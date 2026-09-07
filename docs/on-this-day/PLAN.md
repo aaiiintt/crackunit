@@ -562,7 +562,7 @@ single-post day. Add **03-22** ("It's quite soft enough already.") as the H1 tes
 
 ## Decisions Iain owns (assumptions until told otherwise)
 
-1. **Instagram account is Creator, not Business.** Otherwise the chart tracks are off
+1. **Instagram account is Creator.** Confirmed by Iain 2026-09-07. Had it been Business, the chart tracks are off
    the table entirely and the score beat becomes a chyron with no audio behind it.
 2. **References are on this branch now**; copy them into `crackunit-otd/references/`
    when the new repo exists. Whether they stay in the crackunit repo is Iain's call
