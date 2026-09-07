@@ -1,6 +1,14 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "crackunit.com" }],
+      "destination": "https://www.crackunit.com/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     { "source": "/feed", "destination": "/feed.xml" },
     { "source": "/feed/", "destination": "/feed.xml" },
