@@ -9,7 +9,7 @@ tags: ["bank account", "blog", "Broadband", "conversation", "United Kingdom"]
 excerpt: "I thought it\u2019d had all been sorted out after my last set of ranting. But it would seem not. I\u2019ve now been cut off. Or at least TV and phone have, broadband (oddly) still seems to be working. As before I\u2019m not going to let this rant pollute\u2026"
 ---
 
-![](https://i0.wp.com/i92.photobucket.com/albums/l8/iaintait/virgin_media.jpg?w=660)
+![](/wp-content/rescued/i92.photobucket.com/albums/l8/iaintait/virgin_media.jpg)
 
 I thought it’d had all been sorted out after my last set of ranting.
 

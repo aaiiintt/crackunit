@@ -9,7 +9,7 @@ tags: []
 excerpt: "Great great great! Get your Flickr photos printed onto mini-cards (they\u2019re like 1/2 height business cards). They look a bit like They are v2.0 of Pleasurecards (thanks Stef) which I have some of and are great quality. The application which\u2026"
 ---
 
-[![](https://i0.wp.com/i92.photobucket.com/albums/l8/iaintait/Picture1-2.jpg?w=660)](http://www.moo.com)
+[![](/wp-content/rescued/i92.photobucket.com/albums/l8/iaintait/Picture1-2.jpg)](http://www.moo.com)
 
 Great great great!
 

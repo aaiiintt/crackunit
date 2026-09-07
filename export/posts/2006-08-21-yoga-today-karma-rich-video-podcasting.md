@@ -15,7 +15,7 @@ excerpt: "Yoga Today \u2013 Start each day with a new Yoga lesson (for free). Th
 
 [](http://www.yogatoday.com/ "togatoday.jpg")[](http://www.yogatoday.com/ "togatoday.jpg")
 
-[![](https://i0.wp.com/i92.photobucket.com/albums/l8/iaintait/togatoday.jpg?w=660)](http://www.yogatoday.com/ "togatoday.jpg")
+[![](/wp-content/rescued/i92.photobucket.com/albums/l8/iaintait/togatoday.jpg)](http://www.yogatoday.com/ "togatoday.jpg")
 
 [Yoga Today](http://www.yogatoday.com/) – Start each day with a new Yoga lesson (for free). That sounds nice doesn’t it… If you’re using a PC you can get the lessons in HD, if you’re on a Mac they’re in lower res iTunes format.
 

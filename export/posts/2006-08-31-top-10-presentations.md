@@ -9,7 +9,7 @@ tags: ["blog", "Google", "Mac", "Martin Luthor King", "Steve Jobs", "video"]
 excerpt: "Great list of the Top 10 Best Presentations Ever, a pretty tough list to compile and they\u2019ve done a nice job. There\u2019s a few in here that I\u2019ve seen before, and a few that I haven\u2019t. For Apple geeks of particular note is Steve Jobs launch of\u2026"
 ---
 
-[![](https://i0.wp.com/i92.photobucket.com/albums/l8/iaintait/MartinLuthorKing.jpg?w=660)](http://www.knowhr.com/blog/2006/08/21/top-10-best-presentations-ever/ "MartinLuthorKing.jpg")
+[![](/wp-content/rescued/i92.photobucket.com/albums/l8/iaintait/MartinLuthorKing.jpg)](http://www.knowhr.com/blog/2006/08/21/top-10-best-presentations-ever/ "MartinLuthorKing.jpg")
 
 Great list of the [Top 10 Best Presentations Ever](http://www.knowhr.com/blog/2006/08/21/top-10-best-presentations-ever/), a pretty tough list to compile and they’ve done a nice job. There’s a few in here that I’ve seen before, and a few that I haven’t.
 

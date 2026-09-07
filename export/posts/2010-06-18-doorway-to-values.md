@@ -9,6 +9,6 @@ tags: []
 excerpt: "Such a powerful name for a discount furniture store. I\u2019m thinking of opening \u2018Portal to Decency\u2019 round the corner.\u2026"
 ---
 
-[![](https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/41jVaueFyH5ukCY28Q6pieOpPmemhbLQbNs2nwivHLUtlPvS7tfhYqFQBkwX/photo.jpg.scaled.500.jpg?resize=500%2C370)](https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/waJHQG3kJHPpPty6E0aRpB1bQXQ48HjBEMErFZP5svJxZ29JKk8EN0zEgNYL/photo.jpg)
+[![](/wp-content/rescued/posterous.com/getfile/files.posterous.com/crackunit/41jVaueFyH5ukCY28Q6pieOpPmemhbLQbNs2nwivHLUtlPvS7tfhYqFQBkwX/photo.jpg.scaled.500.jpg)](https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/waJHQG3kJHPpPty6E0aRpB1bQXQ48HjBEMErFZP5svJxZ29JKk8EN0zEgNYL/photo.jpg)
 
 Such a powerful name for a discount furniture store. I’m thinking of opening ‘Portal to Decency’ round the corner.

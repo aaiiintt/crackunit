@@ -9,7 +9,7 @@ tags: []
 excerpt: "John Maeda is the Fortune Cookie it says. I had no desire to snap him in half and extract his wisdom on a piece of roughly typed paper. But I did figure it\u2019d be a chance to meet an interesting guy and ask him a question in a strange\u2026"
 ---
 
-![maeda-main-paper](https://i0.wp.com/img.skitch.com/20101121-et7idetnrf7x17jjrsxyq8m4jf.jpg?w=660)
+![maeda-main-paper](/wp-content/rescued/img.skitch.com/20101121-et7idetnrf7x17jjrsxyq8m4jf.jpg)
 
 John Maeda is the Fortune Cookie it says. I had no desire to snap him in half and extract his wisdom on a piece of roughly typed paper. But I did figure it’d be a chance to meet an interesting guy and ask him a question in a strange setting.
 

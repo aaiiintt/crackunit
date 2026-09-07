@@ -8,4 +8,4 @@ categories: ["Uncategorized"]
 tags: []
 ---
 
-[![](https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/4f8D5WjSRBIvNR9p72HdCHLng83GOHtS9EunYYCrURQl1bvUbd5neuNVaDqf/photo.jpg.scaled.500.jpg?resize=500%2C669)](https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/OvZWYDPNqftTdpaUneDNcsyO1actprRXEAmcTR84kinmexZvY7aUJPoA0fKI/photo.jpg.scaled.1000.jpg)
+[![](/wp-content/rescued/posterous.com/getfile/files.posterous.com/crackunit/4f8D5WjSRBIvNR9p72HdCHLng83GOHtS9EunYYCrURQl1bvUbd5neuNVaDqf/photo.jpg.scaled.500.jpg)](https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/OvZWYDPNqftTdpaUneDNcsyO1actprRXEAmcTR84kinmexZvY7aUJPoA0fKI/photo.jpg.scaled.1000.jpg)

@@ -27,7 +27,7 @@ There’s a load of posts trying to get people to spread spam all over YouTube b
 
 Here’s a lovely piece of ascii art that two people (or one person with two IDs) have posted in quick succession to show their appreciation for the clip:
 
-![](https://i0.wp.com/i92.photobucket.com/albums/l8/iaintait/myspace_bird.png?w=660)
+![](/wp-content/rescued/i92.photobucket.com/albums/l8/iaintait/myspace_bird.png)
 
 Then aside from that the comments are all just banal:
 

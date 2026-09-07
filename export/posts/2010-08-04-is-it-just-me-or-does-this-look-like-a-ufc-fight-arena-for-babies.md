@@ -9,7 +9,7 @@ tags: []
 excerpt: "via onestepahead.com Trying to find a way of temporarily containing 2 little people that doesn\u2019t look like an actual cage is tough."
 ---
 
-![](https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/xEHDtmaEftAGBnqAIHuwgcbpnlivqcoBiHeptDngjHxzzcoyFiEsIninFIqD/media_httpproductsone_fvrEg.jpg.scaled500.jpg?resize=500%2C500)
+![](/wp-content/rescued/posterous.com//getfile/files.posterous.com/crackunit/xEHDtmaEftAGBnqAIHuwgcbpnlivqcoBiHeptDngjHxzzcoyFiEsIninFIqD/media_httpproductsone_fvrEg.jpg.scaled500.jpg)
 
 via [onestepahead.com](http://www.onestepahead.com/popup/zoom.jsp?productId=488757&altImage=1)
 

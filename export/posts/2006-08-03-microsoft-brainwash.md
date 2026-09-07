@@ -19,7 +19,7 @@ I noticed that the guy had a bottle of Microsoft Brainwash on his desk. Surely a
 
 [](http://i92.photobucket.com/albums/l8/iaintait/Picture2-1.jpg)
 
-[](http://i92.photobucket.com/albums/l8/iaintait/Picture2-1.jpg)[![](https://i0.wp.com/i92.photobucket.com/albums/l8/iaintait/Picture2-1.jpg?w=660)](https://i0.wp.com/i92.photobucket.com/albums/l8/iaintait/Picture2-1.jpg)
+[](http://i92.photobucket.com/albums/l8/iaintait/Picture2-1.jpg)[![](/wp-content/rescued/i92.photobucket.com/albums/l8/iaintait/Picture2-1.jpg?w=660)](/wp-content/rescued/i92.photobucket.com/albums/l8/iaintait/Picture2-1.jpg)
 
 But no, it’s real! And very very rare, it’s selling for $80 a bottle at [Sodaking.](http://www.sodaking.com/product_info.php?products_id=593)[  
 ](http://www.sodaking.com/product_info.php?products_id=593)

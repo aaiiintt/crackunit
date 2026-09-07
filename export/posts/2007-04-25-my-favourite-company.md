@@ -9,7 +9,7 @@ tags: ["Specialbike"]
 excerpt: "Specialbike is a company in Brighton that takes old bikes and turns them into new bikes. Kind of like \u2018Pimp My Cycle\u2019 (the bike above used to be a knackered old Peugeot racer). You can tell them exactly what you want your dream bike to be\u2026"
 ---
 
-[![](https://i0.wp.com/i92.photobucket.com/albums/l8/iaintait/specialbike.jpg?w=660)](http://www.specialbike.co.uk)
+[![](/wp-content/rescued/i92.photobucket.com/albums/l8/iaintait/specialbike.jpg)](http://www.specialbike.co.uk)
 
 [Specialbike](http://www.specialbike.co.uk) is a company in Brighton that takes old bikes and turns them into new bikes. Kind of like ‘Pimp My Cycle’ (the bike above used to be a knackered old Peugeot racer).
 

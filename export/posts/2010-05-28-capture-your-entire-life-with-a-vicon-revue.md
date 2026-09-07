@@ -20,4 +20,4 @@ The [Vicon Revue](http://www.viconrevue.com/home.html) is:
 > Based on Microsoft SenseCam technology, Revue is a research tool aimed at medical researchers as an aid for people with memory loss.
 
 Memento would have been a shit film if this had been around.  
-![viconrevue-product](https://i0.wp.com/img.skitch.com/20100528-dxx9a7g99m4fman7k525np2sjk.jpg?w=660)
+![viconrevue-product](/wp-content/rescued/img.skitch.com/20100528-dxx9a7g99m4fman7k525np2sjk.jpg)

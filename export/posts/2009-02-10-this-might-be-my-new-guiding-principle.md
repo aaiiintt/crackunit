@@ -9,6 +9,6 @@ tags: ["ffffound", "image", "motto", "principle"]
 excerpt: "via: ffffound"
 ---
 
-![01\_bs](https://i0.wp.com/img.skitch.com/20090210-gyxknf3djhnsqiw57e2q7p2eue.jpg?w=660)
+![01\_bs](/wp-content/rescued/img.skitch.com/20090210-gyxknf3djhnsqiw57e2q7p2eue.jpg)
 
 via: [ffffound](http://www.ffffound.com)

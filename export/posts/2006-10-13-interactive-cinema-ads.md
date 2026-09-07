@@ -9,7 +9,7 @@ tags: ["Advertising", "blog", "MIT Advertising Lab", "mobile phones"]
 excerpt: "Brazillian interactive cinema ad for Fiat using text messages. More details on the MIT Advertising Lab blog Interesting idea, and something we\u2019ve had discussions about before. But I always felt it was really irresponsible to do something\u2026"
 ---
 
-![](https://i0.wp.com/i92.photobucket.com/albums/l8/iaintait/fiat_interactive_movie.jpg?resize=400%2C361)
+![](/wp-content/rescued/i92.photobucket.com/albums/l8/iaintait/fiat_interactive_movie.jpg)
 
 Brazillian interactive cinema ad for Fiat using text messages. More details on the [MIT Advertising Lab blog](http://adverlab.blogspot.com/2006/10/fiat-advertises-with-interactive-movie.html)
 

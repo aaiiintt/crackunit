@@ -9,7 +9,7 @@ tags: ["Advertising", "creative"]
 excerpt: "[Sorry I\u2019ve been very rubbish at putting up these last 2 reasons \u2013 they were written, but I\u2019ve been suffering from a semi-crippling case of uncertainty\u2026] If you\u2019re \u2018a creative\u2019 you either want to write a novel or make films. If you\u2019re a\u2026"
 ---
 
-![](https://i0.wp.com/i92.photobucket.com/albums/l8/iaintait/9_i_want_to_be.gif?w=660)
+![](/wp-content/rescued/i92.photobucket.com/albums/l8/iaintait/9_i_want_to_be.gif)
 
 \[Sorry I’ve been very rubbish at putting up these last 2 reasons – they were written, but I’ve been suffering from a semi-crippling case of uncertainty…\]
 

@@ -11,7 +11,7 @@ excerpt: "This year\u2019s Webby Award winners have just been announced. And I\u
 
 This year’s [Webby Award winners](http://www.webbyawards.com/webbys/current.php?season=10) have just been announced. And I’m chuffed to say that [Poke](http://www.pokelondon.com) have managed to bag a couple.
 
-![](https://i0.wp.com/www.crackunit.com/wp-content/talkingPointMini_01.jpg?w=660)
+![](/wp-content/rescued/www.crackunit.com/wp-content/talkingPointMini_01.jpg)
 
 One for [Talking Point](http://talkingpoint.orange.co.uk) for Orange, and a People’s Voice for [Feed Me Better](http://www.feedmebetter.com/) for Jamie Oliver.
 

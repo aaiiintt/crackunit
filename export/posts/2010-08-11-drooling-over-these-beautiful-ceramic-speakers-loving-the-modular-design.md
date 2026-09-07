@@ -13,4 +13,4 @@ excerpt: "via aplusrstore.com\u2026"
 
 via [aplusrstore.com](http://www.aplusrstore.com/product.php?id=558&cid=82)
 
-![Ceramic Speaker System](https://i0.wp.com/img.skitch.com/20100811-cdgbsrxyhihifgrdab3nkbqj3e.jpg?w=660)
+![Ceramic Speaker System](/wp-content/rescued/img.skitch.com/20100811-cdgbsrxyhihifgrdab3nkbqj3e.jpg)

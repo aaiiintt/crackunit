@@ -9,7 +9,7 @@ tags: ["mixes", "Music", "soundcloud"]
 excerpt: "SoundCloud is a pretty nifty music upload / sharing / management tool. I\u2019ve taken my last few mixes and stuck them up there. I think I might shift over my podcast arrangement to pull the tracks from there instead. I\u2019m on there at\u2026"
 ---
 
-![soundcloud\_logo](https://i0.wp.com/img.skitch.com/20091023-rhb167bnfb4gnaapr7uun67bxr.jpg?w=660)
+![soundcloud\_logo](/wp-content/rescued/img.skitch.com/20091023-rhb167bnfb4gnaapr7uun67bxr.jpg)
 
 [SoundCloud](http://www.soundcloud.com) is a pretty nifty music upload / sharing / management tool. I’ve taken my last few mixes and stuck them up there. I think I might shift over my podcast arrangement to pull the tracks from there instead.
 

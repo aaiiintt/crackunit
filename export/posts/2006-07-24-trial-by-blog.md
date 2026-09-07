@@ -13,7 +13,7 @@ excerpt: "As I\u2019ve mentioned before, we\u2019re working with Zopa at the mom
 
 [](http://blog.zopa.com/archives/2006/07/19/new-improved-zopa-now-washes-whiter/)
 
-[](http://blog.zopa.com/archives/2006/07/19/new-improved-zopa-now-washes-whiter/)[![Lending home page](https://i0.wp.com/blog.zopa.com/wp-content/lending_demo_sm.jpg?w=660 "Lending home page")](http://blog.zopa.com/archives/2006/07/19/new-improved-zopa-now-washes-whiter/)As I’ve mentioned before, [we’re](http://www.pokelondon.com) working with [Zopa](http://www.zopa.com) at the moment to do a redesign of their website. It’s a great company and a great project.
+[](http://blog.zopa.com/archives/2006/07/19/new-improved-zopa-now-washes-whiter/)[![Lending home page](/wp-content/rescued/blog.zopa.com/wp-content/lending_demo_sm.jpg "Lending home page")](http://blog.zopa.com/archives/2006/07/19/new-improved-zopa-now-washes-whiter/)As I’ve mentioned before, [we’re](http://www.pokelondon.com) working with [Zopa](http://www.zopa.com) at the moment to do a redesign of their website. It’s a great company and a great project.
 
 I was in a meeting last week when Dave from Zopa said “[Oh, I’ve stuck some of the designs on the blog to see what people think](http://blog.zopa.com/archives/2006/07/19/new-improved-zopa-now-washes-whiter/)“. My reactions were twofold and simultaneous:
 

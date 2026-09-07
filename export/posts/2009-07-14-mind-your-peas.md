@@ -9,6 +9,6 @@ tags: []
 excerpt: "I was in the pea section of M&S last night and spotted peas from Gloucester, Kenya, Ethiopia and Guatemala. That\u2019s a lot of Pea-miles."
 ---
 
-![IMG\_0822](https://i0.wp.com/img.skitch.com/20090714-x773qptsbxn427dtfhbd3x74sf.jpg?w=660)
+![IMG\_0822](/wp-content/rescued/img.skitch.com/20090714-x773qptsbxn427dtfhbd3x74sf.jpg)
 
 I was in the pea section of M&S last night and spotted peas from Gloucester, Kenya, Ethiopia and Guatemala. That’s a lot of Pea-miles.

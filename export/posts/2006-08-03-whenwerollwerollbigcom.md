@@ -9,7 +9,7 @@ tags: ["Advertising", "advertising community", "Agency.com camp", "brand", "bran
 excerpt: "A response from the Agency.com camp regarding the Subway video. It\u2019s basically saying: \u201cwe did it, we got people talking, that\u2019s the whole point\u201d. I\u2019m sure the debate will rage on around whether this is just a good piece of\u2026"
 ---
 
-[![logo.png](https://i0.wp.com/whenwerollwerollbig.com/storage/logo.png?w=660)](http://whenwerollwerollbig.com/action/)A [response from the Agency.com camp](http://whenwerollwerollbig.com/action/) regarding the Subway video. It’s basically saying: “we did it, we got people talking, that’s the whole point”.
+[![logo.png](/wp-content/rescued/whenwerollwerollbig.com/storage/logo.png)](http://whenwerollwerollbig.com/action/)A [response from the Agency.com camp](http://whenwerollwerollbig.com/action/) regarding the Subway video. It’s basically saying: “we did it, we got people talking, that’s the whole point”.
 
 I’m sure the debate will rage on around whether this is just a good piece of post-rationalisation and speedy ass-covering. Or a cunning master-plan that was in place from the start. (As an aside, if it’s the latter I think there’s a much better way of presenting this, a making of the behind the scenes video perhaps? Showing the point at which the decision was made to target the advertising community maybe?).
 

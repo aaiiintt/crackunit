@@ -9,7 +9,7 @@ tags: ["censorship", "Culture", "internet", "web"]
 excerpt: "I learned something new today. The Streisand Effect is what happens when you try and shut something down online and as a result everyone finds out about it and loads more people see it than would have if you\u2019d kept your mouth shut. It\u2019s\u2026"
 ---
 
-![barbara-streisand-without-makeup](https://i0.wp.com/img.skitch.com/20090720-pxe41k3t4di8ipiinpu4e28wek.jpg?w=660)
+![barbara-streisand-without-makeup](/wp-content/rescued/img.skitch.com/20090720-pxe41k3t4di8ipiinpu4e28wek.jpg)
 
 I learned something new today. [The Streisand Effect](http://en.wikipedia.org/wiki/Streisand_effect) is what happens when you try and shut something down online and as a result everyone finds out about it and loads more people see it than would have if you’d kept your mouth shut. It’s origins come from Babs’ suing of a photographer over an aerial photo of her house.
 

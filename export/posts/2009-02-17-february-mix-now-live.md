@@ -9,7 +9,7 @@ tags: ["mixes", "Music", "podcast"]
 excerpt: "This latest mix was recorded when it was so cold in the loft that my fingers were numb. Hopefully it hasn\u2019t led to it being a crock of crap. Actually I\u2019m pretty chuffed with how it turned out. It\u2019s quite chugging and if I had to pick\u2026"
 ---
 
-![](https://i0.wp.com/img.skitch.com/20090216-k4frrhkegij45abt7y9mw66eb6.jpg?resize=430%2C430)
+![](/wp-content/rescued/img.skitch.com/20090216-k4frrhkegij45abt7y9mw66eb6.jpg)
 
 This latest mix was recorded when it was so cold in the loft that my fingers were numb. Hopefully it hasn’t led to it being a crock of crap.
 

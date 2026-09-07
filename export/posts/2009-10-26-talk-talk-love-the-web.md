@@ -9,7 +9,7 @@ tags: []
 excerpt: "You can argue all you want about the contents and the style of the report. But the fact that Talk Talk have decided to open up their Digital Anthropology research to all of us scumbags proves that they fundamentally get something\u2026\u2026"
 ---
 
-![Talk Talk Digital Anthropology](https://i0.wp.com/img.skitch.com/20091026-bmyajeinwnm2bd6ja97yf49fef.jpg?w=660)
+![Talk Talk Digital Anthropology](/wp-content/rescued/img.skitch.com/20091026-bmyajeinwnm2bd6ja97yf49fef.jpg)
 
 You can argue all you want about the contents and the style of the report. But the fact that Talk Talk have decided to open up their [Digital Anthropology research](http://www.talktalk.co.uk/we-love-the-web/digital-anthropology/tribes) to all of us scumbags proves that they fundamentally get something…
 

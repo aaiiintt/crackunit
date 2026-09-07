@@ -9,6 +9,6 @@ tags: []
 excerpt: "Loving these photos of people carrying large amounts of things in Shanghai \u2013 via wejetset.com\u2026"
 ---
 
-[![](https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/mGraulftIuuomlnmbGHqoxqtFgFGgkulzCiglmFCtJnsfacDaJAxJGynpkzI/media_httpassetswejet_frIIk.jpg.scaled500.jpg?resize=500%2C328)](https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/mGraulftIuuomlnmbGHqoxqtFgFGgkulzCiglmFCtJnsfacDaJAxJGynpkzI/media_httpassetswejet_frIIk.jpg.scaled1000.jpg)
+[![](/wp-content/rescued/posterous.com/getfile/files.posterous.com/crackunit/mGraulftIuuomlnmbGHqoxqtFgFGgkulzCiglmFCtJnsfacDaJAxJGynpkzI/media_httpassetswejet_frIIk.jpg.scaled500.jpg)](https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/mGraulftIuuomlnmbGHqoxqtFgFGgkulzCiglmFCtJnsfacDaJAxJGynpkzI/media_httpassetswejet_frIIk.jpg.scaled1000.jpg)
 
 Loving these photos of people carrying large amounts of things in Shanghai – via [wejetset.com](http://www.wejetset.com/magazine/2010/9/15/1045/shanghai_stacking_)

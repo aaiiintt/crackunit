@@ -9,7 +9,7 @@ tags: []
 excerpt: "It\u2019s been a long time since I\u2019ve posted a mix (seems to be a recurring theme). Anyway here it is. I recorded it 6 weeks ago so it\u2019s doubly lame that it\u2019s not been online until now, and explains why it\u2019s called July and I\u2019m posting it in\u2026"
 ---
 
-![July 2011 Mix](https://i0.wp.com/img.skitch.com/20110903-jksn33cms7mrcckeknrxp94993.png?w=660&ssl=1)
+![July 2011 Mix](/wp-content/rescued/img.skitch.com/20110903-jksn33cms7mrcckeknrxp94993.png)
 
 It’s been a long time since I’ve posted a mix (seems to be a recurring theme). Anyway here it is. I recorded it 6 weeks ago so it’s doubly lame that it’s not been online until now, and explains why it’s called July and I’m posting it in September. Doh.
 

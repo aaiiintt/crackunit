@@ -13,7 +13,7 @@ Firstly there’s a piece about [Inside Twitter in the Guardian](http://www.guar
 
 The piece itself is pretty good. But it’s the comments underneath that are the telling bit. It’s full of the usual nonsense and lots of people moaning that Twitter is this year’s Friends Reunited blah blah blah.
 
-![guardian twitter](https://i0.wp.com/img.skitch.com/20090715-mmqjad8ruu8i7myi72s6qwsppr.jpg?w=660)
+![guardian twitter](/wp-content/rescued/img.skitch.com/20090715-mmqjad8ruu8i7myi72s6qwsppr.jpg)
 
 But you know what, to me it doesn’t matter. Twitter is a real thing. It’s something that people are using and enjoying, and it’s changing the way that lots of people spend big chunks of their connected time. Surely anything that affords change in this way can never be seen as a *total* waste of time?
 

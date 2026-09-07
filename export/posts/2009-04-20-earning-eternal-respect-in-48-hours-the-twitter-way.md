@@ -23,7 +23,7 @@ I was trying to decide whether to spend the weekend catching up on emails and th
 
 To which Jason replied:
 
-![Twitter / @iaintait](https://i0.wp.com/img.skitch.com/20090419-dfqs97h3fr2sm14fmr3e4xkiek.jpg?w=660)
+![Twitter / @iaintait](/wp-content/rescued/img.skitch.com/20090419-dfqs97h3fr2sm14fmr3e4xkiek.jpg)
 
 And Andy provoked me with:
 

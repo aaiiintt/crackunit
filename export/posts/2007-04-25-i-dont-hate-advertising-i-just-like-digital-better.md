@@ -9,7 +9,7 @@ tags: ["Advertising", "blog", "brand", "brands", "online audiences"]
 excerpt: "Well I finally did it. I finished my list of \u201c10 Reasons that Digital is Better than Advertising\u201c. Which is a personal triumph. It\u2019s the longest sustained thought of my blog so far. Even longer than my ranting about Virgin Media! Even\u2026"
 ---
 
-![](https://i0.wp.com/i92.photobucket.com/albums/l8/iaintait/post_no_bills.jpg?w=660)
+![](/wp-content/rescued/i92.photobucket.com/albums/l8/iaintait/post_no_bills.jpg)
 
 Well I finally did it. I finished my list of “[10 Reasons that Digital is Better than Advertising](/2007/03/26/10-reasons-why-digital-is-better-than-advertising/)“. Which is a personal triumph. It’s the longest sustained thought of my blog so far. Even longer than my ranting about Virgin Media!
 

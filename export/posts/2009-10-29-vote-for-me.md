@@ -9,7 +9,7 @@ tags: []
 excerpt: "I just heard the other day that I\u2019d been shortlisted for \u2018best blog\u2019 at this year\u2019s BIMA awards. I don\u2019t really know how I feel about it to be honest. It\u2019s a bit odd, because I don\u2019t think that I could really ask for anyone to vote for me\u2026"
 ---
 
-[![BIMA 2009 - Best Blog: Vote for me!](https://i0.wp.com/www.bimaawards.com/_images/categories/voteForBlogBestBlog.gif?resize=170%2C50)](http://www.bimaawards.com/categories/best_blog/)
+[![BIMA 2009 - Best Blog: Vote for me!](/wp-content/rescued/www.bimaawards.com/_images/categories/voteForBlogBestBlog.gif)](http://www.bimaawards.com/categories/best_blog/)
 
 I just heard the other day that I’d been [shortlisted for ‘best blog’ at this year’s BIMA awards](http://www.bimaawards.com/categories/best_blog/). I don’t really know how I feel about it to be honest.
 
@@ -21,6 +21,6 @@ But regrettably, there is a competitive streak that exists buried somewhere deep
 
 And just in case it helps [I’ve got 1,000 Google Wave invites for people who vote for me](/2009/10/02/iaintait-does-not-have-1000-google-wave-invites-to-give-away/) (that’s an inappropriate joke by the way).
 
-[![BIMA 2009 - Best Blog: Vote for me!](https://i0.wp.com/www.bimaawards.com/_images/categories/voteForBlogBestBlog.gif?resize=170%2C50)](http://www.bimaawards.com/categories/best_blog/)
+[![BIMA 2009 - Best Blog: Vote for me!](/wp-content/rescued/www.bimaawards.com/_images/categories/voteForBlogBestBlog.gif)](http://www.bimaawards.com/categories/best_blog/)
 
 I feel so dirty.

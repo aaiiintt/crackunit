@@ -11,10 +11,10 @@ excerpt: "Whist in the middle of an email exchange Josh Millrod (@senatorbolton)
 
 Whist in the middle of an email exchange Josh Millrod ([@senatorbolton](http://twitter.com/senatorbolton)) replied with this:
 
-![image](https://i0.wp.com/img.skitch.com/20100919-rp64eg436c1riw5u766fs2pa6q.jpg?w=660)
+![image](/wp-content/rescued/img.skitch.com/20100919-rp64eg436c1riw5u766fs2pa6q.jpg)
 
 In the way that many young people seemingly do, I LOLed. I also did a LOL when someone replied to a Tweet with this:
 
-[![funny animated gif](https://i0.wp.com/www.gifbin.com/bin/1234525508_ben_stiller_-_do_it.gif?w=660)](http://www.gifbin.com/982213)
+[![funny animated gif](/wp-content/rescued/www.gifbin.com/bin/1234525508_ben_stiller_-_do_it.gif)](http://www.gifbin.com/982213)
 
 Anyone got any other useful favourites that I could add to my collection of 2 images?

@@ -9,7 +9,7 @@ tags: []
 excerpt: "The place for people to share things they\u2019re willing to do for $5. Seriously, you can pay people $5 and they do these things for you\u2026 http://www.fiverr.com/ Just a few examples from today\u2019s front page: I will send 10,000 visitors to any\u2026"
 ---
 
-![Fiverr 2013 The place for people to share things they2019re willing to do for $5](https://i0.wp.com/img.skitch.com/20100518-facmdj5qn1q14q7ntbwcpd26mt.jpg?w=660)
+![Fiverr 2013 The place for people to share things they2019re willing to do for $5](/wp-content/rescued/img.skitch.com/20100518-facmdj5qn1q14q7ntbwcpd26mt.jpg)
 
 The place for people to share things they’re willing to do for $5. Seriously, you can pay people $5 and they do these things for you…
 

@@ -9,7 +9,7 @@ tags: ["blog", "cool", "inspiration", "Photos", "quotes", "tumblr"]
 excerpt: "I\u2019m so jealous of this blog. It makes me feel so very uncool. http://theimpossiblecool.tumblr.com It\u2019s an unfussy Tumblr that features the coolest people ever. Great photos and well chosen quotes. Simple and well, cool. I guess. Dudes from\u2026"
 ---
 
-![the impossible cool.](https://i0.wp.com/img.skitch.com/20090712-bswsgj81mkqx6m21p5u9mr7pkb.jpg?w=660)
+![the impossible cool.](/wp-content/rescued/img.skitch.com/20090712-bswsgj81mkqx6m21p5u9mr7pkb.jpg)
 
 I’m so jealous of [this blog](http://theimpossiblecool.tumblr.com). It makes me feel so very uncool.
 
@@ -17,11 +17,11 @@ I’m so jealous of [this blog](http://theimpossiblecool.tumblr.com). It makes m
 
 It’s an unfussy Tumblr that features the coolest people ever. Great photos and well chosen quotes. Simple and well, cool. I guess.
 
-![Dock](https://i0.wp.com/img.skitch.com/20090712-ja76rxr6b4trsr4tf647qb4y7i.jpg?w=660)
+![Dock](/wp-content/rescued/img.skitch.com/20090712-ja76rxr6b4trsr4tf647qb4y7i.jpg)
 
-![the impossible cool.](https://i0.wp.com/img.skitch.com/20090712-k7q7ji958p3cq5kj6fcebcxifr.jpg?w=660)
+![the impossible cool.](/wp-content/rescued/img.skitch.com/20090712-k7q7ji958p3cq5kj6fcebcxifr.jpg)
 
-![the impossible cool.](https://i0.wp.com/img.skitch.com/20090712-nxrt9g8x532he8witndk93jhik.jpg?w=660)
+![the impossible cool.](/wp-content/rescued/img.skitch.com/20090712-nxrt9g8x532he8witndk93jhik.jpg)
 
 Dudes from the top: Walken, Thompson, Curtis, Camus.
 

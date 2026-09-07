@@ -9,7 +9,7 @@ tags: ["Advertising", "advertising ideas", "creative", "important online relatio
 excerpt: "Of course there are brilliant people in advertising who \u2018get it\u2019 too. And blatantly you don\u2019t have to be a web-obsessed geek to come up with interesting interactive ideas. But naturally it becomes easier to consider this world if you spend\u2026"
 ---
 
-![](https://i0.wp.com/i92.photobucket.com/albums/l8/iaintait/10_people_who_get_it.gif?w=660)
+![](/wp-content/rescued/i92.photobucket.com/albums/l8/iaintait/10_people_who_get_it.gif)
 
 Of course there are brilliant people in advertising who ‘get it’ too. And blatantly you don’t have to be a web-obsessed geek to come up with interesting interactive ideas. But naturally it becomes easier to consider this world if you spend some time in it. So, at the very least, you understand a few of its basic rules.
 

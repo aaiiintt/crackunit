@@ -9,7 +9,7 @@ tags: ["blog"]
 excerpt: "\u2026the Oprah Way! I\u2019ve been a real bugger sometimes and asked people to explain what RSS feeds are in an interview. Not to see if they necessarily know or not. But to see how they respond to answering a tricky, techy question. Now if\u2026"
 ---
 
-[![](https://i0.wp.com/i92.photobucket.com/albums/l8/iaintait/oprah.jpg?w=660)](http://cravingideas.blogs.com/backinskinnyjeans/2006/09/how_to_explain_.html "oprah.jpg")…the Oprah Way!
+[![](/wp-content/rescued/i92.photobucket.com/albums/l8/iaintait/oprah.jpg)](http://cravingideas.blogs.com/backinskinnyjeans/2006/09/how_to_explain_.html "oprah.jpg")…the Oprah Way!
 
 I’ve been a real bugger sometimes and asked people to explain what RSS feeds are in an interview. Not to see if they necessarily know or not. But to see how they respond to answering a tricky, techy question.
 

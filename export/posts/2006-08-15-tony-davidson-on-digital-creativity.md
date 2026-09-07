@@ -9,7 +9,7 @@ tags: ["Advertising", "advertising formats", "blog", "creative", "creativity", "
 excerpt: "The above image is blatantly stolen from the excellent DigitalAgency blog. But short of retyping the whole thing I couldn\u2019t think of any other way of doing it. It\u2019s from the D&AD Student Annual, written by Tony Davidson (Creative Director\u2026"
 ---
 
-[![](https://i0.wp.com/i92.photobucket.com/albums/l8/iaintait/tonyd.jpg?w=660)](http://digitalagency.typepad.com/digitalagency/)
+[![](/wp-content/rescued/i92.photobucket.com/albums/l8/iaintait/tonyd.jpg)](http://digitalagency.typepad.com/digitalagency/)
 
 The above image is blatantly stolen from the excellent [DigitalAgency](http://digitalagency.typepad.com/digitalagency/) blog. But short of retyping the whole thing I couldn’t think of any other way of doing it.
 

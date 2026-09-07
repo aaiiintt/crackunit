@@ -9,7 +9,7 @@ tags: ["Advertising", "compare the market", "meerkat", "online", "social media",
 excerpt: "Deep breath\u2026 There\u2019s this campaign right, it\u2019s called Compare The Meerkat, it\u2019s for an insurance comparison website called Compare The Market, the ad is a bit funny. I could try and describe it, but it\u2019s easier to show you: Yes it\u2019s all\u2026"
 ---
 
-![Twitter](https://i0.wp.com/img.skitch.com/20090203-ckww2bx1g5mke9x95wa1bbdnry.jpg?w=660)
+![Twitter](/wp-content/rescued/img.skitch.com/20090203-ckww2bx1g5mke9x95wa1bbdnry.jpg)
 
 Deep breath…
 

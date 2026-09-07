@@ -11,6 +11,6 @@ excerpt: "I thought this was simple and to the point\u2026 Manual downloaded fro
 
 I thought this was simple and to the point…
 
-![xa2man3pdf](https://i0.wp.com/img.skitch.com/20091107-dxkg5mwjj293cuggfstcmur7u6.jpg?w=660)
+![xa2man3pdf](/wp-content/rescued/img.skitch.com/20091107-dxkg5mwjj293cuggfstcmur7u6.jpg)
 
 Manual downloaded [from here](http://diaxa.nfshost.com/xa/xastart.htm).

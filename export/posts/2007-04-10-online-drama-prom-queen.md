@@ -9,7 +9,7 @@ tags: ["internet", "media studio", "Michael Eisner's Tornante Company", "Online 
 excerpt: "I didn\u2019t really know where to start with this one. Prom Queen is a new 80 episode Internet-only drama. Here\u2019s the facts: Each episode is just over 2 minutes long and features pre and post-roll ads \u2013 a couple of seconds pre and about 10\u2026"
 ---
 
-![prom queen](https://i0.wp.com/i92.photobucket.com/albums/l8/iaintait/prom_queen.jpg?w=660)
+![prom queen](/wp-content/rescued/i92.photobucket.com/albums/l8/iaintait/prom_queen.jpg)
 
 I didn’t really know where to start with this one.
 

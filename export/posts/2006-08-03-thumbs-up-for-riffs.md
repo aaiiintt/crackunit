@@ -9,7 +9,7 @@ tags: []
 excerpt: "Riffs: Your Social Recommender \u2013 Ratings, Rants, Raves, and Reviews It\u2019s like \u201chot-or-not\u201d, but applied to everything in the world. A really simple ratings engine for life, the universe, and everything else. Nicely put together and has\u2026"
 ---
 
-[![](https://i0.wp.com/i92.photobucket.com/albums/l8/iaintait/Picture1-1.jpg?w=660)Riffs: Your Social Recommender – Ratings, Rants, Raves, and Reviews](http://www.riffs.com/)
+[![](/wp-content/rescued/i92.photobucket.com/albums/l8/iaintait/Picture1-1.jpg)Riffs: Your Social Recommender – Ratings, Rants, Raves, and Reviews](http://www.riffs.com/)
 
 It’s like “hot-or-not”, but applied to everything in the world. A really simple ratings engine for life, the universe, and everything else. Nicely put together and has some great features like iSuggest – upload your iTunes data and get recommendations from other Riffers.
 

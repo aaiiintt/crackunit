@@ -9,7 +9,7 @@ tags: ["Nite Club"]
 excerpt: "Smart casual is one of my most despised terms ever. What could make it worse? How about turning it into \u2018Very Smart Casual\u2019. Ouch. But I suppose being given the alternative choice of \u2018Dress to Express\u2019 is a nice touch. So it\u2019s chinos with\u2026"
 ---
 
-[![](https://i0.wp.com/i92.photobucket.com/albums/l8/iaintait/DSC00070.jpg?w=660)](http://s92.photobucket.com/albums/l8/iaintait/?action=view&current=DSC00070.jpg "DSC00070.jpg")
+[![](/wp-content/rescued/i92.photobucket.com/albums/l8/iaintait/DSC00070.jpg)](http://s92.photobucket.com/albums/l8/iaintait/?action=view&current=DSC00070.jpg "DSC00070.jpg")
 
 Smart casual is one of my most despised terms ever. What could make it worse?
 
