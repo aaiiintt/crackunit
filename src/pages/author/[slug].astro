@@ -1,0 +1,22 @@
+---
+import Base from "../../layouts/Base.astro";
+import PostList from "../../components/PostList.astro";
+import { allPosts, PAGE_SIZE } from "../../lib/posts";
+import { authors } from "../../lib/taxonomy";
+
+export async function getStaticPaths() {
+  const posts = await allPosts();
+  // Single-author blog: every post belongs to each listed author.
+  return authors.map((a) => ({ params: { slug: a.slug }, props: { name: a.name, posts } }));
+}
+
+const { name, posts } = Astro.props;
+---
+<Base title={name} description={`Posts by ${name}`} path={`/author/${Astro.params.slug}/`}>
+  <div class="wrap wide">
+    <h1>{name}</h1>
+    <p class="meta">{posts.length} posts</p>
+    <PostList posts={posts.slice(0, PAGE_SIZE * 4)} />
+    <p class="meta"><a href="/archive/">See the full archive →</a></p>
+  </div>
+</Base>

@@ -1,0 +1,31 @@
+---
+import Base from "../layouts/Base.astro";
+import { allPosts } from "../lib/posts";
+const posts = await allPosts();
+const byYear = new Map<number, typeof posts>();
+for (const p of posts) {
+  const y = p.data.date.getFullYear();
+  if (!byYear.has(y)) byYear.set(y, []);
+  byYear.get(y)!.push(p);
+}
+const years = [...byYear.keys()].sort((a, b) => b - a);
+---
+<Base title="Archive" description="Every post, by year." path="/archive/">
+  <div class="wrap wide">
+    <h1>Archive</h1>
+    <p class="meta">{posts.length} posts, {years.at(-1)}–{years[0]}</p>
+    {years.map((y) => (
+      <section>
+        <h2>{y}</h2>
+        <ul class="index">
+          {byYear.get(y)!.map((p) => (
+            <li>
+              <h2><a href={p.data.permalink}>{p.data.title}</a></h2>
+              <div class="meta">{p.data.date.toLocaleDateString("en-GB", { day: "numeric", month: "short" })}</div>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+  </div>
+</Base>

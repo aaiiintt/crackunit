@@ -1,0 +1,16 @@
+---
+import Base from "../layouts/Base.astro";
+import PostList from "../components/PostList.astro";
+import { allPosts, PAGE_SIZE } from "../lib/posts";
+const posts = await allPosts();
+const total = Math.ceil(posts.length / PAGE_SIZE);
+---
+<Base title="Crack Unit" description="Iain Tait's blog, since 2005." path="/">
+  <div class="wrap wide">
+    <PostList posts={posts.slice(0, PAGE_SIZE)} />
+    <nav class="pager">
+      <span></span>
+      {total > 1 && <a href="/page/2/">Older posts →</a>}
+    </nav>
+  </div>
+</Base>

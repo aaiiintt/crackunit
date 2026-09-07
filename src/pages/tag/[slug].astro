@@ -1,0 +1,33 @@
+---
+import Base from "../../layouts/Base.astro";
+import PostList from "../../components/PostList.astro";
+import { allPosts } from "../../lib/posts";
+import { tags, slugForTag } from "../../lib/taxonomy";
+
+export async function getStaticPaths() {
+  const posts = await allPosts();
+  // Bucket once rather than filtering 1,526 posts per tag — there are ~1,350 tags.
+  const byTagSlug = new Map<string, typeof posts>();
+  for (const p of posts) {
+    for (const t of p.data.tags) {
+      const s = slugForTag(t);
+      if (!s) continue;
+      if (!byTagSlug.has(s)) byTagSlug.set(s, []);
+      byTagSlug.get(s)!.push(p);
+    }
+  }
+  return tags.map((tag) => ({
+    params: { slug: decodeURIComponent(tag.slug) },
+    props: { name: tag.name, slug: tag.slug, posts: byTagSlug.get(tag.slug) ?? [] },
+  }));
+}
+
+const { name, slug, posts } = Astro.props;
+---
+<Base title={name} description={`Posts tagged ${name}`} path={`/tag/${slug}/`}>
+  <div class="wrap wide">
+    <h1>{name}</h1>
+    <p class="meta">{posts.length} post{posts.length === 1 ? "" : "s"} tagged</p>
+    <PostList posts={posts} />
+  </div>
+</Base>

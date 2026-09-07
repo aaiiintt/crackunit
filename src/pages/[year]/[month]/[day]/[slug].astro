@@ -1,0 +1,40 @@
+---
+import { render } from "astro:content";
+import Base from "../../../../layouts/Base.astro";
+import { allPosts, permalinkParts, formatDate } from "../../../../lib/posts";
+import { slugForCategory, slugForTag } from "../../../../lib/taxonomy";
+
+export async function getStaticPaths() {
+  const posts = await allPosts();
+  return posts.map((post) => ({ params: permalinkParts(post.data.permalink), props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const d = post.data;
+---
+<Base title={d.title} description={d.excerpt} path={d.permalink}>
+  <div class="wrap">
+    <article class="post">
+      <header>
+        <h1>{d.title}</h1>
+        <div class="meta">
+          <time datetime={d.date.toISOString()}>{formatDate(d.date)}</time>
+          {d.categories.length > 0 && <> · {d.categories.map((c, i) => {
+            const s = slugForCategory(c);
+            return <>{i > 0 && ", "}{s ? <a href={`/category/${s}/`}>{c}</a> : c}</>;
+          })}</>}
+        </div>
+      </header>
+      <div class="prose"><Content /></div>
+      {d.tags.length > 0 && (
+        <div class="terms" style="margin-top:2rem">
+          {d.tags.map((t) => {
+            const s = slugForTag(t);
+            return s ? <a href={`/tag/${s}/`}>{t}</a> : <span>{t}</span>;
+          })}
+        </div>
+      )}
+    </article>
+  </div>
+</Base>

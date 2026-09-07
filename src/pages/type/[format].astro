@@ -1,0 +1,26 @@
+---
+import Base from "../../layouts/Base.astro";
+import PostList from "../../components/PostList.astro";
+import { allPosts } from "../../lib/posts";
+
+// WordPress published post-format archives at /type/<format>/ and they are
+// still in the sitemap, so they have to keep resolving.
+export async function getStaticPaths() {
+  const posts = await allPosts();
+  const formats = [...new Set(posts.map((p) => p.data.format).filter(Boolean))] as string[];
+  return formats.map((format) => ({
+    params: { format },
+    props: { format, posts: posts.filter((p) => p.data.format === format) },
+  }));
+}
+
+const { format, posts } = Astro.props;
+const label = format[0].toUpperCase() + format.slice(1);
+---
+<Base title={`${label} posts`} path={`/type/${format}/`}>
+  <div class="wrap wide">
+    <h1>{label}</h1>
+    <p class="meta">{posts.length} post{posts.length === 1 ? "" : "s"}</p>
+    <PostList posts={posts} />
+  </div>
+</Base>

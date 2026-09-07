@@ -1,0 +1,29 @@
+---
+import Base from "../../layouts/Base.astro";
+import PostList from "../../components/PostList.astro";
+import { allPosts, PAGE_SIZE } from "../../lib/posts";
+
+export async function getStaticPaths() {
+  const posts = await allPosts();
+  const total = Math.ceil(posts.length / PAGE_SIZE);
+  // Page 1 lives at "/", so /page/N/ starts at 2 — matching WordPress.
+  return Array.from({ length: total - 1 }, (_, i) => {
+    const n = i + 2;
+    return {
+      params: { page: String(n) },
+      props: { posts: posts.slice((n - 1) * PAGE_SIZE, n * PAGE_SIZE), n, total },
+    };
+  });
+}
+
+const { posts, n, total } = Astro.props;
+---
+<Base title={`Page ${n}`} path={`/page/${n}/`} noindex>
+  <div class="wrap wide">
+    <PostList posts={posts} />
+    <nav class="pager">
+      <a href={n === 2 ? "/" : `/page/${n - 1}/`}>← Newer</a>
+      {n < total && <a href={`/page/${n + 1}/`}>Older →</a>}
+    </nav>
+  </div>
+</Base>
