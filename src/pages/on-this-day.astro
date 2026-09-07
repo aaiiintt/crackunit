@@ -1,0 +1,15 @@
+---
+import Base from "../layouts/Base.astro";
+import OnThisDay from "../components/OnThisDay.astro";
+import { allPosts } from "../lib/posts";
+const posts = await allPosts();
+---
+<Base title="On this day" description="A daily journey through the Crack Unit archive." path="/on-this-day/">
+  <div class="wrap wide on-this-day-page">
+    <OnThisDay posts={posts} />
+  </div>
+</Base>
+
+<style>
+  .on-this-day-page { max-width: 76rem; }
+</style>
