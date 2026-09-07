@@ -74,7 +74,7 @@ const archive = posts.map((post) => ({
         <article class="archive-card ${cardIndex === 0 ? "is-featured" : ""}">
           <div class="card-media">${post.image ? `<img src="${post.image}" alt="" loading="lazy" />` : `<div class="card-art" aria-hidden="true"><span>${post.year}</span></div>`}</div>
           <div class="card-body">
-            <div class="card-meta"><time datetime="${post.date}">${post.year}</time><span>${String(cardIndex + 1).padStart(2, "0")} / ${String(entries.length).padStart(2, "0")}</span></div>
+            <div class="card-meta"><time datetime="${post.date}">${post.year}</time><span>${entries.length > 1 ? `${String(cardIndex + 1).padStart(2, "0")} of ${String(entries.length).padStart(2, "0")}` : "Archive note"}</span></div>
             <h2><a href="${post.permalink}">${post.title}</a></h2>
             ${post.excerpt ? `<p>${post.excerpt}</p>` : ""}
             <a class="read-link" href="${post.permalink}">Read post <span aria-hidden="true">↗</span></a>
@@ -106,11 +106,11 @@ const archive = posts.map((post) => ({
   .day-control { border: 1px solid var(--rule); background: transparent; color: var(--fg); padding: .7rem .9rem; cursor: pointer; font: .78rem var(--sans); letter-spacing: .04em; touch-action: manipulation; }
   .day-control:hover, .day-control:focus-visible { border-color: var(--accent); color: var(--accent); }
   .day-control:focus-visible, .shelf-window:focus-visible, .archive-card a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
-  .shelf-window { overflow-x: auto; overflow-y: hidden; padding: .75rem max(1.25rem, calc((100vw - 70rem) / 2)) 2rem; outline: none; overscroll-behavior-x: contain; scrollbar-width: thin; scroll-snap-type: x mandatory; }
-  .shelf-track { display: flex; justify-content: center; gap: 1.25rem; min-height: 32rem; min-width: min-content; }
-  .archive-card, .empty-card { flex: 0 0 min(70vw, 34rem); min-width: 0; border: 1px solid var(--rule); background: color-mix(in srgb, var(--fg) 3%, var(--bg)); box-shadow: 0 1.5rem 3rem color-mix(in srgb, var(--fg) 9%, transparent); scroll-snap-align: center; }
+  .shelf-window { overflow-x: auto; overflow-y: hidden; padding: .75rem max(1.25rem, calc((100vw - 76rem) / 2)) 2.5rem; outline: none; overscroll-behavior-x: contain; scrollbar-width: thin; scroll-snap-type: x mandatory; }
+  .shelf-track { display: flex; align-items: stretch; justify-content: flex-start; gap: 1.5rem; min-height: 36rem; min-width: max-content; }
+  .archive-card, .empty-card { flex: 0 0 min(31vw, 25rem); min-width: 20rem; border: 1px solid var(--rule); background: color-mix(in srgb, var(--fg) 3%, var(--bg)); box-shadow: 0 1.5rem 3rem color-mix(in srgb, var(--fg) 9%, transparent); scroll-snap-align: center; }
   .archive-card { display: grid; grid-template-rows: 13rem 1fr; }
-  .archive-card.is-featured { flex-basis: min(78vw, 42rem); border-color: color-mix(in srgb, var(--accent) 55%, var(--rule)); box-shadow: 0 2rem 4rem color-mix(in srgb, var(--accent) 12%, transparent); }
+  .archive-card.is-featured { flex-basis: min(43vw, 36rem); border-color: color-mix(in srgb, var(--accent) 55%, var(--rule)); box-shadow: 0 2rem 4rem color-mix(in srgb, var(--accent) 12%, transparent); }
   .card-media, .archive-card img, .card-art { width: 100%; height: 100%; min-height: 0; object-fit: cover; }
   .card-media { overflow: hidden; background: color-mix(in srgb, var(--fg) 8%, var(--bg)); }
   .archive-card img { display: block; filter: saturate(.8); }
@@ -137,7 +137,7 @@ const archive = posts.map((post) => ({
     .day-control span { display: none; }
     .shelf-window { padding-inline: 1rem; }
     .shelf-track { justify-content: flex-start; gap: .75rem; }
-    .archive-card, .archive-card.is-featured { flex-basis: min(84vw, 25rem); }
+    .archive-card, .archive-card.is-featured { flex-basis: min(84vw, 25rem); min-width: 0; }
     .archive-card { grid-template-rows: 10rem 1fr; }
     .card-body h2 { margin-top: 2rem; }
   }
