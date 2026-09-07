@@ -9,7 +9,7 @@ tags: ["Cinematic Orchestra", "Patrick Watson", "youtube"]
 excerpt: "The Great Escape by Patrick Watson. I was listening to the stunning To Build a Home by Cinematic Orchestra and thought I should find out more about Mr Watson (who guests on the track) and it led me to this clip. Simply beautiful."
 ---
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/YA2h9PrIUxs"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/YA2h9PrIUxs" loading="lazy" allowfullscreen></iframe>
 
 The Great Escape by Patrick Watson.
 

@@ -13,6 +13,6 @@ I never thought I’d be ranting about chocolate eggs. It makes me feel unclean 
 
 Small child. Me. Kinder Eggs. Sweet AND fun. Exciting. And those ads…
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/eOFRIWx5F9c&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/eOFRIWx5F9c" loading="lazy" allowfullscreen></iframe>
 
 I was shocked to read that the [Kinder Egg is banned in the USA](http://www.cpsc.gov/cpscpub/prerel/prhtml97/97172.html). As well as [being under threat in Germany](http://www.guardian.co.uk/world/2008/aug/08/germany.foodanddrink), the country where Kinder Eggs were first laid.

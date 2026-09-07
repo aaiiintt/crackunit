@@ -11,13 +11,13 @@ excerpt: "Came across this yesterday: The London to Brighton train ride in 2 min
 
 Came across this yesterday:
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/fzDqzq0WDXc"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/fzDqzq0WDXc" loading="lazy" allowfullscreen></iframe>
 
 The London to Brighton train ride in 2 mins.
 
 Reminds me of the Star Guitar video for the Chemical Brothers by Michel Gondry. I’m not sure if the music almost sounds similar too, or whether that’s just associations in my brain.
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/CBgf2ZxIDZk"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/CBgf2ZxIDZk" loading="lazy" allowfullscreen></iframe>
 
 One of my favourite videos of all time. So effortless and simple on the surface, but so damn complex underneath.
 

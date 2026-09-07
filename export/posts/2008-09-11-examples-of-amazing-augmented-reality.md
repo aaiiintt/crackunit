@@ -13,27 +13,27 @@ I’ve been doing a bit of digging around the whole Augmented Reality thing rece
 
 Carcade – cool!
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/_Se2nhyetR8&amp;hl=en&amp;fs=1&amp;rel=0&amp;color1=0x3a3a3a&amp;color2=0x999999"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/_Se2nhyetR8" loading="lazy" allowfullscreen></iframe>
 
 Micro Machines on AR acid
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/VtIopu0UgXE&amp;hl=en&amp;fs=1&amp;rel=0&amp;color1=0x3a3a3a&amp;color2=0x999999"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/VtIopu0UgXE" loading="lazy" allowfullscreen></iframe>
 
 Absolutely and totally mind-blowing game taking place on table top…
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/Lfp8id6bpDU&amp;hl=en&amp;fs=1&amp;rel=0&amp;color1=0x3a3a3a&amp;color2=0x999999"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/Lfp8id6bpDU" loading="lazy" allowfullscreen></iframe>
 
 This demo gets stunning towards the end:
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/dcvwcizBYk8&amp;hl=en&amp;fs=1&amp;rel=0&amp;color1=0x3a3a3a&amp;color2=0x999999"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/dcvwcizBYk8" loading="lazy" allowfullscreen></iframe>
 
 A not-game use for AR:
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/z-aBUyrhcj0&amp;hl=en&amp;fs=1&amp;rel=0&amp;color1=0x3a3a3a&amp;color2=0x999999"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/z-aBUyrhcj0" loading="lazy" allowfullscreen></iframe>
 
 And even Radio 1 have been getting in on the act…
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/NLahYcb7Ppg&amp;hl=en&amp;fs=1&amp;rel=0&amp;color1=0x3a3a3a&amp;color2=0x999999"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/NLahYcb7Ppg" loading="lazy" allowfullscreen></iframe>
 
 Further Reading:
 

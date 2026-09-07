@@ -11,6 +11,6 @@ excerpt: "This made me swear aloud in the same way that Whopper Sacrifice did. B
 
 This made me swear aloud in the same way that Whopper Sacrifice did. Brilliantly simple.
 
-<object width="560" height="340"><param name="movie" value="http://www.youtube.com/v/YE2LSp-hjbQ&amp;hl=en_US&amp;fs=1&amp;"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/YE2LSp-hjbQ" loading="lazy" allowfullscreen></iframe>
 
 Brace yourselves for a host of imitators…

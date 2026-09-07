@@ -11,7 +11,7 @@ excerpt: "About 18 months ago I posted this clip: At the time I commented: Nice 
 
 About 18 months ago [I posted this clip](/2008/03/06/scratching-hand/):
 
-<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/_zS-z_U-hKI&amp;hl=en&amp;fs=1&amp;"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/_zS-z_U-hKI" loading="lazy" allowfullscreen></iframe>
 
 At the time I commented:
 
@@ -19,7 +19,7 @@ At the time I commented:
 
 Then I saw this.
 
-<object width="480" height="295"><param name="movie" value="http://www.youtube.com/v/u7PE6ozNhM8&amp;hl=en&amp;fs=1&amp;"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/u7PE6ozNhM8" loading="lazy" allowfullscreen></iframe>
 
 I like the new Hula Hoops ads. I think they work really well. they’re funny, silly and reflect a truth about the product – no matter how old you are you can’t help poking your fingers through them and feeling like a big kid :-)
 

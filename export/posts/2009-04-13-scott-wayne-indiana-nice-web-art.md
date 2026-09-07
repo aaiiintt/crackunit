@@ -15,7 +15,7 @@ excerpt: "Scott Wayne Indiana sent me a nice email and a couple of links to his 
 
 He also sent a link to 39 Forks which is a collection of his art projects. There’s some really nice stuff in there including the $200 car project where he bought a car for $200 and drove it till it broke. Here’s the road movie:
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/P261XnBRCd4&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/P261XnBRCd4" loading="lazy" allowfullscreen></iframe>
 
 And perhaps my favourite thing of all is [Web Street](http://www.39forks.com/WebStreet.htm)
 

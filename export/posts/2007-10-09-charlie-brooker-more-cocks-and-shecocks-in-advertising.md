@@ -11,4 +11,4 @@ excerpt: "I do find Charlie Brooker amusing. I think I\u2019d find it a bit pain
 
 I do find Charlie Brooker amusing. I think I’d find it a bit painful being so dark all the time, but I admire him for it…
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/t0l2c-wfCtI"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/t0l2c-wfCtI" loading="lazy" allowfullscreen></iframe>

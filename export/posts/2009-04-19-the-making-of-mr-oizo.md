@@ -13,4 +13,4 @@ excerpt: "Mr Oizo is probably best known for the whole Flat Eric thing. Which ap
 
 I just came across this mini documentary about the making of his new album – Lamb’s Anger. It confirms that he’s a total nutter. In a good way.
 
-<object width="500" height="288"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="always"><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=3830782&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=0&amp;show_portrait=0&amp;color=ffffff&amp;fullscreen=1"></object>
+<iframe src="https://player.vimeo.com/video/3830782" loading="lazy" allowfullscreen></iframe>

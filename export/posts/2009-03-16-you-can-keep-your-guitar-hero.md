@@ -13,7 +13,7 @@ I never wanted to be a Rock God much.
 
 It’d much rather be a God of Psychedelic Electro-Pong, so [Bit.Trip Beat](http://aksysgames.com/bittripbeat/) is the game for me.
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/r0Pl4sPurck&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/r0Pl4sPurck" loading="lazy" allowfullscreen></iframe>
 
 Coming soon on the Wii (via Wiiware platform)
 

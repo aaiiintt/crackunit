@@ -11,14 +11,14 @@ excerpt: "OMG! So good. If you\u2019ve not seen the original rant it\u2019s here
 
 OMG! So good.
 
-<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/Jf13MmZIcLs&amp;hl=en&amp;fs=1&amp;"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/Jf13MmZIcLs" loading="lazy" allowfullscreen></iframe>
 
 If you’ve not seen the original rant it’s here:
 
-<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/AyRDDOpKaLM&amp;hl=en&amp;fs=1&amp;"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/AyRDDOpKaLM" loading="lazy" allowfullscreen></iframe>
 
 And I know you’ve all seen Techno Viking. However, I never tire of his wonderful adventures…
 
-<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/_1nzEFMjkI4&amp;hl=en&amp;fs=1&amp;"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/_1nzEFMjkI4" loading="lazy" allowfullscreen></iframe>
 
 Thank you [@paryshnikov](http://twitter.com/paryshnikov) – I needed to see that.

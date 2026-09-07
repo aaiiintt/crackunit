@@ -15,6 +15,6 @@ Online pawnbroking. A sign of the times in so many ways.
 
 From Channel 4 News:
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/4c6aSsv-uEA&amp;hl=en&amp;fs=1&amp;rel=0&amp;color1=0x3a3a3a&amp;color2=0x999999"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/4c6aSsv-uEA" loading="lazy" allowfullscreen></iframe>
 
 Now where did I put that Rolex…?

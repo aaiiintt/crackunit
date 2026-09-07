@@ -11,4 +11,4 @@ excerpt: "Morphing and cats. The perfect way to start any day."
 
 Morphing and cats. The perfect way to start any day.
 
-<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/hO_Tm7uGf4c&amp;hl=en&amp;fs=1&amp;color1=0xcc2550&amp;color2=0xe87a9f"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/hO_Tm7uGf4c" loading="lazy" allowfullscreen></iframe>

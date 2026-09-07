@@ -11,8 +11,8 @@ excerpt: "Is this a new food show format? Or perhaps M&S could quit the food-por
 
 Is this a new food show format? Or perhaps M&S could quit the food-porn ads and do this instead ;-)
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/PnCVZozHTG8"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/PnCVZozHTG8" loading="lazy" allowfullscreen></iframe>
 
 And while we’re on the topic of music and food, in case you’ve not seen it:
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/S7GGkKpBR-g"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/S7GGkKpBR-g" loading="lazy" allowfullscreen></iframe>

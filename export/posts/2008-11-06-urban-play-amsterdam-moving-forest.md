@@ -41,4 +41,4 @@ And then there’s the sad story of [Sagmeister’s coins…](http://sagmeister.
 
 If you want to see the whole story you can check out this video…
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/vwILTvYUHX8&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/vwILTvYUHX8" loading="lazy" allowfullscreen></iframe>

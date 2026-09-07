@@ -17,11 +17,11 @@ Very excited to see the [WWF paper boat](http://getonboard.wwf.org.uk) floating 
 
 Firstly on the BBC News:
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/22K-h1-cgJ0&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/22K-h1-cgJ0" loading="lazy" allowfullscreen></iframe>
 
 Then on Newsnight:
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/rQrnh8G3ZBw&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/rQrnh8G3ZBw" loading="lazy" allowfullscreen></iframe>
 
 There’s lots of reasons why we decided that a piece of purely online activity wasn’t right for this campaign. This shows that at least one of those reasons was valid ;-)
 

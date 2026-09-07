@@ -17,11 +17,11 @@ Anyway he’s bringing over 2 of his favourite guitarists from Portugal for one 
 
 [Norberto Lobo](http://www.myspace.com/norbertolobo)
 
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="425" height="344" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"><param name="src" value="http://www.youtube.com/v/CktCDmyHXFA&amp;hl=en&amp;fs=1"></object>
+<iframe src="https://www.youtube.com/embed/CktCDmyHXFA" loading="lazy" allowfullscreen></iframe>
 
 And [Manuel Mota](http://www.myspace.com/manuelmota)
 
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="425" height="344" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"><param name="src" value="http://www.youtube.com/v/A2iCe7q-muI&amp;hl=en&amp;fs=1"></object>
+<iframe src="https://www.youtube.com/embed/A2iCe7q-muI" loading="lazy" allowfullscreen></iframe>
 
 Maneul is undoubtedly the more challenging of the two artists and has a much freer sense of how to play a guitar. But it’s the kind of thing that someone from The Wire would say something like this about:
 

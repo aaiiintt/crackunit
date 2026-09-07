@@ -19,14 +19,14 @@ They wouldn’t work if the balance of tutorial vs comedy wasn’t spot on. But 
 
 You suck at Photoshop – Episode 1
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/U_X5uR7VC4M&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/U_X5uR7VC4M" loading="lazy" allowfullscreen></iframe>
 
 You suck at Photoshop – Episode 2
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/VXeZ0s8DXZ0&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/VXeZ0s8DXZ0" loading="lazy" allowfullscreen></iframe>
 
 You suck at Photoshop – Episode 3
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/MWn0lxRNqos&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/MWn0lxRNqos" loading="lazy" allowfullscreen></iframe>
 
 Originally via [Lifehacker](http://www.lifehacker.com) – it’s nice to see that productivity geeks have a sense of humour too ;-)

@@ -9,7 +9,7 @@ tags: ["youtube"]
 excerpt: "Meet my Yoda Furby. As you can see it\u2019s a quality piece of Star Wars merchandise. If a little bit repetative. I\u2019ve had him for a few years now and he\u2019s been hibernating in a box for the last couple. I found him the other day and\u2026"
 ---
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/_vxVwd-RTug"></object>
+<iframe src="https://www.youtube.com/embed/_vxVwd-RTug" loading="lazy" allowfullscreen></iframe>
 
 Meet my Yoda Furby. As you can see it’s a quality piece of Star Wars merchandise. If a little bit repetative. I’ve had him for a few years now and he’s been hibernating in a box for the last couple.
 

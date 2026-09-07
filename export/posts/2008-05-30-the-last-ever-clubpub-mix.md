@@ -23,8 +23,6 @@ Here’s an extended version of the set I played (this is what it would have bee
 
 Obviously sounds better after many pints of lager ;-)
 
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="335" height="28" id="divplaylist"><param name="movie" value="http://www.divshare.com/flash/playlist?myId=4620030-c8e"></object>
-
 Direct [Download Link (114Mb)](http://www.divshare.com/download/4620030-c8e)
 
 > 1.  Shhake it – Diplo

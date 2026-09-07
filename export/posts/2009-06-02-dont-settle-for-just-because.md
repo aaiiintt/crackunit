@@ -29,11 +29,11 @@ My favourite 2 of his machines are an experiment that jams a knife into a toaste
 
 And a powertool that flicks a light switch on-and-off really really fast to see if it’s a bad thing. Here’s what happened when he took the ‘flickerer’ to his dad (the source of the original ‘myth’). Not only is it a great project, but the video’s bloody great too, apart from the volume levels :-(
 
-<object width="500" height="288"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="always"><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=4542496&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=0&amp;show_portrait=0&amp;color=ffffff&amp;fullscreen=1"></object>
+<iframe src="https://player.vimeo.com/video/4542496" loading="lazy" allowfullscreen></iframe>
 
 And can eating Mentos and drinking Diet Coke at the same time kill you? I love the bit halfway through where one ‘pops back out’ – it’s LOLfunny.
 
-<object width="500" height="288"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="always"><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=3978698&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=0&amp;show_portrait=0&amp;color=ffffff&amp;fullscreen=1"></object>
+<iframe src="https://player.vimeo.com/video/3978698" loading="lazy" allowfullscreen></iframe>
 
 Check his [blog](http://liam-h.com/blog/) or [Vimeo channel](http://vimeo.com/user1319289) for more work – should you eat with a knife? Can you cook an egg with a mobile phone? Will a hairdryer in a bath kill you? Should you tap the top of a shaken up can?
 

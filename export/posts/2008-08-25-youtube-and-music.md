@@ -31,12 +31,12 @@ And I knew I could probably find a version of it on Last.fm or some other music 
 
 But I instinctively knew that I’d find a full version of the track quickly and have it playing in seconds via YouTube, and by using my iPhone not my laptop I wouldn’t disturb what was playing. So that’s what I did.
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/gzt-kODolK8&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/gzt-kODolK8" loading="lazy" allowfullscreen></iframe>
 
 Of course it’s not going to keep an audiophile happy. But I thought it was interesting that in the same way that IMDB is my goto for film YouTube has oddly become my goto for music (in that situation at least).
 
 I just did it again with this amazing track ([The Wanderer by Romanthony](http://uk.youtube.com/watch?v=TZmfRKqltkw)). I went straight to YouTube and nailed it. Then when I checked afterwards I couldn’t find a full version of it on Last.fm. And that’s what reminded me to write about it:
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/TZmfRKqltkw&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/TZmfRKqltkw" loading="lazy" allowfullscreen></iframe>
 
 Anyone else finding themselves doing that, or is it just me?

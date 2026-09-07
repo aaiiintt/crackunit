@@ -21,4 +21,4 @@ Anyway, if you’ve ever had an opinion on depression, or think that you might e
 
 Anyway I’m hoping that Giles, and the rest of us, spend more time hanging out with the Pig of Happiness, and less with the Madness Hamsters.
 
-<object width="480" height="295"><param name="movie" value="http://www.youtube.com/v/uoiIYlww8M4&amp;hl=en_US&amp;fs=1&amp;"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/uoiIYlww8M4" loading="lazy" allowfullscreen></iframe>

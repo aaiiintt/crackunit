@@ -11,6 +11,6 @@ excerpt: "Reminded me of the end of the new Guinness Ad (only much cheaper). The
 
 Reminded me of the end of the new Guinness Ad (only much cheaper).
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/vz7BcEfuTFc&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/vz7BcEfuTFc" loading="lazy" allowfullscreen></iframe>
 
 They look like the Diet Coke / Mentos guys. I think they might be…

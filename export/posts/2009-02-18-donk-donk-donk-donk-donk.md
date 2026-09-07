@@ -19,15 +19,13 @@ Here’s where the rabbit hole opened up. A simple P.S. at the bottom of an emai
 
 I click the link. It [takes me here](http://www.vbs.tv/video.php?id=12185178001). To this video.
 
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="392" height="270" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="name" value="flashObj"><param name="bgcolor" value="#FFFFFF"><param name="flashvars" value="videoId=12185178001&amp;playerId=452319916&amp;viewerSecureGatewayURL=https://services.brightcove.com/services/amfgateway&amp;servicesURL=http://services.brightcove.com/services&amp;cdnURL=http://admin.brightcove.com&amp;domain=embed&amp;autoStart=false&amp;"><param name="src" value="http://services.brightcove.com/services/viewer/federated_f8/452319916"></object>
-
 I was convinced that it was a spoof. As if there’d be a genre called Donk. Everything is wrong about the video. The knowing subtitles over subtle Northern Accents. The presenter’s slight grin when he’s chatting to folk. The funnily named shops. Everything. There’s no way I’m falling for a prank like that. It reminds me heavily of the episode of Brass Eye where they whang on about Cake (the made up drug). And all the characters and the interviews look like they could be setups or clever edits.
 
 So the I popped out and went round to Curtis’ house and showed it to him. And he (and his son Max) both went “oh yeah, Put a Donk on it”. So much for the fake thing then. And once again I’m behind the curve.
 
 Here are the real Blackout Crew with their real hit Put A Donk On It. With a real 4 million views on YouTube. Holy crap!
 
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="425" height="344" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"><param name="src" value="http://www.youtube.com/v/ckMvj1piK58&amp;hl=en&amp;fs=1"></object>
+<iframe src="https://www.youtube.com/embed/ckMvj1piK58" loading="lazy" allowfullscreen></iframe>
 
 Oh yeah, the YouTube page features a link to go and [buy the real MP3 from the real iTunes store](http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=286039787). Put a Donk on that. Seriously.
 
@@ -53,11 +51,11 @@ Want to hear a bit more Donk?
 
 Here’s what happens when you Put Some Donk on the Ting Tings.
 
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="425" height="344" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"><param name="src" value="http://www.youtube.com/v/W8EiI0ZKpG4&amp;hl=en&amp;fs=1"></object>
+<iframe src="https://www.youtube.com/embed/W8EiI0ZKpG4" loading="lazy" allowfullscreen></iframe>
 
 And don’t worry all you London-based marketing agencies – Dizzee’s been Donked too. Imagine that – it’s a north-south Donk mash-up. Stick that in your presso and feel the client Kudos.
 
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="425" height="344" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"><param name="src" value="http://www.youtube.com/v/1Y4H_qviLkY&amp;hl=en&amp;fs=1"></object>
+<iframe src="https://www.youtube.com/embed/1Y4H_qviLkY" loading="lazy" allowfullscreen></iframe>
 
 This is where my Donk journey ended for today. If you want to carry on there’s plenty of Donk out there, just get searching.
 

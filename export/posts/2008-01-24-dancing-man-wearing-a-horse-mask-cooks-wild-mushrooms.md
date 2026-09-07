@@ -11,4 +11,4 @@ excerpt: "Last night I was moaning about having one of those days. This morning 
 
 Last night I was moaning about having one of those days. This morning I’ve seen a dancing man wearing a horse mask cook wild mushrooms. Everything suddenly seems different.
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/ffDPTKn7HiY&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/ffDPTKn7HiY" loading="lazy" allowfullscreen></iframe>

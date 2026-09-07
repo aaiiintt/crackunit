@@ -12,7 +12,7 @@ excerpt: "There\u2019s been lots of stuff in the press about this address from a
 There’s been lots of stuff in the press about this address from a Whitehouse dinner. Stepen Colbert gives one of the funniest and most cutting speeches I’ve ever heard. Absolutely ripping into George W. – who’s sitting right next to him. You really have to watch this (it’s in three parts on YouTube).
 
 Part 1:  
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/Gj4rYe4hD6w"></object>
+<iframe src="https://www.youtube.com/embed/Gj4rYe4hD6w" loading="lazy" allowfullscreen></iframe>
 
 [Part 2](http://www.youtube.com/watch?v=h4Y9fO2TpYg)  
 [Part 3](http://youtube.com/watch?v=vtkLY-S-6Bs)

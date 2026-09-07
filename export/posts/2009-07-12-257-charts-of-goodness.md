@@ -9,7 +9,7 @@ tags: ["apg", "digital", "planners", "planning", "presentation", "slides", "slid
 excerpt: "Post Digital Marketing 2009 View more documents from Helge Tenn\u00f8. Helge lays down a seriously comprehensive overview of digital marketing (or post-digital marketing) \u2013 at 257 slides it\u2019s long. But there\u2019s something in there for every\u2026"
 ---
 
-![](https://i0.wp.com/counters.gigya.com/wildfire/IMP/CXNID=2000002.0NXC/bT*xJmx*PTEyNDc*MzExMzEzNjMmcHQ9MTI*NzQzMTEzOTc5NSZwPTEwMTkxJmQ9c3NfZW1iZWQmZz*yJnQ9Jm89NjExNTk5MDNjNjM*NDNmOWE4ZjVmYzk3M2JlNDEzMmEmb2Y9MA==.gif?resize=0%2C0)[Post Digital Marketing 2009](http://www.slideshare.net/helgetenno/post-digital-marketing-2009 "Post Digital Marketing 2009")<object style="margin:0px" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="425" height="355" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true"><param name="allowScriptAccess" value="always"><param name="src" value="http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=137postdigitalmarketing2009-090709062105-phpapp01&amp;stripped_title=post-digital-marketing-2009"><param name="allowfullscreen" value="true"></object>
+![](https://i0.wp.com/counters.gigya.com/wildfire/IMP/CXNID=2000002.0NXC/bT*xJmx*PTEyNDc*MzExMzEzNjMmcHQ9MTI*NzQzMTEzOTc5NSZwPTEwMTkxJmQ9c3NfZW1iZWQmZz*yJnQ9Jm89NjExNTk5MDNjNjM*NDNmOWE4ZjVmYzk3M2JlNDEzMmEmb2Y9MA==.gif?resize=0%2C0)[Post Digital Marketing 2009](http://www.slideshare.net/helgetenno/post-digital-marketing-2009 "Post Digital Marketing 2009")
 
 View more [documents](http://www.slideshare.net/) from [Helge Tennø](http://www.slideshare.net/helgetenno).
 

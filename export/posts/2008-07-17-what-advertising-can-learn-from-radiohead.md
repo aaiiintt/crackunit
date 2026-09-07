@@ -19,7 +19,7 @@ Basically it’s all about how I don’t like Radiohead, but how, through being 
 
 I tried to format it for online video as best as I could (I added some extra words so it can be followed without me speaking, and I put some music in it to stop it feeling too silent) – but I’m not good enough at that kind of thing to make all the timings quite right, so please forgive any bits that feel too slow or too fast.
 
-<object width="450" height="339"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="always"><param name="movie" value="http://www.vimeo.com/moogaloop.swf?clip_id=1356001&amp;server=www.vimeo.com&amp;show_title=1&amp;show_byline=0&amp;show_portrait=0&amp;color=00adef&amp;fullscreen=1"></object>
+<iframe src="https://player.vimeo.com/video/1356001" loading="lazy" allowfullscreen></iframe>
 
 I hope no-one minds that I used their footage in there. I specifically use the examples of:
 

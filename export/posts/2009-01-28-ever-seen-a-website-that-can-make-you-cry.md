@@ -9,7 +9,7 @@ tags: ["ads", "Advertising", "digital", "emotion", "film", "human", "online"]
 excerpt: "Oh bollocks. My last post has stirred up a bit of comment and debate. I thought it might. I tried to be as clear as I could in setting it out. So as not to create yet another us vs them debate. It feels like I failed. I was trying to\u2026"
 ---
 
-<object width="500" height="377"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="always"><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=2995738&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=0&amp;show_portrait=0&amp;color=ffffff&amp;fullscreen=1"></object>
+<iframe src="https://player.vimeo.com/video/2995738" loading="lazy" allowfullscreen></iframe>
 
 Oh bollocks.
 

@@ -21,12 +21,12 @@ But I think generally it’s about familiarity and top-of-mind-ness.
 
 Here’s an example of using YouTube to share audio.
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/iOj3wFgDmQ4"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/iOj3wFgDmQ4" loading="lazy" allowfullscreen></iframe>
 
 Not really very exciting right?
 
 All it takes is a tiny bit of imagination and a teeny bit of video (on a loop) and all of a sudden your audio enters a whole new freaky dimension…
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/n9uh-ESpJjk"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/n9uh-ESpJjk" loading="lazy" allowfullscreen></iframe>
 
 Hehe.

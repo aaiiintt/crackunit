@@ -13,11 +13,11 @@ excerpt: "It\u2019s like a funny sledgehammer. Crude but brutally effective. I l
 
 It’s like a funny sledgehammer. Crude but brutally effective. I love the fact they’ve started using annotations to add another layer of humour too.
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/TQdIiEUFtqk&amp;hl=en&amp;fs=1&amp;rel=0&amp;color1=0x3a3a3a&amp;color2=0x999999"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/TQdIiEUFtqk" loading="lazy" allowfullscreen></iframe>
 
 And another…
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/sfe6nY5qmQY&amp;hl=en&amp;fs=1&amp;rel=0&amp;color1=0x3a3a3a&amp;color2=0x999999"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/sfe6nY5qmQY" loading="lazy" allowfullscreen></iframe>
 
 It can’t be long before someone does one of these as a proper promo video…
 

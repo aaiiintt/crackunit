@@ -13,6 +13,6 @@ It’s been a very very long time since I posted a [Silly](/2007/09/14/silly-mom
 
 This made me laugh so hard that people around the office were concerned for my welfare.
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/A3CzptgIvcU&amp;hl=en&amp;fs=1&amp;rel=0&amp;color1=0x3a3a3a&amp;color2=0x999999"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/A3CzptgIvcU" loading="lazy" allowfullscreen></iframe>
 
 Thank you [Andy](http://www.polaine.com/playpen/), you made my day.

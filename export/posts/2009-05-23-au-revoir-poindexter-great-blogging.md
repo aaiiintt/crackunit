@@ -25,4 +25,4 @@ Go [here to see the full thing](http://www.hellopoindexter.info/?p=101).
 
 And this video of them in the studio recording with [Aeroplane](http://www.myspace.com/aeroplanemusiclove) (my favourite remixers / producers of the last year) made me green. The studio looks mega bad-ass and it the remix of Shadows by Au Revoir Simone they’re mucking about with sounds incredible.
 
-<object width="500" height="375"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="always"><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=4532012&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=0&amp;show_portrait=0&amp;color=ffffff&amp;fullscreen=1"></object>
+<iframe src="https://player.vimeo.com/video/4532012" loading="lazy" allowfullscreen></iframe>

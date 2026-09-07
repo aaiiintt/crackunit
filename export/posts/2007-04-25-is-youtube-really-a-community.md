@@ -17,7 +17,7 @@ Here’s my evidence:
 
 Here’s a recut version of a scene from Monty Python with Darth Vader dubbed into it. Add some light sabres and you’re pretty much guaranteed to flick all of the buttons going in geek culture (it’s had 950,000 views so it’s doing something right). Those views have generated just under 800 comments so far.
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/leEsz9ci5XE"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/leEsz9ci5XE" loading="lazy" allowfullscreen></iframe>
 
 And here’s a selection of the comments under the clip:
 

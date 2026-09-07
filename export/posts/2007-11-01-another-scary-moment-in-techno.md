@@ -11,4 +11,4 @@ excerpt: "Even scarier than techno Viking. If that\u2019s possible."
 
 Even scarier than [techno Viking](/2007/10/01/techno-viking/). If that’s possible.
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/FUgGdo6oVa0"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/FUgGdo6oVa0" loading="lazy" allowfullscreen></iframe>

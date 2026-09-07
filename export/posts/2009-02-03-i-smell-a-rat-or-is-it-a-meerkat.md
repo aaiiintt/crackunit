@@ -15,7 +15,7 @@ Deep breath…
 
 There’s this campaign right, it’s called Compare The Meerkat, it’s for an insurance comparison website called Compare The Market, the ad is a bit funny. I could try and describe it, but it’s easier to show you:
 
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="480" height="295" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"><param name="src" value="http://www.youtube.com/v/4Ust9YBlEfY&amp;hl=en&amp;fs=1"></object>
+<iframe src="https://www.youtube.com/embed/4Ust9YBlEfY" loading="lazy" allowfullscreen></iframe>
 
 Yes it’s all about a word gag. But it works. It’s embedded itself in my head. Ask me to think of a comparison website right now and I know what I’ll think of first. Well not actually right now, because I’m writing about it so I’d obviously think about it first, but generally I think it’s done a good job of using a weird device to get me to think about meerkats when I think about comparing. So psychologically they’ve done a smart thing – I think.
 

@@ -11,13 +11,13 @@ excerpt: "I love lasers and music. I just do. So I almost wet myself when I saw 
 
 I love lasers and music. I just do. So I almost wet myself when I saw this great video of a $5 laser show:
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/mqe6Hg9U8JY&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/mqe6Hg9U8JY" loading="lazy" allowfullscreen></iframe>
 
 Full instructions on [how to make your own are here](http://www.gmilburn.ca/2008/06/22/the-five-dollar-laser-show/).
 
 Or Dr Altman will take you through all the necessary steps right here:
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/MVMxm4WjY4Y&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/MVMxm4WjY4Y" loading="lazy" allowfullscreen></iframe>
 
 Perhaps the best thing is the discovery ([in the comments here](http://www.gmilburn.ca/2008/06/22/the-five-dollar-laser-show/)) is that all you really need to do is mount a tiny mirror on your speaker cone and point the laser at it to get a sound activated laser working like a dream.
 

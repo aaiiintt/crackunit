@@ -9,7 +9,7 @@ tags: ["Manuel Gottsching", "Music", "Poke", "video", "youtube"]
 excerpt: "I kind of love this track. But it sort of doesn\u2019t seem to make sense any more. And the video has aged really really badly too. The original (E2:E4 by Manuel Gottsching) has aged much better in my humble opinion. It might be the cheesy\u2026"
 ---
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/1odEmDYg4Y4&amp;rel=1&amp;border=0"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/1odEmDYg4Y4" loading="lazy" allowfullscreen></iframe>
 
 I kind of love this track. But it sort of doesn’t seem to make sense any more. And the video has aged really really badly too.
 

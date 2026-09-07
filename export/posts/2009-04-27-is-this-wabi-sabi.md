@@ -19,6 +19,4 @@ And:
 
 Which sounds a bit like the slightly fucked-up decoration in parts of our house.
 
-<object width="500" height="375"><param name="flashvars" value="offsite=true&amp;lang=en-us&amp;page_show_url=%2Fphotos%2Fiaintait%2Fsets%2F72157617304792267%2Fshow%2F&amp;page_show_back_url=%2Fphotos%2Fiaintait%2Fsets%2F72157617304792267%2F&amp;set_id=72157617304792267&amp;jump_to="><param name="movie" value="http://www.flickr.com/apps/slideshow/show.swf?v=71574"><param name="allowFullScreen" value="true"></object>
-
 It’s just about to be painted over. But I’ve started to like it’s shoddyness and now I think it might be an example of wabi-sabi I’m starting to feel guilty.

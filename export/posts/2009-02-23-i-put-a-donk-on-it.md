@@ -11,6 +11,6 @@ excerpt: "I spent my Sunday afternoon making this. Sophie said \u201cwhy?\u201d.
 
 I spent my Sunday afternoon making this. Sophie said “why?”.
 
-<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/YkSg9WWfI-c&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/YkSg9WWfI-c" loading="lazy" allowfullscreen></iframe>
 
 I was really just using it as an excuse to learn a bit about how iMovie 09 works. And as soon as I stumbled across the beat matching feature I knew I had to do this.

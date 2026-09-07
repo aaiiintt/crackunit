@@ -9,7 +9,7 @@ tags: []
 excerpt: "It\u2019s not even 8am and I\u2019ve just had my groove totally freaked. Posted via email from crackunit\u2019s posterous"
 ---
 
-<object height="417" width="500"><param name="movie" value="http://www.youtube.com/v/K33vWsRAYlg&amp;hl=en&amp;fs=1"><param name="wmode" value="window"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/K33vWsRAYlg" loading="lazy" allowfullscreen></iframe>
 
 It’s not even 8am and I’ve just had my groove totally freaked.
 

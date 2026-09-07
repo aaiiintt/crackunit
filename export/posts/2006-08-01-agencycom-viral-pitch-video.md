@@ -9,7 +9,7 @@ tags: ["Advertising", "online agencies", "video", "web", "Web Stuff", "youtube"]
 excerpt: "OK, I\u2019m going to give credit where it\u2019s due: hats off to Agency.com for nailing their colours to the mast (in a very public way) and for using web stuff to talk about web stuff. Credit over. Maybe it\u2019s just a cultural thing. But this video\u2026"
 ---
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/d8eV6OuC8Oo"></object>
+<iframe src="https://www.youtube.com/embed/d8eV6OuC8Oo" loading="lazy" allowfullscreen></iframe>
 
 OK, I’m going to give credit where it’s due: hats off to Agency.com for nailing their colours to the mast (in a very public way) and for using web stuff to talk about web stuff. Credit over.
 

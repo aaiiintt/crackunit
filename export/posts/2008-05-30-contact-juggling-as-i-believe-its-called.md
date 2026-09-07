@@ -11,12 +11,12 @@ excerpt: "I normally find this kind of thing a bit sort-of cringe inducing. But 
 
 I normally find this kind of thing a bit sort-of cringe inducing. But this guy is absolutely phenomenal.
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/6iC3b5JnSIE&amp;hl=en"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/6iC3b5JnSIE" loading="lazy" allowfullscreen></iframe>
 
 I also quite liked this clip of a bunch of glass-ball nerds just mucking around and having a jolly good time.
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/NEY29qcRLj8&amp;hl=en"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/NEY29qcRLj8" loading="lazy" allowfullscreen></iframe>
 
 **UPDATE:** I started to ponder why I find this kind of thing a bit cringey, then I found this clip and I remembered exactly why. Oooohya.
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/z3IfLaCUvB4&amp;hl=en"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/z3IfLaCUvB4" loading="lazy" allowfullscreen></iframe>

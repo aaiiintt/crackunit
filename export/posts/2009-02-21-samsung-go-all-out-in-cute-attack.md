@@ -11,7 +11,7 @@ excerpt: "How are you going to show off the big bright screen of your new mobile
 
 How are you going to show off the big bright screen of your new mobile phone? Use it as the centerpiece in loads of scenes with super-cute animals.
 
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="480" height="295" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"><param name="src" value="http://www.youtube.com/v/Ev-opyE2AeU&amp;hl=en&amp;fs=1"></object>
+<iframe src="https://www.youtube.com/embed/Ev-opyE2AeU" loading="lazy" allowfullscreen></iframe>
 
 How can it not fail?
 

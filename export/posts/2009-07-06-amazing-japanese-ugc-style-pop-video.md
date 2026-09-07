@@ -11,6 +11,6 @@ excerpt: "Professionally produced but using real fans and webcams. Quite lovely.
 
 Professionally produced but using real fans and webcams. Quite lovely.
 
-<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/WfBlUQguvyw&amp;hl=en&amp;fs=1&amp;"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/WfBlUQguvyw" loading="lazy" allowfullscreen></iframe>
 
 I can’t remember where I found this, so apologies for not giving a tip of the hat to the source. It’s gone from 8,000 views to 127,000 views over the weekend so it’s on the move…

@@ -49,7 +49,7 @@ Here’s the wool stall.
 
 And as you might have noticed on my shopping list I also needed knitting instruction. Which I got like this.
 
-<object width="500" height="281"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="always"><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=4231824&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=0&amp;show_portrait=0&amp;color=ffffff&amp;fullscreen=1"></object>
+<iframe src="https://player.vimeo.com/video/4231824" loading="lazy" allowfullscreen></iframe>
 
 Absolutely brilliant! I’d have never had a knitting lesson off a geezer if it hadn’t been for Jason’s challenge. Although, to be honest, I did have to cheat a bit later on and look up a couple of how-to videos on the internet. The bloke’s instructions were too fast for me.
 
@@ -65,7 +65,7 @@ Needles and wool cost about £2.50 and it was quite fun after I’d got past the
 
 Then I went shopping for some cream so I could make butter. And here’s what happened when I got home and tried to make it.
 
-<object width="500" height="288"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="always"><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=4231753&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=0&amp;show_portrait=0&amp;color=ffffff&amp;fullscreen=1"></object>
+<iframe src="https://player.vimeo.com/video/4231753" loading="lazy" allowfullscreen></iframe>
 
 But you know what, after that minor fuss it tastes pretty good. And it didn’t work out to be stupidly expensive either. I made loads of butter out of 2 medium cartons of double cream. I might even do that again one day. I’m guessing you could do flavours and all sorts :-)
 

@@ -9,7 +9,7 @@ tags: ["London Organising Committee of the Olympic Games and Pa", "Olympic Games
 excerpt: "Thanks Cookie. Update: Weds 13th \u2013 the video is \u2018unavailable\u2019. \u201cThis video is no longer available due to a copyright claim by London Organising Committee of the Olympic Games and Paralympic Games Limited\u201d. They aren\u2019t liking mashups then"
 ---
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/KSYFj4iQ2AU"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/KSYFj4iQ2AU" loading="lazy" allowfullscreen></iframe>
 
 Thanks [Cookie](http://www.made-in-england.org/).
 

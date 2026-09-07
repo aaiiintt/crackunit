@@ -9,6 +9,6 @@ tags: []
 excerpt: "From http://sesamestreet.tumblr.com/ which I found via http://kottke.org/"
 ---
 
-<object width="560" height="340"><param name="movie" value="http://www.youtube.com/v/cyVzjoj96vs?fs=1&amp;hl=en_US"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/cyVzjoj96vs" loading="lazy" allowfullscreen></iframe>
 
 From [http://sesamestreet.tumblr.com/](http://sesamestreet.tumblr.com/) which I found via [http://kottke.org/](http://kottke.org/)

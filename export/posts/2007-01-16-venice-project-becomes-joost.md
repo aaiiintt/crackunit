@@ -21,10 +21,10 @@ Here’s a couple of useful videos:
 
 This is how it looks when it’s working (pretty slick):
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/JYRIbc2rTqQ"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/JYRIbc2rTqQ" loading="lazy" allowfullscreen></iframe>
 
 Here’s an (audio only) interview with Janus Friis one of the founders:
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/wyuM6sEhekI"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/wyuM6sEhekI" loading="lazy" allowfullscreen></iframe>
 
 I really don’t like the design of their website though. It looks like they’ve tried to progress the 2.0 aesthetic but I don’t think it quite hits the mark…

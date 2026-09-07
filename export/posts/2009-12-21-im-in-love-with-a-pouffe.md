@@ -19,7 +19,7 @@ Today I stumbled across a picture of a woman making them. Now I love them.
 
 Then as you do I stumbled across the website of the designer, Christien Meindertsma, and her awesome PIG 05049 project. Which then led me to her TEDxAmsterdam talk about the same project.
 
-<object width="549" height="309"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="always"><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=7848473&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=0&amp;show_portrait=0&amp;color=f0000c&amp;fullscreen=1"></object>
+<iframe src="https://player.vimeo.com/video/7848473" loading="lazy" allowfullscreen></iframe>
 
 [TEDxAmsterdam: Christien Meindertsma](http://vimeo.com/7848473) from [TEDxAmsterdam](http://vimeo.com/tedxamsterdam) on [Vimeo](http://vimeo.com).
 

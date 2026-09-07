@@ -13,6 +13,6 @@ And this time around, thanks to YouTube, you can witness it from multiple angles
 
 I always thought that flashmobbing was a bit twee and a bit “aren’t we all wacky”, and I still have reservations. But, if I’m being honest, it looks a bit fun too…
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/8nBOQCpHAMY"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/8nBOQCpHAMY" loading="lazy" allowfullscreen></iframe>
 
 Liverpool Street Station Wednesday evening.

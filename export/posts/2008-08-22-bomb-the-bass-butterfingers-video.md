@@ -13,6 +13,6 @@ I love this completely and utterly.
 
 The track is amazing and the video is wonderfully simple…
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/WRxrRbk2PgY&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/WRxrRbk2PgY" loading="lazy" allowfullscreen></iframe>
 
 It’s Butterfingers by Bomb the Bass (featuring Fujiya & Miyagi). There’s a high [quality quicktime version here with much better audio](http://www.perishfactory.com/).

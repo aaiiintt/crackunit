@@ -40,8 +40,6 @@ Download here: **[July Mix from The Loft](http://rapidshare.com/files/132054247/
   
 You can play it here:
 
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="335" height="28" id="divplaylist"><param name="movie" value="http://www.divshare.com/flash/playlist?myId=4979809-e26"></object>
-
 Or if you want to take it away for your iPod you can download it below (*you can’t just right click and save as*, you have to [visit DivShare to get it](http://www.divshare.com/download/4979809-e26)):
 
 **[July Mix From the Loft 2008](http://www.divshare.com/download/4979809-e26)** (left click to download)

@@ -9,7 +9,7 @@ tags: []
 excerpt: "For some reason this ad came into my head when I was in the shower. I think it was because I was just using random bottles of shampoo and shower gel. Just goes to show the power of a jingle"
 ---
 
-<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/6ucWBoN4Dcs?fs=1&amp;hl=en_US"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/6ucWBoN4Dcs" loading="lazy" allowfullscreen></iframe>
 
 For some reason this ad came into my head when I was in the shower. I think it was because I was just using random bottles of shampoo and shower gel.
 

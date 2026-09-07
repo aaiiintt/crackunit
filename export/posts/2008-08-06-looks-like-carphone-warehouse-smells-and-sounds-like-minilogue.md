@@ -9,11 +9,11 @@ tags: ["Advertising", "animation", "cool", "creative", "Mobile", "Music", "video
 excerpt: "Minilogue video by Kristopher Storm (Music by Minilogue). Carphone Warehouse ad by Kristopher Storm (Music by Minilogue). I\u2019m really confused. Everything in my brain is shutting down and I\u2019ve got no idea what to say about it. My groove has\u2026"
 ---
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/u46eaeAfeqw&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/u46eaeAfeqw" loading="lazy" allowfullscreen></iframe>
 
 Minilogue video by Kristopher Storm (Music by Minilogue).
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/joJ7G47Y9go&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/joJ7G47Y9go" loading="lazy" allowfullscreen></iframe>
 
 Carphone Warehouse ad by Kristopher Storm (Music by Minilogue).
 

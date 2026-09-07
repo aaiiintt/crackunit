@@ -33,7 +33,7 @@ So here’s my 4 answers to each of 4 questions:
 
 (When trying to write this I realised just how little ‘serious’ TV I watch).
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/Vc6h0WWJUfE&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/Vc6h0WWJUfE" loading="lazy" allowfullscreen></iframe>
 
 [**Weeds**](http://www.sho.com/site/weeds/home.do) – if you’ve not seen it you should. It’s incredibly dark and incredibly funny. A suburban housewife starts growing weed in order to keep her dysfunctional family together. I still chuckle when I think about the young son’s gangster rap, and any show that makes gags about the Prius being the perfect drive-by car shows a certain degree of skill. Oh and there’s a very odd cameo by Snoop Dogg in series 3. And they have a thing where someone different sings the theme song every episode – and they’re all really cool Weeds is cool.
 

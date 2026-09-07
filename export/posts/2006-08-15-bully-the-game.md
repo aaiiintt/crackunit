@@ -11,7 +11,7 @@ excerpt: "2 posts about game related things in one day. Perhaps I\u2019m turning
 
 2 posts about game related things in one day. Perhaps I’m turning into a wannabe gamer without even knowing it. I just had to post this trailer for the new Rockstar game ‘Bully’, it looks amazing. Given their history with games like Grand Theft Auto you’d expect things like tuck shop extortion, lunch money muggings and more. But it looks slightly less controversial, maybe.
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/88KNf0MtU14"></object>
+<iframe src="https://www.youtube.com/embed/88KNf0MtU14" loading="lazy" allowfullscreen></iframe>
 
 OK, so it’s only a trailer movie, but you can see how great the characterisation is going to be, the graphics, the storyline.
 

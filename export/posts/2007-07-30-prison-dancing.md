@@ -11,15 +11,15 @@ excerpt: "The clip of prisoners doing the Thriller dance has been featured all o
 
 The clip of prisoners doing the Thriller dance has been featured all over the place, in case you missed it, here it is:
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/MCWIcs2ovgM"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/MCWIcs2ovgM" loading="lazy" allowfullscreen></iframe>
 
 But I looked about and found these two which are less impressive from a choreography point of view. But somehow I found them a bit more odd. I think it might be because they’re less ‘cool’ they make you wonder how the whole prisoners dancing thing actually happens and makes it onto YouTube. I can almost imagine people signing up to do the zombie thriller dance. But Jumbo Hot Dog?
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/LwWTyeQPcjE"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/LwWTyeQPcjE" loading="lazy" allowfullscreen></iframe>
 
 Or Radio Gaga…
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/TBaw8UdTTH8"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/TBaw8UdTTH8" loading="lazy" allowfullscreen></iframe>
 
 And there’s a couple of [odd](http://www.youtube.com/watch?v=2CPg9GWBoL0) [ones](http://www.youtube.com/watch?v=muP6Xb5jlmo) from [Sister Act](http://www.youtube.com/watch?v=fptZ3FY-AwY) too…
 

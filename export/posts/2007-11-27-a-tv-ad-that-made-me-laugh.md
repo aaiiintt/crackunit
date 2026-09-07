@@ -11,7 +11,7 @@ excerpt: "This new TV ad for Carling lager made me laugh out loud. Mr Cherkoff t
 
 This new TV ad for Carling lager made me laugh out loud.
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/p7AM49svaGQ&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/p7AM49svaGQ" loading="lazy" allowfullscreen></iframe>
 
 [Mr Cherkoff](http://www.collaboratemarketing.com/) take note ;-)
 

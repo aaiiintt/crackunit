@@ -11,7 +11,7 @@ excerpt: "If you\u2019ve not seen Twitterfall it\u2019s quite nice. It streams i
 
 If you’ve not seen Twitterfall it’s quite nice. It streams in Twitter messages with certain keywords in real time. It makes twitter feel like a bit joined up community (which it isn’t really). What really freaked me out was watching it during the Gmail outage so I grabbed some video of what it looked like:
 
-<object width="500" height="278"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="always"><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=3348155&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=0&amp;show_portrait=0&amp;color=ffffff&amp;fullscreen=1"></object>
+<iframe src="https://player.vimeo.com/video/3348155" loading="lazy" allowfullscreen></iframe>
 
 It’s strangely compelling to watch. In spite of the complete drivel that’s being poured onto the internet.
 

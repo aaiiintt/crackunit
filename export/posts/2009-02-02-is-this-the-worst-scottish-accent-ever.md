@@ -11,16 +11,16 @@ excerpt: "From last night\u2019s Superbowl: I\u2019m really tempted to re-dub it
 
 From last night’s Superbowl:
 
-<object width="425" height="349"><param name="movie" value="http://www.youtube.com/v/30lkCkCaJaI&amp;border=1&amp;color1=0xd6d6d6&amp;color2=0xf0f0f0&amp;hl=en&amp;feature=player_embedded&amp;fs=1"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/30lkCkCaJaI" loading="lazy" allowfullscreen></iframe>
 
 I’m really tempted to re-dub it and see if I can pull off a better Scotch accent ;-)
 
 And I was 100% convinced that this [Cash4Gold](http://www.cash4gold.com/) ad was a spoof until I visited the website, where unfortunately it’s all true:
 
-<object width="425" height="349"><param name="movie" value="http://www.youtube.com/v/TrNipeP4HvQ&amp;border=1&amp;color1=0xd6d6d6&amp;color2=0xf0f0f0&amp;hl=en&amp;feature=player_embedded&amp;fs=1"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/TrNipeP4HvQ" loading="lazy" allowfullscreen></iframe>
 
 I thought it couldn’t go much lower. But it does…
 
-<object width="425" height="349"><param name="movie" value="http://www.youtube.com/v/ve6uipBICeY&amp;border=1&amp;color1=0xd6d6d6&amp;color2=0xf0f0f0&amp;hl=en&amp;feature=player_embedded&amp;fs=1"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/ve6uipBICeY" loading="lazy" allowfullscreen></iframe>
 
 Of course there’s some good ads from the breaks too, but being a bitch is so much easier…

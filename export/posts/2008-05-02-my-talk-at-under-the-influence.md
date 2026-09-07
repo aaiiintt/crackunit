@@ -11,7 +11,7 @@ excerpt: "Here\u2019s the talk I did at Iris\u2019 excellent Under the Influence
 
 Here’s the talk I did at Iris’ excellent [Under the Influence day](http://www.irisnation.com/undertheinfluence/). It’s basically about digital experiences and magic and how the two are interconnected.
 
-<object type="application/x-shockwave-flash" width="450" height="254" data="http://www.vimeo.com/moogaloop.swf?clip_id=966520&amp;server=www.vimeo.com&amp;fullscreen=1&amp;show_title=1&amp;show_byline=0&amp;show_portrait=0&amp;color=00adef"><param name="quality" value="best"><param name="allowfullscreen" value="true"><param name="scale" value="showAll"><param name="movie" value="http://www.vimeo.com/moogaloop.swf?clip_id=966520&amp;server=www.vimeo.com&amp;fullscreen=1&amp;show_title=1&amp;show_byline=0&amp;show_portrait=0&amp;color=00adef"></object>
+<iframe src="https://player.vimeo.com/video/966520" loading="lazy" allowfullscreen></iframe>
 
 Hope it’s OK – from my perspective I think it wanders a bit at the end (I sort of ran out of preparation time). As usual I can’t bear to watch it in order to tell if it’s rubbish or not. I need to get over my fear of seeing and hearing myself, it makes it impossible to do anything on YouTube or the like.
 

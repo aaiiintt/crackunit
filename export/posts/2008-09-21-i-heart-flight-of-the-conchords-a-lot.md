@@ -19,15 +19,15 @@ For me FOC takes the slow, dark, slightly depressing humour of The Office, and m
 
 And the songs. I’m not normally a funny song kind of person. But I love the way these guys burst into song with a totally unexpected genre and mutate it into something that’s laugh out loud funny.
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/JT5AQIlmM0I&amp;hl=en&amp;fs=1&amp;rel=0&amp;color1=0x3a3a3a&amp;color2=0x999999"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/JT5AQIlmM0I" loading="lazy" allowfullscreen></iframe>
 
 Hip hop gets lampooned quite a lot, but this is so superior to most efforts. **Hiphopopotamus vs. Rhymenoceros**:
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/FArZxLj6DLk&amp;hl=en&amp;fs=1&amp;rel=0&amp;color1=0x3a3a3a&amp;color2=0x999999"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/FArZxLj6DLk" loading="lazy" allowfullscreen></iframe>
 
 And **Inner City Pressure** bears more than a passing resemblance to someone…
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/7wqfcwgT0Ds&amp;hl=en&amp;fs=1&amp;rel=0&amp;color1=0x3a3a3a&amp;color2=0x999999"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/7wqfcwgT0Ds" loading="lazy" allowfullscreen></iframe>
 
 And the songs / sketches make perfect [YouTube fodder](http://uk.youtube.com/results?search_query=flight+of+the+conchords&search_type=). Their clips have millions and millions of views which can’t hurt in terms of creating buzz and awareness.
 

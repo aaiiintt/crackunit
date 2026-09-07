@@ -19,19 +19,19 @@ These videos are what we ended up with. In each one of them David Elsewhere ‘i
 
 **ModeShift**: feature that allows you to switch between music and phone mode in one click
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/vRp0TGFmIRk&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/vRp0TGFmIRk" loading="lazy" allowfullscreen></iframe>
 
 **Camera**: it should be obvious what a camera is
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/GiIXMpEiK1w&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/GiIXMpEiK1w" loading="lazy" allowfullscreen></iframe>
 
 **HapticTouch**: A thing that makes it feel like there’s buttons, but there aren’t really…
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/5uSSvW_JorQ&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/5uSSvW_JorQ" loading="lazy" allowfullscreen></iframe>
 
 **CrystalTalk**: for clear voice calls
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/cl41ysEsB8E&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/cl41ysEsB8E" loading="lazy" allowfullscreen></iframe>
 
 The phone can be found here: [http://direct.motorola.com/hellomoto/rokre8/](http://direct.motorola.com/hellomoto/rokre8/)
 

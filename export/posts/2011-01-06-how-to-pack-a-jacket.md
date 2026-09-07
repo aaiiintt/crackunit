@@ -11,4 +11,4 @@ excerpt: "Not quite as kick-ass as the japanese t-shirt folding stuff from a whi
 
 Not quite as kick-ass as the japanese t-shirt folding stuff from a while back. But useful and practical if you’re a jacket-packer.
 
-<object width="550" height="437"><param name="movie" value="http://www.youtube.com/v/eWz6aJPae7s?fs=1&amp;hl=en_US"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/eWz6aJPae7s" loading="lazy" allowfullscreen></iframe>

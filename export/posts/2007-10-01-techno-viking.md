@@ -11,7 +11,7 @@ excerpt: "I\u2019m not sure if this qualifies as a Silly Moment in Techno. It\u2
 
 I’m not sure if this qualifies as a [Silly Moment in Techno](/2007/09/14/silly-moments-in-techno/). It’s undoubtedly a rather odd moment. But I’m too frightened of The Viking to call it silly.
 
-<object width="425" height="359"><param name="movie" value="http://embed.break.com/MzczMjAw"></object>  
+  
 [All Hail Technoviking!](http://www.break.com/knockedupdvd/all-hail-technoviking.html) – Watch more [free videos](http://www.break.com/)
 
 The guys at Break.com say:

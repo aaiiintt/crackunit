@@ -15,17 +15,17 @@ Well this guy Kutiman has gone one better and nailed a whole bunch of really ric
 
 Here’s his intro:
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/cqWpjUUOOMY&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/cqWpjUUOOMY" loading="lazy" allowfullscreen></iframe>
 
 And here’s a couple of the tracks:
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/AzZi-btc8AA&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/AzZi-btc8AA" loading="lazy" allowfullscreen></iframe>
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/slsyWayCkS8&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/slsyWayCkS8" loading="lazy" allowfullscreen></iframe>
 
 And he can drop the Drums and Basses too…
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/XDBzHds-QJM&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/XDBzHds-QJM" loading="lazy" allowfullscreen></iframe>
 
 Each track has links to all the component parts. Dig around and you’ll see what an amazing thing he’s managed to pull off. I’ve taken my hat so far off to Kutiman, it may never go back on again.
 

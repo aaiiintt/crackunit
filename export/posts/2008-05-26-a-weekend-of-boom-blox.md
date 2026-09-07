@@ -9,7 +9,7 @@ tags: ["wii", "youtube"]
 excerpt: "I couldn\u2019t find Wii Fit anywhere this weekend. And even Mario Kart seemed to be sold out at most places so I took a punt and bought Boom Blox for the Wii instead. Net result. A very sore arm and many hours wasted. It\u2019s a brilliant game\u2026"
 ---
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/Vb6EyvaNn7M&amp;hl=en"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/Vb6EyvaNn7M" loading="lazy" allowfullscreen></iframe>
 
 I couldn’t find Wii Fit anywhere this weekend. And even Mario Kart seemed to be sold out at most places so I took a punt and bought Boom Blox for the Wii instead.
 

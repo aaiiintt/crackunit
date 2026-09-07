@@ -9,8 +9,6 @@ tags: ["Goodthingsshouldneverend.co.uk", "orange", "web"]
 excerpt: "Here\u2019s something we just did for Orange. Goodthingsshouldneverend.co.uk It\u2019s one of my favourite things that we\u2019ve done in a while. It\u2019s a never ending webpage. Crammed full of fun stuff and lots of surprises. Some are online, some are\u2026"
 ---
 
-<object width="300" height="300"><param name="movie" value="http://unlimited.orange.co.uk/flash/m_animation_hairycutter1_embed.swf"></object>
-
 Here’s something we just did for Orange. [Goodthingsshouldneverend.co.uk](http://www.goodthingsshouldneverend.co.uk)
 
 It’s one of my favourite things that we’ve done in a while. ***It’s a never ending webpage***. Crammed full of fun stuff and lots of surprises. Some are online, some are mobile things. But all of them demonstrate the notion of ‘unlimited’.

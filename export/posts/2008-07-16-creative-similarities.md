@@ -15,11 +15,11 @@ On the [David Elsewhere](/2008/07/13/david-elsewhere-and-motorola/) stuff [Tim j
 
 With a link to this video:
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/KICj3g_e7L0&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/KICj3g_e7L0" loading="lazy" allowfullscreen></iframe>
 
 It’s a different thing doing a different job. But I can see how one would perhaps make you think of the other. For sure.
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/vRp0TGFmIRk&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/vRp0TGFmIRk" loading="lazy" allowfullscreen></iframe>
 
 Now I’ve no idea if Tim’s comment is a thinly veiled jibe or just a simple statement. I don’t know Tim. Or his intentions, so it’s really hard to tell.
 

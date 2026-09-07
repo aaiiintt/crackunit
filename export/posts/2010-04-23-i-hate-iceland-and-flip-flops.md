@@ -15,8 +15,8 @@ But these two videos genuinely made me do LOLs today.
 
 Just in case you're as out of touch as me…
 
-[<object height="417" width="500"><param name="movie" value="http://www.youtube.com/v/34mHZgP9vkc&amp;hl=en&amp;fs=1"><param name="wmode" value="window"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>](http://www.youtube.com/watch?v=34mHZgP9vkc&feature=related)
+[<iframe src="https://www.youtube.com/embed/34mHZgP9vkc" loading="lazy" allowfullscreen></iframe>](http://www.youtube.com/watch?v=34mHZgP9vkc&feature=related)
 
 [](http://www.youtube.com/watch?v=34mHZgP9vkc&feature=related)
 
-[](http://www.youtube.com/watch?v=34mHZgP9vkc&feature=related)<object height="417" width="500"><param name="movie" value="http://www.youtube.com/v/0Au_8GMUxVs&amp;hl=en&amp;fs=1"><param name="wmode" value="window"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+[](http://www.youtube.com/watch?v=34mHZgP9vkc&feature=related)<iframe src="https://www.youtube.com/embed/0Au_8GMUxVs" loading="lazy" allowfullscreen></iframe>

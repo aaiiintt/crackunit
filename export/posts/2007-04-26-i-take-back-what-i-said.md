@@ -13,7 +13,7 @@ The MySpace community is alive and well.
 
 Under this clip (which really is the ultimate in nerdism)
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/hNxhrPaaCA4"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/hNxhrPaaCA4" loading="lazy" allowfullscreen></iframe>
 
 I spotted this comment:
 

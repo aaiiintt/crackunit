@@ -17,13 +17,13 @@ Here’s some things I saw when I was there…
 
 Yet another Fatboy Slim ‘Right Here Right Now’ pumped-up-isn’t-the-world-changing-rapidly conference sequence. Isn’t it about time someone found a new soundtrack for that kind of thing?
 
-<object width="450" height="339"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="always"><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=2323245&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=0&amp;show_portrait=0&amp;color=00adef&amp;fullscreen=1"></object>
+<iframe src="https://player.vimeo.com/video/2323245" loading="lazy" allowfullscreen></iframe>
 
 A couple of lovely lo-fi flashing neon chalkboards outside bars (these might be common everywhere in the world, but in my sheltered life I’d not seen them before).
 
-<object width="450" height="339"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="always"><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=2316704&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=0&amp;show_portrait=0&amp;color=00adef&amp;fullscreen=1"></object>
+<iframe src="https://player.vimeo.com/video/2316704" loading="lazy" allowfullscreen></iframe>
 
-<object width="450" height="339"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="always"><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=2316721&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=0&amp;show_portrait=0&amp;color=00adef&amp;fullscreen=1"></object>
+<iframe src="https://player.vimeo.com/video/2316721" loading="lazy" allowfullscreen></iframe>
 
 We got taken to an amazing music venue that was hidden away behind a the kind of door where you wouldn’t expect anything good to be going on. I witnessed some awesome laptop music action. It was kind of like an ongoing techno karaoke session where people seemed to swap in and out of the lineup.
 
@@ -33,7 +33,7 @@ We got taken to an amazing music venue that was hidden away behind a the kind of
 
 My favourite bit was this beats and trumpets section which was really very very good indeed (sorry for the bad sound and picture quality).
 
-<object width="450" height="339"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="always"><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=2325424&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=0&amp;show_portrait=0&amp;color=00adef&amp;fullscreen=1"></object>
+<iframe src="https://player.vimeo.com/video/2325424" loading="lazy" allowfullscreen></iframe>
 
 Then we went to another amazing venue called The Hall which was also great.
 

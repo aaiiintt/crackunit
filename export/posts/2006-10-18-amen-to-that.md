@@ -16,6 +16,6 @@ Even if you’re not a muso I reckon it’s worth watching for a couple of reaso
 -   The style of it is very basic, but it works. The spinning record is strangely mesmerising. And it works alongside the slightly hypnotic drone (in the nicest possible way) of the narrator.
 -   There’s some incredibly interesting stuff in there about the point at which a cultural artifact essentially becomes public domain, and copyright becomes irrelevant. We’re reaching a point where loads of things are becoming so appropriated that it’s impossible to unpick them from their surroundings and give credit to the source.
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/5SaFTm2bcac"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/5SaFTm2bcac" loading="lazy" allowfullscreen></iframe>
 
 And from a muso’s point of view, it boggles my mind that over the years a single beat, a noise made by one man hitting a drum, has been replicated, multiplied, sliced, re-ordered and rejigged in so many ways. In thousands of clubs all over the world every Saturday night you’ll be able to hear the noise of that man hitting that drum. You may not recognise it, but it’ll be there. Somewhere…

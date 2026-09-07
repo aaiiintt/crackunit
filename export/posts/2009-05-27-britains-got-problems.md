@@ -15,10 +15,10 @@ I’m pretty sure that almost all the problems in British society can be tracked
 
 DJ Talent
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/3gJNMlodcqY&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/3gJNMlodcqY" loading="lazy" allowfullscreen></iframe>
 
 And, Floral High Notes
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/jaUkxP2xN9E&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/jaUkxP2xN9E" loading="lazy" allowfullscreen></iframe>
 
 I don’t think any further analysis is required.

@@ -11,7 +11,7 @@ excerpt: "This track just totally floored me. It\u2019s a remix of In for the Ki
 
 This track just totally floored me. It’s a remix of In for the Kill by La Roux which has been done over by dubstep star Skream.
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/Mq5GdutCRo8&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/Mq5GdutCRo8" loading="lazy" allowfullscreen></iframe>
 
 It’s just huge. When it kicks in just after the 4 minute mark it’d be better with a donk on it, obviously ;-) but apart from that it’s a masterful remix. It takes a nice, but unremarkable, original and turns it into something epic.
 

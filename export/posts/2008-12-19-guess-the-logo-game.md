@@ -11,6 +11,4 @@ excerpt: "Here\u2019s a little \u2018game\u2019 that I made (using Keynote and e
 
 Here’s a little ‘game’ that I made (using Keynote and exporting it as Flash). See if you can guess the companies from their Arabic logos…
 
-<object width="480" height="320"><param name="movie" value="logoguess.swf"></object>
-
 Sorry, it’s a big file and there’s no pre-loader or loading bar. But that’s how it rolls.

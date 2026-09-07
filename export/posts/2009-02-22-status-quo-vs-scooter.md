@@ -11,11 +11,11 @@ excerpt: "Kind of like Walk This Way by Run DMC and Aerosmith. But the version t
 
 Kind of like Walk This Way by Run DMC and Aerosmith. But the version that would have occurred if Satan was in charge.
 
-<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/I2R-80-7s_I&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/I2R-80-7s_I" loading="lazy" allowfullscreen></iframe>
 
 And just in case that leaves you in any doubt of Scooter’s genius. Check this.
 
-<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/IiHIlE7XG5E&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/IiHIlE7XG5E" loading="lazy" allowfullscreen></iframe>
 
 Kind of like a jumpstyle version of [Where The Hell Is Matt](http://www.wherethehellismatt.com).
 

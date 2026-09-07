@@ -15,7 +15,7 @@ In my fantasy vision I’ll become some kind of mad professor Frankentoy. Capabl
 
 For a more realistic clip of what Toy Hacking is actually about…
 
-<object width="425" height="373"><param name="movie" value="http://www.youtube.com/v/FBLuBi-rVT8&amp;rel=1&amp;border=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/FBLuBi-rVT8" loading="lazy" allowfullscreen></iframe>
 
 On the [NPR website](http://www.npr.org/blogs/bryantpark/2008/01/the_night_the_toys_came_to_lif_1.html) there’s an interesting comment about Toy Hacking:
 
@@ -27,4 +27,4 @@ I realised last night that my friends fall into 2 groups. Those who think toy ha
 
 The toy I’m taking to hack is my Yoda Furby. Surely a toy hackers dream (especially with it’s ability to sense the force!):
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/_vxVwd-RTug&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/_vxVwd-RTug" loading="lazy" allowfullscreen></iframe>

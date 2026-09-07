@@ -13,4 +13,4 @@ Bumped into this piece for Mountain Dew over at [Faris’ Blog](http://farisyako
 
 It’s a ‘viral’ that I like. And I liked it so much I passed it on. Making it really and truly ‘viral’. I’ve got to go and lie down…
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/A4uyN5rQbbU"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/A4uyN5rQbbU" loading="lazy" allowfullscreen></iframe>

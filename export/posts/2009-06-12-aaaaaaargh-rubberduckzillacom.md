@@ -11,15 +11,15 @@ excerpt: "Poke have done some Augmented Reality stuff for Oasis. It ties in with
 
 Poke have done some Augmented Reality stuff for Oasis. It ties in with the whole Rubberduckzilla campaign from Mother. Here’s the TV spot:
 
-<object width="480" height="295"><param name="movie" value="http://www.youtube.com/v/6gUDibEz5dM&amp;hl=en&amp;fs=1&amp;"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/6gUDibEz5dM" loading="lazy" allowfullscreen></iframe>
 
 The guys took the Nipponophillic oddness of the ad and turned it into something that felt like it came from the same warped place. It’s a bunch of AR games that push the technology in a couple of interesting ways. Like allowing you to become RDZ and fire lasers out of your eyes, which is always a good place to start.
 
-<object width="480" height="295"><param name="movie" value="http://www.youtube.com/v/5lbIBfN6dkI&amp;hl=en&amp;fs=1&amp;"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/5lbIBfN6dkI" loading="lazy" allowfullscreen></iframe>
 
 And here’s the latest ‘episode’ which is a special with The Sun. It replaces the front cover of the paper with an animated slice of destruction. Personally I like this bit of the campaign as it puts the ‘marker’ in peoples’ hands and doesn’t rely on printers and stuff.
 
-<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/eMfUO_rVTSM&amp;hl=en&amp;fs=1&amp;"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/eMfUO_rVTSM" loading="lazy" allowfullscreen></iframe>
 
 Nice work Katie and Jason on the particularly ghetto demo ;-)
 
@@ -31,6 +31,6 @@ The Oasis stuff feels like a slightly silly way of delivering what is essentiall
 
 I’m not as sure about this application of AR for USPS which was getting absolutely masses of Twitter love the other day.
 
-<object width="480" height="295"><param name="movie" value="http://www.youtube.com/v/jCcZX8qGAX0&amp;hl=en&amp;fs=1&amp;"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/jCcZX8qGAX0" loading="lazy" allowfullscreen></iframe>
 
 People seemed to like the utility of it. And I admire its intent. But I’m not so sure it actually works. It feels more like an interesting step on the way to something better. I guess most of the AR stuff around at the moment feels like stepping stones more than anything solid in it’s own right. And I suppose taking steps somewhere is (almost always) better than standing still. Plus it does make the brand look cool and cyber (for a week or two).

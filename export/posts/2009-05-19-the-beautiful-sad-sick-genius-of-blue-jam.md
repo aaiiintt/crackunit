@@ -17,11 +17,11 @@ It can put you in a very strange place. But it is absolutely amazing. Some of th
 
 Here’s a kind of montage of a bunch of bits from YouTube. The video isn’t supposed to move, it’s a radio show :-)
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/MChVzBKUM4I&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/MChVzBKUM4I" loading="lazy" allowfullscreen></iframe>
 
 From a DJing perspective the musical selection is fantastic too. That’s the thing you don’t pick up from these isolated clips, you don’t get a sense of the sonic journey.
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/X9sneJWJPvs&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/X9sneJWJPvs" loading="lazy" allowfullscreen></iframe>
 
 These YouTubed snippets don’t really do it justice. You need to get transported into the whole 60 minute experience for it to really seep into your brain like is needs to.
 
@@ -35,14 +35,14 @@ Oh and you can still get hold of the [DVD of the Show JAM](http://www.amazon.co.
 
 There’s lots of snippets from Jam around on YouTube if you want to check it out. And in spite of having just said that it’s not as good as the radio there are undoubtedly moments of genius…
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/rYFQZFL0yoo&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/rYFQZFL0yoo" loading="lazy" allowfullscreen></iframe>
 
 And it still does have that strange sense of melancholy that I love so dearly…
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/9Y0IqAeuuuY&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/9Y0IqAeuuuY" loading="lazy" allowfullscreen></iframe>
 
 The sense that you’re not quite sure whether to laugh, cry or peel off your skin with a rusty penknife.
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/x1d5vI1UpNo&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/x1d5vI1UpNo" loading="lazy" allowfullscreen></iframe>
 
 And don’t get me started on [The Day Today](http://www.bbc.co.uk/comedy/daytoday/), [Brass Eye](http://en.wikipedia.org/wiki/Brass_Eye) or [Nathan Barley](http://www.channel4.com/entertainment/tv/microsites/N/nathanbarley/) or we’ll be here forever…

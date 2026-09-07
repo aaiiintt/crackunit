@@ -17,7 +17,7 @@ Anyway I tried it out with some holiday snaps and it was a bit odd. The images w
 
 Here’s what happened:
 
-<object type="application/x-shockwave-flash" width="400" height="300" data="http://www.vimeo.com/moogaloop.swf?clip_id=863125&amp;server=www.vimeo.com&amp;fullscreen=1&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=c9ff23"><param name="quality" value="best"><param name="allowfullscreen" value="true"><param name="scale" value="showAll"><param name="movie" value="http://www.vimeo.com/moogaloop.swf?clip_id=863125&amp;server=www.vimeo.com&amp;fullscreen=1&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=c9ff23"></object>  
+<iframe src="https://player.vimeo.com/video/863125" loading="lazy" allowfullscreen></iframe>  
 [10 Reasons Digital is Better than Advertising](http://www.vimeo.com/863125/l:embed_863125) from [iaintait](http://www.vimeo.com/iaintait/l:embed_863125) on [Vimeo](http://vimeo.com/l:embed_863125).
 
 Oh my good lord I can see myself having some fun with This. Slipping in transformation like this 1/2 way through a boring creds presentation into an acid inspired 3d alternate reality…

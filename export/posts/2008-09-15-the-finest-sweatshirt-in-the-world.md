@@ -11,7 +11,7 @@ excerpt: "I bought me one of these Nike x Loopwheeler AW77 sweatshirts: From the
 
 I bought me one of these Nike x Loopwheeler AW77 sweatshirts:
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/rHWRsnCzXRc&amp;hl=en&amp;fs=1&amp;rel=0&amp;color1=0x3a3a3a&amp;color2=0x999999"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/rHWRsnCzXRc" loading="lazy" allowfullscreen></iframe>
 
 From the [Nike 1948 store](/2008/08/19/nike-1948-popup-store-in-london/) in Shoreditch.
 

@@ -13,8 +13,8 @@ I rarely get angry. It’s not in my nature. But I got an email today that made 
 
 (They’re kind of like UK jump-stylers…)
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/pIcPLfZ7hus&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/pIcPLfZ7hus" loading="lazy" allowfullscreen></iframe>
 
 And here’s a face for the future. He keeps up the pace for over 4 minutes which is no mean feat. He’s incredibly in time for a 3 year old and I love the style in the middle, kind of like fencing. Looks like the back hand would be great at clutching a bottle of lager during dancing – a useful skill for later. Superb.
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/eMtQvtYuqqM&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/eMtQvtYuqqM" loading="lazy" allowfullscreen></iframe>

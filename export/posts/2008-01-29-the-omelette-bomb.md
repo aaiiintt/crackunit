@@ -11,6 +11,6 @@ excerpt: "My trip to Manchester was made awesome by witnessing \u2018The Omelett
 
 My trip to Manchester was made awesome by witnessing ‘The Omelette Bomb’ – a piece of extreme [Teppanyaki](http://en.wikipedia.org/wiki/Teppanyaki) showboating the likes of which I’ve never seen before…
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/MSvXLs903Fk&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/MSvXLs903Fk" loading="lazy" allowfullscreen></iframe>
 
 Thank goodness I had my camera with me…

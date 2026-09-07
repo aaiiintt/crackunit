@@ -17,7 +17,7 @@ It made me realise just how lazy I’ve been with blogging. And of course I have
 
 But then I started to think about what I love about blogging and how much it’s done for me, things that not-blogging platforms like Twitter never can or will. Things like the weekend where [I took the challenge to do a bunch of stuff and had a really great time](/2009/04/20/earning-eternal-respect-in-48-hours-the-twitter-way/), (like making butter…)
 
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="549" height="316" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="always"><param name="src" value="http://vimeo.com/moogaloop.swf?clip_id=4231753&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=0&amp;show_portrait=0&amp;color=ffffff&amp;fullscreen=1&amp;autoplay=0&amp;loop=0"></object>
+<iframe src="https://player.vimeo.com/video/4231753" loading="lazy" allowfullscreen></iframe>
 
 Plus I got a lovely mail from someone the other day about how much my post on [Mental Detox Week](/2008/04/30/10-things-i-learned-from-mental-detox-week/) had inspired them. Which made me reconsider blog-retirement.
 

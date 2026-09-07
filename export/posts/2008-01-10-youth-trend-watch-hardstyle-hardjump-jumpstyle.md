@@ -13,7 +13,7 @@ This started out being a [silly moment in techno](/2007/09/14/silly-moments-in-t
 
 It started with this clip from Malaysia:
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/UZAfSD1Misw&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/UZAfSD1Misw" loading="lazy" allowfullscreen></iframe>
 
 A few things things I noted:
 
@@ -28,31 +28,31 @@ And the more I looked and watched. The more I realised that I’ve discovered th
 
 And you don’t have to be out and about to do it. Look Jumpstyle at home:
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/PCSEEK6IpyU&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/PCSEEK6IpyU" loading="lazy" allowfullscreen></iframe>
 
 But you can also do it with a friend and it becomes Duojump. Now they really do look like 2 skilled DDR players… Or is it like a Gabba Riverdance…
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/P64rbVE1L0k&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/P64rbVE1L0k" loading="lazy" allowfullscreen></iframe>
 
 And you can do it with **3 people**!
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/hsoNmcAAanw&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/hsoNmcAAanw" loading="lazy" allowfullscreen></iframe>
 
 Or if you’ve got a few mates you can all do it together!
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/SR0_amp0lwQ&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/SR0_amp0lwQ" loading="lazy" allowfullscreen></iframe>
 
 And it appears they’re teaching it in schools – to groups of kids!
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/bUhAEfMuG3E&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/bUhAEfMuG3E" loading="lazy" allowfullscreen></iframe>
 
 It’s become so big it’s spawned it’s own remixes and stuff – check Jumpstyle Borat:
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/nFvASjWaF3I&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/nFvASjWaF3I" loading="lazy" allowfullscreen></iframe>
 
 So now you’re tuned into the latest global youth craze you’ll be wanting a how-to guide right? Of course, YouTube can provide (thanks to Patrick Jumpen, one of the stars of Jumpstyle):
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/FHKrZ0E6eTg&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/FHKrZ0E6eTg" loading="lazy" allowfullscreen></iframe>
 
 And for those of you who are more into studying from the sidelines don’t forget to check Wikipedia – the page on [Jumpstyle](http://en.wikipedia.org/wiki/Jumpstyle) is the most informative. It has a list of different sub-styles as well as some useful links to some of the top dudes in the scene.
 

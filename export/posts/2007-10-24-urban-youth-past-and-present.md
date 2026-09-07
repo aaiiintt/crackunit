@@ -11,11 +11,11 @@ excerpt: "Back in the day urban culture used to look so much more friendly\u2026
 
 Back in the day urban culture used to look so much more friendly…
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/rGkIUlYEQT8"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/rGkIUlYEQT8" loading="lazy" allowfullscreen></iframe>
 
 These days it’s so much more serious and less fun:
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/ENq5rJDFA1o"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/ENq5rJDFA1o" loading="lazy" allowfullscreen></iframe>
 
 The first lot are still hanging round in a little gang. But they look like nice boys, maybe even a little camp. They’ve got no hoods and their music is much more jolly.
 

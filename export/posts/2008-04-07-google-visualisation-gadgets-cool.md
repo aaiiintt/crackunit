@@ -13,7 +13,7 @@ I discovered the world of visualisation gadgets through this excellent blog: [ht
 
 They’re things that can basically turn a table full of boring data into interactive gadgets that you can publish and share as you like.
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/8EsFJu6p3P4&amp;hl=en"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/8EsFJu6p3P4" loading="lazy" allowfullscreen></iframe>
 
 I thought it looked easy. So I tried it out.
 

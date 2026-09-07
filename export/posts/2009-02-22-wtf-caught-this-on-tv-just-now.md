@@ -11,4 +11,4 @@ excerpt: "Seriously disturbing on so many levels."
 
 Seriously disturbing on so many levels.
 
-<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/tx-bChDLJpE&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/tx-bChDLJpE" loading="lazy" allowfullscreen></iframe>

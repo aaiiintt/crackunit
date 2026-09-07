@@ -11,4 +11,4 @@ excerpt: "A classic bit of 80s Balearic tunage. What\u2019s not to love. A prope
 
 A classic bit of 80s Balearic tunage. What’s not to love. A proper classic. Not 100% sold on the video though…
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/RIcmIhOesaI&amp;hl=en"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/RIcmIhOesaI" loading="lazy" allowfullscreen></iframe>

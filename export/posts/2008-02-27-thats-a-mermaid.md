@@ -11,7 +11,7 @@ excerpt: "It\u2019s amazing what YouTube throws up in it\u2019s \u2018related vi
 
 It’s amazing what YouTube throws up in it’s ‘related videos’ section:
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/6tfTMjYsS-U&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/6tfTMjYsS-U" loading="lazy" allowfullscreen></iframe>
 
 For me, that’s not a mermaid. This is a mermaid:
 

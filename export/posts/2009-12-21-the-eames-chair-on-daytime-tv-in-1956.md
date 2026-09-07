@@ -13,10 +13,10 @@ Well perhaps it’s not strictly daytime TV, I’ve got no idea what time of day
 
 Absolutely golden clips though…
 
-<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/zfzLzOl795E&amp;hl=en_US&amp;fs=1&amp;"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/zfzLzOl795E" loading="lazy" allowfullscreen></iframe>
 
 And part 2:
 
-<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/-MomNfLGOLg&amp;hl=en_US&amp;fs=1&amp;"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/-MomNfLGOLg" loading="lazy" allowfullscreen></iframe>
 
 Via the [DWR blog](http://blog.dwr.com/).

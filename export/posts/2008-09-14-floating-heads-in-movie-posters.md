@@ -13,4 +13,3 @@ As you might know I’ve got a [thing about floating heads](/2008/07/23/powerful
 
 So this made me laugh…
 
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="464" height="388" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="flashvars" value="key=47d8df4123"><param name="allowfullscreen" value="true"><param name="src" value="http://www2.funnyordie.com/public/flash/fodplayer.swf"></object>

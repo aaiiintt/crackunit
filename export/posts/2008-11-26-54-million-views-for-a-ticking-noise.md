@@ -13,6 +13,6 @@ I’m sure most of you have seen this. But I saw it again the other day and was 
 
 Potter Puppet Pals, I salute you…
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/Tx1XIm6q4r4&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/Tx1XIm6q4r4" loading="lazy" allowfullscreen></iframe>
 
 Pure genius

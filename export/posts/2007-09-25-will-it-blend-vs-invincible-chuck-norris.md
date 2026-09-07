@@ -11,6 +11,6 @@ excerpt: "Two meme mashups in just one day. Internet you are really spoiling us\
 
 Two meme mashups in just one day. Internet you are really spoiling us…
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/NdD54rG9oQA"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/NdD54rG9oQA" loading="lazy" allowfullscreen></iframe>
 
 Thanks [Knotty](http://www.managedobjects.com.au/)!

@@ -15,6 +15,6 @@ I’m sure I’ve got this on VHS tape somewhere. Absolutely classic. Feels a we
 
 Split into 2 parts because, at over 13 minutes, it’s too long for YouTube.
 
-<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/VMAHtOuZtnc&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/VMAHtOuZtnc" loading="lazy" allowfullscreen></iframe>
 
-<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/RpgPH0GfGV4&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/RpgPH0GfGV4" loading="lazy" allowfullscreen></iframe>

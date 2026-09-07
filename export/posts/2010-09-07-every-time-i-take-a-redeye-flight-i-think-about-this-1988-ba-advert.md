@@ -11,7 +11,7 @@ excerpt: "And I hear the words of the smugfaced git ringing in my ears: \u201cLi
 
 And I hear the words of the smugfaced git ringing in my ears: “Like a lamb to the slaughter, gentlemen…”
 
-<object height="417" width="500"><param name="movie" value="http://www.youtube.com/v/rW3zAhZB_4g&amp;hl=en&amp;fs=1"><param name="wmode" value="window"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/rW3zAhZB_4g" loading="lazy" allowfullscreen></iframe>
 
 Only tonight I’m traveling on JetBlue and I will feel tired, hungry and destroyed when I arrive…
 

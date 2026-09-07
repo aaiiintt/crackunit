@@ -23,7 +23,7 @@ And sometimes time isn’t on your side.
 
 We’re stuck in one of those situations right now. The climate change bill is creeping ever closer in parliament and we’ve not got the time or cash to accelerate the [Get On Board](http://wwf.org.uk/getonboard) campaign for the WWF.
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/eijNQm3y7bE"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/eijNQm3y7bE" loading="lazy" allowfullscreen></iframe>
 
 We need more people to get stuck in. The guys at the WWF are doing a great job of getting their supporters involved. They’re pushing as many media buttons as they can. But the story just hasn’t picked up like we all hoped it would.
 
@@ -38,7 +38,7 @@ Go here to [visit the blog to find out what’s coming next](http://getonboard.w
 
 And here’s a nice little video showing some of the people who do give a shit messing up. Everyone likes out-takes don’t they? Featuring David Nussbaum (CEO of WWF), Sarah Beeny, Terry Waite, Lewis Gordon Pugh (the guy who can swim in really cold water) and my personal favourite Chris Packham (who used to be in the Really Wild Show with the one and only Terry Nutkins). It’s not massively funny, it’s just quite nice.
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/6igrEbiFiVA"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/6igrEbiFiVA" loading="lazy" allowfullscreen></iframe>
 
 Having said all of the above we’re not doing all that badly considering that everything we’re doing hardly costs a penny and there’s been no paid for media whatsoever :-)
 

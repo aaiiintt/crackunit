@@ -11,11 +11,11 @@ excerpt: "Take a massive full on techno track like Waves by Erol Alkan and Boyz 
 
 Take a massive full on techno track like Waves by Erol Alkan and Boyz Noize, something like this:
 
-<object height="417" width="500"><param name="movie" value="http://www.youtube.com/v/sUf459p5i-A&amp;hl=en&amp;fs=1"><param name="wmode" value="window"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/sUf459p5i-A" loading="lazy" allowfullscreen></iframe>
 
 Then put it in the hands of an awesome modern pianist / composer like Chilly Gonzales, and this is what comes out:
 
-<object height="417" width="500"><param name="movie" value="http://www.youtube.com/v/7uetgOn_tUI&amp;hl=en&amp;fs=1"><param name="wmode" value="window"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/7uetgOn_tUI" loading="lazy" allowfullscreen></iframe>
 
 On the flipside of the record is a great interview with Chilly where he talks about the making of the track and the joy of arpeggiation. My favourite bit is where he talks about Glen Miller's "In the Mood" being the club banger of the day. If you're lucky enough to have Spotify, the interview can be heard here: [Erol Alkan – Remaking Waves – By Chilly Gonzales](http://open.spotify.com/track/7Bw2djLzYQU9Y4gXcFx7eV)
 

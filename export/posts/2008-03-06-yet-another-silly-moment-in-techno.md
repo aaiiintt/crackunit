@@ -11,6 +11,6 @@ excerpt: "Is this techno viking\u2018s mum? Or grandma? Very scary indeed."
 
 Is this [techno viking](/2007/10/01/techno-viking/)‘s mum? Or grandma?
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/yulRmH41yCk"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/yulRmH41yCk" loading="lazy" allowfullscreen></iframe>
 
 Very scary indeed.

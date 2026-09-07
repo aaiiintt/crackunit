@@ -13,7 +13,7 @@ Pregnancy tests are a staple of TV drama. You can’t have a soap opera without 
 
 And these days the technology is pretty advanced:
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/DqX7VxW3wL0"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/DqX7VxW3wL0" loading="lazy" allowfullscreen></iframe>
 
 I just love that line about ‘the most advanced technology you’ll ever pee on’.
 

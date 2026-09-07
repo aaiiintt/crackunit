@@ -15,15 +15,15 @@ Just another one of those ‘funny’ ‘little’ online things that feels real
 
 The daddy of the clips:
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/FLn45-7Pn2Y"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/FLn45-7Pn2Y" loading="lazy" allowfullscreen></iframe>
 
 The Taco Bell version:
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/EGYmEInsW8Y"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/EGYmEInsW8Y" loading="lazy" allowfullscreen></iframe>
 
 And of course a ‘healthy option’:
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/nWTYyx6PLZY"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/nWTYyx6PLZY" loading="lazy" allowfullscreen></iframe>
 
 There’s lots and lots of them, and remixes and mashups and all that jazz and they’re breeding… [http://www.fastfoodfreestyle.net/](http://www.fastfoodfreestyle.net/) is the hub of the ‘movement’.
 

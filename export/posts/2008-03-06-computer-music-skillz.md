@@ -13,10 +13,10 @@ Sorry for the flurry of posts. It’s the first excitable surfing I’ve done in
 
 I am so envious of this guy’s ability with his computer music equipment:
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/XWsX6X2TaYQ"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/XWsX6X2TaYQ" loading="lazy" allowfullscreen></iframe>
 
 Here’s some more beatfoolery:
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/twHhcB4D-po"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/twHhcB4D-po" loading="lazy" allowfullscreen></iframe>
 
 Jealous.

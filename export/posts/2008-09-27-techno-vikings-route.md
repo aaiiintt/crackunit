@@ -22,4 +22,4 @@ Then I started fantasising about how great it’s going to be once they add Stre
 
 Here he is again, just in case you’ve forgotten his immense power:
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/_1nzEFMjkI4&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/_1nzEFMjkI4" loading="lazy" allowfullscreen></iframe>

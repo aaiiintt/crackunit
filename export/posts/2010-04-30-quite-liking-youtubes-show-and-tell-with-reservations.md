@@ -9,7 +9,7 @@ tags: []
 excerpt: "via youtube.com Nice touches in the video, but the shitty page design that doesn\u2019t let you bookmark individual sections of the site blows hard."
 ---
 
-<object height="417" width="500"><param name="movie" value="http://www.youtube.com/v/e-wUX9bGIvk&amp;hl=en&amp;fs=1"><param name="wmode" value="window"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/e-wUX9bGIvk" loading="lazy" allowfullscreen></iframe>
 
 via [youtube.com](http://www.youtube.com/watch?v=e-wUX9bGIvk&feature=player_embedded)
 

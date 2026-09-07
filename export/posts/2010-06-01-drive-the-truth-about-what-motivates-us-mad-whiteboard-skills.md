@@ -9,7 +9,7 @@ tags: []
 excerpt: "via youtube.com It\u2019s doing the rounds. Because it\u2019s good."
 ---
 
-<object height="417" width="500"><param name="movie" value="http://www.youtube.com/v/u6XAPnuFjJc&amp;hl=en&amp;fs=1"><param name="wmode" value="window"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/u6XAPnuFjJc" loading="lazy" allowfullscreen></iframe>
 
 via [youtube.com](http://www.youtube.com/watch?v=u6XAPnuFjJc)
 

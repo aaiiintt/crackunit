@@ -25,7 +25,7 @@ And he’s sticking up his photos on Flickr where they get combined with a passa
 
 And he’s reading out passages from the book in relevant locations and putting the videos online:
 
-<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/MvL4QswpZ6s&amp;hl=en&amp;fs=1&amp;"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/MvL4QswpZ6s" loading="lazy" allowfullscreen></iframe>
 
 And bravely he’s offering up:
 

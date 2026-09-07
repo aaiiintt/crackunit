@@ -21,6 +21,6 @@ I feel really guilty now.
 
 Time to break the cycle and laugh a little. Here’s the South Park set in World of Warcraft:
 
-<object width="425" height="335"><param name="movie" value="http://www.dailymotion.com/swf/75yNTwRgcHMKd3hDk"><param name="allowfullscreen" value="true"></object>  
+<iframe src="https://www.dailymotion.com/embed/video/75yNTwRgcHMKd3hDk" loading="lazy" allowfullscreen></iframe>  
 **[SP 1008 – Make Love, not Warcraft](http://www.dailymotion.com/video/xgrzm_sp-1008-make-love-not-warcraft)**  
 *Uploaded by [pradera](http://www.dailymotion.com/pradera)*

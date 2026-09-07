@@ -11,7 +11,7 @@ excerpt: "This ad for Geometry Wars I liked. It\u2019s almost another kind of en
 
 This ad for Geometry Wars I liked. It’s almost another kind of entertaining demo, sort of:
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/3GpsG8iQ5oY&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/3GpsG8iQ5oY" loading="lazy" allowfullscreen></iframe>
 
 It makes me smile and chuckle.
 

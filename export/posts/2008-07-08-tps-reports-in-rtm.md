@@ -13,7 +13,7 @@ excerpt: "I just noticed this in the Remember the Milk task manager in Gmail. Th
 
 I just noticed this in the [Remember the Milk task manager](http://www.rememberthemilk.com) in Gmail. The default task is “TPS Report 5pm”. For some reasons TPS reports chimed a bell with me. Then I remembered they’re featured in the legendary film [Office Space](http://www.imdb.com/title/tt0151804/):
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/eon207FjXzU&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/eon207FjXzU" loading="lazy" allowfullscreen></iframe>
 
 In reality TPS Reports are Test Procedure Specification Reports (apparently). But from the Wikipedia page on [TPS Report (Office Space)](http://en.wikipedia.org/wiki/TPS_report_\(Office_Space\)).
 

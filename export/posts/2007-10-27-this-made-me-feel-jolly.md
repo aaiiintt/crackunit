@@ -9,6 +9,6 @@ tags: ["Music", "youtube"]
 excerpt: "5 Years Later by Noah and the Whale."
 ---
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/jRX5kH6IrkY"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/jRX5kH6IrkY" loading="lazy" allowfullscreen></iframe>
 
 5 Years Later by [Noah and the Whale](http://www.last.fm/music/Noah+and+the+Whale).

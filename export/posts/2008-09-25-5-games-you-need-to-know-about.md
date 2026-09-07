@@ -18,8 +18,6 @@ First up [Braid](http://braid-game.com/). Available on Xbox 360 as a download. A
 
 It’s a lovely looking platform game. All cutesy and painty-styled. But the big twist with the game is that you can muck around with time. When you die you can rewind time and go back to where you were. Or at any point you choose you can just do a quick rewind or ffwd. But depending on the level it works slightly differently each time. It’s quite hard to explain, I’m not even sure I fully grasp it, but this video helped…
 
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="500" id="gb_player" align="middle"><param name="allowScriptAccess" value="sameDomain"><param name="allowFullScreen" value="true"><param name="movie" value="http://www.giantbomb.com/video/video.swf"><param name="quality" value="high"><param name="flashvars" value="paramsURI=http%3A//www.giantbomb.com/video/params/24/?w=1"><param name="bgcolor" value="#000000"></object>
-
 It gets absolutely amazing reviews everywhere. I’m sure a lot of it is because it’s taken a classic format and done something to it that everyone is just going ‘damn I wish I’d thought of that first…’.
 
 Equally I’ve always been a big fan of the idea that the web and computers allow us to mess with the standard laws of time and space (like being able to warp to different bits of a supermarket using just a search box). But it’s hard to get your brain to think of paradigms that don’t have real world equivalents.
@@ -28,7 +26,7 @@ We need more things like Braid that abuse our expectations of normality.
 
 Which is a beautiful anti-segue into something that’s *all* about the wonders of physics, motion and gravity. [Crayon Physics Deluxe](http://www.kloonigames.com/crayon/) has been seen millions of times and is hardly new. But in case anyone hasn’t seen it…
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/QsTqspnvAaI&amp;hl=en&amp;fs=1&amp;rel=0&amp;color1=0x3a3a3a&amp;color2=0x999999"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/QsTqspnvAaI" loading="lazy" allowfullscreen></iframe>
 
 There is actually a [playable sort of prototype (PC)](http://www.kloonigames.com/crayon/) that you can get from the website. But the deluxe version isn’t ready yet.
 
@@ -36,7 +34,7 @@ And if that’s all a bit crayony for you, perhaps [Little Big Planet](http://ww
 
 Here’s a drool-inducing gameplay montage:
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/FtP6fYHj7h8&amp;hl=en&amp;fs=1&amp;rel=0&amp;color1=0x3a3a3a&amp;color2=0x999999"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/FtP6fYHj7h8" loading="lazy" allowfullscreen></iframe>
 
 It looks like it could be the awesomest thing ever.
 

@@ -11,7 +11,7 @@ excerpt: "How to hand out a free magazine on the streets of London presented by 
 
 How to hand out a free magazine on the streets of London presented by Shortlist’s publisher Mike Soutar…
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/hZXrc3QqNmk&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/hZXrc3QqNmk" loading="lazy" allowfullscreen></iframe>
 
 I LOLed multiple times and had my mouth agog for most of it. Absolute comedy gold. You really couldn’t make that shit up.
 

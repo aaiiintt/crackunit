@@ -19,13 +19,13 @@ Lead singer ‘The Reverend’ takes the poet and the rock godness of Jim Morris
 
 You’re probably none the wiser. So here’s the best live footage I could find (from their support slot with The Arctic Monkeys last year)…
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/jhGSRRiBPfM"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/jhGSRRiBPfM" loading="lazy" allowfullscreen></iframe>
 
 I’m pretty sure that these guys are about to get huge – not because I’m a great predictor of trends, but because they’re awesome (plus the fact I heard them on Asda’s in-store radio on Sunday which suggests something).
 
 Plus the (very little) kids like them:
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/jsUDLgb80F8"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/jsUDLgb80F8" loading="lazy" allowfullscreen></iframe>
 
 More on [MySpace](http://www.myspace.com/reverendmusic).  
 [Their own page](http://www.iamreverend.com/).  

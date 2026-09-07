@@ -13,7 +13,7 @@ We’re putting on a tour with Orange. It’s part of the whole ‘I am’ thing
 
 This video basically tells the story better than I could. It’s the film of their first few days on the road.
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/orz-sbuGFPM&amp;hl=en&amp;fs=1&amp;rel=0&amp;color1=0x3a3a3a&amp;color2=0x999999"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/orz-sbuGFPM" loading="lazy" allowfullscreen></iframe>
 
 My particular highlight is a band called [Hedluv](http://www.myspace.com/hedluv) who played in Penzance. They’re kind of like [The Mighty Boosh](http://en.wikipedia.org/wiki/Mighty_boosh) meeting [Goldie Lookin Chain](http://en.wikipedia.org/wiki/Goldie_Lookin%27_Chain) in the keyboard section of Toys R Us.
 
@@ -21,7 +21,7 @@ To see them live watch about halfway through the video above.
 
 Or here’s something else they made from YouTube:
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/d4hcQngap5s&amp;hl=en&amp;fs=1&amp;rel=0&amp;color1=0x3a3a3a&amp;color2=0x999999"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/d4hcQngap5s" loading="lazy" allowfullscreen></iframe>
 
 On [their website](http://hedluv.co.uk/) you can find such awesome things as [HedLuv’s Online Pasty Guide](http://hedluv.co.uk/blog1.html).
 

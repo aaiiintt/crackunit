@@ -9,7 +9,7 @@ tags: ["Advertising", "youtube"]
 excerpt: "A classic: \u201cIt\u2019s not a detergent it\u2019s a safetergent\u201d. I just saw this on TV and couldn\u2019t believe it. I didn\u2019t think I\u2019d be able to share it, but thanks to the all-seeing YouTube I can. Hooray."
 ---
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/A-9nNW7KnNs&amp;hl=en"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/A-9nNW7KnNs" loading="lazy" allowfullscreen></iframe>
 
 A classic: “It’s not a detergent it’s a safetergent”.
 

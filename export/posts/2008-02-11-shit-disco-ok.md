@@ -11,6 +11,6 @@ excerpt: "Simple, but effective\u2026 For some reason I kept imagining an intera
 
 Simple, but effective…
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/OXM5LGfpmrE&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/OXM5LGfpmrE" loading="lazy" allowfullscreen></iframe>
 
 For some reason I kept imagining an interactive version of the video that acts a bit like a Guitar Hero style game…

@@ -21,6 +21,4 @@ You describe your work like this:
 
 I describe it like this. Very funny.
 
-<object width="500" height="375"><param name="flashvars" value="offsite=true&amp;lang=en-us&amp;page_show_url=%2Fphotos%2F34742091%40N04%2Fsets%2F72157616861341608%2Fshow%2F&amp;page_show_back_url=%2Fphotos%2F34742091%40N04%2Fsets%2F72157616861341608%2F&amp;set_id=72157616861341608&amp;jump_to="><param name="movie" value="http://www.flickr.com/apps/slideshow/show.swf?v=71649"><param name="allowFullScreen" value="true"></object>
-
 Superb.

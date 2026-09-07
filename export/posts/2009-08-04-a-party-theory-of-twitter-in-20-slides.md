@@ -13,7 +13,7 @@ Here’s my presentation from [the Glug event](http://www.gluglondon.co.uk/) las
 
 I added some extra notes and hopefully it still makes a bit of sense without the presenter.
 
-[A Party Theory of Twitter](http://www.slideshare.net/iaintait/a-party-theory-of-twitter "A Party Theory of Twitter")<object style="margin:0px" width="425" height="355"><param name="movie" value="http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=twittertalkforslideshare-090731140517-phpapp02&amp;rel=0&amp;stripped_title=a-party-theory-of-twitter"><param name="allowFullScreen" value="true"><param name="allowScriptAccess" value="always"></object>
+[A Party Theory of Twitter](http://www.slideshare.net/iaintait/a-party-theory-of-twitter "A Party Theory of Twitter")
 
 Sorry [Nathan](http://www.rubbishcorp.com/) I had to do it. At the time I did explain that I love you and [your blog](http://www.rubbishcorp.com/) ;-)
 

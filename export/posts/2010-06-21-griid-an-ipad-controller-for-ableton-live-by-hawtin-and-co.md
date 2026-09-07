@@ -14,7 +14,7 @@ excerpt: "I think I might be desirous of this. Sneak preview here: Official site
 I think I might be desirous of this.
 
 Sneak preview here:  
-<object height="417" width="500"><param name="movie" value="http://www.youtube.com/v/V3GermFZ9_g&amp;hl=en&amp;fs=1"><param name="wmode" value="window"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/V3GermFZ9_g" loading="lazy" allowfullscreen></iframe>
 
 Official site here: [http://liine.net/griid/](http://liine.net/griid/)  
 More news here: [http://www.residentadvisor.net/news.aspx?id=12386](http://www.residentadvisor.net/news.aspx?id=12386)

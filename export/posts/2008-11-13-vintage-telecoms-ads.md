@@ -9,8 +9,8 @@ tags: []
 excerpt: "And of course you can surf the net, that BT Cellnet"
 ---
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/k6b4NtJdCH8&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/k6b4NtJdCH8" loading="lazy" allowfullscreen></iframe>
 
 And of course you can surf the net, that BT Cellnet…
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/6z1S2tL51dE&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/6z1S2tL51dE" loading="lazy" allowfullscreen></iframe>

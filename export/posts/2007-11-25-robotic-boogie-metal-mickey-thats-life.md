@@ -11,4 +11,4 @@ excerpt: "Today I love YouTube more than I ever thought I\u2019d be able to love
 
 Today I love YouTube more than I ever thought I’d be able to love a video sharing site…
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/xLTfxgw5aCU&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/xLTfxgw5aCU" loading="lazy" allowfullscreen></iframe>

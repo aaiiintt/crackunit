@@ -9,7 +9,7 @@ tags: ["Brighton", "cycling", "game", "rider spoke"]
 excerpt: "I\u2019m a little gutted. I just got the programme for the Brighton Festival and got all excited when I saw that Blast Theory\u2019s location based cycling thingy Rider Spoke is coming to Brighton for a weekend! Woo hoo! Then I called up to try and\u2026"
 ---
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/3u1dMZ8OATo&amp;hl=en"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/3u1dMZ8OATo" loading="lazy" allowfullscreen></iframe>
 
 I’m a little gutted.
 

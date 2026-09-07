@@ -21,4 +21,4 @@ It’s an inbound link that made me feel cool. Maybe that’s a bit sad. But it�
 
 Graham’s blog is nice and has lots of funny stuff in it (as you might expect). [It’s where I found](http://whythatsdelightful.wordpress.com/2008/10/08/cloooose-uuuuup-eeeeyyyyyyyes/) this…
 
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="425" height="344" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"><param name="src" value="http://www.youtube.com/v/8HE9OQ4FnkQ&amp;hl=en&amp;fs=1"></object>
+<iframe src="https://www.youtube.com/embed/8HE9OQ4FnkQ" loading="lazy" allowfullscreen></iframe>

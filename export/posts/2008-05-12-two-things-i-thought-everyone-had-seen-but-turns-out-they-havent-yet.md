@@ -13,10 +13,10 @@ If you have seen these already, sorry. I thought that they’d done the rounds b
 
 Facebook in real life:
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/nrlSkU0TFLs&amp;hl=en"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/nrlSkU0TFLs" loading="lazy" allowfullscreen></iframe>
 
 And this guy who breaks out a cracking (if slightly politically incorrect) stand up routine at his high school speech thingy:
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/aZoolnsmQ04&amp;hl=en"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/aZoolnsmQ04" loading="lazy" allowfullscreen></iframe>
 
 Although it doesn’t seem to have loads of views on YouTube on things like break.com it’s had well over a million views, and *the scandal* has been picked up [in the media](http://www.canada.com/victoriatimescolonist/news/story.html?id=9e990dab-2f1a-4c68-a161-c6ca913be8aa&k=93426), [Doc Searls has blogged about it](http://blogs.law.harvard.edu/doc/2008/04/26/think-softly-and-punish-a-big-schtick/) and there’s a [Facebook group](http://www.facebook.com/group.php?gid=49407760006&ref=mf) supporting his right to free speech.

@@ -15,6 +15,6 @@ It’s great to see the balloon widget working so nicely (see below). Thanks to 
 
 When the site goes live this widget will show your progress – where you are in the race – and allow friends to give you a boost. All good stuff.
 
-<object width="380" height="350" style="width:100%; max-width:800px;"><param name="movie" value="http://www.playballoonacy.com/flash/widget/widget_loader.swf?uuid=ee44ca5c4b19fcaad464293ea3daff51"><param name="scale" value="noScale"><param name="salign" value="lt"><param name="menu" value="false"></object> ![](https://i0.wp.com/counters.gigya.com/wildfire/CIMP/bT*xJmx*PTEyMTI3NTkwMTI4NzEmcHQ9MTIxMjc1OTMxMzc4NCZwPTE5OTUyMSZkPSZuPSZnPTE=.jpg?resize=0%2C0)
+ ![](https://i0.wp.com/counters.gigya.com/wildfire/CIMP/bT*xJmx*PTEyMTI3NTkwMTI4NzEmcHQ9MTIxMjc1OTMxMzc4NCZwPTE5OTUyMSZkPSZuPSZnPTE=.jpg?resize=0%2C0)
 
 It’s all getting really exciting. I can’t wait for the main thing to go live. In testing it’s all looking pretty spiffy. I hope people like it…

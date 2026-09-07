@@ -23,7 +23,7 @@ In response [@felixturner](http://www.twitter.com/felixturner) sent me a link to
 
 But thanks to the wonder of people – here it is in a UK friendly format! Yay!
 
-<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/WXStPqhLmIk&amp;hl=en&amp;fs=1&amp;"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/WXStPqhLmIk" loading="lazy" allowfullscreen></iframe>
 
 He’s right you know. And that little iPod with a colour screen, video camera, radio, pedometer, etc. etc. etc. That’s serious witchcraft.
 

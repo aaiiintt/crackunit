@@ -9,7 +9,7 @@ tags: ["internet", "Internet People", "youtube"]
 excerpt: "Job done. Absolutely superb."
 ---
 
-<object width="425" height="353"><param name="movie" value="http://www.youtube.com/v/2pPCkhYMQgY"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/2pPCkhYMQgY" loading="lazy" allowfullscreen></iframe>
 
 Job done.
 

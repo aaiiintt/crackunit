@@ -17,11 +17,11 @@ And here’s a couple of demos I found recently featuring 2006 and 2007 UK Beatb
 
 Here’s Beardyman battling himself (with the help of DJ JFB) using Numark’s Virtual Vinyl:
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/y9qX5dO-I_U&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/y9qX5dO-I_U" loading="lazy" allowfullscreen></iframe>
 
 And here he is again jamming on the Korg Kaoss Pad 3 with a plastic duck. I don’t know why but I love the fact that the product is upside-down. I’m sure it’s not been done on purpose, but if a company did that I’d think that they were dead confident and stuff.
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/39n4wow8fWE&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/39n4wow8fWE" loading="lazy" allowfullscreen></iframe>
 
 If you want to hear quite how skilled Beardyman is there’s some amazing audio [on his website](http://www.beardyman.co.uk/beardyaudios.html). The clip from ‘Tim Shaw’s Asylum’ is totally next-level. Scratching the DJs name backwards and stuff.
 

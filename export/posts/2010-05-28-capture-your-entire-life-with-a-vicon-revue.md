@@ -11,7 +11,7 @@ excerpt: "Watching this makes me feel really funny. I love its mundane epicness.
 
 Watching this makes me feel really funny. I love its mundane epicness. It’s so ordinary and everyday, but I can’t help but extrapolate back to birth and forward to death.
 
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="500" height="417" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="wmode" value="window"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"><param name="src" value="http://www.youtube.com/v/MbESeTTInEc&amp;hl=en&amp;fs=1"><param name="allowfullscreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/MbESeTTInEc" loading="lazy" allowfullscreen></iframe>
 
 The [Vicon Revue](http://www.viconrevue.com/home.html) is:
 

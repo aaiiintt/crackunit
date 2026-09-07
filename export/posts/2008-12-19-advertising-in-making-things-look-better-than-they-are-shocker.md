@@ -13,7 +13,7 @@ This story is genius – [thanks to Guy over on Think Demux](http://thinkdemux.c
 
 Anyway, this DFS ad has been banned. Not because it’s a hunk of shit, but for other reasons…
 
-<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/RKCMGGN1HFo&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/RKCMGGN1HFo" loading="lazy" allowfullscreen></iframe>
 
 The [Daily Mail is the best place to read the story](http://www.dailymail.co.uk/news/article-1091540/DFS-Furniture-ads-banned-shrinking-actors-make-sofas-look-bigger.html). Obviously.
 

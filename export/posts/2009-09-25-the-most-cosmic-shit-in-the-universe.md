@@ -9,7 +9,7 @@ tags: []
 excerpt: "Oh yes. Thank you Garry (@gluewho) for the enlightenment! Thank you."
 ---
 
-<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/zSgiXGELjbc&amp;hl=en&amp;fs=1&amp;color1=0xcc2550&amp;color2=0xe87a9f"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/zSgiXGELjbc" loading="lazy" allowfullscreen></iframe>
 
 Oh yes.
 

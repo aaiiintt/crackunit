@@ -9,7 +9,7 @@ tags: []
 excerpt: "via thinkgeek.com This sleeping bag even has a genius light sabre zip pull so you can reenact the slicing open of the Tauntaun every time you get into the sleeping bag. Wow."
 ---
 
-<object height="299" width="500"><param name="movie" value="http://www.youtube.com/v/uHlM2OBfzB0?hd=0"></object>
+<iframe src="https://www.youtube.com/embed/uHlM2OBfzB0" loading="lazy" allowfullscreen></iframe>
 
 via [thinkgeek.com](http://www.thinkgeek.com/geektoys/plush/bb2e/)
 

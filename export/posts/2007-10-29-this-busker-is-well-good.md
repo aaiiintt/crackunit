@@ -9,7 +9,7 @@ tags: ["Sanyo", "video", "youtube"]
 excerpt: "Saw him in North Laine on Saturday. This epic psychedelic trance improv was just part of his set. A proper one-man-band with mad skills. Again sorry for the video quality. I think I might have to invest in some kind of camera that can do\u2026"
 ---
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/xANLerScqo0"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/xANLerScqo0" loading="lazy" allowfullscreen></iframe>
 
 Saw him in North Laine on Saturday. This epic psychedelic trance improv was just part of his set. A proper one-man-band with mad skills.
 

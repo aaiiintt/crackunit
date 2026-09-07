@@ -15,7 +15,7 @@ Maybe it’s just because I’m a big fan of crisps. But Walkers seem to be doin
 
 Firstly the brilliant [‘Do Us a Flavour’ campaign](http://www.walkers.co.uk/flavours/default.html?ver=hi). (If you’ve not seen it, they’re getting people to submit new flavors of potato chips. If you submit the winning flavour you get £50k and a 1% share of the profits from the new flavour).
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/klyaAe04yKc&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/klyaAe04yKc" loading="lazy" allowfullscreen></iframe>
 
 [The site’s got a lot of shortcomings](http://www.walkers.co.uk/flavours/default.html?ver=hi). It doesn’t handle duplicates at all well, and the searching isn’t up to scratch. But it obviously doesn’t matter that much to people: 130,000 pages of entries – 6 to a page – gives almost 800,000 flavours submitted. That’s bloody incredible.
 
@@ -41,4 +41,4 @@ Apparently [there’s a new website coming soon](http://megamonstermunch.com/) t
 
 And just in case you don’t remember the original Monster Munch monsters from the TV ads…
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/70RMn9nh_mo&amp;hl=en&amp;fs=1&amp;rel=0&amp;color1=0x3a3a3a&amp;color2=0x999999"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/70RMn9nh_mo" loading="lazy" allowfullscreen></iframe>

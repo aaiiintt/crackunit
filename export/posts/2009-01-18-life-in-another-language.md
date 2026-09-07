@@ -11,6 +11,6 @@ excerpt: "Just caught this on the TV. I had no idea what it was for, but it had 
 
 Just caught this on the TV. I had no idea what it was for, but it had an intriguing coolness about it. As I had my laptop on my knee I tried out the URL just to see…
 
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="480" height="295" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"><param name="src" value="http://www.youtube.com/v/qlpAgOUYPXo&amp;hl=en&amp;fs=1"></object>
+<iframe src="https://www.youtube.com/embed/qlpAgOUYPXo" loading="lazy" allowfullscreen></iframe>
 
 Turns out it’s a pretty smart thing that C4 are doing to get youngsters interested in other languages. [Once you get to the site](http://www.channel4.com/entertainment/t4/advertorial/try-life-in-another-language/dancing.html) the language stuff is quite knocked back. But there are some very cool little films in there (although they’re non-embeddable, doh!). Not sure how well it’s work, but s’quite nice.

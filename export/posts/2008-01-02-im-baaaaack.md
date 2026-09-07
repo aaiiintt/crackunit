@@ -13,14 +13,14 @@ But I’ve got blank page syndrome. I can’t think of anything interesting to w
 
 But to bring in the New Year, here’s the greatest advert I saw whilst in India (to be fair I didn’t see many, but this is classic).
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/tcmc7tWPJu0&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/tcmc7tWPJu0" loading="lazy" allowfullscreen></iframe>
 
 “Yellow, yellow, dirty fellow” – priceless.
 
 And there’s 2 more in the series that I found on YouTube.
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/ihyWdDTA3PM&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/ihyWdDTA3PM" loading="lazy" allowfullscreen></iframe>
 
 And (warning a bit LOUD!):
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/jDiNtKMqHG0&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/jDiNtKMqHG0" loading="lazy" allowfullscreen></iframe>

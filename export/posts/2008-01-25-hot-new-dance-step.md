@@ -11,6 +11,6 @@ excerpt: "Forget jumpstyle. This is the hot new dance step (well it was hot and 
 
 Forget [jumpstyle](/2008/01/10/youth-trend-watch-hardstyle-hardjump-jumpstyle/). This is the hot new dance step (well it was hot and new in 1930)…
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/NMPwVAmOwz8&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/NMPwVAmOwz8" loading="lazy" allowfullscreen></iframe>
 
 Check the user ‘[GoodOldDays](http://www.youtube.com/user/GoodOldDays)‘ for loads of great vintage videos. There’s some amazing stuff in there.

@@ -9,8 +9,6 @@ tags: ["video"]
 excerpt: "I really like this. I guess some people won\u2019t. I know it\u2019s kinda unusable, but that\u2019s the point. I found myself playing through it 5 times to try and see what\u2019s going on. Then I started trying to pause bits and rewind it. Then I figured I\u2026"
 ---
 
-<object type="application/x-shockwave-flash" width="500" height="288" data="http://www.flickr.com/apps/video/stewart.swf?v=68975" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"><param name="flashvars" value="intl_lang=en-us&amp;photo_secret=b4b6715bea&amp;photo_id=3278920469"><param name="movie" value="http://www.flickr.com/apps/video/stewart.swf?v=68975"><param name="bgcolor" value="#000000"><param name="allowFullScreen" value="true"></object>
-
 I really like this.
 
 I guess some people won’t. I know it’s kinda unusable, but that’s the point. I found myself playing through it 5 times to try and see what’s going on. Then I started trying to pause bits and rewind it. Then I figured I needed to go to [their Flickr stream to see what their work looked like](http://www.flickr.com/photos/this_studio).

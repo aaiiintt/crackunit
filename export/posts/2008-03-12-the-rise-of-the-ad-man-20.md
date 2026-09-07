@@ -63,7 +63,7 @@ I’m not sure exactly what that principle is, but it’s the equivalent of know
 
 I loved this from the programme:
 
-<object type="application/x-shockwave-flash" width="400" height="300" data="http://www.vimeo.com/moogaloop.swf?clip_id=777469&amp;server=www.vimeo.com&amp;fullscreen=1&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=c9ff23"><param name="quality" value="best"><param name="allowfullscreen" value="true"><param name="scale" value="showAll"><param name="movie" value="http://www.vimeo.com/moogaloop.swf?clip_id=777469&amp;server=www.vimeo.com&amp;fullscreen=1&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=c9ff23"></object>
+<iframe src="https://player.vimeo.com/video/777469" loading="lazy" allowfullscreen></iframe>
 
 I doubt that this would be said by many people nowadays (especially not in the online space).
 

@@ -11,7 +11,7 @@ excerpt: "Why has Guru Josh Project \u2013 Infinity 2008 (Official Video \u2013 
 
 Why has [Guru Josh Project – Infinity 2008 (Official Video – Klaas Vocal Edit)](http://www.youtube.com/watch?v=w9KnuJZkBjg&feature=fvw) got nearly 67 million views on YouTube? Is there a global love for sax-trance no one told me about? Is JoshRolling the new RickRolling? Anyone have any ideas how and why this has happened? In my own small way I know I’m making it worse, but I’m pretty sure the traffic hasn’t come purely from idiots like me asking why it’s got a load of views.
 
-<object width="560" height="340"><param name="movie" value="http://www.youtube.com/v/w9KnuJZkBjg&amp;hl=en_US&amp;fs=1&amp;"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/w9KnuJZkBjg" loading="lazy" allowfullscreen></iframe>
 
 ***Update:*** After some speculation in the comments by Emil that it’s the the fault of the Germans I remembered that you can (of course) click to look at the stats of YouTube videos and yes…
 

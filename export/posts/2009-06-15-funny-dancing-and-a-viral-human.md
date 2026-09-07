@@ -11,4 +11,4 @@ excerpt: "Thanks Knotty. I couldn\u2019t not post a man dancing funny that becom
 
 Thanks Knotty. I couldn’t not post a man dancing funny that becomes a human viral smash…
 
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="480" height="385" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"><param name="src" value="http://www.youtube.com/v/GA8z7f7a2Pk&amp;hl=en&amp;fs=1&amp;"><param name="allowfullscreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/GA8z7f7a2Pk" loading="lazy" allowfullscreen></iframe>

@@ -15,8 +15,6 @@ I got in this morning and the cleaners had spilled some coffee/glue hybrid on my
 
 It was very firmly stuck fast:
 
-<object type="application/x-shockwave-flash" width="400" height="300" data="http://www.flickr.com/apps/video/stewart.swf?v=59154" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"><param name="flashvars" value="intl_lang=en-us&amp;photo_secret=ee679f0dc1&amp;photo_id=2805909058"><param name="movie" value="http://www.flickr.com/apps/video/stewart.swf?v=59154"><param name="bgcolor" value="#000000"><param name="allowFullScreen" value="true"></object>
-
 Then I had to clean up. Which wasn’t easy. Sugary coffee forms a very very sticky substance indeed.
 
 [![Me Cleaning The Aftermath](/wp-content/rescued/farm4.static.flickr.com/3101/2805065411_8b39cbb88e.jpg)](http://www.flickr.com/photos/iaintait/2805065411/ "Me Cleaning The Aftermath by Iain Tait, on Flickr")

@@ -13,16 +13,16 @@ This guy [Cyriak](http://www.cyriak.co.uk/) lives in Brighton. I’m not sure I�
 
 He has got some crazy skills going on though, kind of like B3ta meets Chris Cunningham.
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/05ZvII57p_M&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/05ZvII57p_M" loading="lazy" allowfullscreen></iframe>
 
 And if that doesn’t scare you.
 
 Check this:
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/kVzMewUqTII&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/kVzMewUqTII" loading="lazy" allowfullscreen></iframe>
 
 And to prove that it’s not all scary and dark, this made me chuckle:
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/JXli15Q1k-Y&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/JXli15Q1k-Y" loading="lazy" allowfullscreen></iframe>
 
 I like a lot.

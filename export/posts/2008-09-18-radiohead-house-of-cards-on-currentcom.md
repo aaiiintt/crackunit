@@ -11,5 +11,5 @@ excerpt: "I was just watching Current TV and this film about the Radiohead House
 
 I was just watching Current TV and this film about the [Radiohead House of Cards](http://code.google.com/creative/radiohead/) video came on…
 
-<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="400" height="400"><param name="movie" value="http://current.com/e/89111098/en_UK"><param name="wmode" value="transparent"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="always"></object>  
+  
 It really is a bit good.

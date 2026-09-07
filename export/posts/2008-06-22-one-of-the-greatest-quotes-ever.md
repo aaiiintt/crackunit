@@ -27,7 +27,7 @@ And:
 
 It’s definitely worth setting aside a bit of time for:
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/Lvdxwm_fLyA&amp;hl=en"></object>
+<iframe src="https://www.youtube.com/embed/Lvdxwm_fLyA" loading="lazy" allowfullscreen></iframe>
 
 Or you can [get the slides here](http://sites.google.com/site/io/best-practices-for-spreading-your-app-without-ruining-the-user-experience) if you prefer it that way.
 

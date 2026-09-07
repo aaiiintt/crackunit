@@ -11,7 +11,7 @@ excerpt: "Simply brilliant\u2026 I quite like the track (larytta \u2013 souvenir
 
 Simply brilliant…
 
-<object width="480" height="295"><param name="movie" value="http://www.youtube.com/v/306MUlh054Y&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/306MUlh054Y" loading="lazy" allowfullscreen></iframe>
 
 I quite like the track (larytta – souvenir de chine) too in a proggy kind of way.
 

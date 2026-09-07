@@ -11,6 +11,6 @@ excerpt: "Like shooting fish in a barrel. But there\u2019s a bit in the middle t
 
 Like shooting fish in a barrel. But there’s a bit in the middle that’s a minor stroke of genius (I won’t spoil it)…
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/48HUdzoKiPA&amp;hl=en&amp;fs=1&amp;rel=0&amp;color1=0x3a3a3a&amp;color2=0x999999"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/48HUdzoKiPA" loading="lazy" allowfullscreen></iframe>
 
 Originally found at [jiggmiester’s Tumblr](http://gcp.tumblr.com/).

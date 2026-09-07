@@ -25,6 +25,4 @@ People often seem totally terrified for us having twins. But so far having twins
 
 Some photos from the last few days in hospital and the first couple of days home are below:
 
-<object width="500" height="375"><param name="flashvars" value="offsite=true&amp;lang=en-us&amp;page_show_url=%2Fphotos%2Fiaintait%2Fsets%2F72157622530022408%2Fshow%2F&amp;page_show_back_url=%2Fphotos%2Fiaintait%2Fsets%2F72157622530022408%2F&amp;set_id=72157622530022408&amp;jump_to="><param name="movie" value="http://www.flickr.com/apps/slideshow/show.swf?v=71649"><param name="allowFullScreen" value="true"></object>
-
 Thank you again everyone.

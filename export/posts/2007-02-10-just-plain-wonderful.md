@@ -11,6 +11,6 @@ excerpt: "No need to say anything really\u2026 Thanks to David for the link"
 
 No need to say anything really…
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/7AeodCMHCFk"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/7AeodCMHCFk" loading="lazy" allowfullscreen></iframe>
 
 Thanks to [David](http://www.davidmccandless.com/) for the link

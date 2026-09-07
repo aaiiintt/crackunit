@@ -15,7 +15,7 @@ I’m going to try and tell the story as best I can, but I’m sure I’m not go
 
 It all starts with [popininmyhood](http://www.youtube.com/user/popininmyhood) posting this video entitled Quadruple Kickflip.
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/F_nw_mQF6RE&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/F_nw_mQF6RE" loading="lazy" allowfullscreen></iframe>
 
 It’s one of those videos where something ‘scary’ happens unexpectedly, sorry if you hadn’t read this and it shocked you.
 
@@ -25,23 +25,23 @@ The clip has got 80 video responses. And they’re almost universally handing ou
 
 This dude is angry (and he uses swearwords – bad swearwords) – but he’s also pretty comfortable in front of the camera:
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/TihhAk68AD8&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/TihhAk68AD8" loading="lazy" allowfullscreen></iframe>
 
 The art of the parody is not lost on the young:
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/MIM4AuBCEDw&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/MIM4AuBCEDw" loading="lazy" allowfullscreen></iframe>
 
 This shows a use of mixed media hating and a [Perez Hilton](http://www.perezhilton.com) style overlay:
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/O0nKvIgZ7XY&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/O0nKvIgZ7XY" loading="lazy" allowfullscreen></iframe>
 
 I’ve got no idea what Hugh Jackman has done to upset this dude with the big hair. But he’s really upset, so much so that he’s wishing death on things:
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/pmxSU1ojKg0&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/pmxSU1ojKg0" loading="lazy" allowfullscreen></iframe>
 
 I don’t like the start of this kids clip, but I think his response gets pretty fair and measured towards the end:
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/dQYykdH6WwQ&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/dQYykdH6WwQ" loading="lazy" allowfullscreen></iframe>
 
 What can we learn from this:
 

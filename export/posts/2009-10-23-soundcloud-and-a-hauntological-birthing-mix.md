@@ -19,7 +19,7 @@ I don’t think I ever posted this mix on here. I made it during the birth of th
 
 I’m not really sure what all this [Hauntology](http://en.wikipedia.org/wiki/Hauntology_\(musical_genre\)) thing is about, but I’ve got a feeling that parts of this mix might exist on the fringes of it somewhere… It’s dubsteppy in places and D&Bish in others, with a bit of droney electronica elsewhere. For [tracklists and stuff go here](http://soundcloud.com/iainmixedit/august2009).
 
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="100%" height="81" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowscriptaccess" value="always"><param name="src" value="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fsoundcloud.com%2Fiainmixedit%2Faugust2009"></object> [For Eleanor and Josie – August 2009](http://soundcloud.com/iainmixedit/august2009) by [iainmixedit](http://soundcloud.com/iainmixedit)
+<iframe src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fsoundcloud.com%2Fiainmixedit%2Faugust2009&visual=false" loading="lazy" allowfullscreen style="height:166px;aspect-ratio:auto"></iframe> [For Eleanor and Josie – August 2009](http://soundcloud.com/iainmixedit/august2009) by [iainmixedit](http://soundcloud.com/iainmixedit)
 
 You can [download the MP3 via SoundCloud](http://soundcloud.com/iainmixedit/august2009/download).
 
@@ -32,6 +32,6 @@ Why do I like SoundCloud?
 
 I particularly like the way that you can add comments to particular bits of tracks, like you can see on this mix below:
 
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="100%" height="81" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowscriptaccess" value="always"><param name="src" value="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fsoundcloud.com%2Fiainmixedit%2Ffrom-the-loft-easter-2009"></object> [From The Loft – Easter 2009](http://soundcloud.com/iainmixedit/from-the-loft-easter-2009) by [iainmixedit](http://soundcloud.com/iainmixedit)
+<iframe src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fsoundcloud.com%2Fiainmixedit%2Ffrom-the-loft-easter-2009&visual=false" loading="lazy" allowfullscreen style="height:166px;aspect-ratio:auto"></iframe> [From The Loft – Easter 2009](http://soundcloud.com/iainmixedit/from-the-loft-easter-2009) by [iainmixedit](http://soundcloud.com/iainmixedit)
 
 It’s also got a lightweight, but useful way of following artists / djs that you like which shows what they’re uploading and so on. I think I like it a lot.

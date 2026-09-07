@@ -23,11 +23,11 @@ I think that this Google translated text from describes them better than I could
 
 I could hardly find any of them online. But here’s a couple of examples:
 
-<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/5qw1qJu4OtA&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/5qw1qJu4OtA" loading="lazy" allowfullscreen></iframe>
 
 And.
 
-<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/T7SYmnn1xqA&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/T7SYmnn1xqA" loading="lazy" allowfullscreen></iframe>
 
 These aren’t as good as the best ones Erik showed. There was a clip of a rubber duck in a foamy bath bobbing up and down under a running tap. And some handy cam footage of buildings that look like faces (but with someone making the noises that the faces would make if they were human). Oh bollocks, they’re almost impossible to describe and make sound good.
 

@@ -13,18 +13,18 @@ I’ve got no clue what’s going on… Comment is all pure guesswork. If you ca
 
 Is this an ad from Japan?
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/OiwxMxzCPNg&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/OiwxMxzCPNg" loading="lazy" allowfullscreen></iframe>
 
 Is this a really mentalist remix of an ad from Japan (it really gets going about 2/3 the way in)?
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/Q16KpquGsIc&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/Q16KpquGsIc" loading="lazy" allowfullscreen></iframe>
 
 This really does look like an ad (featuring Ronald’s freaky trance-soundtracked clown-spawn…)
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/XrfM0z0Xx_E&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/XrfM0z0Xx_E" loading="lazy" allowfullscreen></iframe>
 
 And daughter of Ronald (also likes Jap-trance)…
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/Gr6Wwb6Std0&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/Gr6Wwb6Std0" loading="lazy" allowfullscreen></iframe>
 
 2nd clip via [Mike Laurie’s ‘Ships Biscuit’ blog](http://www.shipsbiscuit.com/). The rest was just a bunch of horrible accidents…

@@ -11,6 +11,6 @@ excerpt: "Another bit of creative dance from elsewhere in the world\u2026 Thanks
 
 Another bit of creative dance from elsewhere in the world…
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/K7H9ZGmlWuY&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/K7H9ZGmlWuY" loading="lazy" allowfullscreen></iframe>
 
 Thanks to [Mr Polaine](http://www.polaine.com/playpen/) for the link – genius.

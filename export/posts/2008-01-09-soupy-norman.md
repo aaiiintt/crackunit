@@ -11,6 +11,6 @@ excerpt: "There\u2019s quite a lot of re-dubbed comedy in the world. Much of it 
 
 There’s quite a lot of re-dubbed comedy in the world. Much of it I don’t care for that much. But this re-dubbing of the Polish soap opera ‘First Love’ to make it a story about Irish Folk made me laugh out loud. For all the details [consult the wikipedia](http://en.wikipedia.org/wiki/Soupy_Norman).
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/9ddWlNQrUNI&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/9ddWlNQrUNI" loading="lazy" allowfullscreen></iframe>
 
 All the episodes seem to be on YouTube.

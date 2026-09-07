@@ -13,7 +13,7 @@ excerpt: "David McCandless has been doing bits and pieces for Poke as long as Po
 
 And if he can put the internet in a book. I can put his book with the internet in it into a video…
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/uFMPN51OW2s&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/uFMPN51OW2s" loading="lazy" allowfullscreen></iframe>
 
 As you can probably see the book is packed full of stuff. Thankfully it’s funny stuff. Well it certainly made me laugh out loud in places.
 

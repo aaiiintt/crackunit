@@ -19,13 +19,13 @@ After a couple of hours of playing around and watching a few online tutorials I 
 
 This (very badly done) floating head was executed in about 30 minutes (once I’d got to grips with some basics). If you know anything about this kind of thing you’ll spot how shoddy it is. But in my defence I’ve got bad lighting, a severe case of impatience and very little skill:
 
-<object width="450" height="254"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="always"><param name="movie" value="http://www.vimeo.com/moogaloop.swf?clip_id=1394461&amp;server=www.vimeo.com&amp;show_title=1&amp;show_byline=0&amp;show_portrait=0&amp;color=00adef&amp;fullscreen=1"></object>
+<iframe src="https://player.vimeo.com/video/1394461" loading="lazy" allowfullscreen></iframe>
 
 Once I’d done that I realised that I had to do the thing that everyone does when they get a shot at After Effects. **MAKE A LIGHT SABER!!!** Star Wars kid here we come…
 
 But I decided I’d try sticking it up my nose instead:
 
-<object width="450" height="253"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="always"><param name="movie" value="http://www.vimeo.com/moogaloop.swf?clip_id=1395778&amp;server=www.vimeo.com&amp;show_title=1&amp;show_byline=0&amp;show_portrait=0&amp;color=00adef&amp;fullscreen=1"></object>
+<iframe src="https://player.vimeo.com/video/1395778" loading="lazy" allowfullscreen></iframe>
 
 Obviously it needs sound effects and it’s very short because my impatience kicked in again…
 

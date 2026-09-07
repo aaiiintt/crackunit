@@ -11,6 +11,6 @@ excerpt: "Absolutely incredible \u2013 also from http://www.perishfactory.com/. 
 
 Absolutely incredible – also from [http://www.perishfactory.com/](http://www.perishfactory.com/). It’s just one long scrolling scene made up of thousands of [animated gifs](http://www.theanimatedgifappreciationsociety.com/). I quite like the song too, it’s jolly.
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/EY55SDAocL8&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/EY55SDAocL8" loading="lazy" allowfullscreen></iframe>
 
 Whoops, almost forgot the track is by The Sea and Cake and it’s called “Coconut”.

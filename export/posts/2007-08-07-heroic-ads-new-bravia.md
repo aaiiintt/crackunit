@@ -29,13 +29,13 @@ It’s not an uncommon thing for many of us to get a brief that’s basically �
 
 An ad that tried to hero-ise itself without the balls to back it up (‘scuse the pun) is the recent Ford one with the balloons in it. This one if you’ve not seen it:
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/k1pfBIJfox0"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/k1pfBIJfox0" loading="lazy" allowfullscreen></iframe>
 
 The first time I saw it was in the Metro, they’d run a piece on how it was going to be shown during some football match, and it had cost loads of money, and it had lots of landmarks in it. OK, so what, now you’re going to have to prove something to me.
 
 The second time I saw it was in Victoria station. Where they’d parked a Ford Mondeo in the station with loads of plasma screens, a sound system, etc. And you know what you could do? You could sit in the car AND WATCH THE ADVERT! I thought this was pretty lame and a bit navel-gazingly-rubbish. That was until I visited Amsterdam a few weeks ago and it was eclipsed by this (at the airport):
 
-<object type="application/x-shockwave-flash" width="480" height="360" data="http://vimeo.com/moogaloop.swf?clip_id=265201&amp;server=vimeo.com&amp;fullscreen=1&amp;show_title=1&amp;show_byline=1&amp;show_portrait=1&amp;color=00ADEF"><param name="quality" value="best"><param name="allowfullscreen" value="true"><param name="scale" value="showAll"><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=265201&amp;server=vimeo.com&amp;fullscreen=1&amp;show_title=1&amp;show_byline=1&amp;show_portrait=1&amp;color=00ADEF"></object>
+<iframe src="https://player.vimeo.com/video/265201" loading="lazy" allowfullscreen></iframe>
 
 As you’re going along the travelator, the ADVERT FOLLOWS YOU!
 

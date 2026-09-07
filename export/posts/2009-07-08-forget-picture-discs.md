@@ -11,7 +11,7 @@ excerpt: "This is pretty cool. Using timecoded vinyl and processing. via: http:/
 
 This is pretty cool. Using timecoded vinyl and processing.
 
-<object width="549" height="412"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="always"><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=4901339&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=0&amp;show_portrait=0&amp;color=ffffff&amp;fullscreen=1"></object>
+<iframe src="https://player.vimeo.com/video/4901339" loading="lazy" allowfullscreen></iframe>
 
 via: [http://www.creativeapplications.net](http://www.creativeapplications.net) and [@flipper01](http://twitter.com/flipper01)
 

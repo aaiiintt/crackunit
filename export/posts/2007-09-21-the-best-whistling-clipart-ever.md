@@ -9,6 +9,6 @@ tags: ["Bjorn", "John", "Peter", "youtube"]
 excerpt: "From the slightly overplayed but still very nice \u2018Young Folks\u2019 by Peter, Bjorn and John."
 ---
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/51V1VMkuyx0"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/51V1VMkuyx0" loading="lazy" allowfullscreen></iframe>
 
 From the slightly overplayed but still very nice ‘Young Folks’ by Peter, Bjorn and John.

@@ -17,7 +17,7 @@ I managed to get along to the ‘Learn to Moonwalk’ session and it was great!
 
 Sorry about the rubbish quality – my phone video camera just isn’t good enough…
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/-ODl93eTeBs"></object>
+<iframe src="https://www.youtube.com/embed/-ODl93eTeBs" loading="lazy" allowfullscreen></iframe>
 
 A free lunch and a thoroughly entertaining lesson in the moonwalk – I’m still not an expert, but I’ve got the knowledge and the building blocks ;-)
 

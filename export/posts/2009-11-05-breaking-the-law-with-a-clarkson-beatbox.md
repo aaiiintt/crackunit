@@ -11,4 +11,4 @@ excerpt: "There\u2019s some a law that says you\u2019re not allowed to post any 
 
 There’s some a law that says you’re not allowed to post any YouTube video that’s already been seen by more than quarter of a million people. I’m prepared to break that law, go to blog jail and get done in the showers for being a late-to-the-party-video-watcher for the sake of this excellent Clarkson clip from a few months ago.
 
-<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/RY9u0LxIWJk&amp;hl=en&amp;fs=1&amp;"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/RY9u0LxIWJk" loading="lazy" allowfullscreen></iframe>

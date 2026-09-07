@@ -25,8 +25,8 @@ Any mix that manages to make sense of Aphex Twin, Yazoo, John Carpenter, Bridget
 
 If you want to know more about Booka Shade and hear some of their productions and stuff, head over to Last.fm and check out: [http://www.last.fm/music/Booka+Shade](http://www.last.fm/music/Booka+Shade) – they’re basically a couple of massively influential producers out of Berlin who came up with a track called Body Language a couple of years ago. For me it’s one of *the* standout dance tunes since 2000.
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/i_oDVCBefk4"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/i_oDVCBefk4" loading="lazy" allowfullscreen></iframe>
 
 And once you’ve heard that, I can share with you another ‘[Silly Moment in Techno](/2007/09/14/silly-moments-in-techno/)‘ (from a Booka Shade live show)…
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/ajvs5u-3hVM"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/ajvs5u-3hVM" loading="lazy" allowfullscreen></iframe>

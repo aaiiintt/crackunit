@@ -11,4 +11,4 @@ excerpt: "Sorry if this is old hat, it\u2019s been seen by quite a few people on
 
 Sorry if this is old hat, it’s been seen by quite a few people on YouTube. But it’s one of those things that even if you’ve seen it before, you’ll be happier after seeing it again…
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/wnZr0wiG1Hg&amp;rel=0"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/wnZr0wiG1Hg" loading="lazy" allowfullscreen></iframe>

@@ -9,6 +9,6 @@ tags: []
 excerpt: "I just thought this was very lovely."
 ---
 
-<object data="http://vimeo.com/moogaloop.swf" type="application/x-shockwave-flash" height="281" width="500"><param name="allowscriptaccess" value="always"><param name="allowfullscreen" value="true"><param name="movie" value="http://vimeo.com/moogaloop.swf"><param name="flashvars" value="clip_id=7681282&amp;server=vimeo.com&amp;fullscreen=1&amp;show_title=1&amp;show_byline=1&amp;show_portrait=1&amp;color=00ADEF"></object>
+<iframe src="https://player.vimeo.com/video/7681282" loading="lazy" allowfullscreen></iframe>
 
 I just thought this was very lovely.

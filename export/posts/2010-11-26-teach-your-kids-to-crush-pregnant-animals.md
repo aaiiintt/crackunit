@@ -9,7 +9,7 @@ tags: []
 excerpt: "I saw this ad on telly today and was totally blown away. My first reaction was \u201cwooooah, that looks awesome\u201d (in the voice of my inner 6 year old). Then my inner Daily Mail reader kicked in and was all like \u201coh my god, teaching kids to\u2026"
 ---
 
-<object width="560" height="340"><param name="movie" value="http://www.youtube.com/v/O-K0j2vrWDs?fs=1&amp;hl=en_US"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/O-K0j2vrWDs" loading="lazy" allowfullscreen></iframe>
 
 I saw this ad on telly today and was totally blown away. My first reaction was “wooooah, that looks awesome” (in the voice of my inner 6 year old). Then my inner Daily Mail reader kicked in and was all like “oh my god, teaching kids to splatter bugs is raising a nation of serial killers, no wonder this country is going to the dogs”.
 

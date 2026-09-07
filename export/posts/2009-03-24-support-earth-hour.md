@@ -13,7 +13,7 @@ The good folk at WWF are doing Earth Hour again around the globe. It’s really 
 
 Here’s a video about it:
 
-<object width="480" height="295"><param name="movie" value="http://www.youtube.com/v/1bBJ9lSSUW4&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/1bBJ9lSSUW4" loading="lazy" allowfullscreen></iframe>
 
 Judging by the number of views of that video they need some help getting the word out. So please don’t leave it to someone else, blog it, twitter it, blah blah blah.
 
@@ -23,7 +23,7 @@ Or there’s lots more stuff over at the global site [http://www.earthhour.org](
 
 Including the (becoming) almost ubiquitous Augmented Reality thingy…
 
-<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/8Ztnfpl0MPc&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/8Ztnfpl0MPc" loading="lazy" allowfullscreen></iframe>
 
 ([Flo](http://floheiss.wordpress.com/), [I think you’re right](http://twitter.com/Floheiss/statuses/1344739428))
 

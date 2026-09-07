@@ -21,7 +21,7 @@ It really is just like art. Almost.
 
 Excel on the other hand doesn’t have an ‘art’ mode. But [Danielle Aubert](http://www.danielleaubert.com/) has been making art with it. And I like it.
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/_TLp4OSxPhY&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/_TLp4OSxPhY" loading="lazy" allowfullscreen></iframe>
 
 There’s lots more on the site: [http://www.danielleaubert.com/](http://www.danielleaubert.com/)
 

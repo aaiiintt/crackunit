@@ -15,6 +15,6 @@ via [midigun.com](http://www.midigun.com/images/Action04.jpg)
 
 I’ve come across the MidiGun before, but I wasn’t sure it was real. But turns out it is.
 
-<object height="417" width="500"><param name="movie" value="http://www.youtube.com/v/yBo-LGyljsw&amp;hl=en&amp;fs=1"><param name="wmode" value="window"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/yBo-LGyljsw" loading="lazy" allowfullscreen></iframe>
 
 [Posted via web](http://posterous.com) from [crackunit’s posterous](http://crackunit.posterous.com/the-midigun-is-real)

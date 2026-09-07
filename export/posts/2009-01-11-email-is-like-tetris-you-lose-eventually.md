@@ -19,4 +19,4 @@ But is it true that we’ll all lose eventually? Most days it feels like it to m
 
 Or is there an email equivalent of Cossack dancers and a shuttle launch? If so, where is it, and how can I get there?
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/Tx6OFwLZk6w&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/Tx6OFwLZk6w" loading="lazy" allowfullscreen></iframe>

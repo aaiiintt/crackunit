@@ -12,11 +12,11 @@ excerpt: "Original compositions made with heavy borrowing from films. Nice stuff
 Original compositions made with heavy borrowing from films. Nice stuff…  
 Looks and sounds a bit like LemonJelly meets Hextatic (or something like that).
 
-<object width="560" height="340"><param name="movie" value="http://www.youtube.com/v/F1jmhbw3JHw&amp;hl=en&amp;fs=1&amp;"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/F1jmhbw3JHw" loading="lazy" allowfullscreen></iframe>
 
-<object width="560" height="340"><param name="movie" value="http://www.youtube.com/v/3Za-V_lhwGg&amp;hl=en&amp;fs=1&amp;"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/3Za-V_lhwGg" loading="lazy" allowfullscreen></iframe>
 
-<object width="560" height="340"><param name="movie" value="http://www.youtube.com/v/65PiKsNhCsc&amp;hl=en&amp;fs=1&amp;"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/65PiKsNhCsc" loading="lazy" allowfullscreen></iframe>
 
 EDIT: The third video wasn’t broken last night. But it is as of this morning \[10.09.09\] – I thought I ought to leave it in as an artifact of ‘the man’ exercising his right to shut stuff down. I wonder how long the others will last?
 

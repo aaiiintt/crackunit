@@ -13,4 +13,4 @@ What is it about Zoo advertising. This is the 3rd Zoo ad I’ve posted on here. 
 
 I guess this is really just a press ad turned into a short movie, but given the costs of putting something on the Internet why the hell not.
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/cvs9kURU79s&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/cvs9kURU79s" loading="lazy" allowfullscreen></iframe>

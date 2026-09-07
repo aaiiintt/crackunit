@@ -11,7 +11,7 @@ excerpt: "Sorry, last one of the day I promise. I just couldn\u2019t not share t
 
 Sorry, last one of the day I promise. I just couldn’t not share this incredible body popping.
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/yY5et2t2dn4"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/yY5et2t2dn4" loading="lazy" allowfullscreen></iframe>
 
 Wow!
 

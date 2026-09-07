@@ -11,12 +11,8 @@ excerpt: "Could this be the most brilliant TV show ever conceived? Recreate Wile
 
 Could this be the most brilliant TV show ever conceived?
 
-<object width="380" height="300"><param name="movie" value="http://www.trutv.com/video/embplayer/truPlayer.swf?PID=6skgsG9KQmIksXpf7h6VRmGr3WeIQfJE&amp;feedPID=ZfBw6zxJKuMXo1Qui37ueatzWaIkNBtH"><param name="wmode" value="transparent"></object>
-
 Recreate Wile E. Coyote’s contraptions for catching the Road Runner in real life. What a joy.
 
 And they’ve even got a professor called Don Weincoff (sp?).
-
-<object width="380" height="300"><param name="movie" value="http://www.trutv.com/video/embplayer/truPlayer.swf?PID=OKgodR5YOX3O6kUZmMv5ulMFUPRmflL0&amp;feedPID=ZfBw6zxJKuMXo1Qui37ueatzWaIkNBtH"><param name="wmode" value="transparent"></object>
 
 For more info [head here](http://www.trutv.com/shows/man_vs_cartoon/index.html).

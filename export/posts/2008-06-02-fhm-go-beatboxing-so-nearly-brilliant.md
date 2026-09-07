@@ -9,7 +9,7 @@ tags: ["video", "youtube"]
 excerpt: "A guy from FHM learns to beatbox. Then enters the UK Beatbox Championships. The video is really nice, fun and kind of educational. \u201cBuh, keh, buh, keh, ts, ts. I\u2019m getting it. I\u2019m really getting it\u2026\u201d The clip above is basically a teaser\u2026"
 ---
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/BUrK7F5124I&amp;hl=en"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/BUrK7F5124I" loading="lazy" allowfullscreen></iframe>
 
 A guy from FHM learns to beatbox. Then enters the UK Beatbox Championships. The video is really nice, fun and kind of educational.
 

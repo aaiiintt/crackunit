@@ -21,6 +21,6 @@ So in an act of total fingers-upness to the geek community they’ve taken our l
 
 Well, will it? What do you think?
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/qg1ckCkm8YI"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/qg1ckCkm8YI" loading="lazy" allowfullscreen></iframe>
 
 Thanks [Knotty](http://www.managedobjects.com.au/) for the tip.

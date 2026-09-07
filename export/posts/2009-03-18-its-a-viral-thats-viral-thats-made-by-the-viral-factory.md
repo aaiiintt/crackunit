@@ -15,7 +15,7 @@ A couple of hours later. I’m sitting next to Ed from the Viral Factory. And he
 
 About an hour later Asi sends me this link: [http://is.gd/nHjt](http://is.gd/nHjt) just with the subject Get That. So I click it. And guess what it’s the video. In my blinkin’ inbox.
 
-<object width="480" height="295"><param name="movie" value="http://www.youtube.com/v/D2FX9rviEhw&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/D2FX9rviEhw" loading="lazy" allowfullscreen></iframe>
 
 It’s like the viral circle of life. A beautiful moment I shall treasure forever.
 

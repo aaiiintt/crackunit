@@ -8,4 +8,4 @@ categories: ["Videos"]
 tags: ["youtube"]
 ---
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/7Ev7dftP0-I"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/7Ev7dftP0-I" loading="lazy" allowfullscreen></iframe>

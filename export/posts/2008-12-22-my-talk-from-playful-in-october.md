@@ -11,7 +11,7 @@ excerpt: "Here\u2019s the talk I did at Playful on 31.10.08. It\u2019s basically
 
 Here’s the talk I did at [Playful on 31.10.08](http://www.thisisplayful.com). It’s basically about the changing nature of scores in games and how scores are starting to infect everything.
 
-<object width="500" height="282"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="always"><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=2602586&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=0&amp;show_portrait=0&amp;color=00adef&amp;fullscreen=1"></object>  
+<iframe src="https://player.vimeo.com/video/2602586" loading="lazy" allowfullscreen></iframe>  
 [Iain Tait – High Scores Talk at Playful London 31.10.08](http://vimeo.com/2602586) from [Iain Tait](http://vimeo.com/iaintait) on [Vimeo](http://vimeo.com).
 
 Sorry it’s taken me so long to get it up online, but I had to get the video off the guys, and then it turned out to have been shot from a strange angle where you’ve got no idea what’s going on. So I did a bit of jiggery-pokery and combined the video with the Keynote presentation and synched it up as best I could. And the audio is a bit muffled, but hopefully you can make out what’s going on…

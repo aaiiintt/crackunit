@@ -21,6 +21,6 @@ Then I thought about how they’d just have to not look at the comments and resp
 
 But if you didn’t have comments on YouTube there would be no sense of community. And there are plenty of people who do think that YouTube is a proper community. These guys from the SouthTube get-together certainly do. And a couple of them acknowledge that even the haters have a sort of role in the community.
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/dQJbgEiQ4Cg&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/dQJbgEiQ4Cg" loading="lazy" allowfullscreen></iframe>
 
 I’m not saying that I agree with them, they certainly feel pretty strongly about it though.

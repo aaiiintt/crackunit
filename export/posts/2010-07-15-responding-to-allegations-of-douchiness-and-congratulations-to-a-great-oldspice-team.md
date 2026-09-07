@@ -9,7 +9,7 @@ tags: []
 excerpt: "I\u2019ve just been called a douche on Twitter (http://twitter.com/andrewmackenzie/status/18553562836) for not specifically mentioning the Old Spice art director and copywriter in an article that was written here\u2026"
 ---
 
-<object height="300" width="500"><param name="movie" value="http://www.youtube.com/v/LWCVhGzrAT0&amp;hl=en&amp;fs=1&amp;hd=1"><param name="wmode" value="window"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/LWCVhGzrAT0" loading="lazy" allowfullscreen></iframe>
 
 I’ve just been called a douche on Twitter ([http://twitter.com/andrewmackenzie/status/18553562836)](http://twitter.com/andrewmackenzie/status/18553562836\)) for not specifically mentioning the Old Spice art director and copywriter in an article that was written here: [http://www.fastcompany.com/1670314/old-spice-youtube-videos-wieden](http://www.fastcompany.com/1670314/old-spice-youtube-videos-wieden).  
 I know I’m not supposed to rise to things like this on the Internet. It’s rule one, on page one, chapter one of Social Media 101. But I hate it when I get called a douche. Because my mother says I’m not. And I trust her.

@@ -17,6 +17,6 @@ I started to think about how many VHS (or Betamax) cassettes there must be in lo
 
 Anyway, back to the clip. Donna Summer’s ‘State of Independence’ has got a really well known bit in it featuring a choir. But I had no idea who was in the Choir, I’d never thought twice about it. But this clip shows it’s probably the Carlsberg of choirs:
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/84_IQKtNYhg"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/84_IQKtNYhg" loading="lazy" allowfullscreen></iframe>
 
 Via awesome MP3 blog: [Dilated Choonz](http://dilate.choonz.com/)

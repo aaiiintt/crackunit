@@ -11,4 +11,4 @@ excerpt: "Prank calls are sometimes just a bit rubbish, they\u2019re just too ea
 
 Prank calls are sometimes just a bit rubbish, they’re just too easy. But this one made me laugh out loud. There’s no video just sound.
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/mdYG7hkhe7M"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/mdYG7hkhe7M" loading="lazy" allowfullscreen></iframe>

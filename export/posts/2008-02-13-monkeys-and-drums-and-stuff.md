@@ -9,7 +9,7 @@ tags: ["Advertising", "advertising blog", "blog", "creative", "food", "internet"
 excerpt: "Scamp has written a really good piece about ideas and their appropriation by advertising. It specifically talks about the Cadbury\u2019s Gorilla and the fact that it was originally pitched to someone else, and there was once a drumming Gorilla\u2026"
 ---
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/18BcWQsljvU&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/18BcWQsljvU" loading="lazy" allowfullscreen></iframe>
 
 Scamp has written a [really good piece about ideas and their appropriation by advertising](http://scampblog.blogspot.com/2008/02/more-jury-gossip-this-time-about.html). It specifically talks about the Cadbury’s Gorilla and the fact that it was originally pitched to someone else, and there was once a drumming Gorilla on YouTube.
 

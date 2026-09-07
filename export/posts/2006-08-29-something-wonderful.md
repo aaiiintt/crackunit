@@ -11,6 +11,6 @@ excerpt: "On YouTube. It\u2019s true. A thing of beauty. Simple, elegant, straig
 
 On YouTube. It’s true. A thing of beauty. Simple, elegant, straightforward beauty…
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/gjMvQHgAgjg"></object>
+<iframe src="https://www.youtube.com/embed/gjMvQHgAgjg" loading="lazy" allowfullscreen></iframe>
 
 Via [noodlepie](http://www.noodlepie.com/).

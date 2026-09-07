@@ -17,8 +17,6 @@ They’re a set of 12 mugs styled like an amazing modern version of the Willow P
 
 I wanted to keep them all, but that felt a bit mean, so I gave them to the first 12 people to come and claim one from my desk. Here’s some photos.
 
-<object width="500" height="375"><param name="flashvars" value="offsite=true&amp;lang=en-us&amp;page_show_url=%2Fphotos%2Fiaintait%2Fsets%2F72157622928022803%2Fshow%2F&amp;page_show_back_url=%2Fphotos%2Fiaintait%2Fsets%2F72157622928022803%2F&amp;set_id=72157622928022803&amp;jump_to="><param name="movie" value="http://www.flickr.com/apps/slideshow/show.swf?v=71649"><param name="allowFullScreen" value="true"></object>
-
 Bloody brilliant. Even the box was one of the greatest boxes I’ve ever had the pleasure to receive.
 
 Sophie was a bit cross though, she wanted me to bring them home because they’re so nice. I’d buy another set if they were for sale, but it doesn’t look like they are – yet…

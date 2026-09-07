@@ -15,31 +15,31 @@ Recent examples of the genre are:
 
 A big domino toppling thing,
 
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="425" height="344" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"><param name="src" value="http://www.youtube.com/v/JinnnukLCbM&amp;hl=en&amp;fs=1"></object>
+<iframe src="https://www.youtube.com/embed/JinnnukLCbM" loading="lazy" allowfullscreen></iframe>
 
 a big, unfolded newspaper,
 
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="425" height="344" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"><param name="src" value="http://www.youtube.com/v/XMhjXoPqys4&amp;hl=en&amp;fs=1"></object>
+<iframe src="https://www.youtube.com/embed/XMhjXoPqys4" loading="lazy" allowfullscreen></iframe>
 
 a ‘hand made’ internet,
 
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="425" height="344" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"><param name="src" value="http://www.youtube.com/v/zGMM-e4eeQU&amp;hl=en&amp;fs=1"></object>
+<iframe src="https://www.youtube.com/embed/zGMM-e4eeQU" loading="lazy" allowfullscreen></iframe>
 
 a big picture,
 
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="425" height="344" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"><param name="src" value="http://www.youtube.com/v/H6dqKWV_U-Y&amp;hl=en&amp;fs=1"></object>
+<iframe src="https://www.youtube.com/embed/H6dqKWV_U-Y" loading="lazy" allowfullscreen></iframe>
 
 a rainbow,
 
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="425" height="344" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"><param name="src" value="http://www.youtube.com/v/8B-gFWU6xYc&amp;hl=en&amp;fs=1"></object>
+<iframe src="https://www.youtube.com/embed/8B-gFWU6xYc" loading="lazy" allowfullscreen></iframe>
 
 an orchestra (forget for a minute that orchestras are made up of people collaborating and doing things together, this is an orchestra with a twist)
 
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="425" height="264" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"><param name="src" value="http://www.youtube.com/v/do1F-Dabn1w&amp;hl=en&amp;fs=1"></object>
+<iframe src="https://www.youtube.com/embed/do1F-Dabn1w" loading="lazy" allowfullscreen></iframe>
 
 a big picnic,
 
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="425" height="344" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"><param name="src" value="http://www.youtube.com/v/31uOBYJJYuw&amp;hl=en&amp;fs=1"></object>
+<iframe src="https://www.youtube.com/embed/31uOBYJJYuw" loading="lazy" allowfullscreen></iframe>
 
 Or milking a massive 80 foot udder. Actually that last one is a lie – or it might be a premonition.
 
@@ -71,7 +71,7 @@ But sometimes people do arrange to meet up with a large group of people to do so
 
 And now, inevitably, there’s an advert about a flashmob…
 
-<object width="425" height="264"><param name="movie" value="http://www.youtube.com/v/VQ3d3KigPQM&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/VQ3d3KigPQM" loading="lazy" allowfullscreen></iframe>
 
 You can’t escape it. It’s on TransVision screens at all the London stations, escalator panels on the underground, the telly, and on the YouTubes (with a huge number of variants including the 2.41s mega-ad above). It’s pretty much everywhere. I’ve tried hiding from it. But it keeps on finding me.
 
@@ -81,7 +81,7 @@ But the truth is it couldn’t not have happened. It’s got the hip-but-not-too
 
 But it’s not surprising that they have to fake it, when an actual flashmob looks like this:
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/wl4r1CnZ-VU&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/wl4r1CnZ-VU" loading="lazy" allowfullscreen></iframe>
 
 (I recorded this at the ‘Rick Rolling’ Flash Mob last year – I was **not** proud to be there)
 
@@ -105,7 +105,7 @@ Spot the differences:
 
 The one thing that they have in common is people filming / photographing it. And to give it credit the T-Mobile ‘event’ does a great job of continuing the illusion by getting a bunch of assorted ‘real’ people to talk about their experiences of the flashmob:
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/9Jv6rHJiNhQ&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/9Jv6rHJiNhQ" loading="lazy" allowfullscreen></iframe>
 
 Enthusiastic folk who’ve just seen a TV ad being filmed + editing = magic! If you’d done it you would though wouldn’t you…
 

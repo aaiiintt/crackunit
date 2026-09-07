@@ -11,7 +11,7 @@ excerpt: "This video makes Second Life look pretty interesting (although I do se
 
 This video makes Second Life look pretty interesting (although I do sense a bit of hyperbole in there…).
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/synxFmQJ_0A"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/synxFmQJ_0A" loading="lazy" allowfullscreen></iframe>
 
 Personally I still can’t get my head into Second Life. Changing my outfit was by far the most interesting bit.
 

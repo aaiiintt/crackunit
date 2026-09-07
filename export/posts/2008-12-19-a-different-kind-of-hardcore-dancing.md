@@ -11,4 +11,4 @@ excerpt: "I\u2019ve not posted any funny dancing for a long old time. Here\u2019
 
 I’ve not posted any funny dancing for a long old time. Here’s a totally different style…
 
-<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/k_ehZcYFCz8&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/k_ehZcYFCz8" loading="lazy" allowfullscreen></iframe>

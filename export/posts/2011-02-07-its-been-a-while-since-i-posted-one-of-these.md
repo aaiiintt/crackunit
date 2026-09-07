@@ -9,6 +9,6 @@ tags: []
 excerpt: "Awesome."
 ---
 
-<object height="417" width="500"><param name="movie" value="http://www.youtube.com/v/L6SJPhjn8Yc&amp;hl=en&amp;fs=1"><param name="wmode" value="window"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/L6SJPhjn8Yc" loading="lazy" allowfullscreen></iframe>
 
 Awesome.

@@ -9,7 +9,7 @@ tags: []
 excerpt: "via vimeo.com Cute interactive installation. I like the fact it uses \u2018stomp detection\u2019 I think more things should feature stomp detection. Read more at: http://www.theowatson.com/site_docs/work.php?id=47 and\u2026"
 ---
 
-<object height="281" width="500"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="always"><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=8805152&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=1&amp;color=00ADEF&amp;fullscreen=1"></object>
+<iframe src="https://player.vimeo.com/video/8805152" loading="lazy" allowfullscreen></iframe>
 
 via [vimeo.com](http://vimeo.com/8805152)
 

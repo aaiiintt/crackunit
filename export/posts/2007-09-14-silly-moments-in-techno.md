@@ -13,10 +13,10 @@ Techno clubs aren’t normally renowned for their sense of humour. But here’s 
 
 A rather odd reaction to a rather odd track called Heater by Samin at the Outhouse Festival.
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/tC-e8_x1fOw"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/tC-e8_x1fOw" loading="lazy" allowfullscreen></iframe>
 
 And this from the always-a-little-bonkers terrace at DC10 in Ibiza (the club starts at something stupid like 8am on Monday morning and goes on till Monday night so what do you expect!). I’m not quite sure where the sitting down thing came from though…
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/js7Scz6HpTg"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/js7Scz6HpTg" loading="lazy" allowfullscreen></iframe>
 
 Anyone got any other ‘silly moments in techno’?

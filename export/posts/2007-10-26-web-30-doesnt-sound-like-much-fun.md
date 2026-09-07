@@ -9,7 +9,7 @@ tags: ["distributable micro applications", "Eric Schmidt", "Google", "web", "you
 excerpt: "I wasn\u2019t going to post this as it\u2019s not all that enlightening. It\u2019s from a few months ago and is Eric Schmidt (Google CEO) talking about web 3.0 as a bunch of lightweight free distributable micro applications / services. Which is all very\u2026"
 ---
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/T0QJmmdw3b0"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/T0QJmmdw3b0" loading="lazy" allowfullscreen></iframe>
 
 I wasn’t going to post this as it’s not all that enlightening. It’s from a few months ago and is Eric Schmidt (Google CEO) talking about web 3.0 as a bunch of lightweight free distributable micro applications / services. Which is all very well, but he doesn’t make it sound all that sexy.
 

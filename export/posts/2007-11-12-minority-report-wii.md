@@ -13,6 +13,6 @@ Elaborate hack that makes the Wii work like that crazy fingertip Minority Report
 
 It’s quite a long time before it gets to the money shot and it’s quite high in geekiness.
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/0awjPUkBXOU&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/0awjPUkBXOU" loading="lazy" allowfullscreen></iframe>
 
 via: [PSFK](http://www.psfk.com/2007/11/minority-report-with-your-wii.html)

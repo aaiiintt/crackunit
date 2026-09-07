@@ -9,7 +9,7 @@ tags: ["art", "odd", "trippy", "weird", "youtube"]
 excerpt: "Sophie\u2019s brother introduced me to the work of Larry Carlson yesterday. Half of me wishes he hadn\u2019t. It\u2019s like a portal into a strange dimension that makes you feel kind of odd. But you can\u2019t help sticking around to see what happens next\u2026"
 ---
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/ap3evKqWtq0&amp;hl=en"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/ap3evKqWtq0" loading="lazy" allowfullscreen></iframe>
 
 [Sophie’s brother](http://www.mrpiper.co.uk/) introduced me to the work of [Larry Carlson](http://www.larrycarlson.com/) yesterday. Half of me wishes he hadn’t.
 

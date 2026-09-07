@@ -23,6 +23,6 @@ And whenever I’m having a hard time I always reassure myself with this simple 
 
 Which makes me think of this clip from The Day Today, which makes me laugh, and then it’s all OK…
 
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/ob1rYlCpOnM&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"></object>
+<iframe src="https://www.youtube.com/embed/ob1rYlCpOnM" loading="lazy" allowfullscreen></iframe>
 
 Note: this will only work until someone dies or gets killed at work, then I’ll be stuffed.

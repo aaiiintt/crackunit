@@ -17,6 +17,6 @@ It’s just dead good. It shows that designing more stuff isn’t the right way.
 
 And his cheeky video intro is funny:
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/Mdvctn-ILtQ"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/Mdvctn-ILtQ" loading="lazy" allowfullscreen></iframe>
 
 [Read it](http://noisydecentgraphics.typepad.com/design/2007/10/im-a-designer-u.html)

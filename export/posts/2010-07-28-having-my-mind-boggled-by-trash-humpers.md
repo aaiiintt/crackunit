@@ -13,7 +13,7 @@ excerpt: "Trash Humpers is the latest film by Harmony Korine. The film is being 
 
 [Trash Humpers](http://www.trashhumpers.com/) is the latest film by Harmony Korine.
 
-<object height="417" width="500"><param name="movie" value="http://www.youtube.com/v/JQYSRXT3CiU&amp;hl=en&amp;fs=1"><param name="wmode" value="window"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/JQYSRXT3CiU" loading="lazy" allowfullscreen></iframe>
 
 The film is being shown at various VHS screenings on old TV sets. I’m not sure if this is the most [Barley](http://www.youtube.com/watch?v=lhAr_UeroCk) thing ever, or a moment of brilliant. Maybe I’ll never know.
 

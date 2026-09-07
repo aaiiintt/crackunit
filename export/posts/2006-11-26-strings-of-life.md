@@ -16,4 +16,4 @@ A few reasons to post this clip:
 -   When he talks about the making of the track you realise that he must have just sat there listening to that loop over and over and over again.
 -   Derrick May’s description of the Eureaka moment is great. The fear of realising that he’d just made something that would profoundly change dance music forever. It makes me want to have one too.
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/yt3QvoF8eK4"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/yt3QvoF8eK4" loading="lazy" allowfullscreen></iframe>

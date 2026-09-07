@@ -11,6 +11,6 @@ excerpt: "There\u2019s one unfortunate things about Interactive TV ads, not that
 
 There’s one unfortunate things about Interactive TV ads, not that many people really get to see them. Which is a shame when they’re sometimes as lovely as this:
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/hiZfFERGe5k&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/hiZfFERGe5k" loading="lazy" allowfullscreen></iframe>
 
 Thanks to YouTube ‘ordinary’ people without Murdochian Red Buttons can now see it too. Nice work by the [Weapon 7](http://www.weapon7.com/) folks.

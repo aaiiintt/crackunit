@@ -11,4 +11,4 @@ excerpt: "It\u2019s had over 7m views. And it\u2019s just a video of a cat. But 
 
 It’s had over 7m views. And it’s just a video of a cat. But it makes me laugh. Again and again. So I had to post it…
 
-<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/eV71mpbvl-g&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/eV71mpbvl-g" loading="lazy" allowfullscreen></iframe>

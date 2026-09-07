@@ -10,5 +10,5 @@ excerpt: "Modern hip hop videos don\u2019t look like this\u2026 Thought it was i
 ---
 
 Modern hip hop videos don’t look like this…  
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/JF7b1hdFiDM"></object>  
+<iframe src="https://www.youtube.com/embed/JF7b1hdFiDM" loading="lazy" allowfullscreen></iframe>  
 Thought it was interesting as a social snapshot of the early 80s in New York. Plus there’s some great fashions and urban landscapes in there.

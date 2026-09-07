@@ -11,7 +11,7 @@ excerpt: "This video for Heaven Can Wait is lovely, if very strange. Don\u2019t 
 
 This video for Heaven Can Wait is lovely, if very strange. Don’t do that thing of flicking through it to see if it’s any good before you watch it. YOU’LL RUIN IT. Just sit back, put it on fullscreen and watch.
 
-<object height="281" width="500"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="always"><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=7703592&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=1&amp;color=00ADEF&amp;fullscreen=1"></object>
+<iframe src="https://player.vimeo.com/video/7703592" loading="lazy" allowfullscreen></iframe>
 
 I blogged about [the curse of the fidget before](/2009/01/25/amazing-fever-ray-video-with-disabled-fidget-bar/) – I know passively watching stuff is so un-web, but sometimes things deserve your full attention.
 

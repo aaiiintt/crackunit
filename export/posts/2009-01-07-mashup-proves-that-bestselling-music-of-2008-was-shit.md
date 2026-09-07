@@ -9,7 +9,7 @@ tags: []
 excerpt: "DJ Earworm has put together this mashup of the top 25 Billboard Chart tracks of 2008. It\u2019s technically very accomplished. But it left me feeling full of regret and despair. It shows how mainstream bestselling music is a pile of generic\u2026"
 ---
 
-<object width="480" height="295"><param name="movie" value="http://www.youtube.com/v/XLaZ-8IMtt0&amp;hl=en&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/XLaZ-8IMtt0" loading="lazy" allowfullscreen></iframe>
 
 DJ Earworm has put together this mashup of the top 25 Billboard Chart tracks of 2008. It’s technically very accomplished. But it left me feeling full of regret and despair. It shows how mainstream bestselling music is a pile of generic piss-wailing R&B toss.
 

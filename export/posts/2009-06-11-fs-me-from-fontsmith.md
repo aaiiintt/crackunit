@@ -11,8 +11,6 @@ excerpt: "I rarely blog about stuff that I get sent in the post, because most of
 
 I rarely blog about stuff that I get sent in the post, because most of it isn’t very inspiring. But this booklet that I got this morning worked for me on lots of levels…
 
-<object width="500" height="375"><param name="flashvars" value="offsite=true&amp;lang=en-us&amp;page_show_url=%2Fphotos%2Fiaintait%2Fsets%2F72157619504835881%2Fshow%2F&amp;page_show_back_url=%2Fphotos%2Fiaintait%2Fsets%2F72157619504835881%2F&amp;set_id=72157619504835881&amp;jump_to="><param name="movie" value="http://www.flickr.com/apps/slideshow/show.swf?v=71649"><param name="allowFullScreen" value="true"></object>
-
 Here’s why I liked it:
 
 1.  It’s a lovely booklet

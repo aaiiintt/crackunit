@@ -11,6 +11,6 @@ excerpt: "Following on from the Eva Pascoe and Tony Wilson post the other day. S
 
 Following on from the [Eva Pascoe and Tony Wilson](/2007/10/30/tony-wilson-and-eva-pascoe-on-the-internet/) post the other day.
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/LwQYyUoOA7w&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/LwQYyUoOA7w" loading="lazy" allowfullscreen></iframe>
 
 So many great moments, I really like the bit about emoticons… “Turn your head to the left… A little frowny face…”. Classic.

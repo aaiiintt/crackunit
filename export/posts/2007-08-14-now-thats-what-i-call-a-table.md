@@ -11,4 +11,4 @@ excerpt: "This has been around for a while, but someone just sent it round work 
 
 This has been around for a while, but someone just sent it round work again. Stunning bit of physical interface shenanigans…
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/0h-RhyopUmc"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/0h-RhyopUmc" loading="lazy" allowfullscreen></iframe>

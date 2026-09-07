@@ -13,7 +13,7 @@ There’s a new game coming out called Skate. I think you should be able to gues
 
 It looks absolutely stunning, not sure that this clip will do it justice.
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/tC9TDmqFZFY"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/tC9TDmqFZFY" loading="lazy" allowfullscreen></iframe>
 
 I think they’ve also done some cool stuff with the control system by the sounds of it. And it’s got some neat replay video production stuff too so you can show off your rad skillz.
 

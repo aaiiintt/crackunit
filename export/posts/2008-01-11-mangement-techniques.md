@@ -13,7 +13,7 @@ Where I work it’s all very nicey nicey. Which makes for a *nice* place to work
 
 (From [Glengarry Glen Ross](http://www.imdb.com/title/tt0104348/) – contains *very* strong language)
 
-<object width="425" height="373"><param name="movie" value="http://www.youtube.com/v/xKzMd328bMw&amp;rel=1&amp;border=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/xKzMd328bMw" loading="lazy" allowfullscreen></iframe>
 
 I’m wondering if this style of management would work in the creative industries? I’m sure it’d work for motivating new business teams. But I’m pretty sure it could be modified slightly to get creative people to come up with more and better ideas too. Just need to figure out some new acronyms… And get a massive watch… Oh and earn a million dollars last year… And drive a BMW…
 

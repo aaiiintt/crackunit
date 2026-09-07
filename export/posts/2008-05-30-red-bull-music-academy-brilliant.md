@@ -9,7 +9,7 @@ tags: ["brand", "Music", "video", "youtube"]
 excerpt: "I\u2019ve not really looked into the Red Bull Music Academy stuff before. IT\u2019S AMAZING. There\u2019s some brilliant video lectures and an awesome podcast. It\u2019s like TED for cool music. The lectures are full of heroic musical dudes from bunch of\u2026"
 ---
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/h7hikFtTIsQ&amp;hl=en"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/h7hikFtTIsQ" loading="lazy" allowfullscreen></iframe>
 
 I’ve not really looked into the Red Bull Music Academy stuff before.
 

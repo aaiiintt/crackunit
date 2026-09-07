@@ -11,26 +11,26 @@ excerpt: "Lauded as \u2018the best 5 second clip on the Internet\u2019 \u2013 an
 
 Lauded as ‘the best 5 second clip on the Internet’ – and you know what, they might be right:
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/jHjFxJVeCQs"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/jHjFxJVeCQs" loading="lazy" allowfullscreen></iframe>
 
 Then come the literally hundreds of ‘remixes’…
 
 Silent Movie:
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/2lXL7HflU1Q"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/2lXL7HflU1Q" loading="lazy" allowfullscreen></iframe>
 
 Kill Bill:
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/54vtXRI32MQ"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/54vtXRI32MQ" loading="lazy" allowfullscreen></iframe>
 
 Star Wars:
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/ttksHRp_6lM"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/ttksHRp_6lM" loading="lazy" allowfullscreen></iframe>
 
 It’s a gift that just keeps on giving…
 
 If you want to see the original show where the clip was taken from, it’s here:
 
-<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/SZjPvoYeZRI"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/SZjPvoYeZRI" loading="lazy" allowfullscreen></iframe>
 
 Thanks to [Richard](http://opensource.typepad.com/) for the tip.

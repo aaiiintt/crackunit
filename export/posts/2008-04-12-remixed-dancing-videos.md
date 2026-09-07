@@ -11,10 +11,10 @@ excerpt: "I\u2019ve had one of these saved for a while, but when I found the oth
 
 I’ve had one of these saved for a while, but when I found the other I thought it was time to post them as a set. I don’t know why, they just tickle me.
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/krvTmwGpAD8&amp;hl=en"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/krvTmwGpAD8" loading="lazy" allowfullscreen></iframe>
 
 And this one from Romania (thanks to whoever sent this link to me via del.icio.us – I can’t remember who it was, sorry).
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/ZNA07FYi8Xc&amp;hl=en"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/ZNA07FYi8Xc" loading="lazy" allowfullscreen></iframe>
 
 Kind of silly moments in techno…

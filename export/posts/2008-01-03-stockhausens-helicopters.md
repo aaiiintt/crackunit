@@ -15,7 +15,7 @@ And thank heavens I have, otherwise I’d never have known about Karlheinz Stock
 
 You can see it being performed in 1993 in Austria right here:
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/13D1YY_BvWU&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/13D1YY_BvWU" loading="lazy" allowfullscreen></iframe>
 
 Karlheinz, who sadly died last year, is reported as saying:
 
@@ -25,6 +25,6 @@ That’s the kind of creative process I like.
 
 I enjoyed this interview with him. But I still can’t tell if he’s a genius or a nutjob. And I still don’t think I could actually listen to any of his compositions for fun, but it’s interesting to see him composing using sketches and grids that look to the untrained eye quite a lot like modern music production software.
 
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/mrzi4YNhvig&amp;rel=1"><param name="wmode" value="transparent"></object>
+<iframe src="https://www.youtube.com/embed/mrzi4YNhvig" loading="lazy" allowfullscreen></iframe>
 
 And if you’re still interested in Stockhausen, [this remembrance piece from the Guardian](http://music.guardian.co.uk/electronic/story/0,,2226684,00.html) from a few weeks ago has some interesting anecdotes from collaborators and friends.

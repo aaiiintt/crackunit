@@ -9,7 +9,7 @@ tags: []
 excerpt: "via youtube.com There\u2019s been so many spoofy hip hop things \u2013 but this is so far beyond the next level I got stuck. The Pink Floyd shorts are totally TDF."
 ---
 
-<object height="417" width="500"><param name="movie" value="http://www.youtube.com/v/4_pS46YRMIQ&amp;hl=en&amp;fs=1"><param name="wmode" value="window"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"></object>
+<iframe src="https://www.youtube.com/embed/4_pS46YRMIQ" loading="lazy" allowfullscreen></iframe>
 
 via [youtube.com](http://www.youtube.com/watch?v=4_pS46YRMIQ&feature=player_embedded)
 
