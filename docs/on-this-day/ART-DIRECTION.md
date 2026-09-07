@@ -17,7 +17,7 @@ and frame counts to move by 10 to 20%. Expect the ideas not to.
 
 Every Reel is the opening titles of a film that is the day itself. One line from
 the post, huge, in a 2006 system font, over a crunchy acid collage that moves like
-a GIF while the camera moves like glass. The junk talks in dialog boxes. The post
+a GIF while the camera moves like glass. The junk talks in dialog boxes, and only ever in sentences from the other posts on that date. The post
 gets read on its own real page. The chart track is the score. crackunit.com is the
 studio card. It loops. It is 12 seconds. It is deadpan.
 
@@ -568,190 +568,75 @@ Tone gate: lines containing strong swearing get `confidence` capped at 0.5 and a
 
 ---
 
-## 12. Copy bank v1
+## 12. Copy bank: the junk quotes the archive
 
-The junk speaks. 150 lines, tagged. Picked per video by seed, never repeating within
-a video, never used for the line itself. British English. Iain edits this; nothing
-here is precious.
+Nothing in the furniture is written for the video. Every dialog, search field,
+Notepad, email subject, label tag, tile word and status bar quotes the archive,
+verbatim, typos included. The hero post gets the line. **The other posts from that
+date, across every year, get the furniture.** That is how a 12-second video about
+one post still resurfaces everything Iain posted on that day.
 
-Format for `data/copy-bank.json`: `{ id, tag, text, buttons? }`. Buttons are given
-in square brackets below and become the dialog's buttons in order.
+There is no hand-written bank. `build-days.mjs` derives the copy per day from the
+posts by the rules below and writes it to `data/days/MM-DD.json` as `copy`. No
+model is involved. Iain can override any slot in `data/copy-overrides.json`.
 
-### dialog (40)
+### Derivation rules
 
-1. Are you sure you want to remember this? [Yes] [No]
-2. This page was last updated 19 years ago. Continue anyway? [OK]
-3. Windows has found a post from 2007. What would you like to do with it? [Read it] [Ignore it]
-4. You've been on the internet for 21 years. [OK]
-5. Everything here was true at the time. [Fine]
-6. Do you want to save changes to 2007? [Yes] [No] [Cancel]
-7. This video is no longer available. It was quite good. [OK]
-8. It's not even 8am. [OK]
-9. Restart required to apply the past. [Restart now] [Later]
-10. Email is for old people. [OK]
-11. This blog would like to send you notifications from before notifications. [Allow] [Don't allow]
-12. You have 1 unread post from 2006. [Open] [Mark as read]
-13. Someone has poked you. [Poke back] [Leave it]
-14. Nobody's blogged in a while. That's fine. [OK]
-15. It's quite soft enough already. [Agree]
-16. Flash Player is required to view this memory. [Install] [Cancel]
-17. Unexpected optimism detected. [Continue]
-18. Please rate this year. [Submit]
-19. Your session from 2008 has expired. [Log in again]
-20. Delete browsing history? Some of it was lovely. [Delete] [Keep]
-21. This link is dead. Long live the link. [OK]
-22. Would you like to be 34 again? [Yes] [No] [Not like that]
-23. The future arrived. Not the one in the post. [OK]
-24. Loading the rest of your life. [Cancel]
-25. You've reached the end of the internet. Again. [Back]
-26. Warning: contains earnest enthusiasm about widgets. [Proceed]
-27. Buffering. It'll be worth it. Probably. [Wait]
-28. The comments were open then. [OK]
-29. It seemed important on the day. [OK]
-30. Skip intro? There isn't one. [OK]
-31. Send to a friend? You've only got the one. [Send]
-32. Add to del.icio.us? del.icio.us has gone. [OK]
-33. Update available. Nothing has changed. [Update]
-34. Remember me? [Yes] [No]
-35. Bookmark this? You won't come back. [Bookmark anyway]
-36. Turn on comments? [No]
-37. This post has been read 0 times since 2009. [Fix that]
-38. Your Nokia is ready. [OK]
-39. Are you still watching? It's 12 seconds. [Yes]
-40. The page has finished loading. Nobody's ever said that before. [OK]
+| Slot | Source | Rule |
+|---|---|---|
+| `dialog` | Sentences from the day's non-hero posts | Sentences of 12 to 90 characters that make a claim or ask a question. Buttons: if the same post contains a one-word exclamation ("Whoop!", "totally!"), that is the button; otherwise the period default [OK]. Never [Yes] [No] unless the sentence is a question. |
+| `search` | Titles of the day's posts | Lowercased, as typed into a search field. The hero's title is excluded because it appears in the post beat. |
+| `error` | The post's actual media state | If the post's image is in `export/unrecoverable.json`, the error names the real dead host: *"This image was on Skitch. Skitch is gone."* If the embed was dropped in migration, *"This was a Flickr slideshow. Flash took it."* If a post is fine, no error box that day. The errors are true. |
+| `notepad` | The hero post's `excerpt` frontmatter, or a non-hero post's whole body if under 200 characters | As is. The excerpt is Iain's own first paragraph as WordPress cut it, ellipsis included. |
+| `subject` | Titles of non-hero posts | As is. No "Re:" or "Fwd:" added; if a title already reads like a subject line, it was always one. |
+| `tag` | The day's WordPress tags and categories, from `taxonomy.json` names | Verbatim, including "street figther 2" and "www.makemineabuilders.com". Sorted by length, shortest first. Category names count ("Lovely Design", "Photos"). Never "Uncategorized". |
+| `tile` | One word | The shortest word in the line with three or more letters, or the day's shortest exclamation ("Whoop!"), or the hero's first tag. |
+| `status` | Real metadata | The permalink, the ISO timestamp from frontmatter, "Post ID 838" from `wpId`, the category, and, only on posts that carry it, the real boilerplate "Posted via email from crackunit's posterous". |
 
-### search (25)
+Fallbacks, in order: a single-post day quotes the hero's own other sentences; a
+day still short of copy takes from the same date's posts one year either side and
+flags `copy.borrowed: true` so the site can say so.
 
-41. where do you even put a blog now
-42. is 2007 still going
-43. how to stop caring about widgets
-44. what did i mean by this
-45. why did i post that
-46. best year on the internet
-47. is myspace up
-48. what happened to the person in this photo
-49. number one single september 2007
-50. how old is the internet
-51. can you still buy chupa chups relax
-52. when did everyone stop blogging
-53. how to leave a comment
-54. was it better then
-55. street fighter car bonus stage
-56. how many 5 year olds could i take in a fight
-57. is it just me
-58. what does web 2.0 mean
-59. remind me what a feed is
-60. how to stop being emotionally middle aged
-61. why do i remember this and not my pin
-62. buffering forever
-63. who was i in 2008
-64. the internet, before
-65. what to call myself
+### Worked example, 09-07
 
-### error (20)
+The date has 8 posts, 2006 to 2020. Hero: Super Supermarkets (2007). The line:
+*"I don't know if I want my beans bigger?"*
 
-66. 404. The past can't be found. It was here a minute ago.
-67. Error 500. The server is having a think.
-68. The image you're looking for was on Skitch. So was everything.
-69. Photobucket has eaten this.
-70. This embed needs Flash. Flash needs 2006.
-71. Something went wrong in 2011 and nobody noticed.
-72. Not found. Not lost either.
-73. Cannot connect. Try standing nearer the router.
-74. Fatal exception at address 2007. Press any key.
-75. The page has expired. Which is fair.
-76. Stack overflow. Too many tabs about the same thing.
-77. An unknown error occurred. It's known now.
-78. Feed not found. You were using Bloglines, weren't you.
-79. Video removed by the uploader. The uploader was 22.
-80. This page moved. It didn't say where.
-81. Timeout. Tried for 19 years.
-82. Permission denied. You're allowed, though.
-83. Broken image. Still counts.
-84. Comment failed. Nobody reads them anyway.
-85. Out of memory. Fitting.
+| Slot | Copy | From |
+|---|---|---|
+| dialog | All we need now is a bunch of different comparisons of comparison websites and we can compare them too. [OK] | Comparing Comparisons, 2008 |
+| dialog | They melted. I think the message is pretty clear. [OK] | WWF Melting Men in Berlin, 2009 |
+| dialog | It's a nice thought… [OK] | Starbucks Bring Drinks To Your Laptop, 2007 |
+| dialog | When you see it you'll totally remember. [totally!] | Forget the Congestion Charge, 2008 |
+| dialog | Only tonight I'm traveling on JetBlue and I will feel tired, hungry and destroyed when I arrive… [Whoop!] | 1988 BA advert, 2010 |
+| search | notting hill lights | 2006 |
+| search | forget the congestion charge | 2008 |
+| search | ai lip sync magic | 2020 |
+| error | This image was on static.flickr.com. Rescued from the Wayback Machine. | Notting Hill Lights, media state |
+| notepad | Normally I'm a bit hurried or hassled going around the supermarket, but on Saturday I decided to have a bit of a wander… | Hero excerpt |
+| notepad | This from their wi-fi login page: It's a nice thought… | Starbucks, whole body |
+| subject | Every time I take a redeye flight I think about this 1988 BA advert | 2010 |
+| subject | Starbucks Bring Drinks To Your Laptop | 2007 |
+| tag | NHS · brand · design · car · web · games · Photos · wi-fi · fighting · Starbucks · paralysis · Notting Hill · Advertising · ecommerce · comparison · Lovely Design · street figther 2 · limited edition product · www.makemineabuilders.com | All 8 posts |
+| tile | Whoop! | 2010 |
+| status | /2007/09/07/super-supermarkets/ · 2007-09-07T10:12:38 · Post ID 838 · Culture, Lovely Design | Hero metadata |
 
-### notepad (15)
+Set in the A6 Starfield archetype, that is: a dialog asking whether we can compare
+the comparisons, a search field looking for notting hill lights, a Notepad with the
+supermarket paragraph, "paralysis" and "street figther 2" as label tags, and
+"Whoop!" as the button that closes the loop. All of it his. None of it written.
 
-86. note to self: get back into reading the B3ta newsletter
-87. things that seemed like a good idea in 2007 (list)
-88. draft. don't post this. (posted)
-89. buy: beans (bigger). lollies (NHS).
-90. ideas. 1. blog about it. 2.
-91. I quite like some of them.
-92. must remember to write this up. didn't.
-93. untitled.txt
-94. todo: nothing. it's Saturday.
-95. the internet was a smaller place. it felt bigger.
-96. spotted today. two of them.
-97. possibly true. can't decide.
-98. wrote this on a phone with keys
-99. everyone was there. nobody remembers.
-100. seemed important. was.
+### What the build script needs
 
-### subject (15)
-
-101. Re: Re: Re: have you seen this
-102. Fwd: you'll totally remember
-103. no subject
-104. This from today's Metro
-105. quick one
-106. as discussed (it wasn't)
-107. OUT OF OFFICE: 2007
-108. Fw: Fw: Fw: cat
-109. not sure this is real
-110. spotted near Old St
-111. the one with the goose
-112. Re: your blog
-113. ping
-114. (no subject) but important
-115. read this on the bus
-
-### tag (15), short words for the label boxes
-
-116. PROPER
-117. A BIT MUCH
-118. STILL TRUE
-119. LOVELY
-120. RUBBISH
-121. WHOOP
-122. BETA
-123. NEW!
-124. VIA
-125. VERY 2007
-126. WEB 2.0
-127. CAN'T DECIDE
-128. QUITE GOOD
-129. SUPER
-130. OLD
-
-### tile (10), one word to repeat until it is wallpaper
-
-131. delete
-132. ok
-133. post
-134. refresh
-135. again
-136. lovely
-137. loading
-138. whoop
-139. blimey
-140. back
-
-### status (10), status bars and tooltips
-
-141. Done, but with errors on page.
-142. Opening page. 19 years.
-143. Transferring data from the past
-144. Waiting for i0.wp.com
-145. 1 item remaining
-146. Connected at 56k
-147. Last modified: a long time ago
-148. You are here. You were here.
-149. Loading 3 of 1526
-150. Posted via email from crackunit's posterous
-
----
+- Sentence splitting that respects Iain's ellipses ("…") and quoted speech.
+- The `excerpt` frontmatter, the `tags` and `categories` arrays, `wpId`, `date`,
+  `permalink`, and a lookup into `export/unrecoverable.json` and
+  `export/media-paths.json` for the media state.
+- A strip list for boilerplate that must never be quoted as a sentence: "Posted
+  via web from crackunit's posterous", "Posted via email from crackunit's
+  posterous", "via youtube.com", "via boingboing.net" and the other `via` stubs.
+  These are allowed only in the `status` slot, where they are true.
+- Deterministic ordering (seeded by `MM-DD`) so a re-run gives the same video.
 
 ## 13. Asset lists for Phase D2
 

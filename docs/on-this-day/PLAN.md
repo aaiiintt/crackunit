@@ -163,19 +163,18 @@ override file; the rule for the picker is *"the sentence that is strangest when 
 alone by someone who doesn't know what it's about."* Fallback when no sentence
 qualifies: the title, set as a question.
 
-### The copy bank: the junk speaks
+### The copy: the junk quotes the archive
 
-The refs put the oddest copy in the *system*, not the headline. So every piece of
-UI furniture in the library carries its own line, drawn from a bank of ~150 in
-Iain's voice: dialog questions with Yes/No, search-field queries, error messages,
-Notepad drafts, email subjects, tag-box nonsense, a word to tile. Deadpan,
-first-person, 2007-confident. Examples of the register: *"Does the ever changing
-landscape of the online age scare you?"* · *"where do I even stand in life"* ·
-*"This post is no longer available. It never was."* · *"delete delete delete."*
-
-Written in Phase B (Fable drafts 150; Iain edits; the `rewrite` skill available for
-tuning to his voice), stored in `data/copy-bank.json` with tags (dialog / search /
-error / tile / tag), picked per video by seed. Never repeats within a video.
+The refs put their oddest copy in the system UI. Ours does the same, but the
+system UI only ever quotes crackunit. The hero post gets the line. **Every other
+post from that date, across all years, gets the furniture**: their sentences become
+the dialogs, their titles the search fields and email subjects, their real
+WordPress tags the label boxes, their excerpts the Notepad, their real media state
+the error boxes ("This image was on Skitch. Skitch is gone."). Nothing is written
+for the video; `build-days.mjs` derives it all from the posts by fixed rules, and
+`data/copy-overrides.json` lets Iain swap any slot. So a 12-second video about one
+post still surfaces everything posted on that day. Rules, sources and a worked
+example for 09-07 are in `ART-DIRECTION.md` section 12.
 
 ### The hook taxonomy, how a thumb stops
 
@@ -381,7 +380,7 @@ build session (~120k context, 60 turns) about $3–4; Opus about double Sonnet.
 | Phase | Model | Cap | What comes out |
 |---|---|---|---|
 | A This review + plan | Fable 5.1 | $8 | This file |
-| B Creative bible | Fable 5.1, one session, `xhigh`, with the 12 refs in context (downscaled to ~700px, once) | $14 | `ART-DIRECTION.md`: palette values, type spec, the 8 ref-traced archetypes as z-plane diagrams + camera paths, motion vocabulary with frame counts, hook taxonomy, beat sheet, sound spec, cover spec, line-picker brief, **copy bank v1**, specimen and loop lists |
+| B Creative bible | Fable 5.1, one session, `xhigh`, with the 12 refs in context (downscaled to ~700px, once) | $14 | `ART-DIRECTION.md`: palette values, type spec, the 8 ref-traced archetypes as z-plane diagrams + camera paths, motion vocabulary with frame counts, hook taxonomy, beat sheet, sound spec, cover spec, line-picker brief, **copy derivation rules**, specimen and loop lists |
 | C Scaffold + data | Sonnet 5 | $10 | Remotion project, R3F wired, `build-days.mjs`, `validate-days.mjs`, `fetch-charts.mjs`, `fetch-wayback-shots.mjs`, contact sheet |
 | D The line + hook assignment | Haiku 4.5 batch; Sonnet spot-checks 30 | $4 | `data/lines/MM-DD.json`: line, hook type, confidence; `data/line-overrides.json` |
 | D2 Asset generation batch | Sonnet 5 | $4 | Prompt sheets for ~40 stills and ~30 loops (per the nano-banana skill, with key-colour and loop instructions), `scripts/key-and-crunch.sh`, `scripts/catalogue-props.mjs` |
@@ -427,7 +426,7 @@ Output `ART-DIRECTION.md`, with literal values:
 5. Hook taxonomy, cover spec, sound spec, beat sheet: as in Part 2, tuned.
 6. The line-picker brief: a one-paragraph instruction plus 10 worked examples from
    real posts, for Phase D's cheap model.
-7. **The copy bank**: 150 lines of system-UI copy in Iain's voice, tagged, for
+7. **The copy rules**: how each furniture slot quotes the day's other posts (no written copy), for
    Iain to edit. The specimen list and loop list for Phase D2, traced to refs.
 
 ### Phase C, Scaffold + data (Sonnet)
