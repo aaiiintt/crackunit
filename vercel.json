@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "trailingSlash": true,
+  "rewrites": [
+    { "source": "/feed", "destination": "/feed.xml" },
+    { "source": "/feed/", "destination": "/feed.xml" },
+    { "source": "/comments/feed/", "destination": "/feed.xml" }
+  ]
+}

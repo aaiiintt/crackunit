@@ -1,0 +1,19 @@
+{
+  "name": "crackunit",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "export": "node scripts/export-wp.mjs",
+    "media": "node scripts/fetch-media.mjs",
+    "taxonomy": "node scripts/fetch-taxonomy.mjs",
+    "verify": "node scripts/verify-links.mjs"
+  },
+  "dependencies": {
+    "@astrojs/rss": "^4.0.19",
+    "astro": "^7.3.1",
+    "turndown": "^7.2.4"
+  }
+}
