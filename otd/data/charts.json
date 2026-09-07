@@ -1,0 +1,28 @@
+{
+  "_readme": "Keyed by the Sunday that starts the Official Charts week (Friday from July 2015). Dry-run values came from web search because officialcharts.com and Wikipedia are blocked from the build container; scripts/fetch-charts.mjs on the Mac replaces these with the scraped top 3 and sets verified: true. instagramSearch is what to type into the Reels music picker.",
+  "2006-09-03": {
+    "week": "3 to 9 September 2006",
+    "top": [{ "pos": 1, "title": "SexyBack", "artist": "Justin Timberlake", "instagramSearch": "SexyBack Justin Timberlake" }],
+    "partial": true, "verified": false,
+    "source": "officialcharts.com/charts/singles-chart/20060903/7501/ via search snippet"
+  },
+  "2007-09-09": {
+    "week": "9 to 15 September 2007",
+    "top": [{ "pos": 1, "title": "Beautiful Girls", "artist": "Sean Kingston", "instagramSearch": "Beautiful Girls Sean Kingston" }],
+    "partial": true, "verified": false,
+    "source": "officialcharts.com/charts/singles-chart/20070909/7501/ via search snippet; 3rd of 4 weeks at No.1"
+  },
+  "2009-09-06": {
+    "week": "6 to 12 September 2009",
+    "top": [{ "pos": 1, "title": "Run This Town", "artist": "Jay-Z feat. Rihanna & Kanye West", "instagramSearch": "Run This Town Jay-Z Rihanna" }],
+    "partial": true, "verified": false,
+    "source": "officialcharts.com/charts/singles-chart/20090906/7501/ via search snippet"
+  },
+  "_dayToWeek": {
+    "09-08": "2006-09-03",
+    "09-09": "2009-09-06",
+    "09-10": "2007-09-09",
+    "09-11": "2007-09-09",
+    "09-12": "2007-09-09"
+  }
+}

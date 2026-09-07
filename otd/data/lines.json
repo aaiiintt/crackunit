@@ -1,0 +1,43 @@
+{
+  "_readme": "Per-day editorial picks. Hero override lives in hero-overrides.json; this file holds the line, hook, archetype and the reasoning. Chosen by hand for the dry run; Phase D automates the line pick with a cheap model and this file becomes the override layer.",
+  "09-08": {
+    "hero": "/2006/09/08/youth/",
+    "line": "Anyone know where I can get the ‘urban youth cliche clipart vol 7 cd’?",
+    "alternates": ["Ooooh oooh yes please.", "Advertising ‘the snip’ must be an interesting brief…"],
+    "hook": "H2",
+    "archetype": "A6",
+    "why": "A question, so the dialog gets Yes/No. Every image that day is dead (Photobucket, Skitch, Posterous), so the starfield's error boxes are all true."
+  },
+  "09-09": {
+    "hero": "/2009/09/09/super-lovely-bootlegs/",
+    "line": "I wonder how long the others will last?",
+    "alternates": ["But then I don’t normally laugh out loud like a freak in the office either…", "Jeez, is there nothing that can’t be turned into a video game these days"],
+    "hook": "H4",
+    "archetype": "A4",
+    "why": "The post records one of its own videos being taken down. The YouTube 'no longer available' hook is the truth, and the remaining video is the payoff."
+  },
+  "09-10": {
+    "hero": "/2007/09/10/brighton-chip-shop/",
+    "line": "Anthropologists could figure out a lot about Brighton just by looking at this chippy window.",
+    "alternates": ["And of course there’s a small dose of Tai Chi for good measure.", "Yeah, that’s what they say… I don’t think it’s strictly true though."],
+    "hook": "H1",
+    "archetype": "A7",
+    "why": "Three posts, all with local images. The grid holds the chippy photo in a cell; Internet Now Working is the search field; Everything Is Amazing is the video thumbnail."
+  },
+  "09-11": {
+    "hero": "/2007/09/11/fosters-do-a-bad-thing/",
+    "line": "I clicked on a banner today.",
+    "alternates": ["I probably click on 2/3 a month.", "I object to this too."],
+    "hook": "H1",
+    "archetype": "A3",
+    "why": "Thirteen posts. A cascade of thirteen windows is the day. The dialogs are I object to this too, I think I object, Wow."
+  },
+  "09-12": {
+    "hero": "/2007/09/12/cranes-are-big/",
+    "line": "This is a very big crane on Ebor Street near my work.",
+    "alternates": ["I got bluetoothed yesterday at Euston Station.", "It made me realise just how lazy I’ve been with blogging."],
+    "hook": "H1",
+    "archetype": "A1",
+    "why": "Deadpan. The crane photo is the hero element, cropped off the top of the frame like ref 1's headline. Blogs is Back is the Notepad."
+  }
+}
