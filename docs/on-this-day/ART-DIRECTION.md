@@ -10,8 +10,8 @@ MiniDisc; raytracing meets DV cams; **a digital deconstruction of the post, the
 video, the tags and the images, by an agentic observer, shown as freeze frames.**
 
 The reference implementation is `otd/lookdev/`: `lib.js` (the operations),
-`decon/1.js` to `12.js` (the twelve slides for 11-09), `render.mjs`. Stage 2
-turns those twelve sketches into recipes driven by any day's JSON. Nothing in
+`decon/1.js` to `13.js` (the thirteen slides for 11-09), `render.mjs`. Stage 2
+turns those thirteen sketches into recipes driven by any day's JSON. Nothing in
 this document is aspirational; every value below is one the boards used.
 
 ## 1. The substrate
@@ -33,7 +33,8 @@ this document is aspirational; every value below is one the boards used.
   a capture (video frames, yt-dlp metadata and errors, Wayback pages), the
   surviving image, the raw source file, or the Giphy catalog. Copy is never
   written. The only furniture words are `on this day`, the date, the URL,
-  `link in bio`, `recovered, web.archive.org`, `Powered by GIPHY`.
+  `link in bio`, `recovered, web.archive.org`, `no longer available`,
+  `come back tomorrow`, `TOMORROW`, `Powered by GIPHY`. Everything else is quoted.
 - **Degradation lives in the material.** Interlace, chroma bleed, scanlines,
   dither, pixelation, cropping, repetition: on frames, stickers, screenshots.
   Never blur or interlace on type. Type may be **pulled apart** as content (a
@@ -119,7 +120,7 @@ Type:
 - **highlight across a wrap**: the longest run of whole words in a wrapped
   segment that is a substring of the line, HIGHLIGHTER behind it.
 
-## 4. The carousel grammar (twelve slides)
+## 4. The carousel grammar (thirteen slides)
 
 | # | Slide | Ground | Accent | Modes (by seed) |
 |---|---|---|---|---|
