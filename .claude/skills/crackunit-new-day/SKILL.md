@@ -108,11 +108,15 @@ missing from the vocabulary, add it to the bible first, then use it.
 
 ```bash
 cd otd
-npx remotion still OnThisDay out/still/09-12-hook.png --props='{"day":"09-12","frame":0}'
-npx remotion still OnThisDay out/still/09-12-post.png --props='{"day":"09-12","frame":150}'
-npx remotion still OnThisDay out/still/09-12-page.png --props='{"day":"09-12","frame":400}'
-npx remotion still Cover     out/cover/09-12.png     --props='{"day":"09-12"}'
+npx remotion still OnThisDay out/still/09-12-hook.png --props='{"day":"09-12"}' --frame=0   --scale=0.25
+npx remotion still OnThisDay out/still/09-12-post.png --props='{"day":"09-12"}' --frame=150 --scale=0.25
+npx remotion still OnThisDay out/still/09-12-page.png --props='{"day":"09-12"}' --frame=400 --scale=0.25
+npx remotion still OnThisDay out/still/09-12-f719.png --props='{"day":"09-12"}' --frame=719 --scale=0.25
+npx remotion still Cover     out/cover/09-12.png      --props='{"day":"09-12"}'
 ```
+
+`--scale=0.25` gives the 270 px thumbnail directly, which is the legibility test.
+Compare `-f719` with `-hook`: they must differ by one frame of motion only.
 
 Downscale the hook still to 270 px wide and look at it. If the line cannot be
 read, change the line, the size or the archetype. Do not proceed on a still that
@@ -122,7 +126,7 @@ fails bible §14.
 
 ```bash
 cd otd
-time npx remotion render OnThisDay out/video/09-12.mp4 --props='{"day":"09-12"}'
+time npx remotion render OnThisDay out/video/09-12.mp4 --props='{"day":"09-12"}' --concurrency=4
 ```
 
 Watch it on a phone. Play it three times for the loop seam. Check every gate in
