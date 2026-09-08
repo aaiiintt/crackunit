@@ -140,10 +140,21 @@ const OTD = {
     if (it) { const g = this.sticker(it); if (g && g.width > 1) return { kind: "sticker", img: this.frozen(g, Math.floor(random((g.numFrames && g.numFrames()) || 1))), label: `giphy ${it.id} · "${it.query}"` }; }
     return null;
   },
-  stickerFor(post) { // a sticker from the library whose word is in this post's text
-    const t = " " + String(post.bodyText || "").toLowerCase() + " ";
-    const hits = ((this.giphy || {}).items || []).filter((i) => i.keep !== false && (i.frames == null || i.frames <= 80) &&
-      [i.query, ...(i.words || [])].some((w) => w && w.length > 3 && new RegExp(`[^a-z]${String(w).toLowerCase()}[^a-z]`).test(t)));
+  // Everything the archive itself says about a post: its prose, its title, the
+  // alt text it gave its own pictures, and the tags it filed itself under. A
+  // sticker may only be used when one of these words is the post's own.
+  ownWords(p) {
+    return " " + [p.bodyText, p.title, ...(p.tags || []), ...(p.categories || []), ...this.images_(p).map((i) => i.alt)]
+      .filter(Boolean).join(" ").toLowerCase() + " ";
+  },
+  stickersFor(post, max = 8) { // every library sticker whose word this post uses
+    const t = this.ownWords(post);
+    return ((this.giphy || {}).items || []).filter((i) => i.keep !== false && (i.frames == null || i.frames <= 80) &&
+      [i.query, ...(i.words || [])].some((w) => w && w.length > 3 && new RegExp(`[^a-z]${String(w).toLowerCase()}[^a-z]`).test(t)))
+      .slice(0, max);
+  },
+  stickerFor(post) { // one of them, seeded
+    const hits = this.stickersFor(post, 99);
     return hits.length ? hits[(this.seed() - 1) % hits.length] : null;
   },
   drawMaterial(m, r) { // into the rectangle the layout reserved, bottom-aligned to its text

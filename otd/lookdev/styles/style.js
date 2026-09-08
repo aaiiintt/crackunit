@@ -138,6 +138,72 @@ const S = {
     for (let px = maxPx; px >= minPx; px -= 1) { setSize(px); if (textWidth(t) <= w) return px; }
     setSize(minPx); return minPx;
   },
+  // ---------- looseness ----------
+  // The four p5 pieces Iain picked are all off the grid: one thing enormous and
+  // running out of the frame, the same thing tiny and marching off both edges,
+  // type and picture overlapping with neither protected by a box, a swarm of
+  // stickers at wildly different sizes, and a credit line in the gutter. These
+  // are those moves, so each option can be loose in its own way.
+
+  // One picture many times, mostly small and a few enormous, placed past the
+  // edges so the frame crops it. Seeded, so a good one can be kept.
+  pick(img, i) { return Array.isArray(img) ? img[i % img.length] : img; },
+  swarm(imgs, o = {}) {
+    const { n = 10, min = 26, max = 460, x = -140, y = -140, w = OTD.W + 280, h = OTD.H + 280, rot = 0, bias = 2.4 } = o;
+    for (let i = 0; i < n; i++) {
+      const img = S.pick(imgs, Math.floor(random(99)));
+      const ww = min + Math.pow(random(), bias) * (max - min), hh = ww * img.height / img.width;
+      push(); translate(random(x, x + w), random(y, y + h));
+      if (rot) rotate(random(-rot, rot));
+      image(img, -ww / 2, -hh / 2, ww, hh); pop();
+    }
+  },
+  // A row that starts before the left edge and ends after the right one
+  march(imgs, y, size, o = {}) {
+    const { gap = 5, angle = 0, phase = null } = o;
+    const step = size + gap, x0 = (phase === null ? -random(step) : phase) - size;
+    push();
+    if (angle) { translate(OTD.W / 2, y); rotate(angle); translate(-OTD.W / 2, -y); }
+    let k = 0;
+    for (let x = x0; x < OTD.W + size; x += step, k++) { const img = S.pick(imgs, k); image(img, x, y, size, size * img.height / img.width); }
+    pop();
+  },
+  // The browser's own bullet list, tiny and grey: a post's sentences as the
+  // markup rendered them, which is furniture the archive already had.
+  bullets(list, x, y, w, px, lead, maxY) {
+    push(); noStroke(); S.arial(px); let yy = y;
+    for (const t of list) {
+      if (yy > maxY) break;
+      fill(150); rect(x, yy - px * 0.5, 4, 4);
+      fill(55);
+      for (const ln of OTD.wrap(t, w - 24)) { if (yy > maxY) break; text(ln, x + 22, yy); yy += px * lead; }
+      yy += 7;
+    }
+    pop(); return yy;
+  },
+  // One picture too big for the frame, anchored by a point rather than a box
+  bleed(img, cx, cy, w) { const hh = w * img.height / img.width; image(img, cx - w / 2, cy - hh / 2, w, hh); },
+  // Type set past the edge: wrapped at a width wider than the canvas, so the
+  // longest line leaves the frame. Returns the y it finished at.
+  giant(t, x, y, px, lead, wrapW, setSize, jitter = 0) {
+    push(); setSize(px);
+    let yy = y + px * 0.76;
+    for (const ln of OTD.wrap(t, wrapW)) { text(ln, x + (jitter ? random(-jitter * 0.35, jitter) : 0), yy); yy += px * lead; }
+    pop(); return yy;
+  },
+  giantSize(t, wrapW, targetH, lead, setSize, maxPx = 420, minPx = 54) {
+    for (let px = maxPx; px >= minPx; px -= 4) { setSize(px); if (OTD.wrap(t, wrapW).length * px * lead <= targetH) return px; }
+    setSize(minPx); return minPx;
+  },
+  // Where the account signs itself, and where Giphy is credited. Both tiny,
+  // both in the gutter, both in every one of the references.
+  daymark(t) { push(); noStroke(); fill(0); S.arialB(15); S.tracked(OTD.caps(t), 46, 62, 1.9); pop(); },
+  credit(parts) {
+    push(); noStroke(); fill(0); S.arialB(12.5);
+    S.tracked(OTD.caps(parts.filter(Boolean).join("  ·  ")), 46, OTD.H - 30, 1.1); pop();
+  },
+  anomaly(x, y, c = [255, 40, 0], r = 5) { push(); noStroke(); fill(c[0], c[1], c[2]); ellipse(x, y, r * 2, r * 2); pop(); },
+
   rule(x, y, w, weight = 1, c = 0) { push(); stroke(c); strokeWeight(weight); line(x, y, x + w, y); pop(); },
   cross(x, y, r = 6, weight = 1.6, c = 0) { push(); stroke(c); strokeWeight(weight); line(x - r, y - r, x + r, y + r); line(x + r, y - r, x - r, y + r); pop(); },
   // Draw something n times, receding: the back copy first so the front occludes.
