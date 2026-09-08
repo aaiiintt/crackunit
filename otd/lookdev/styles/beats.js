@@ -113,7 +113,7 @@ function hook() { ({ A: hookA, B: hookB, C: hookC, D: hookD })[OPT](); }
 
 function hookA() {
   if (K.pic) { const big = bw(K.pic.img, 150); push(); S.bleed(big, 300, 620, 1180); pop(); }
-  if (pool()) S.swarm(pool(), { n: 14, min: 30, max: 330, rot: 0.34 });
+  if (pool()) S.swarm(pool(), { n: 14, rot: 0.34 });
   push(); fill(0); noStroke();
   const px = S.giantSize(K.theLine, OTD.W * 1.22, 780, 0.94, (v) => S.arialB(v), 260);
   S.giant(K.theLine, 44, 232, px, 0.94, OTD.W * 1.22, (v) => S.arialB(v), 96);
@@ -134,7 +134,7 @@ function hookB() {
   S.justified(K.body, 44, 190, 700, 40, 470);
   pop();
   if (K.pic) { push(); S.bleed(K.pic.img, 210, 1090, 880); pop(); }
-  if (pool()) S.swarm(pool(), { n: 13, min: 34, max: 340, rot: 0.28, y: 260, h: 1140 });
+  if (pool()) S.swarm(pool(), { n: 13, rot: 0.28, y: 260, h: 1140 });
   push(); fill(0); noStroke();
   const px = S.giantSize(K.theLine, OTD.W * 1.18, 620, 0.96, (v) => S.arial(v), 250);
   S.giant(K.theLine, 40, 520, px, 0.96, OTD.W * 1.18, (v) => S.arial(v), 96);
@@ -153,7 +153,7 @@ function hookC() {
     if (i === 0) { fill(255); rect(r.x, r.y, r.w, r.h); if (K.pic) C.picture(K.pic.img, r.x + r.w * 0.42, r.y + 10, r.w * 0.58, r.h - 20); }
   }, -30, -24);
   pop();
-  if (pool()) S.swarm(pool(), { n: 11, min: 38, max: 280, rot: 0.38, y: 540, h: 820 });
+  if (pool()) S.swarm(pool(), { n: 11, rot: 0.38, y: 540, h: 820 });
   push(); fill(0); noStroke();
   const px = S.giantSize(OTD.caps(K.theLine), OTD.W * 1.2, 560, 0.9, (v) => S.arialB(v), 210);
   S.giant(OTD.caps(K.theLine), 40, 700, px, 0.9, OTD.W * 1.2, (v) => S.arialB(v), 96);
@@ -166,7 +166,7 @@ function hookC() {
 
 function hookD() {
   if (K.pic) { push(); S.bleed(inked(K.pic.img, 170), 830, 900, 1080); pop(); }
-  if (pool()) S.swarm(pool().map((f) => inked(f, 90)), { n: 14, min: 28, max: 320, rot: 0.32 });
+  if (pool()) S.swarm(pool().map((f) => inked(f, 90)), { n: 14, rot: 0.32 });
   push(); fill(0); noStroke();
   const px = S.giantSize(K.theLine, OTD.W * 1.16, 620, 1.0, (v) => S.arial(v), 230);
   S.giant(K.theLine, 44, 200, px, 1.0, OTD.W * 1.16, (v) => S.arial(v), 96);
@@ -186,7 +186,7 @@ const tcOf = (f) => `0:${String(Math.floor(f.t / 60)).padStart(2, "0")}:${String
 function videoA() {
   const F = K.frames;
   push(); S.bleed(bw(F[2].img, 260), 760, 400, 1240); pop();
-  if (pool()) S.swarm(pool(), { n: 13, min: 34, max: 300, rot: 0.32 });
+  if (pool()) S.swarm(pool(), { n: 13, rot: 0.32 });
   push(); fill(0); noStroke();
   const px = S.giantSize(K.title, OTD.W * 1.15, 320, 0.94, (v) => S.arialB(v), 150);
   S.giant(K.title, 40, 128, px, 0.94, OTD.W * 1.15, (v) => S.arialB(v), 96);
@@ -211,7 +211,7 @@ function videoB() {
   push(); fill(0); noStroke(); S.arial(32);
   S.justified(K.body, 44, 150, 720, 43, 560);
   pop();
-  if (pool()) S.swarm(pool(), { n: 13, min: 32, max: 310, rot: 0.3 });
+  if (pool()) S.swarm(pool(), { n: 13, rot: 0.3 });
   [[62, 300, 286, -0.06], [330, 430, 320, 0.03], [630, 316, 290, -0.03], [104, 704, 328, 0.05], [430, 836, 310, -0.05], [714, 660, 296, 0.04], [206, 1046, 300, 0.02]]
     .forEach(([x, y, w, a], i) => {
       const f = F[i % F.length], ih = w * f.img.height / f.img.width;
@@ -235,7 +235,7 @@ function videoC() {
     C.picture(f.img, r.x + r.w * 0.26, r.y, r.w * 0.74, r.h - 1, INK);
   }, -32, -22);
   pop();
-  if (pool()) S.swarm(pool(), { n: 12, min: 36, max: 300, rot: 0.36, y: 660, h: 700 });
+  if (pool()) S.swarm(pool(), { n: 12, rot: 0.36, y: 660, h: 700 });
   push(); fill(0); noStroke();
   const px = S.giantSize(OTD.caps(K.title), OTD.W * 1.2, 300, 0.92, (v) => S.arialB(v), 150);
   S.giant(OTD.caps(K.title), 40, 118, px, 0.92, OTD.W * 1.2, (v) => S.arialB(v), 96);
@@ -251,7 +251,7 @@ function videoC() {
 function videoD() {
   const F = K.frames;
   push(); S.bleed(inked(F[4 % F.length].img, 240), 780, 340, 1240); pop();
-  if (pool()) S.swarm(pool().map((f) => inked(f, 90)), { n: 13, min: 30, max: 300, rot: 0.34 });
+  if (pool()) S.swarm(pool().map((f) => inked(f, 90)), { n: 13, rot: 0.34 });
   push(); translate(24, 636); rotate(-0.05);
   const cols = 4, cw = 236, ch = 200;
   for (let i = 0; i < Math.min(12, F.length); i++) {
@@ -279,7 +279,7 @@ function post() { ({ A: postA, B: postB, C: postC, D: postD })[OPT](); }
 function postA() {
   if (K.wb) { push(); tint(255, 210); S.bleed(K.wb.img, 800, 800, 1080); noTint(); pop(); }
   push(); noStroke(); S.bullets(K.sentences, 46, 176, 480, 16, 1.4, 620); pop();
-  if (pool()) S.swarm(pool(), { n: 12, min: 32, max: 300, rot: 0.32 });
+  if (pool()) S.swarm(pool(), { n: 12, rot: 0.32 });
   push(); fill(0); noStroke();
   const px = S.giantSize(K.quote, OTD.W * 1.14, 400, 0.96, (v) => S.arialB(v), 120);
   S.giant(K.quote, 40, 660, px, 0.96, OTD.W * 1.14, (v) => S.arialB(v), 96);
@@ -298,7 +298,7 @@ function postB() {
   S.justified(K.body, 44, 154, 700, 40, 430);
   pop();
   if (K.wb) { push(); translate(470, 620); rotate(0.045); S.shadow(40, 8, 14, 0.26); noStroke(); fill(255); rect(0, 0, 620, 720); S.noShadow(); S.cover(K.wb.img, 16, 16, 588, 660, false); noStroke(); fill(INK[0], INK[1], INK[2]); S.arial(17); text(`web.archive.org/web/${K.wb.ts}`, 16, 700); pop(); }
-  if (pool()) S.swarm(pool(), { n: 12, min: 34, max: 330, rot: 0.3 });
+  if (pool()) S.swarm(pool(), { n: 12, rot: 0.3 });
   push(); fill(0); noStroke();
   const px = S.giantSize(K.quote, OTD.W * 1.12, 340, 0.98, (v) => S.arial(v), 116);
   S.giant(K.quote, 38, 470, px, 0.98, OTD.W * 1.12, (v) => S.arial(v), 96);
@@ -317,7 +317,7 @@ function postC() {
     }, -34, -26);
     pop();
   }
-  if (pool()) S.swarm(pool(), { n: 11, min: 38, max: 280, rot: 0.36 });
+  if (pool()) S.swarm(pool(), { n: 11, rot: 0.36 });
   push(); fill(0); noStroke();
   const px = S.giantSize(OTD.caps(K.quote), OTD.W * 1.16, 330, 0.9, (v) => S.arialB(v), 108);
   S.giant(OTD.caps(K.quote), 38, 116, px, 0.9, OTD.W * 1.16, (v) => S.arialB(v), 96);
@@ -330,7 +330,7 @@ function postC() {
 
 function postD() {
   if (K.wb) { push(); S.bleed(inked(K.wb.img, 200), 700, 830, 1160); pop(); }
-  if (pool()) S.swarm(pool().map((f) => inked(f, 90)), { n: 13, min: 30, max: 300, rot: 0.34 });
+  if (pool()) S.swarm(pool().map((f) => inked(f, 90)), { n: 13, rot: 0.34 });
   push(); fill(0); noStroke();
   const px = S.giantSize(K.quote, OTD.W * 1.12, 360, 1.0, (v) => S.arial(v), 116);
   S.giant(K.quote, 42, 150, px, 1.0, OTD.W * 1.12, (v) => S.arial(v), 96);

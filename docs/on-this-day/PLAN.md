@@ -138,44 +138,168 @@ identical every day. Point 2 is the one the architecture must protect.
 | **Checklist** | `otd/out/checklist/MM-DD.md` | `checklist.mjs` |
 | **Performance** — 48 h and 7 d | `otd/data/performance.json` | Iain, later |
 
-## 3. The flow
+## 3. How a day gets made
 
-### Weekly, once
-Choose seven days' shapes together so the week has a deliberate rhythm: loud,
-quiet, dense, single, wrecked. `node otd/scripts/week.mjs 12-08` prints the
-inventories for seven days side by side and the arcs each qualifies for; the
-output is seven draft treatments, reviewed in one sitting.
+Seven steps. Two are editorial, one is Iain's gate, the rest are automatic.
+Nothing renders before step 4 is written and read.
 
-### Daily, per day
-**Step 1 · Look.** `node otd/scripts/look.mjs 12-10` prints the day's
-**inventory**: every post with year, length and media state; what survives, what
-died, what was recovered; videos alive or terminated; Wayback captures; tags;
-year span; the sentences that are strange out of context. Then read the posts in
-full. No design thinking yet.
+```
+  "it's the 10th of December"
+             │
+   1  LOOK        automatic   what this day contains
+             │
+   2  READ        editorial   the posts in full. no design thinking yet
+             │
+   3  STOCK       editorial   the objects this day names → the sticker library
+             │
+   4  TREATMENT   editorial   arc · register · hook · line · ink · beats · density
+             │    → IAIN      ══ the gate. it is text. two minutes to change ══
+             │
+   5  COMPOSE     automatic   cards, placed by the register, at the day's density
+             │
+   6  REVIEW      IAIN        contact strip + the profile grid preview
+             │                redlines go into the treatment, not the code
+   7  SHIP       automatic    caption · alt text · day page · checklist · upload
+```
 
-**Step 2 · Conceptualise.** From the inventory, what *is* this day? Pick the
-**shape** (an arc), the **hook** (the strongest single thing the day has, which
-becomes slide 1), the **line**, the **ink**, and the ordered **beats**. Write the
-treatment, with one sentence of why. **This is text, and it is the review gate.**
-Iain reads it in two minutes and changes it before anything renders.
+### 1 · Look — what this day contains
 
-**Step 3 · Design and lay out.** `node otd/scripts/compose.mjs 12-10` renders the
-treatment: each beat becomes a slide composed of **cards**, in the day's ink, at
-the rhythm the arc asks for.
+```
+inventory(day):
+  posts[]     year, title, permalink, date, text, sentences, tags, categories
+  media[]     per post: image  live | dead | recovered | none
+                        video  alive(frames, yt-dlp meta) | terminated(error) | none
+              captures: wayback page snapshots, rescued images
+  shape       n_posts, n_years, span, chars, n_tags,
+              n_live, n_dead, n_recovered, n_videos, n_frames, n_captures
+  arcs        every arc whose precondition the shape satisfies
+  ink         dominant saturated hue of the day's best surviving material
+  shelf       stickers already in the library that this day's own words earn
+  gaps        things the posts name that the shelf has no object for
+```
 
-**Step 4 · Review.** Contact strip, plus the grid preview showing this cover
-against the last eight. Redlines go into the treatment, not the code, and it
-re-renders in seconds. Code changes only when a *card* is wrong.
+Derived, never edited. `look.mjs` prints it.
 
-**Step 5 · Ship.** Caption, alt text, day page, checklist, upload, log.
+### 2 · Read — the day, before any design
 
-The inversion that matters: steps 1 and 2 happen before any pixels, and step 2's
-output is prose a human can argue with.
+Read every post in full and write one line each:
+
+- what actually happened that day
+- the strangest sentence out of context
+- what has died since, and what the Archive still had
+- what a peer who was there would recognise without being told
+
+### 3 · Stock the shelf — before design, not after
+
+A day whose shelf is empty has no swarm, and the composition collapses to type
+on white. This step is what stops that, and it happens **before** the treatment
+so the treatment knows what it can spend.
+
+```
+for each post:
+  things = the objects, brands, institutions, places and formats it names
+           (nouns you could photograph. not verbs, not concepts, not feelings)
+  for each thing:
+    query = the most specific name for it
+            "mirror ball" not "party" · "TR-909" not "drum machine"
+    if library has nothing for it:
+      fetch-giphy <query> --words "<the post's own words>" --for <day>
+prune to the keepers          # eight fetched, three kept, is normal
+```
+
+The query is associative; the link back to the archive stays literal. See
+`otd/README.md` for the evidence on what searches well and what does not.
+
+### 4 · Treatment — the gate
+
+The day's plan as text, with one line of why for each choice. Iain reads it and
+changes it before anything renders.
+
+```
+treatment(day) = {
+  arc        one of the candidates, chosen and justified
+  register   A · Sponsored | B · Journal | D · Duotone     (below)
+  hook       the single strongest thing this day has, which becomes slide 1:
+             a sentence · a survivor · a wall of broken boxes · a number · one frame
+  line       the words that carry the day
+  ink        the sampled one, or an override
+  density    how loud this day is                          (below)
+  beats[]    ordered, each: { says, post, material, cards[] }
+  caption    the context the slides do not carry
+}
+
+assert differs_on_two_of(arc, register, ink) from each of the last two days
+```
+
+**Registers.** The option is not a house style; it is chosen per day by what
+carries that day.
+
+```
+register(inventory):
+  D · Duotone     pictures carry it — two or more videos, a surviving image, or
+                  every image dead, since absence reads as a colour state
+  B · Journal     words carry it — one long post, a strong single claim, or a
+                  day that is mostly text
+  A · Sponsored   things carry it — many short posts, links out, a list, or a
+                  day about advertising
+```
+
+**Density.** How far apart the biggest and smallest instance of a thing are,
+how many, how far off-square, how far past the edge. It is derived, and the
+rule is an inversion:
+
+```
+density(inventory):
+  material = n_live + n_recovered + n_frames + shelf.length
+  scarce   → amplify:  scale range 40:1, the largest instance wider than the
+                       frame, swarm 12-16, hard bleed, deep rotation
+  plentiful→ let it speak: scale range 6:1, little past the edge, swarm 4-6,
+                       the quantity is already the density
+```
+
+**The less a day has, the bigger and more repeated it gets.** A day with one
+photograph shows that photograph at two thousand pixels and at twenty on the
+same slide. A day with nine posts and twelve frames does not need amplifying.
+
+### 5 · Compose — mechanical
+
+```
+for each beat:
+  cards = beat.cards
+  for each card:
+    refuse unless card.material belongs to beat.post      # provenance, in code
+    draw it: the register's ground, type and chrome
+             the day's ink on each element by what it means
+             the day's density for scale range, count, rotation, bleed
+write provenance.json
+render slides + contact strip + grid preview
+```
+
+**The cards.** Composable pieces, not slide templates. Each takes a rectangle
+and some material and does not know what day it is.
+
+| card | what it is |
+|---|---|
+| `statement` | the line at the size of the frame, lines staggered, bleeding |
+| `swarm` | one thing at every scale from a speck to wider than the canvas |
+| `march` | a row of one thing running off both edges |
+| `stack` | the same window repeated in depth, each copy holding its own frame |
+| `wall` | a grid of frames, in the ink |
+| `window` | one thing framed, carrying its real URL |
+| `broken` | the browser's box for an image that is gone, with its alt text |
+| `bullets` | the post's sentences as the browser's own list, tiny and grey |
+| `quote` | one sentence pulled out |
+| `page` | a Wayback capture, whole |
+| `tags` | the tag field |
+| `source` | the raw markdown the post is stored as |
+| `tomorrow` | the tease |
 
 ## 4. The architecture
 
 ```
 inventory   what this day is           (data, computed)     look.mjs
+   ↓
+shelf       what it can be drawn with  (assets, fetched)    fetch-giphy.mjs
    ↓
 treatment   what we will do with it    (text, editorial)    data/treatments/MM-DD.json
    ↓
@@ -184,15 +308,34 @@ cards       the pieces we can draw     (code, visual)       lookdev/cards.js
 compose     the slides                 (code, mechanical)   scripts/compose.mjs
 ```
 
-- **Inventory** is derived, never edited.
-- **Treatment** holds every decision: shape, hook, line, ink, beats. A beat names
-  a card type and the material it uses. Nothing else decides order or length.
-- **Cards** are composable pieces, not slide templates: a window holding a page
-  or an image, a stack of repeated windows, a quote, a broken-image box, a list,
-  a big-type statement, a tag field, a source view, a tomorrow block. Each knows
-  how to draw itself at a given size in the day's style. A slide is one to three
-  cards placed by the composer.
-- **Compose** is mechanical: walk the beats, lay out the cards, render.
+The inversion that matters: steps 1 to 4 happen before any pixels, and the
+treatment is prose a human can argue with in two minutes.
+
+### Worked example · 05-10
+
+```
+1 LOOK      1 post · 2008 · 98 characters · 1 live image · 0 video · 2 tags
+            arcs: the single
+            ink:  sampled from SP_googlerules.jpg
+            shelf: nothing. gaps: google, list, blog
+2 READ      "I reckon there's some gems in this list. Stollen mercilessly from
+             the most excellent Core 77 Blog." — a link post, and a typo that
+             has been sitting there since 2008
+3 STOCK     things: Google, a list, a blog, Core77
+            queries: "google logo 2008", "notepad", "rss icon", "bookmark"
+            → fetch, tagged --words "google,list,blog"
+4 TREATMENT arc: the single. register: B · Journal, because 98 characters set
+            to fill the page is the whole joke. hook: the misspelling, set at
+            the size of the frame. density: SCARCE → amplify hard.
+            beats: [statement · the typo] [page · the Google list, whole]
+                   [swarm · the list at forty scales] [bullets · both sentences]
+                   [window · the permalink] [tomorrow]
+5 COMPOSE   six slides
+6 REVIEW    against 05-08 and 05-09: arc differs, register differs. pass.
+```
+
+`12-10`, Iain's own example date, has **no posts at all** — one of 26 such days.
+That branch is still unanswered and is flagged in §4 below.
 
 ### The hook
 Slide 1 is not a date card. It is **the strongest single thing the day has**, and

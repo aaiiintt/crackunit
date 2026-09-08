@@ -3,8 +3,10 @@
 What is settled about how this looks, and what is still open. Short on purpose:
 the long specs that preceded this one were locking a template.
 
-**Status: open.** Part A of `PLAN.md` is a pre-project that tests four options
-and settles it. Until Part A is judged, only §1 below is binding.
+**Status: §1 and §2 settled, the card library open.** Part A ran and Iain chose
+three registers, used per day rather than one house style. What is still open is
+the card library and how a composition is chosen from a day's shape, which is
+Part B.
 
 ## 1. Settled
 
@@ -50,23 +52,39 @@ day has, chosen per day, and the date is a small mark in a fixed position.
 **Gates.** Readable at 270 px wide. A minimum type size judged at phone scale.
 The cover legible after a square crop. Alt text per slide, from provenance.
 
-## 2. Open, and what Part A tests
+## 2. The registers
 
-The references are `references/round2/`: two on simplicity and a reduced
-palette, one on repetition as stacked windows, one on monochrome. They point
-somewhere much simpler than the first twelve references did — white or cream
-grounds, everything held in windows and labelled cards, imagery duotoned.
+Part A ran twice. Round 1 was too tidy — a sentence in a hairline box — and
+round 2 rebuilt it on the moves in Iain's own p5 pieces: one thing enormous and
+leaving the frame, the same thing tiny and marching off both edges, a swarm at
+every scale, type and picture overlapping with neither protected, the day mark
+and the Giphy credit in the gutter, and one small anomaly.
 
-Four options, three beats each, on days we know:
+**Iain, after round 2: "mostly happy with A, B and D — and could imagine them on
+different days."** So the option is not a house style. It is a **register**,
+chosen per day by what carries that day:
 
-| Option | From | Ground | Colour | The move |
+| register | ground | type | the move | the day it suits |
 |---|---|---|---|---|
-| **A · Sponsored** | *You May Also Like* | white | ink on links only | Labelled boxes with a close ×; cards overlap; captions under images |
-| **B · Journal** | *XXIX* | off-white | one flat colour card | A body of type as the ground, cards floating over it, numbered margin notes |
-| **C · Windows** | *CCA Career Expo* | white | primaries | Browser windows repeated in deep offset stacks; the stack is the hero |
-| **D · Duotone** | *Ettore Grotesk* | cream | ink on everything but the words | Every image halftoned into the day's ink, held in plain windows |
+| **A · Sponsored** | white | Arial bold, black | labelled boxes, unaligned and overlapping, captions under everything, ink on links only | things carry it: many short posts, links out, a list, a day about advertising |
+| **B · Journal** | off-white | grotesk, the post's own prose as the ground at whatever size fills the page | cards float over the bed and crop it, numbered notes in the margin | words carry it: one long post, a strong claim, a day that is mostly text |
+| **D · Duotone** | cream | grotesk, one weight | every picture halftoned into the day's ink, held in thin outlined windows | pictures carry it: two or more videos, a surviving image, or every image dead |
 
-Iain chooses one, or names a mix, and this file becomes the locked spec.
+**C · Windows is not a register.** Its browser-window stack was the strongest
+single move in Part A, so the proposal is that it survives as a **card** — the
+same window repeated in depth, each copy holding its own frame — available
+inside any register, drawn in that register's palette. *Proposed, not yet
+agreed.*
+
+**Scale.** Sticker and picture instances run from about twenty pixels to wider
+than the 1080 frame. A swarm that never leaves the canvas is a pattern, not a
+swarm. How far apart the extremes are is set by the day's density (`PLAN.md`
+§3): the less a day has, the bigger and more repeated it gets.
+
+**Stickers.** A sticker is used only when one of its `words` is a word the post
+itself uses — its prose, title, alt text or tags. The search that put it in the
+library is associative and names an object; the link back to the archive is
+literal. See `otd/README.md`.
 
 ## 3. Rejected, so it is not tried again
 

@@ -148,11 +148,15 @@ const S = {
   // One picture many times, mostly small and a few enormous, placed past the
   // edges so the frame crops it. Seeded, so a good one can be kept.
   pick(img, i) { return Array.isArray(img) ? img[i % img.length] : img; },
+  // The first `giant` instances are drawn at full size and drawn first, so the
+  // small ones land on top of them: the range is 20px to wider than the frame,
+  // because a swarm that never leaves the canvas is just a pattern.
   swarm(imgs, o = {}) {
-    const { n = 10, min = 26, max = 460, x = -140, y = -140, w = OTD.W + 280, h = OTD.H + 280, rot = 0, bias = 2.4 } = o;
+    const { n = 12, min = 22, max = 1180, x = -200, y = -200, w = OTD.W + 400, h = OTD.H + 400, rot = 0, bias = 3.4, giant = 1 } = o;
     for (let i = 0; i < n; i++) {
       const img = S.pick(imgs, Math.floor(random(99)));
-      const ww = min + Math.pow(random(), bias) * (max - min), hh = ww * img.height / img.width;
+      const t = i < giant ? 1 : Math.pow(random(), bias);
+      const ww = min + t * (max - min), hh = ww * img.height / img.width;
       push(); translate(random(x, x + w), random(y, y + h));
       if (rot) rotate(random(-rot, rot));
       image(img, -ww / 2, -hh / 2, ww, hh); pop();
