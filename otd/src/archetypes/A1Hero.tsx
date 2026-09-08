@@ -56,10 +56,10 @@ export const A1Hero: React.FC<{
 	} else if (frame < BEATS.pageSweepStart) {
 		bibleZ = 1300;
 	} else if (frame < BEATS.pageSweepEnd) {
-		bibleZ = sweep(frame, BEATS.pageSweepStart, 36, 1300, -1630); // f300 sweep36 to page
+		bibleZ = sweep(frame, BEATS.pageSweepStart, 36, 1300, -1700); // f300 sweep36 to page
 	} else if (frame < BEATS.pageEnd) {
 		// f336-480: only the camera moves, 60px total dolly (§8).
-		bibleZ = interpolate(frame, [BEATS.pageDwellStart, BEATS.pageEnd], [-1630, -1690], {
+		bibleZ = interpolate(frame, [BEATS.pageDwellStart, BEATS.pageEnd], [-1700, -1760], {
 			extrapolateLeft: 'clamp',
 			extrapolateRight: 'clamp',
 		});
@@ -76,6 +76,15 @@ export const A1Hero: React.FC<{
 
 	// --- specimen fall (A1's own loop mechanic) -----------------------------
 	const specimenY = fallingY(frame, -SPECIMEN_HEIGHT, FALL_PX_PER_FRAME, FALL_PERIOD);
+	// Item 7's loop check: at frame 0 the specimen is just above frame (one
+	// row of it grazing the top edge); at frame 719 it must be the SAME
+	// state one frame earlier in that same fall — i.e. also off-screen, not
+	// visible at the opposite (bottom) edge. The perspective transform can
+	// still paint a transformed element whose flat, pre-transform position
+	// is off-screen (3D transforms don't clip the way flat CSS positioning
+	// intuition suggests), so visibility is gated explicitly here rather
+	// than trusted to the container's overflow:hidden.
+	const specimenVisible = specimenY + SPECIMEN_HEIGHT > -20 && specimenY < 1920 + 20;
 
 	// --- furniture, quoted from the day's non-hero posts (§12) --------------
 	// Round-two redline item 8: the post beat is culled to AT MOST — the
@@ -134,7 +143,7 @@ export const A1Hero: React.FC<{
 						{/* Loop z -900: the falling specimen (hero image), 70% of
 						    frame height (item 8). */}
 						<Plane z={PLANE_Z.loop}>
-							{hero.image && hero.image.exists ? (
+							{hero.image && hero.image.exists && specimenVisible ? (
 								<img
 									src={staticFile(hero.image.src)}
 									alt={hero.title}
@@ -155,7 +164,7 @@ export const A1Hero: React.FC<{
 						    cluster, one dialog (>=50% frame width, Silkscreen >=33). */}
 						{showArchetypeFurniture && (
 							<Plane z={PLANE_Z.furniture}>
-								<div style={{position: 'absolute', left: 48, top: 240, display: 'flex', gap: 6, opacity: tagArrival.opacity}}>
+								<div style={{position: 'absolute', left: 48, top: 340, display: 'flex', gap: 6, opacity: tagArrival.opacity}}>
 									{tagCluster.map((tag, i) => (
 										<LabelTag key={tag} text={tag} seedIndex={i} x={0} y={0} style={{position: 'static'}} />
 									))}

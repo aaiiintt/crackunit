@@ -56,9 +56,9 @@ export const A7Grid: React.FC<{
 	} else if (frame < BEATS.pageSweepStart) {
 		bibleZ = 1500;
 	} else if (frame < BEATS.pageSweepEnd) {
-		bibleZ = sweep(frame, BEATS.pageSweepStart, 36, 1500, -1630);
+		bibleZ = sweep(frame, BEATS.pageSweepStart, 36, 1500, -1700);
 	} else if (frame < BEATS.pageEnd) {
-		bibleZ = interpolate(frame, [BEATS.pageDwellStart, BEATS.pageEnd], [-1630, -1690], {
+		bibleZ = interpolate(frame, [BEATS.pageDwellStart, BEATS.pageEnd], [-1700, -1760], {
 			extrapolateLeft: 'clamp',
 			extrapolateRight: 'clamp',
 		});
