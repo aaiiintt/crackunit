@@ -1,0 +1,21 @@
+{
+  "name": "otd",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "still": "remotion still",
+    "render": "remotion render",
+    "studio": "remotion studio"
+  },
+  "dependencies": {
+    "remotion": "4.0.522",
+    "@remotion/cli": "4.0.522",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "typescript": "7.0.2",
+    "@types/react": "19.2.18"
+  }
+}
