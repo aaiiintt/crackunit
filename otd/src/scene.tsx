@@ -77,7 +77,7 @@ export const Camera: React.FC<{
 // centred.
 export const Plane: React.FC<{
 	z: number;
-	children: React.ReactNode;
+	children?: React.ReactNode;
 	style?: React.CSSProperties;
 }> = ({z, children, style}) => {
 	const {width, height} = useVideoConfig();

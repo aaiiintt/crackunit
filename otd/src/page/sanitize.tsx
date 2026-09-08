@@ -9,7 +9,16 @@
 // the brief says no new ones — this is a small hand-rolled pass, not a full
 // Markdown engine.
 import React from 'react';
+import {staticFile} from 'remotion';
 import {PALETTE} from '../palette';
+
+// Image srcs in bodyHtml are root-relative WordPress upload paths (served
+// from otd/public/wp-content via the symlink into ../../public/wp-content) —
+// those need staticFile() to resolve against Remotion's actual static base,
+// which isn't always literally "/". A handful are still-remote i0.wp.com/
+// i.ytimg.com URLs (dead-image proxies, thumbnails); staticFile() rejects
+// http(s) URLs outright, so pass those through unchanged.
+const resolveSrc = (src: string): string => (/^https?:\/\//i.test(src) ? src : staticFile(src));
 
 // Strip <script>...</script> and <iframe>...</iframe> (paired or
 // self-closing) entirely, per the brief's sanitise rule. These are the only
@@ -28,12 +37,27 @@ const unescapeBrackets = (s: string): string => s.replace(/\\([[\]])/g, '$1');
 
 let linkCounter = 0;
 
+// Optional Markdown "title" after a URL, e.g. (url "photo sharing") — matched
+// but discarded (there's nowhere in the allow-listed tags to put it).
+const TITLE_SUFFIX = String.raw`(?:\s+"[^"]*")?`;
+
 const renderInline = (text: string, keyPrefix: string): React.ReactNode[] => {
 	const nodes: React.ReactNode[] = [];
-	// Order matters: images before links (image syntax is a superset,
-	// ![alt](url), of the link syntax), then bold, then italic.
-	const pattern =
-		/!\[([^\]]*)\]\(([^)]+)\)|\[([^\]]*)\]\(([^)]+)\)|\*\*([^*]+)\*\*|\*([^*]+)\*|_([^_]+)_/g;
+	// Order matters: a linked image, `[![alt](src)](href)` — WordPress's
+	// "link photo to its Flickr page" pattern — must be tried before a plain
+	// image or plain link, or the outer `[...]( ... )` link syntax greedily
+	// swallows the inner `![` as its own (very wrong) link text.
+	const pattern = new RegExp(
+		[
+			String.raw`\[!\[([^\]]*)\]\(([^)]+?)\)\]\(([^)\s]+)${TITLE_SUFFIX}\)`, // 1 alt, 2 imgSrc, 3 href
+			String.raw`!\[([^\]]*)\]\(([^)\s]+)${TITLE_SUFFIX}\)`, // 4 alt, 5 src
+			String.raw`\[([^\]]*)\]\(([^)\s]+)${TITLE_SUFFIX}\)`, // 6 text, 7 href
+			String.raw`\*\*([^*]+)\*\*`, // 8 bold
+			String.raw`\*([^*]+)\*`, // 9 italic
+			String.raw`_([^_]+)_`, // 10 italic
+		].join('|'),
+		'g',
+	);
 	let lastIndex = 0;
 	let match: RegExpExecArray | null;
 	let i = 0;
@@ -43,37 +67,50 @@ const renderInline = (text: string, keyPrefix: string): React.ReactNode[] => {
 		}
 		const key = `${keyPrefix}-${i++}`;
 		if (match[1] !== undefined) {
-			// image
+			// linked image
+			const isVisited = linkCounter % 2 === 1;
+			linkCounter++;
+			nodes.push(
+				<a key={key} href={match[3]} style={{color: isVisited ? PALETTE.VISITED : PALETTE.LINK}}>
+					<img
+						src={resolveSrc(match[2])}
+						alt={match[1]}
+						style={{maxWidth: '100%', height: 'auto', display: 'block', margin: '12px 0', border: 0}}
+					/>
+				</a>,
+			);
+		} else if (match[4] !== undefined) {
+			// plain image
 			nodes.push(
 				<img
 					key={key}
-					src={match[2]}
-					alt={match[1]}
+					src={resolveSrc(match[5])}
+					alt={match[4]}
 					style={{maxWidth: '100%', height: 'auto', display: 'block', margin: '12px 0'}}
 				/>,
 			);
-		} else if (match[3] !== undefined) {
-			// link
+		} else if (match[6] !== undefined) {
+			// plain link
 			const isVisited = linkCounter % 2 === 1;
 			linkCounter++;
 			nodes.push(
 				<a
 					key={key}
-					href={match[4]}
+					href={match[7]}
 					style={{
 						color: isVisited ? PALETTE.VISITED : PALETTE.LINK,
 						textDecoration: 'underline',
 					}}
 				>
-					{unescapeBrackets(match[3])}
+					{unescapeBrackets(match[6])}
 				</a>,
 			);
-		} else if (match[5] !== undefined) {
-			nodes.push(<strong key={key}>{unescapeBrackets(match[5])}</strong>);
-		} else if (match[6] !== undefined) {
-			nodes.push(<em key={key}>{unescapeBrackets(match[6])}</em>);
-		} else if (match[7] !== undefined) {
-			nodes.push(<em key={key}>{unescapeBrackets(match[7])}</em>);
+		} else if (match[8] !== undefined) {
+			nodes.push(<strong key={key}>{unescapeBrackets(match[8])}</strong>);
+		} else if (match[9] !== undefined) {
+			nodes.push(<em key={key}>{unescapeBrackets(match[9])}</em>);
+		} else if (match[10] !== undefined) {
+			nodes.push(<em key={key}>{unescapeBrackets(match[10])}</em>);
 		}
 		lastIndex = pattern.lastIndex;
 	}
@@ -142,15 +179,30 @@ export const renderBody = (bodyHtml: string): React.ReactNode => {
 			return;
 		}
 
-		// A block that is ONLY an image renders as a bare <img>, not wrapped in
-		// a <p> — matches "inline images at their original size" without the
-		// extra paragraph box model around them.
-		const soloImage = block.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+		// A block that is ONLY an image (plain or linked-to-its-Flickr-page)
+		// renders bare, not wrapped in a <p> — matches "inline images at their
+		// original size" without the extra paragraph box model around them.
+		const soloLinkedImage = block.match(
+			new RegExp(String.raw`^\[!\[([^\]]*)\]\(([^)]+?)\)\]\(([^)\s]+)${TITLE_SUFFIX}\)$`),
+		);
+		if (soloLinkedImage) {
+			elements.push(
+				<a key={bi} href={soloLinkedImage[3]}>
+					<img
+						src={resolveSrc(soloLinkedImage[2])}
+						alt={soloLinkedImage[1]}
+						style={{maxWidth: '100%', height: 'auto', display: 'block', margin: '16px 0', border: 0}}
+					/>
+				</a>,
+			);
+			return;
+		}
+		const soloImage = block.match(new RegExp(String.raw`^!\[([^\]]*)\]\(([^)\s]+)${TITLE_SUFFIX}\)$`));
 		if (soloImage) {
 			elements.push(
 				<img
 					key={bi}
-					src={soloImage[2]}
+					src={resolveSrc(soloImage[2])}
 					alt={soloImage[1]}
 					style={{maxWidth: '100%', height: 'auto', display: 'block', margin: '16px 0'}}
 				/>,

@@ -1,234 +1,49 @@
-// Placeholder composition for the on-this-day dry run.
+// The dispatcher: loads the day's data (§8's per-day JSON, plus the shared
+// lines.json/charts.json editorial picks) and renders the archetype the
+// editorial pick names, with the hook prop it names.
 //
-// This proves two things the real build depends on, per
-// docs/on-this-day/ART-DIRECTION.md section 5 ("The z-space and camera"):
-//  1. A CSS-only stand-in for the bible's one R3F scene: a `Camera` that
-//     dollies/trucks, and `Plane`s that sit at the bible's fixed z depths.
-//  2. That the resulting parallax is real - two planes at different z,
-//     the same camera move, different apparent motion.
-//
-// Everything else (the actual archetypes, junk, type treatment) is out of
-// scope. This is deliberately dumb.
-import React, {useMemo} from 'react';
-import {AbsoluteFill, interpolate, useCurrentFrame, useVideoConfig} from 'remotion';
-import {FALLBACK_STACK, FONT_FAMILY, loadFonts} from './fonts';
+// Scope for this dry run: A1 Hero, A3 Cascade, A4 Window, A6 Starfield, A7
+// Grid; hooks H1, H2, H4 (per the brief). `data/` and `scripts/build-days.mjs`
+// belong to another agent — read only, never written here.
+import React from 'react';
+import {loadFonts} from './fonts';
+import {getDay, getHeroPost, getLinePick, getChartPick} from './data';
+import {A1Hero} from './archetypes/A1Hero';
+import {A3Cascade} from './archetypes/A3Cascade';
+import {A4Window} from './archetypes/A4Window';
+import {A6Starfield} from './archetypes/A6Starfield';
+import {A7Grid} from './archetypes/A7Grid';
 
 loadFonts();
 
-export const HOUSE_BLUE = '#1A1AFF';
+// The render date is passed in props so a batch rendered in one year for
+// posting in the next is still right (§7's note on H5 — not used by this
+// dry run's hooks, but the date is also what the studio card shows, so it's
+// threaded through regardless).
+export const OnThisDay: React.FC<{day: string; renderDate?: string}> = ({day, renderDate}) => {
+	const dayData = getDay(day);
+	const pick = getLinePick(day);
+	const hero = getHeroPost(day);
+	const {track} = getChartPick(day);
+	const date = renderDate ?? dayData.posts.find((p) => p.permalink === dayData.hero)?.date ?? day;
 
-// Section 5's plane table, z in pixels at 1080x1920 design scale.
-export const PLANE_Z = {
-	screen: 0,
-	type: -100,
-	furniture: -300,
-	collage: -600,
-	loop: -900,
-	ground: -1400,
-	page: -2400,
-} as const;
+	const props = {day: dayData, pick, hero, track, renderDate: date};
 
-type CameraPosition = {
-	x: number;
-	y: number;
-	z: number;
-};
-
-// -------------------------------------------------------------------------
-// Camera: a perspective container whose vertical FOV matches the bible's
-// 35 degrees at the 1080x1920 design frame. Moving the camera is implemented
-// by translating the world in the opposite direction (a fixed-perspective-
-// origin, translate-only camera - the bible says the camera never rolls, so
-// this is the whole rig we need). Every Plane's translateZ then composes
-// with this to give correct perspective-divide parallax for free.
-// -------------------------------------------------------------------------
-const verticalFovToPerspectivePx = (fovDegrees: number, heightPx: number) => {
-	const halfFovRadians = (fovDegrees / 2) * (Math.PI / 180);
-	return heightPx / 2 / Math.tan(halfFovRadians);
-};
-
-export const CAMERA_FOV_DEGREES = 35;
-
-export const Camera: React.FC<{
-	position: CameraPosition;
-	children: React.ReactNode;
-}> = ({position, children}) => {
-	const {width, height} = useVideoConfig();
-	const perspective = useMemo(
-		() => verticalFovToPerspectivePx(CAMERA_FOV_DEGREES, height),
-		[height],
-	);
-
-	return (
-		<div
-			style={{
-				width,
-				height,
-				perspective: `${perspective}px`,
-				perspectiveOrigin: '50% 50%',
-				overflow: 'hidden',
-				transformStyle: 'preserve-3d',
-			}}
-		>
-			<div
-				style={{
-					width,
-					height,
-					transformStyle: 'preserve-3d',
-					// World moves opposite the camera; z is inverted relative to x/y
-					// because a camera dolly "forward" (into the scene, where the
-					// negative-z planes live) should bring the world closer, i.e. a
-					// positive world-space translateZ.
-					transform: `translate3d(${-position.x}px, ${-position.y}px, ${position.z}px)`,
-				}}
-			>
-				{children}
-			</div>
-		</div>
-	);
-};
-
-// -------------------------------------------------------------------------
-// Plane: places children at a fixed z (see PLANE_Z above), full-frame and
-// centred, matching how the bible describes each plane ("one large plane",
-// "textured planes... per element", etc). z depth is the only thing this
-// placeholder cares about - real content is layout on top.
-// -------------------------------------------------------------------------
-export const Plane: React.FC<{
-	z: number;
-	children: React.ReactNode;
-	style?: React.CSSProperties;
-}> = ({z, children, style}) => {
-	const {width, height} = useVideoConfig();
-
-	return (
-		<div
-			style={{
-				position: 'absolute',
-				left: '50%',
-				top: '50%',
-				width,
-				height,
-				marginLeft: -width / 2,
-				marginTop: -height / 2,
-				transform: `translateZ(${z}px)`,
-				transformStyle: 'preserve-3d',
-				...style,
-			}}
-		>
-			{children}
-		</div>
-	);
-};
-
-// -------------------------------------------------------------------------
-// The parallax proof: camera dollies 200px over 60 frames (frames 0-59).
-// Two planes carry a same-size, same-position box - Furniture (z -300, near)
-// and Ground (z -1400, far). Because both sit at a fixed x/y and only the
-// camera moves in z, the near box grows/shifts noticeably more on screen
-// than the far box over the same 60 frames. That differential is parallax;
-// a screenshot at f0 vs f59 should show the two boxes no longer aligned.
-// -------------------------------------------------------------------------
-const DOLLY_FRAMES = 60;
-const DOLLY_DISTANCE_PX = 200;
-
-export const OnThisDay: React.FC<{day: string}> = ({day}) => {
-	const frame = useCurrentFrame();
-
-	const cameraZ = interpolate(frame, [0, DOLLY_FRAMES], [0, DOLLY_DISTANCE_PX], {
-		extrapolateLeft: 'clamp',
-		extrapolateRight: 'clamp',
-	});
-
-	return (
-		<AbsoluteFill style={{backgroundColor: HOUSE_BLUE}}>
-			<Camera position={{x: 0, y: 0, z: cameraZ}}>
-				{/* Ground plane, z -1400: far side of the parallax proof. */}
-				<Plane z={PLANE_Z.ground}>
-					<AbsoluteFill style={{alignItems: 'center', justifyContent: 'center'}}>
-						<div
-							style={{
-								width: 500,
-								height: 500,
-								border: '8px solid white',
-								display: 'flex',
-								alignItems: 'center',
-								justifyContent: 'center',
-								fontFamily: FALLBACK_STACK.mono,
-								color: 'white',
-								fontSize: 28,
-							}}
-						>
-							GROUND z={PLANE_Z.ground}
-						</div>
-					</AbsoluteFill>
-				</Plane>
-
-				{/* Furniture plane, z -300: near side of the parallax proof. */}
-				<Plane z={PLANE_Z.furniture}>
-					<AbsoluteFill style={{alignItems: 'center', justifyContent: 'center'}}>
-						<div
-							style={{
-								width: 320,
-								height: 320,
-								border: '8px solid #FFEE00',
-								display: 'flex',
-								alignItems: 'center',
-								justifyContent: 'center',
-								fontFamily: FALLBACK_STACK.mono,
-								color: '#FFEE00',
-								fontSize: 24,
-								transform: 'translateY(260px)',
-							}}
-						>
-							FURNITURE z={PLANE_Z.furniture}
-						</div>
-					</AbsoluteFill>
-				</Plane>
-
-				{/* Type plane, z -100: the placeholder subject of this dry run. */}
-				<Plane z={PLANE_Z.type}>
-					<AbsoluteFill style={{alignItems: 'center', justifyContent: 'center'}}>
-						<div
-							style={{
-								fontFamily: `${FONT_FAMILY.anton}, ${FALLBACK_STACK.sans}`,
-								fontSize: 260,
-								color: 'white',
-								textTransform: 'uppercase',
-								letterSpacing: '-0.01em',
-								textAlign: 'center',
-								textShadow: '6px 6px 0 #000',
-							}}
-						>
-							{day}
-						</div>
-						<div
-							style={{
-								position: 'absolute',
-								bottom: 140,
-								fontFamily: FONT_FAMILY.silkscreen,
-								fontSize: 44,
-								color: '#FFEE00',
-								imageRendering: 'pixelated',
-							}}
-						>
-							ON THIS DAY - PLACEHOLDER
-						</div>
-						<div
-							style={{
-								position: 'absolute',
-								bottom: 70,
-								fontFamily: `${FONT_FAMILY.anybody}, ${FALLBACK_STACK.sans}`,
-								fontVariationSettings: `'wdth' 110, 'wght' 700`,
-								fontSize: 40,
-								color: 'white',
-							}}
-						>
-							camera z = {cameraZ.toFixed(1)}px
-						</div>
-					</AbsoluteFill>
-				</Plane>
-			</Camera>
-		</AbsoluteFill>
-	);
+	switch (pick.archetype) {
+		case 'A1':
+			return <A1Hero {...props} />;
+		case 'A3':
+			return <A3Cascade {...props} />;
+		case 'A4':
+			return <A4Window {...props} />;
+		case 'A6':
+			return <A6Starfield {...props} />;
+		case 'A7':
+			return <A7Grid {...props} />;
+		default:
+			throw new Error(
+				`Archetype "${pick.archetype}" (day ${day}) is out of this dry run's scope ` +
+					`(A1, A3, A4, A6, A7 only — see the brief).`,
+			);
+	}
 };
