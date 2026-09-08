@@ -18,3 +18,5 @@ otd/public/sfx/
 .env.*
 otd/.env
 otd/site/.env
+otd/captures/
+otd/lookdev/out/

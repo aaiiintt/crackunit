@@ -1,4 +1,60 @@
-# ART-DIRECTION.md, on-this-day house style v1
+# ART-DIRECTION.md
+
+## Status: Stage 1 open. v1 below is retired.
+
+v1 (2026-09-07) specified a blue-and-magenta acid house style for 60fps Reels. The
+Reels were laboured and the palette misread the references: seven of the twelve
+sit on white, paper or black, and their colour is found material. v1's §2 to §9
+are retired. §1 (frame, safe areas) survives in spirit for 1080 × 1350; §3's type
+principle survives; §10 to §14 survive as reference. **ART-DIRECTION v2 is the
+output of Stage 1** and replaces this file when a look is locked.
+
+The brief for v2: subtle but still crazy; a strange liminal 90s-to-2020s vibe;
+HD meets MiniDisc; raytracing meets DV cams. Format: 5 to 8 image carousels,
+1080 × 1350.
+
+## Stage 1 working notes
+
+### The substrate (true of every candidate look)
+
+- Grounds: `WHITE #FFFFFF`, `PAPER #F1EEE8`, `BLACK #000000`, `SILVER #D9DAD6`. Nothing else is a ground.
+- Ink: `BLACK` on light grounds, `WHITE` on dark.
+- Found colour: whatever the material carries. Never corrected, never tinted to a brand.
+- One accent per slide, from: `REC #FF1E00`, `HIGHLIGHTER #C8FF00`, `SAFETY #FFD400`, `AQUA #7FDBE6`, `LINK #0000EE`. Blue and magenta only if the material brought them.
+- Type: Times New Roman for the line and prose, set immaculately; Arial Bold caps small for labels; Courier New for metadata; a bitmap face only where a screen is quoted; two period display faces per look. HD-crisp always. Type is never degraded.
+- Degradation lives in the material only: interlace, chroma bleed, 4:3 pillarbox, timecode burn, inkjet banding, dither, low-poly. Never on type, never on a whole slide.
+- Composition: one dominant element, at most three, much empty ground; the 12-column grid, hairline rules; one wrongness per slide, by scale or placement.
+
+### The six looks
+
+**A · Camcorder** (primary). White ground; video frames as DV: 4:3 pillarboxed, interlace comb, chroma bleed, the camcorder's OSD burned in (`REC ●`, `SP`, `0:07:12`, `NOV 9 2005`, battery) in VCR OSD Mono. Times 150 px beside it. The REC dot is the only colour. Refs 1, 5, 6.
+
+**B · MiniDisc** (primary). Silver or white; MD and Sony product graphics: tiny bold caps labels, engineering hairlines, spec tables, a translucent `AQUA` shutter, DSEG7 numerals, a debossed wordmark. The day is a disc: the posts are the TOC with track numbers and lengths. Refs 9, 5, 6.
+
+**C · Raytraced** (primary). A generated 1996 raytraced empty room as ground (chequered floor, grey walls, one window of light); a DV frame mapped onto a floating plane; a chrome sphere reflecting a screenshot; the line in Times flat and crisp, refusing the perspective. Refs 12, 11.
+
+**D · Scanner** (secondary). Paper, grain, scanner dust; screenshots as inkjet printouts, banding, skew, tape; highlighter accent. Refs 8, 3, 10.
+
+**E · Broadcast** (secondary). Black; a 4:3 safe-area hairline; teletext mosaic type rebuilt crisp; `PLAY ▶`; teletext's eight colours one at a time. Refs 12, 1.
+
+**F · Desktop** (secondary). Grey; one real Tiger or XP window, empty and enormous; icons at 4×; kept for its chrome as a device. Refs 5, 12, 2.
+
+### The nine boards for 11-09
+
+| Still | A · Camcorder | B · MiniDisc | C · Raytraced |
+|---|---|---|---|
+| 1 The line | A small pillarboxed Sueño Latino frame, interlaced, OSD `REC ● NOV 9 2005`, alone in the upper third of a white field. The line in Times 150 px below, ragged left. | Silver ground. Caps label `ON THIS DAY · 09.11 · 2005` top left. The line in Times 150 px. Right column `18:14:42` in DSEG7, `74 MIN`. Hairlines. Aqua shutter behind the date. | The raytraced room. The line flat in Times 150 px white, centred, ignoring the perspective. One chrome sphere on the floor reflecting freerice.com. |
+| 2 The picture | 12 DV frames in a 3 × 4 grid with timecode burn-ins and interlace; white gutters; "And the video has aged really really badly too." in Times 40 beneath. | The freerice.com screenshot in a rounded label window with MD grooves; beside it the TOC: `01 Talking Point for Orange 2005 03:21` … nine tracks in Arial Bold caps 22 px. | One DV frame mapped onto a floating plane, soft shadow on the chequerboard, crisp timecode beside it; "Anyone know what that funny bird sound is?" in Times 96. |
+| 3 The others | A black tape label: `TAPE 1` and the eight other titles as an index in VCR OSD Mono with counter times; one Post-it Note Waterfall frame, pillarboxed, small. | The Presentation Zen source as a printed spec sheet in Courier, the line highlighted in `AQUA`. | The nine titles as a Win95 Explorer list floating in the room at 3×, pixels showing; nothing else. |
+
+Rules: real material only; one accent; nothing degraded but the material; each
+still survives at 270 px wide. Round two builds the survivors; round three the
+one; then v2 is written and this header is replaced.
+
+---
+
+# v1 (retired), kept for reference
+
 
 Phase B deliverable. Written by Fable 5.1 with the 12 references and the archive in
 context. This is the spec that the cheaper build sessions implement. It is not a mood

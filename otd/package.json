@@ -1,21 +1,15 @@
 {
-  "name": "otd",
-  "version": "0.0.1",
+  "name": "crackunit-otd",
   "private": true,
   "type": "module",
+  "description": "on-this-day: carousels cut from the crackunit archive. Stage 1 is art direction (see docs/on-this-day/PLAN.md).",
   "scripts": {
-    "still": "remotion still",
-    "render": "remotion render",
-    "studio": "remotion studio"
-  },
-  "dependencies": {
-    "remotion": "4.0.522",
-    "@remotion/cli": "4.0.522",
-    "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "days": "node scripts/build-days.mjs && node scripts/validate-days.mjs",
+    "day": "node scripts/show-day.mjs",
+    "frames": "node scripts/frames.mjs",
+    "checklist": "node scripts/checklist.mjs"
   },
   "devDependencies": {
-    "typescript": "7.0.2",
-    "@types/react": "19.2.18"
+    "playwright-core": "1.63.0"
   }
 }

@@ -100,3 +100,16 @@ Round three, not blocking the dry run:
    @remotion/gif@4.0.522` in `otd/` and replace A6's CSS disc with a real GIF.
 8. Asset orders: the skill's Step 4b format is live; the first order is the
    crackunit wordmark turning in chrome (bible §13, loop 6).
+
+## Verdict on the Reels, and the pivot (2026-09-08)
+
+Iain: the animations are trashy, slow and laboured, not authentic design from any
+time or place. Agreed. The stills worked; the motion did not, and the motion was
+where invented material lived. Decision: no Remotion. Each day becomes a 5 to 8
+image carousel cut from real archive material, including frames grabbed from the
+posts' YouTube videos. And before any pipeline: **Stage 1, art direction**, on
+the Mac, because the palette drifted to blue and magenta when seven of the twelve
+references sit on white, paper or black. The brief is now "subtle but still crazy;
+liminal 90s-to-2020s; HD meets MiniDisc; raytracing meets DV cams". Plan v4 has
+the corrected reading of the refs, six candidate looks and the nine look boards
+for 11-09. The Remotion tree is removed from `otd/` and lives in history.
