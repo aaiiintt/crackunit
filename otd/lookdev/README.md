@@ -20,7 +20,7 @@ lookdev/
   vendor/p5.min.js  p5 1.11.3, pinned, committed (a file, not an npm dependency)
   decon/1.js … 12.js the twelve freeze frames for 11-09 (9 to 12 are the text screens; OTD.postsFlow lays the posts out once so every screen agrees on the cut)
   assets/           ordered assets (the raytraced room; on hold, see ../orders/11-09.md)
-  out/              gitignored: decon-<n>-s<seed>.png and contact.png
+  out/              gitignored: decon-<n>-s<seed>.png and contact.png (or contact-1.png, contact-2.png when taller than Chrome's 16384 px cap)
 ```
 
 ```bash
@@ -42,8 +42,11 @@ ends with `OTD.done()`. Frames and stickers load asynchronously; a sketch that
 needs them checks `.width` and reschedules `redraw()` until they are there.
 Material is served from the repo root by root-absolute path.
 
-The same seed renders the same still. Seeds vary placement, crop, which frame,
-which sticker frame, sizes within bounds. They never vary the material.
+The same seed renders the same still. A seed first picks a **mode** (a
+different composition of the same material: on the date slide, monolith, dial,
+sticker wall or night) and then varies placement, crop, which frame, which
+sticker frame and sizes within it. Seeds never vary the material. Render five
+seeds when Iain is judging the range, three when iterating.
 
 ## The observer's operations (lib.js)
 

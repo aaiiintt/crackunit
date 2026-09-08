@@ -192,6 +192,10 @@ response. That is the loop.
 
 ## Version
 
+- v1.4, 2026-09-08 (Mac). Iain's twelve-page redline. Seeds pick a **mode**
+  first (a different composition), then vary within it, so a run shows a real
+  range; render five seeds for review. The text screens' material is placed by
+  the layout, not by hand. Sheets split when taller than Chrome's cap.
 - v1.3, 2026-09-08 (Mac). Round three: twelve slides with the posts' full text
   on four screens; the GIF library and catalog; `wayback-page.mjs` and the
   rescued-image rule; more layers, sizes and repetition per Iain's redline.

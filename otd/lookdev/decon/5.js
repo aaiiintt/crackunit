@@ -10,7 +10,8 @@ function preload() { OTD.preload(); }
 function setup() {
   createCanvas(1080, 1350);
   const word = WORDS[(window.SEED - 1) % WORDS.length];
-  const it = OTD.stickerByMood(word, 120); stk = it ? { word, it, img: OTD.loadSticker(it) } : null;
+  const it = OTD.stickerByMood(word, 120, /pixel|glitch|typo|type/) || OTD.stickerByMood(word, 400) || OTD.stickerByMood("photo", 120);
+  stk = it ? { word, it, img: OTD.loadSticker(it) } : null;
 }
 function draw() {
   if (!OTD.allLoaded()) { setTimeout(() => redraw(), 80); return; }

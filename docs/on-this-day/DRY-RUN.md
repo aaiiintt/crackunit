@@ -230,3 +230,38 @@ rice bowl stayed. The survivors carry a `mood` field in the catalog. Slides 1,
 5, 7 and 8 re-rendered from the pruned set without a change to the sketches.
 The library is 84 MB, mostly a few long GIFs he kept (the cheetah at 198
 frames, the round waterfall at 251).
+
+## Stage 1, round four: Iain's twelve-page redline (2026-09-08)
+
+The redline, from `~/Documents/crackunit-otd-notes.pdf`, and what was done:
+
+1. **Date**: likes 1 and 3, but seeds barely differ; wants significant change
+   each render and to see the range. Seeds now pick a **mode** (monolith,
+   dial, sticker wall, night on black) before varying within it; five seeds
+   rendered per slide so the range is visible.
+2. **Line**: bullets made of bullets is fun but illegible and not versatile;
+   should have been about • bullets, spaces and formatting. Rebuilt: the
+   post's own sentences as a bulleted list beside one sentence alone in
+   space; modes: two columns, the list huge and overflowing, the space one.
+3. **Text-ments**: too much but OK. Kept.
+4. **Stills wall**: liked; big text bigger (96 px), the block sized to fit.
+   "The background textures are ace."
+5. **GIF**: all good seeds; the middle one unclear; the puma jarring but cool.
+   Stickers whose mood is pixel, glitch or type are excluded at frame scale,
+   with a fallback so a word never comes back empty.
+6. **Wayback**: liked, too much on one screen, no blue border, "cool when you
+   zoom in". Now one masthead at 4× cropped, one page at 2×, the recovered
+   images, the timestamps; no border; seeds pick the leading page.
+7. **Dead video**: close; the filmic bird. Only stickers with mood `photo`.
+8. **Source**: "love these"; zoom in closer; seed 3 best. Courier 30, links at
+   230 to 310 px cropped harder, the recovered logo larger.
+9. **Text screen 1**: "going straight and editorial like this is great".
+10. **Text screen 2**: the wrap must be intentional or editorial. Editorial:
+    `postsFlow` now places each screen's material itself, at the start of a
+    post's body, so the heading sits above and the text wraps round it.
+11. Fine. 12. "Why the date again at the end?" A stale sheet; slide 12 is the
+    fourth text screen with the link in bio.
+
+Learned: Chrome caps one screenshot at 16384 device px, so a five-seed sheet
+wraps at the bottom; `render.mjs` now writes `contact-1.png, contact-2.png`
+when a sheet would exceed it. A local `const line` shadows p5's `line()`.

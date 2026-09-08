@@ -37,6 +37,7 @@ half price.
 
 | Date | Phase | Model | Cost | Notes |
 |---|---|---|---|---|
+| 2026-09-08 | Stage 1, round four (Mac) | Fable 5.1 | fill from `/cost`; est. $6 to $9 | Twelve-page redline actioned; modes per seed; 60 renders reviewed. |
 | 2026-09-08 | Stage 1, round three (Mac) | Fable 5.1, one Explore agent | fill from `/cost`; est. $8 to $12 | GIF library and catalog, wayback-page.mjs, lib.js ops, twelve sketches, 36 renders reviewed. Reviewing sheets at 1500 px is the main cost. |
 | 2026-09-08 | Stage 1, round two (Mac) | Fable 5.1, one Explore agent | fill from `/cost`; est. $6 to $9 | Plan for p5, lib.js, eight sketches, 24 renders reviewed at 700 px. |
 | 2026-09-08 | Stage 1, session one (Mac) | Fable 5.1, no subagents | fill from `/cost`; est. $4 to $6 | First hour (pull, fonts, frames, render.mjs) plus six of the nine look boards and the Raytraced asset order. Rendering is 5 s for six stills; the cost is reading refs and material, and reviewing stills at 800 px. |

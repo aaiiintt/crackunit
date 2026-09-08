@@ -28,8 +28,9 @@ function draw() {
   }
   for (const w of IDS.flatMap((id) => OTD.snippets(id))) { fill(0); OTD.label(w, random(40, 700), random(120, 1300), 16, "#fff"); }
   const say = OTD.posts().filter((p) => p.video && IDS.includes(p.video.id)).map((p) => random(p.sentences || [""]));
-  let ty = random(200, 900);
-  for (const s of say) { OTD.times(52); for (const l of OTD.wrap(s, 900)) { fill(255); rect(56, ty - 44, textWidth(l) + 16, 60); fill(0); text(l, 64, ty); ty += 60; } ty += 90; }
+  OTD.times(96); const blocks = say.map((s) => OTD.wrap(s, 940)); const need = blocks.reduce((n, b) => n + b.length * 108 + 120, 0);
+  let ty = random(160, Math.max(160, 1250 - need));
+  for (const b of blocks) { OTD.times(96); for (const l of b) { fill(255); rect(56, ty - 82, textWidth(l) + 16, 108); fill(0); text(l, 64, ty); ty += 108; } ty += 120; }
   fill(0); OTD.label("crackunit.com · 9 november 2007 · 24 frames", 60, 1350 - 48, 14, "#fff");
   OTD.done();
 }

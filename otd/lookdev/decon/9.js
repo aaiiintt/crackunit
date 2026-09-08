@@ -1,15 +1,13 @@
 // 9 · The posts, screen one of four. Every post from the day in date order,
-// title and year as a small caps heading under a hairline, the body in Times
-// 36 on 46, flowed around one piece of material per screen. Simple, legible on
-// a phone. White. No accent. Screen one flows around the surviving image.
+// a small caps heading under a hairline, the body in Times 36 on 46, wrapped
+// round one piece of material the layout places at the start of a post. White.
+// Screen one carries the surviving image.
 function preload() { OTD.preload(); }
 function setup() { createCanvas(1080, 1350); }
 function draw() {
   if (!OTD.allLoaded()) { setTimeout(() => redraw(), 80); return; }
   OTD.begin(); background(OTD.WHITE);
-  const o = OTD.POST_SCREENS[0][0], fr = OTD.images.freerice, ih = o.w * fr.height / fr.width;
-  OTD.pixelated(true); image(fr, o.x, o.y, o.w, ih); OTD.pixelated(false);
-  fill(0); OTD.label("freerice.jpg · 2007", o.x, o.y + ih + 26, 12);
-  OTD.postsFlow(0);
+  const { rect } = OTD.postsFlow(0);
+  if (rect) { const fr = OTD.images.freerice, h = Math.min(rect.h, rect.w * fr.height / fr.width), w = h * fr.width / fr.height; OTD.pixelated(true); image(fr, rect.x + rect.w - w, rect.y, w, h); OTD.pixelated(false); fill(0); OTD.label("freerice.jpg · 2007", rect.x + rect.w - w, rect.y + h + 24, 12); }
   OTD.done();
 }

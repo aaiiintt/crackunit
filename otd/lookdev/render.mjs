@@ -13,7 +13,8 @@
 // scale 2 (2160 × 2700) by Google Chrome through playwright-core, into
 // otd/lookdev/out/<look>-<n>-s<seed>.png. Then out/contact.png: a grid, one
 // row per still, one column per seed at 25%, plus seed 1 at 270 px wide (the
-// readability gate), which is what Iain reviews.
+// readability gate), which is what Iain reviews. A sheet taller than Chrome's
+// 16384 px screenshot limit is written as contact-1.png, contact-2.png, …
 //
 // Pages are served from the repo root, so a still references material by
 // root-absolute path: /otd/public/fonts/…, /otd/captures/11-09/…,
@@ -111,20 +112,28 @@ try {
   }
   const cw = W * SCALE * CONTACT, ch = H * SCALE * CONTACT, gap = 24, label = 44, gateH = Math.round(GATE * H / W);
   const cols = Math.max(...[...rowsMap.values()].map((r) => r.length));
-  const html = `<!doctype html><meta charset="utf-8"><style>
-    body{margin:0;background:#888;font:14px/1 "Arial Bold","Arial",sans-serif;font-weight:700;color:#fff;letter-spacing:.06em}
-    .row{display:flex;gap:${gap}px;padding:${gap}px ${gap}px 0;align-items:flex-start}
-    figure{margin:0;width:${cw}px}
-    img{display:block;width:${cw}px;height:${ch}px;outline:1px solid #000}
-    .gate{width:${GATE}px;margin-left:${gap}px}
-    .gate img{width:${GATE}px;height:${gateH}px}
-    figcaption{height:${label}px;line-height:${label}px;text-transform:uppercase}
-  </style>${[...rowsMap.entries()].map(([rk, fl]) => `<div class="row">${fl.map((f) => `<figure><img src="/otd/lookdev/out/${f}"><figcaption>${f.replace(".png", "").replace(/-(\d+)-s(\d+)$/, " · $1 · seed $2")}</figcaption></figure>`).join("")}<figure class="gate"><img src="/otd/lookdev/out/${fl[0]}"><figcaption>${GATE} px</figcaption></figure></div>`).join("")}<div style="height:${gap}px"></div>`;
+  const rowH = ch + label + gap, MAXH = 16000 / SCALE; // Chrome caps one screenshot at 16384 device px; beyond that the capture wraps
+  const perSheet = Math.max(1, Math.floor((MAXH - gap) / rowH));
+  const rows = [...rowsMap.entries()];
+  const sheets = []; for (let i = 0; i < rows.length; i += perSheet) sheets.push(rows.slice(i, i + perSheet));
   const cpage = await ctx.newPage();
-  await cpage.setViewportSize({ width: Math.ceil(cols * (cw + gap) + gap * 2 + GATE), height: Math.ceil(rowsMap.size * (ch + label + gap) + gap) });
-  await cpage.setContent(html.replace(/src="\//g, `src="${base}/`), { waitUntil: "networkidle" });
-  await cpage.screenshot({ path: path.join(outDir, "contact.png"), fullPage: true });
-  console.log(`contact: ${files.length} renders in ${rowsMap.size} rows  →  otd/lookdev/out/contact.png   (${((Date.now() - t0) / 1000).toFixed(1)}s)`);
+  for (const [si, chunk] of sheets.entries()) {
+    const html = `<!doctype html><meta charset="utf-8"><style>
+      body{margin:0;background:#888;font:14px/1 "Arial Bold","Arial",sans-serif;font-weight:700;color:#fff;letter-spacing:.06em}
+      .row{display:flex;gap:${gap}px;padding:${gap}px ${gap}px 0;align-items:flex-start}
+      figure{margin:0;width:${cw}px}
+      img{display:block;width:${cw}px;height:${ch}px;outline:1px solid #000}
+      .gate{width:${GATE}px;margin-left:${gap}px}
+      .gate img{width:${GATE}px;height:${gateH}px}
+      figcaption{height:${label}px;line-height:${label}px;text-transform:uppercase}
+    </style>${chunk.map(([rk, fl]) => `<div class="row">${fl.map((f) => `<figure><img src="/otd/lookdev/out/${f}"><figcaption>${f.replace(".png", "").replace(/-(\d+)-s(\d+)$/, " · $1 · seed $2")}</figcaption></figure>`).join("")}<figure class="gate"><img src="/otd/lookdev/out/${fl[0]}"><figcaption>${GATE} px</figcaption></figure></div>`).join("")}<div style="height:${gap}px"></div>`;
+    await cpage.setViewportSize({ width: Math.ceil(cols * (cw + gap) + gap * 2 + GATE), height: Math.ceil(chunk.length * rowH + gap) });
+    await cpage.setContent(html.replace(/src="\//g, `src="${base}/`), { waitUntil: "networkidle" });
+    const name = sheets.length === 1 ? "contact.png" : `contact-${si + 1}.png`;
+    await cpage.screenshot({ path: path.join(outDir, name), fullPage: true });
+  }
+  if (sheets.length > 1) fs.rmSync(path.join(outDir, "contact.png"), { force: true }); else for (const f of fs.readdirSync(outDir)) if (/^contact-\d+\.png$/.test(f)) fs.rmSync(path.join(outDir, f));
+  console.log(`contact: ${files.length} renders in ${rowsMap.size} rows  →  otd/lookdev/out/${sheets.length === 1 ? "contact.png" : `contact-1..${sheets.length}.png`}   (${((Date.now() - t0) / 1000).toFixed(1)}s)`);
 } finally {
   await browser.close();
   server.close();

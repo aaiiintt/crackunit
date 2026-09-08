@@ -92,9 +92,9 @@ const OTD = {
     return out;
   },
   stickers(query) { return ((this.giphy || {}).items || []).filter((i) => i.query === query && i.keep !== false); },
-  stickerByMood(word, maxFrames = 80) { // catalog lookup by query, words or mood; seeded pick
+  stickerByMood(word, maxFrames = 80, exclude = null) { // catalog lookup by query, words or mood; seeded pick; exclude is a regex on mood
     const w = String(word).toLowerCase();
-    const all = ((this.giphy || {}).items || []).filter((i) => i.keep !== false && (i.frames == null || i.frames <= maxFrames) &&
+    const all = ((this.giphy || {}).items || []).filter((i) => i.keep !== false && (i.frames == null || i.frames <= maxFrames) && !(exclude && exclude.test(i.mood || "")) &&
       ([i.query, ...(i.words || []), i.mood || ""].some((x) => String(x).toLowerCase().includes(w))));
     return all.length ? all[(this.seed() - 1) % all.length] : null;
   },
@@ -245,34 +245,38 @@ const OTD = {
     return yy;
   },
   // The posts as text screens. Every post in date order, laid out once into up to
-  // POST_SCREENS.length screens, each flowing around that screen's obstacles (fixed
-  // here so every screen computes the same cut). Screen k draws its share and
-  // returns the y after its last line. Whatever does not fit the last screen is cut.
+  // POST_SCREENS.length screens; each screen may carry one piece of material, which
+  // the layout places at the start of a post's body (right or left) so the text
+  // wraps round it cleanly and the heading sits above it. Screen k draws its share
+  // and returns { end, rects } so the sketch can draw the material in the rect.
   POST_SCREENS: [
-    [{ x: 600, y: 120, w: 420, h: 340 }],        // 1: the surviving image, top right
-    [{ x: 60, y: 620, w: 480, h: 360 }],         // 2: a DV frame, left, mid
-    [{ x: 640, y: 560, w: 380, h: 420 }],        // 3: a sticker, right, mid
-    [{ x: 600, y: 120, w: 420, h: 300 }],        // 4: a broken image, top right; ends with the link
+    { w: 420, h: 300, side: "right" },   // 1: the surviving image
+    { w: 460, h: 345, side: "left" },    // 2: a DV frame
+    { w: 380, h: 380, side: "right" },   // 3: the recovered Hulger phone
+    { w: 420, h: 300, side: "right" },   // 4: a recovered image; ends with the link
   ],
   postsFlow(k, { x = 60, y0 = 120, w = 960, bottom = 1350 - 170, px = 36, lineH = 46 } = {}) {
     const screens = this.POST_SCREENS, headH = 56;
-    let screen = 0, yy = y0, lastY = null;
-    const span = (yTop, yBot) => { // the widest horizontal run free of this screen's obstacles between yTop and yBot
-      let spans = [[x, x + w]];
-      for (const o of screens[screen]) if (yTop < o.y + o.h && yBot > o.y) spans = spans.flatMap(([a, b]) => (o.x >= b || o.x + o.w <= a) ? [[a, b]] : [[a, Math.min(b, o.x - 24)], [Math.max(a, o.x + o.w + 24), b]]).filter(([a, b]) => b - a > 120);
-      return spans.length ? spans.reduce((m, sp) => (sp[1] - sp[0] > m[1] - m[0] ? sp : m)) : [x, x + w];
+    let screen = 0, yy = y0, lastY = null; const rects = {};
+    const obstacles = () => (rects[screen] ? [rects[screen]] : []);
+    const heading = (p) => { if (screen === k) { push(); fill(0); stroke(0); strokeWeight(1); line(x, yy, x + w, yy); noStroke(); this.arialCaps(16); text(`${this.caps(p.title)} · ${p.year}`, x, yy + 26); pop(); } };
+    const body = (p, yStart) => { push(); this.times(px); if (screen !== k) fill(0, 0); else fill(0); const r = this.flowText(p.bodyText, x, yStart, w, lineH, obstacles(), bottom); pop(); return r; };
+    const place = (p, yStart) => { // material beside this post's body, if the screen has none yet and the post is long enough
+      const spec = screens[screen]; if (!spec || rects[screen]) return;
+      push(); this.times(px); const lines = Math.ceil(textWidth(p.bodyText) / (w - spec.w - 24)); pop();
+      if (lines * lineH < spec.h * 0.6) return;
+      const top = yStart - px * 0.8 - 4; if (top + spec.h > bottom + 40) return;
+      rects[screen] = { x: spec.side === "left" ? x : x + w - spec.w, y: top, w: spec.w, h: spec.h };
     };
-    const heading = (p) => { if (screen === k) { const [a, b] = span(yy - 4, yy + 30); push(); fill(0); stroke(0); strokeWeight(1); line(a, yy, b, yy); noStroke(); this.arialCaps(16); text(`${this.caps(p.title)} · ${p.year}`, a, yy + 26); pop(); } };
-    const body = (p, yStart) => { push(); this.times(px); if (screen !== k) fill(0, 0); else fill(0); const r = this.flowText(p.bodyText, x, yStart, w, lineH, screens[screen], bottom); pop(); return r; };
     for (const p of this.posts()) {
       if (yy + headH + 3 * lineH > bottom) { screen++; yy = y0; if (screen >= screens.length) break; }
-      heading(p);
+      heading(p); place(p, yy + headH + px * 0.8);
       let endY = body(p, yy + headH + px * 0.8);
-      if (endY === null) { screen++; yy = y0; if (screen >= screens.length) break; heading(p); endY = body(p, yy + headH + px * 0.8); if (endY === null) endY = bottom; }
-      if (screen === k) lastY = endY;
-      yy = endY + 28;
+      if (endY === null) { screen++; yy = y0; if (screen >= screens.length) break; heading(p); place(p, yy + headH + px * 0.8); endY = body(p, yy + headH + px * 0.8); if (endY === null) endY = bottom; }
+      if (screen === k) { lastY = endY; if (rects[k]) lastY = Math.max(lastY, rects[k].y + rects[k].h); }
+      yy = endY + 28; if (rects[screen] && yy < rects[screen].y + rects[screen].h + 28 && screen === k) { /* the next post starts beside the material; flowText handles it */ }
     }
-    return lastY;
+    return { end: lastY, rect: rects[k] || null };
   },
   stamp(n, label, x, y, px = 420) { // a true number set like a counter, with what it is in Courier
     push(); this.times(px); text(String(n), x, y); this.courier(16); text(label, x + 6, y + 30); pop();

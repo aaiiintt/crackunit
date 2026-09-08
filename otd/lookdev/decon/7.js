@@ -7,7 +7,7 @@ let bird = null;
 function preload() { OTD.preload(); }
 function setup() {
   createCanvas(1080, 1350);
-  const all = OTD.stickers("bird").filter((s) => s.frames <= 80);
+  const all = OTD.stickers("bird").filter((s) => s.frames <= 80 && /photo/.test(s.mood || ""));
   const pick = all[(window.SEED - 1) % all.length];
   bird = { item: pick, img: OTD.loadSticker(pick) };
 }
