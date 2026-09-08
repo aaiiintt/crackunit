@@ -78,12 +78,15 @@ error is material. A quick sheet of what came back:
 
 ## The look-board loop (Stage 1 only)
 
-- **L1. Build.** From `ART-DIRECTION.md` Stage 1 notes (the substrate, the
-  looks, the nine-still table) and this day's captures, hand-compose each still
-  as a 1080 × 1350 HTML page in `otd/lookdev/<look>/<n>.html` and render it with
-  `node otd/lookdev/render.mjs` into `otd/lookdev/out/` with a `contact.png`. No
-  templates, no pipeline. Real material only. One accent. Nothing degraded but
-  the material.
+- **L1. Build.** From `ART-DIRECTION.md` Stage 1 notes (the substrate) and this
+  day's captures, hand-compose each still as a p5.js sketch in
+  `otd/lookdev/<look>/<n>.js` using the observer's operations in
+  `otd/lookdev/lib.js` (see `otd/lookdev/README.md`), and render it with
+  `node otd/lookdev/render.mjs` at three seeds into `otd/lookdev/out/` with a
+  `contact.png` grid (rows: stills; columns: seeds; last column 270 px). No
+  templates, no pipeline. Real material only. One accent. Interlace and blur
+  never on type. Stickers from Giphy where a real word names a thing
+  (`fetch-giphy.mjs`, Step 8), frozen on one frame, never animated.
 - **L2. Review.** Iain looks at `contact.png`. Redlines in text: keep, kill, mix.
 - **L3. Iterate.** Round two builds the survivors; round three the one.
 - **L4. Lock.** Write `ART-DIRECTION.md` v2: the substrate, the chosen look with
@@ -158,6 +161,9 @@ response. That is the loop.
 
 ## Version
 
+- v1.2, 2026-09-08 (Mac). Round two: the HTML boards read as web templates and
+  the tape/track metaphor was rejected (posts are not songs). Stage 1 is now a
+  p5.js deconstruction carousel with seeded variants; L1 rewritten.
 - v1.1, 2026-09-08 (Mac). Stage 1 in progress: `lookdev/render.mjs` exists
   (serves the repo root; stills declare ordered assets with a `requires` meta
   and are skipped until they arrive). Six of nine boards built; the Raytraced

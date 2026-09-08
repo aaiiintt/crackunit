@@ -1,0 +1,19 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>lookdev host</title>
+<link rel="stylesheet" href="/otd/lookdev/fonts.css">
+<style>html,body{margin:0;background:#888}canvas{display:block}</style>
+<script src="/otd/lookdev/vendor/p5.min.js"></script>
+<script src="/otd/lookdev/lib.js"></script>
+<script>
+  // ?sketch=/otd/lookdev/decon/1.js&seed=1&day=11-09
+  const q = new URLSearchParams(location.search);
+  window.SEED = Number(q.get("seed") || 1);
+  window.DAY = q.get("day") || "11-09";
+  window.__rendered = false;
+  const s = document.createElement("script");
+  s.src = q.get("sketch") || "/otd/lookdev/decon/1.js";
+  s.onerror = () => { window.__error = "sketch failed to load: " + s.src; };
+  document.head.appendChild(s);
+  window.addEventListener("error", (e) => { window.__error = String(e.message || e); });
+</script>

@@ -82,6 +82,16 @@
         "even/f-09-0m07s.jpg"
       ]
     },
-    "why": "Seven words, a whole argument, and it makes no sense without the post. The Sueño Latino video (1odEmDYg4Y4) is terminated, so its error text is the day's DV material and the Post-it Note Waterfall (480×360, 15 fps, a dim conference stage) is the camcorder footage. Three 2005 images are gone: Picture1.jpg (powerpoint logo), talkingPointMini_01.jpg (talkingpoint screengrab), hulger.jpg (hulger phone)."
+    "why": "Seven words, a whole argument, and it makes no sense without the post. The Sueño Latino video (1odEmDYg4Y4) is terminated, so its error text is the day's DV material and the Post-it Note Waterfall (480×360, 15 fps, a dim conference stage) is the camcorder footage. Three 2005 images are gone: Picture1.jpg (powerpoint logo), talkingPointMini_01.jpg (talkingpoint screengrab), hulger.jpg (hulger phone).",
+    "assets": {
+      "giphy": {
+        "november": "stickers filtered to titles containing November, picked by seed",
+        "bird": "stickers with ≤80 frames, picked by seed",
+        "orange": "on the tag orange",
+        "rice": "on the tag United Nations World Food Program",
+        "zoo": "on the tag San Francisco Zoo"
+      },
+      "note": "all from otd/public/giphy/manifest.json; ids chosen per seed at render time, recorded on the still's last line"
+    }
   }
 }

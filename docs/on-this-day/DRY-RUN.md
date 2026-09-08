@@ -145,3 +145,36 @@ for 11-09. The Remotion tree is removed from `otd/` and lives in history.
   and `chrome-sphere.png` and render when the order in `otd/orders/11-09.md`
   is filled. Unfilled at the end of the session.
 - Stopped at the gate: Iain reviews `otd/lookdev/out/contact.png`.
+
+## Stage 1, round two: the redline and the pivot to p5 (2026-09-08)
+
+Iain on the six HTML boards (round 1.5): closer, but very ordered, very "html
+template". Wanted: a **digital deconstruction** of the post, the video, the
+tags and the images, by an agentic observer pulling the post apart and showing
+it to the world as freeze frames. The date is the anchor; go bonkers on the
+intro slide. Keep showing the source; keep filling a page with stills and the
+video's text. Kill the tape metaphor and the timings: posts are not songs.
+Use p5.js. Show the Giphy API actually being used. No motion.
+
+Decisions: one carousel, not three looks; each still rendered at three seeds
+so the sheet shows real alternatives; type may be pulled apart as an operation
+(content, not degradation); the Raytraced order is on hold.
+
+What was built: `otd/lookdev/vendor/p5.min.js` (1.11.3), `page.html`, `lib.js`
+(the observer's operations: real pixel interlace, chroma, Bayer dither, pixel
+sort, frozen stickers, a wall, textToPoints, the broken-image box), `render.mjs`
+extended for sketches, seeds and a grid sheet, and `decon/1.js` to `8.js`:
+the date (the nine publish times on a twelve-hour dial, the 9 larger than the
+card, a Giphy NOVEMBER sticker), the line (crisp, then rebuilt from 1,069
+bullets and 959 × 136 px of space), the source (the file verbatim, its two
+links set huge, the missing image as a browser box), the stills wall (24
+frames, three crops at 3×, yt-dlp's words as labels), the dead video (the
+error text in the empty player, a frozen bird), the tags (23 words sized by
+count, stickers on the literal ones), the images (freerice at 2.5× echoed,
+three broken boxes), the end. 24 renders in about 15 s.
+
+Learned: Giphy "skype" returns PAW Patrol; "november" gives good pixel text
+stickers; filter stickers by `frames` (a 198-frame GIF is slow to decode).
+Labels for posts minutes apart collide on the dial; stagger vertically, not
+radially. `build-days.mjs` does not surface image alt text; `lib.js` parses it
+from `bodyHtml` (Stage 2: add `image.alt` to the day JSON).
