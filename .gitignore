@@ -8,3 +8,8 @@ otd/node_modules/
 otd/out/
 otd/data/days/
 otd/data/index.json
+otd/site/node_modules/
+otd/site/dist/
+otd/site/out/
+otd/site/public/cover/
+otd/site/.astro/
