@@ -46,4 +46,10 @@ Filled in at Phase G. Decides the batch strategy.
 
 | Day | Archetype | Frames | Wall time | Machine |
 |---|---|---|---|---|
-| 09-12 | A1, CSS 3D, no loops | 720 | 2m 32s | 4-core cloud container, concurrency 4 |
+| 09-12 | A1, CSS 3D, no loops | 720 | 2m 32s (round one), 2m 15s (round two) | 4-core cloud container, concurrency 4 |
+| 09-08 | A6 | 720 | 1m 19s | same |
+| 09-09 | A4 | 720 | 1m 43s | same |
+| 09-10 | A7 | 720 | 1m 33s | same |
+| 09-11 | A3 | 720 | 1m 17s | same |
+
+Five days: about 9 minutes of machine time. All 340 would be roughly 9 hours on this box before loops and R3F are added. Render only the days being posted.
