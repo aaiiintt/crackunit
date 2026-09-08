@@ -37,6 +37,7 @@ half price.
 
 | Date | Phase | Model | Cost | Notes |
 |---|---|---|---|---|
+| 2026-09-08 | C, D2-lite, E, G, H (dry run) | Sonnet 5 subagents ×5 | est. $6 to $9 | Scaffold 146k tokens, data pipeline 169k, splitter fix 98k, site 141k, composition 369k (mixed in/out; Sonnet rates). Fable orchestration on top: see `/cost`. |
 | 2026-09-07 | A + B | Fable 5.1 | fill from `/cost` | Plan v2, ART-DIRECTION v1, this file. A and B were done in one session because the references and the archive facts were already in context; a second session would have paid to re-load them. Expect $10 to $14 combined against a $22 cap. |
 
 ## Render time
@@ -45,4 +46,4 @@ Filled in at Phase G. Decides the batch strategy.
 
 | Day | Archetype | Frames | Wall time | Machine |
 |---|---|---|---|---|
-| | | | | |
+| 09-12 | A1, CSS 3D, no loops | 720 | 2m 32s | 4-core cloud container, concurrency 4 |

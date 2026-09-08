@@ -72,6 +72,8 @@ grass only ever arrive as found material inside a photo.
 outline on any photo. `BLACK` on `WHITE`. `WHITE` on `BLUE`. `RED` blocks on
 `WHITE`. `BLUE`, `RED`, `YELLOW` blocks together on `WHITE` (ref 5, ref 9).
 
+**Furniture exception.** OS chrome (Win98 dialogs, Notepad, Mac windows, the YouTube player) keeps its period greys: `#C0C0C0`, `#808080`, `#DFDFDF`, `#000080` title bars, the Mac traffic lights. They are found material, like a photo. Everything the furniture *says* is set in palette colours.
+
 **Pairings that are banned.** `ACID` on `YELLOW`. `MAGENTA` on `RED`. Any two
 colours mixed into a smooth gradient except `BLUE` to `CYAN` (ref 7).
 
@@ -95,7 +97,7 @@ from a Mac (`/System/Library/Fonts/Supplemental/`). The rest are open licence.
 
 | Register | Face, file | Sizes at 1080 (cap height) | Tracking | Rules |
 |---|---|---|---|---|
-| **Serif** | Times New Roman Regular + Italic (`Times New Roman.ttf`). Redaction 50 (`Redaction-50.otf`) allowed only in the page beat | The line: 96 to 220 px cap. Window copy: 26 px. Site index: 64 px | −0.04em above 96 px, 0 below | The line is set in one block, ragged left, max 4 lines, never centred. Italic for anything quoted. |
+| **Serif** | Times New Roman Regular + Italic (`Times New Roman.ttf`). Redaction 50 (`Redaction-50.otf`) allowed only in the page beat | The line: 96 to 220 px cap. Window copy: 26 px. Site index: 64 px | −0.04em above 96 px, 0 below | The line is set in one block, ragged left, max 4 lines, never centred. Italic for anything quoted. **Autoscale**: start at 220 px cap and step down to 140 px until the line fits 4 lines in the safe width; never truncate; below 140 px the line is too long and should be re-picked. |
 | **Grotesk** | Arial Bold (`Arial Bold.ttf`) | Statements 72 to 140 px. Tile words 40 px | −0.02em | Caps. Outline treatment: `-webkit-text-stroke: 3px ACID` with transparent fill at 1080 (6 px at 4K), refs 8, 11. Solid fill on colour blocks, ref 5. |
 | **Condensed italic** | Anton (`Anton-Regular.ttf`) with `skewX(-12deg)`. Swap for Druk Condensed Super Italic if licensed | 260 to 420 px cap | −0.01em | Always cropped by at least one frame edge (ref 1). Never fully visible. `MAGENTA` on `BLUE`. |
 | **Mono** | Courier New Regular (`Courier New.ttf`) | URL 34 px. Timestamps 22 px. HTML texture 14 px. ASCII rows 40 px | 0 | Left aligned. Deliberately misaligned baseline between adjacent lines by 1 to 3 px. |
