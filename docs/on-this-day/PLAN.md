@@ -276,7 +276,7 @@ Rules for all registers:
 | 24–90 | Payoff / kinetic jump | The first cut. Collage arrives in layers, 3–4 frames apart |
 | 90–300 | The post | Title, line, image or video thumbnail. One sweep, one jump. The hyper element enters here and must refract or reflect the collage |
 | 300–480 | The page | Push into the real page. Dwell. Nothing else moves except the camera |
-| 480–600 | The score | *"No.1 that week: [track]"* as a chyron. Typography beat, because the audio arrives in-app |
+| 480–600 | The score | *"In the charts that week: [track], No. [n]"* as a chyron. Any single from that week's Top 40, chosen to suit the line, not necessarily the No.1. Typography beat, because the audio arrives in-app |
 | 600–690 | Studio card | Date, `crackunit.com/on-this-day` or "link in bio", the sting |
 | 690–720 | Loop return | Back to frame-0 state |
 

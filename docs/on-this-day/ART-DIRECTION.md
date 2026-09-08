@@ -458,7 +458,7 @@ right.
 | 24 to 90 | Payoff | The archetype assembles by `layerStack` or `cascade`. The first `cut` is at 24 or 30. |
 | 90 to 300 | The post | Title (Arial Bold, 72 px, `WHITE` with `BLACK` shadow, top of safe area), the line, the image or video thumbnail. One `sweep`. The glossy element, if the archetype has one, enters here and must visibly reflect or refract the collage. |
 | 300 to 480 | The page | `sweep` 36 into the page plane. From f336 to f480 only the camera moves: a slow dolly of 60 px total. The post body is readable. Nothing else happens. This is the beat that earns the click. |
-| 480 to 600 | The score | `cut` back to the archetype. Chyron on the Screen plane: "No.1 that week" in W95FA 33 over "TRACK by ARTIST" in Times 48, bottom of safe area. The two runners-up in Courier 22 beneath. |
+| 480 to 600 | The score | `cut` back to the archetype. Chyron on the Screen plane: "In the charts that week" in W95FA 33 over "TRACK by ARTIST" in Times 48, bottom of safe area, with "No. 14" in Courier 22 beneath. The track is any single from that week's Top 40, chosen to suit the line; No.1 is only the default when nothing fits better. The same track is the one added in-app. |
 | 600 to 690 | Studio card | Date in Anybody 80 (wdth animating), `crackunit.com` in Courier 34, "link in bio" in W95FA 33. The sting. Fixed positions: date at y 700, URL at y 820, "link in bio" at y 900, all left aligned at x 72. |
 | 690 to 720 | Loop return | Per the archetype and hook. Frame 719 is one frame before frame 0. |
 
