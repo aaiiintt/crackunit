@@ -52,6 +52,10 @@ const stills = [];
 for (const look of looks) for (const f of fs.readdirSync(path.join(here, look)).filter((f) => /^\d+\.html$/.test(f)).sort((a, b) => parseInt(a) - parseInt(b))) {
   const id = `${look}/${parseInt(f)}`;
   if (filter && id !== filter && look !== filter) continue;
+  // a still may declare <meta name="requires" content="/path, /path"> for ordered assets; skip it until they exist
+  const req = (fs.readFileSync(path.join(here, look, f), "utf8").match(/<meta name="requires" content="([^"]+)"/) || [])[1];
+  const missing = req ? req.split(",").map((s) => s.trim()).filter((s) => !fs.existsSync(path.join(repo, s))) : [];
+  if (missing.length) { console.log(`${id}  waiting for ${missing.join(", ")}  (see otd/orders/)`); continue; }
   stills.push({ look, n: parseInt(f), id, url: `${base}/otd/lookdev/${look}/${f}`, png: path.join(outDir, `${look}-${parseInt(f)}.png`) });
 }
 if (stills.length === 0) { console.error(`no stills${filter ? ` matching ${filter}` : ""} in ${here}`); server.close(); process.exit(1); }

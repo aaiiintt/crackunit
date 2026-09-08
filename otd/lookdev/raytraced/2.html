@@ -1,0 +1,39 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="requires" content="/otd/lookdev/assets/room-1996.png">
+<title>C2 · Raytraced · The picture</title>
+<link rel="stylesheet" href="/otd/lookdev/fonts.css">
+<style>
+  /* C · Raytraced, still 2: the picture.
+     One Post-it Note Waterfall frame mapped onto a plane floating in the
+     room, a soft shadow under it on the chequerboard, its timecode crisp
+     beside it. The runner-up line in Times 96, flat. Accent: the REC dot. */
+  html, body { margin: 0; width: 1080px; height: 1350px; background: #000000; color: #fff; overflow: hidden; }
+  body { position: relative; }
+  .room { position: absolute; inset: 0; }
+  .room img { display: block; width: 1080px; height: 1350px; object-fit: cover; }
+  .stage { position: absolute; left: 0; top: 0; width: 1080px; height: 1350px; perspective: 1400px; perspective-origin: 50% 46%; }
+  .plane { position: absolute; left: 220px; top: 300px; width: 560px; height: 420px; transform: rotateY(-28deg) rotateX(4deg); transform-style: preserve-3d; overflow: hidden; background: #000; }
+  .plane img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .plane .odd { transform: translateX(3px); -webkit-mask-image: repeating-linear-gradient(#000 0 1px, transparent 1px 2px); mask-image: repeating-linear-gradient(#000 0 1px, transparent 1px 2px); }
+  .plane .chroma { filter: blur(3px) saturate(1.8); mix-blend-mode: color; transform: translateX(4px); opacity: .9; }
+  .plane .scan { position: absolute; inset: 0; background: repeating-linear-gradient(rgba(0,0,0,.22) 0 1px, transparent 1px 2px); }
+  .shadow { position: absolute; left: 200px; top: 780px; width: 620px; height: 120px; background: radial-gradient(ellipse at center, rgba(0,0,0,.55), rgba(0,0,0,0) 70%); transform: rotateX(70deg); }
+  .tc { position: absolute; left: 800px; top: 690px; font: 22px/1.5 "Courier New"; color: #fff; }
+  .tc i { display: inline-block; width: 14px; height: 14px; border-radius: 50%; background: #FF1E00; margin-right: 10px; vertical-align: -1px; }
+  .line { position: absolute; left: 60px; right: 60px; top: 960px; font: 400 96px/1.04 "Times New Roman"; letter-spacing: -.01em; color: #fff; }
+  .stamp { position: absolute; left: 60px; bottom: 60px; font: 700 14px/1 "Arial"; letter-spacing: .12em; text-transform: uppercase; color: #fff; }
+</style>
+<div class="room"><img src="/otd/lookdev/assets/room-1996.png" alt=""></div>
+<div class="stage">
+  <div class="shadow"></div>
+  <div class="plane">
+    <img src="/otd/captures/11-09/post-it-note-waterfall/video/vz7BcEfuTFc/even/f-10-0m24s.jpg" alt="">
+    <img class="odd" src="/otd/captures/11-09/post-it-note-waterfall/video/vz7BcEfuTFc/even/f-10-0m24s.jpg" alt="">
+    <img class="chroma" src="/otd/captures/11-09/post-it-note-waterfall/video/vz7BcEfuTFc/even/f-10-0m24s.jpg" alt="">
+    <div class="scan"></div>
+  </div>
+</div>
+<div class="tc"><i></i>0:00:24<br>vz7BcEfuTFc<br>480×360 15fps</div>
+<div class="line">Anyone know what that funny bird sound is?</div>
+<div class="stamp">crackunit.com · 9 November 2007 · How Stuff Dates</div>

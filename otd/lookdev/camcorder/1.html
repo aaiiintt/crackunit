@@ -1,0 +1,60 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>A1 · Camcorder · The line</title>
+<link rel="stylesheet" href="/otd/lookdev/fonts.css">
+<style>
+  /* A · Camcorder, still 1: the line.
+     White ground. One small pillarboxed DV frame alone in the upper third, the
+     camcorder's OSD burned into it. The line in Times below, ragged left.
+     Accent: the REC dot, #FF1E00. Nothing else has colour but the frame. */
+  html, body { margin: 0; width: 1080px; height: 1350px; background: #FFFFFF; color: #000; overflow: hidden; }
+  body { position: relative; font-family: "Times New Roman"; }
+
+  /* the frame: a 16:9 player, black, with the 4:3 video pillarboxed inside */
+  .player { position: absolute; left: 60px; top: 132px; width: 560px; height: 315px; background: #000; }
+  .dv { position: absolute; left: 70px; top: 0; width: 420px; height: 315px; overflow: hidden; background: #000; }
+  .dv img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  /* interlace comb: odd field shifted right; chroma bleed: colour smeared, luma kept */
+  .dv .odd { transform: translateX(4px); -webkit-mask-image: repeating-linear-gradient(#000 0 1px, transparent 1px 2px); mask-image: repeating-linear-gradient(#000 0 1px, transparent 1px 2px); }
+  .dv .chroma { filter: blur(3px) saturate(1.8); mix-blend-mode: color; transform: translateX(5px); opacity: .9; }
+  .dv .scan { position: absolute; inset: 0; background: repeating-linear-gradient(rgba(0,0,0,.22) 0 1px, transparent 1px 2px); }
+
+  /* the OSD, quoted from the camcorder: VCR OSD Mono, white with a black edge */
+  .osd { position: absolute; font: 22px/1 "VCR OSD Mono"; color: #fff; letter-spacing: .02em;
+         text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000, 2px 2px #000, -2px -2px #000, 2px -2px #000, -2px 2px #000; }
+  .osd.rec { left: 88px; top: 18px; }
+  .osd.rec i { display: inline-block; width: 16px; height: 16px; border-radius: 50%; background: #FF1E00; vertical-align: -1px; margin-left: 10px; box-shadow: 0 0 0 2px #000; }
+  .osd.sp { right: 88px; top: 18px; }
+  .osd.tc { left: 88px; bottom: 18px; }
+  .osd.date { right: 88px; bottom: 18px; }
+  .batt { position: absolute; right: 88px; top: 52px; width: 34px; height: 14px; border: 2px solid #fff; box-shadow: 0 0 0 2px #000; }
+  .batt::after { content: ""; position: absolute; right: -8px; top: 2px; width: 4px; height: 6px; background: #fff; box-shadow: 0 0 0 2px #000; }
+  .batt i { position: absolute; left: 2px; top: 2px; bottom: 2px; width: 60%; background: #fff; }
+
+  /* the line */
+  .line { position: absolute; left: 56px; top: 600px; width: 1000px; font: 400 150px/1.02 "Times New Roman"; letter-spacing: -.012em; }
+  .line span { display: block; white-space: nowrap; }
+
+  /* stamp */
+  .stamp { position: absolute; left: 60px; bottom: 60px; font: 700 14px/1 "Arial"; letter-spacing: .12em; text-transform: uppercase; }
+  .src { position: absolute; right: 60px; bottom: 60px; font: 14px/1 "Courier New"; }
+</style>
+
+<div class="player">
+  <div class="dv">
+    <img src="/otd/captures/11-09/post-it-note-waterfall/video/vz7BcEfuTFc/even/f-07-0m17s.jpg" alt="">
+    <img class="odd" src="/otd/captures/11-09/post-it-note-waterfall/video/vz7BcEfuTFc/even/f-07-0m17s.jpg" alt="">
+    <img class="chroma" src="/otd/captures/11-09/post-it-note-waterfall/video/vz7BcEfuTFc/even/f-07-0m17s.jpg" alt="">
+    <div class="scan"></div>
+  </div>
+  <div class="osd rec">REC<i></i></div>
+  <div class="osd sp">SP</div>
+  <div class="batt"><i></i></div>
+  <div class="osd tc">0:00:17</div>
+  <div class="osd date">NOV 9 2005</div>
+</div>
+
+<div class="line"><span>Bill has bullets,</span><span>Steve has space.</span></div>
+
+<div class="stamp">crackunit.com · 9 November 2005 · Presentation Zen</div>
+<div class="src">vz7BcEfuTFc 480×360 15fps</div>

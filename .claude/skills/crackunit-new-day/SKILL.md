@@ -69,6 +69,13 @@ node otd/scripts/capture.mjs 11-09 --wayback   # Stage 2: page renders, crops, r
 Open `otd/captures/MM-DD/`. Look at the frames. Note the ones with a face, a
 title card, a moment, a colour, in `lines.json[MM-DD].frames` by filename.
 
+What `frames.mjs` learned on 11-09: the default and iOS clients 403 or find no
+formats; the **android client** works, and the script tries it fourth, so let it
+run through. `yt-dlp -U` refuses when yt-dlp came from pip (`pip install -U
+yt-dlp` instead). A terminated video writes `unavailable.txt`; keep it, the
+error is material. A quick sheet of what came back:
+`ffmpeg -pattern_type glob -i 'otd/captures/MM-DD/<slug>/video/<id>/even/*.jpg' -vf scale=240:-1,tile=4x3 sheet.jpg`.
+
 ## The look-board loop (Stage 1 only)
 
 - **L1. Build.** From `ART-DIRECTION.md` Stage 1 notes (the substrate, the
@@ -151,9 +158,13 @@ response. That is the loop.
 
 ## Version
 
+- v1.1, 2026-09-08 (Mac). Stage 1 in progress: `lookdev/render.mjs` exists
+  (serves the repo root; stills declare ordered assets with a `requires` meta
+  and are skipped until they arrive). Six of nine boards built; the Raytraced
+  three wait on `otd/orders/11-09.md`. Step 3 notes on yt-dlp clients.
 - v1, 2026-09-08. Rewritten for carousels and Stage 1 art direction after the
   Remotion dry run (09-08 to 09-12) was judged laboured. Scripts that exist:
   `build-days`, `validate-days`, `show-day`, `checklist`, `fetch-giphy`,
-  `frames` (untested until the Mac). Scripts that do not yet exist: `capture`,
-  `compose`, `fetch-charts`, `performance-report`, `lookdev/render`.
+  `frames` (works on the Mac). Scripts that do not yet exist: `capture`,
+  `compose`, `fetch-charts`, `performance-report`.
 - v0, 2026-09-07. The Remotion version. In git history.

@@ -113,3 +113,35 @@ references sit on white, paper or black. The brief is now "subtle but still craz
 liminal 90s-to-2020s; HD meets MiniDisc; raytracing meets DV cams". Plan v4 has
 the corrected reading of the refs, six candidate looks and the nine look boards
 for 11-09. The Remotion tree is removed from `otd/` and lives in history.
+
+## Stage 1, session one on the Mac (2026-09-08)
+
+- Fonts: Mac faces copied (gitignored), VCR OSD Mono and DSEG fetched and
+  committed. `otd/lookdev/fonts.css` declares them.
+- `frames.mjs 11-09`: the Sueño Latino video (How Stuff Dates) is terminated,
+  so the day's planned DV material is an error message. The Post-it Note
+  Waterfall clip (480×360, 15 fps, two men in lab coats on a dim conference
+  stage) is the camcorder footage instead; the Zoo ad is a flat cream card.
+  Default and iOS yt-dlp clients fail; android works.
+- `lookdev/render.mjs`: 1080 × 1350 at device scale 2 through Google Chrome,
+  labelled contact sheet, about 5 s for six stills.
+- Boards: A1 to A3 (Camcorder) and B1 to B3 (MiniDisc) built from real
+  material only. Material treatments that now exist as CSS and can be named in
+  v2: **pillarbox** (4:3 in a 16:9 black player), **interlace** (odd field
+  masked and shifted 3 to 4 px, plus a 50% scanline veil), **chroma bleed** (a
+  blurred, saturated copy in `color` blend, shifted 4 to 5 px), **OSD burn**
+  (VCR OSD Mono, white, 2 px black edge), **LCD readout** (DSEG7 with the
+  ghost `88:88:88` at 8% behind), **label window** (rounded white window on
+  concentric groove hairlines), **shutter** (AQUA at 72%), **deboss** (ground-
+  coloured type with a dark/light 1 px offset), **spec sheet** (Courier 24 on a
+  white sheet, one `mark`).
+- Departures from the nine-still table, all forced by the material: A1 and A3
+  use Post-it frames, not Sueño Latino; A2's twelve frames are Post-it frames
+  under the How Stuff Dates sentence; A3's counter times are the posts' real
+  publish times, not invented ones; B2 puts the TOC under the label window
+  rather than beside it (the longest title does not fit beside a 600 px
+  window at 22 px caps).
+- C1 to C3 (Raytraced) are written against `otd/lookdev/assets/room-1996.png`
+  and `chrome-sphere.png` and render when the order in `otd/orders/11-09.md`
+  is filled. Unfilled at the end of the session.
+- Stopped at the gate: Iain reviews `otd/lookdev/out/contact.png`.

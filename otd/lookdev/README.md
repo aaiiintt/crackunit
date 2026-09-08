@@ -13,22 +13,38 @@ lookdev/
   camcorder/1.html 2.html 3.html
   minidisc/1.html 2.html 3.html
   raytraced/1.html 2.html 3.html
-  fonts -> ../public/fonts
-  material -> ../captures/11-09    (frames, screenshots, raw source; gitignored, regenerate with frames.mjs and capture.mjs)
+  fonts.css            @font-face for the substrate's faces (all in ../public/fonts)
+  assets/              ordered assets (the raytraced room, the chrome sphere); see ../orders/11-09.md
   out/                 gitignored
 ```
 
-Fonts still to fetch on the Mac, into `otd/public/fonts/`:
+`render.mjs` serves the **repo root**, so a still references material by
+root-absolute path: `/otd/public/fonts/…`, `/otd/captures/11-09/…`,
+`/public/wp-content/…`, `/export/posts/…`. A still that needs an ordered asset
+declares `<meta name="requires" content="/otd/lookdev/assets/room-1996.png">`
+and is skipped, with a note, until the file exists.
 
-- VCR OSD Mono (camcorder on-screen display), free, dafont.com/vcr-osd-mono
-- DSEG7 Classic and DSEG14 (LCD segment numerals), free, github.com/keshikan/DSEG
-- Times New Roman, Arial Bold, Courier New from `/System/Library/Fonts/Supplemental/`
+```bash
+node otd/lookdev/render.mjs              # all stills + contact.png
+node otd/lookdev/render.mjs minidisc     # one look
+node otd/lookdev/render.mjs camcorder/2  # one still (contact.png still shows everything rendered so far)
+```
+
+Fonts, in `otd/public/fonts/` (done 2026-09-08):
+
+- VCR OSD Mono (`VCR_OSD_MONO.ttf`), free, dafont.com/vcr-osd-mono. Committed.
+- DSEG7 Classic Regular and Bold, DSEG14 Classic (`DSEG*.ttf`), OFL, github.com/keshikan/DSEG v0.46. Committed.
+- Times New Roman (+ Italic, Bold), Arial (+ Bold), Courier New (+ Bold), Impact, Brush Script: copied from
+  `/System/Library/Fonts/Supplemental/` and **gitignored** (the repo is public; they are proprietary). Re-copy on a new Mac:
+  `cd otd && for f in "Times New Roman" "Times New Roman Italic" "Times New Roman Bold" "Arial" "Arial Bold" "Courier New" "Courier New Bold" Impact "Brush Script"; do cp "/System/Library/Fonts/Supplemental/$f.ttf" public/fonts/; done`
 
 Material for 11-09 the boards need:
 
-- `frames.mjs 11-09` for the three videos: How Stuff Dates (1odEmDYg4Y4, the
-  Sueño Latino video, 1989), Post-it Note Waterfall (vz7BcEfuTFc), Zoo
-  Advertising (cvs9kURU79s).
+- `frames.mjs 11-09` for the three videos. **How Stuff Dates (1odEmDYg4Y4, the
+  Sueño Latino video) is terminated**; its error text is the material. Post-it
+  Note Waterfall (vz7BcEfuTFc, 480×360, 15 fps, a dim conference stage: the
+  camcorder footage of the day) and Zoo Advertising (cvs9kURU79s, 320×240, a
+  flat cream card) gave 12 even frames each via the android player client.
 - `public/wp-content/uploads/2007/11/freerice.jpg` (the one surviving image).
 - `export/posts/2005-11-09-presentation-zen.md` (the raw source).
 - A generated empty raytraced room for look C: order it from Iain per the skill's

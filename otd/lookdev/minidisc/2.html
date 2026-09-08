@@ -1,0 +1,51 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>B2 · MiniDisc · The picture</title>
+<link rel="stylesheet" href="/otd/lookdev/fonts.css">
+<style>
+  /* B · MiniDisc, still 2: the picture.
+     The freerice.com screenshot (the day's one surviving image) in a rounded
+     label window with the disc's grooves; the nine posts as the TOC, track
+     lengths from word counts (one word, one second). Accent: the AQUA shutter. */
+  html, body { margin: 0; width: 1080px; height: 1350px; background: #D9DAD6; color: #000; overflow: hidden; }
+  body { position: relative; }
+  .cap { position: absolute; font: 700 14px/1 "Arial"; letter-spacing: .14em; text-transform: uppercase; }
+  /* the label window: grooves are concentric hairlines, the window is a rounded rect cut into them */
+  .grooves { position: absolute; left: -400px; top: -120px; width: 1500px; height: 1500px; border-radius: 50%;
+             background: repeating-radial-gradient(circle at center, rgba(0,0,0,.14) 0 1px, transparent 1px 7px); }
+  .label { position: absolute; left: 60px; top: 60px; width: 600px; height: 424px; border-radius: 22px; background: #fff; overflow: hidden;
+           box-shadow: inset 0 0 0 1px rgba(0,0,0,.35), 0 1px 0 rgba(255,255,255,.8); }
+  .label img { display: block; width: 600px; height: 424px; image-rendering: auto; }
+  .shutter { position: absolute; left: 700px; top: 60px; width: 320px; height: 424px; background: #7FDBE6; opacity: .72; }
+  .shutter .cap { left: 20px; top: 20px; }
+  .shutter .n { position: absolute; left: 20px; bottom: 20px; font: 400 96px/1 "DSEG7"; }
+  .shutter .n i { position: absolute; left: 0; top: 0; font-style: normal; opacity: .08; }
+  .shutter .n b { position: relative; font-weight: 400; }
+  .toc { position: absolute; left: 60px; top: 560px; width: 960px; border-top: 1px solid #000; }
+  .toc div { display: grid; grid-template-columns: 60px 1fr 80px 90px; align-items: baseline; padding: 14px 0 12px; border-bottom: 1px solid #000; font: 700 22px/1 "Arial"; letter-spacing: .04em; text-transform: uppercase; }
+  .toc div span:nth-child(3) { text-align: right; font-weight: 400; }
+  .toc div span:nth-child(4) { text-align: right; font-family: "Courier New"; font-weight: 400; font-size: 22px; }
+  .toc .total { border-bottom: none; font-size: 14px; letter-spacing: .14em; padding-top: 16px; }
+  .toc .total span:nth-child(4) { font-size: 14px; }
+  .mark { position: absolute; left: 60px; bottom: 56px; font: 700 44px/1 "Arial"; letter-spacing: -.03em; color: #D9DAD6;
+          text-shadow: -1px -1px 0 rgba(0,0,0,.45), 1px 1px 0 rgba(255,255,255,.9); }
+  .spec { position: absolute; right: 60px; bottom: 60px; text-align: right; font: 700 12px/1.9 "Arial"; letter-spacing: .14em; text-transform: uppercase; }
+</style>
+<div class="grooves"></div>
+<div class="label"><img src="/public/wp-content/uploads/2007/11/freerice.jpg" alt="Free Rice"></div>
+<div class="shutter"><div class="cap">On this day · 09.11</div><div class="n"><i>88</i><b>09</b></div></div>
+<div class="cap" style="left:60px;top:520px">TOC · 9 tracks · 2005 to 2007</div>
+<div class="toc">
+  <div><span>01</span><span>Talking Point for Orange</span><span>2005</span><span>1:56</span></div>
+  <div><span>02</span><span>Account Planning School Of The Web</span><span>2005</span><span>1:41</span></div>
+  <div><span>03</span><span>Presentation Zen</span><span>2005</span><span>0:39</span></div>
+  <div><span>04</span><span>Technorati Tags Plugin</span><span>2005</span><span>0:58</span></div>
+  <div><span>05</span><span>Hulger and Skype</span><span>2005</span><span>1:06</span></div>
+  <div><span>06</span><span>FreeRice.com</span><span>2007</span><span>1:29</span></div>
+  <div><span>07</span><span>How Stuff Dates</span><span>2007</span><span>2:28</span></div>
+  <div><span>08</span><span>Post-it Note Waterfall</span><span>2007</span><span>0:27</span></div>
+  <div><span>09</span><span>Zoo Advertising</span><span>2007</span><span>0:51</span></div>
+  <div class="total"><span></span><span>Total</span><span></span><span>11:35</span></div>
+</div>
+<div class="mark">crackunit</div>
+<div class="spec">/2007/11/09/freericecom/<br>freerice.jpg · 425×300</div>

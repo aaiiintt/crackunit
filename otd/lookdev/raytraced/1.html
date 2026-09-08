@@ -1,0 +1,26 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="requires" content="/otd/lookdev/assets/room-1996.png, /otd/lookdev/assets/chrome-sphere.png">
+<title>C1 · Raytraced · The line</title>
+<link rel="stylesheet" href="/otd/lookdev/fonts.css">
+<style>
+  /* C · Raytraced, still 1: the line.
+     Ground: the ordered 1996 raytraced room (otd/orders/11-09.md). The line
+     flat in Times, HD white, centred, ignoring the perspective. One chrome
+     sphere on the floor, right. No accent: the room's greys are the colour. */
+  html, body { margin: 0; width: 1080px; height: 1350px; background: #000000; color: #fff; overflow: hidden; }
+  body { position: relative; }
+  .room { position: absolute; inset: 0; }
+  .room img { display: block; width: 1080px; height: 1350px; object-fit: cover; }
+  .sphere { position: absolute; left: 640px; top: 820px; width: 360px; height: 360px; }
+  .sphere img { display: block; width: 100%; height: 100%; }
+  .line { position: absolute; left: 60px; right: 60px; top: 440px; text-align: center; font: 400 150px/1.02 "Times New Roman"; letter-spacing: -.012em; color: #fff; }
+  .line span { display: block; white-space: nowrap; }
+  .stamp { position: absolute; left: 60px; bottom: 60px; font: 700 14px/1 "Arial"; letter-spacing: .12em; text-transform: uppercase; color: #fff; }
+  .src { position: absolute; right: 60px; bottom: 60px; font: 14px/1 "Courier New"; color: #fff; }
+</style>
+<div class="room"><img src="/otd/lookdev/assets/room-1996.png" alt=""></div>
+<div class="sphere"><img src="/otd/lookdev/assets/chrome-sphere.png" alt=""></div>
+<div class="line"><span>Bill has bullets,</span><span>Steve has space.</span></div>
+<div class="stamp">crackunit.com · 9 November 2005 · Presentation Zen</div>
+<div class="src">/2005/11/09/presentation-zen/</div>
