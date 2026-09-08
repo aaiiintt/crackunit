@@ -56,10 +56,16 @@ export const A4Window: React.FC<{
 	// payoff, after the title has burst through (f18-26).
 	const BIG_PLAYER = {width: 972, height: 730, x: (1080 - 972) / 2, y: 420};
 	const SMALL_PLAYER = {width: 260, height: 200, x: 60, y: 60};
-	const playerShrink = interpolate(frame, [26, 40], [0, 1], {
-		extrapolateLeft: 'clamp',
-		extrapolateRight: 'clamp',
-	});
+	// Shrinks into the noise cluster after the burst (f26-40), then — per
+	// §7's H4 loop row ("at f708 the thumbnail shrinks back behind 'no
+	// longer available'") — grows back to the big, centred, frame-0 framing
+	// over the loop tail, ending one frame short of it at f719 (item 7).
+	let playerShrink: number;
+	if (frame < 700) {
+		playerShrink = interpolate(frame, [26, 40], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+	} else {
+		playerShrink = interpolate(frame, [700, BEATS.loopEnd], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+	}
 	const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
 	const player = {
 		width: lerp(BIG_PLAYER.width, SMALL_PLAYER.width, playerShrink),
@@ -68,6 +74,9 @@ export const A4Window: React.FC<{
 		y: lerp(BIG_PLAYER.y, SMALL_PLAYER.y, playerShrink),
 	};
 	const playerMessageSize = lerp(48, 26, playerShrink);
+	// The burst reverses near the tail too, matching frame 0's "unavailable"
+	// reading (not mid-title-burst).
+	const playerForceUnavailable = frame >= 700;
 
 	const showPost = frame >= BEATS.postStart && frame < BEATS.postEnd;
 	const showScore = frame >= BEATS.scoreStart && frame < BEATS.scoreEnd;
@@ -151,22 +160,20 @@ export const A4Window: React.FC<{
 				{/* The YouTube player: 90% frame width and centred at the hook
 				    (frame 0), full opacity throughout (not part of the noise
 				    fade) — it shrinks into its noise-cluster spot once the title
-				    has burst through. Hidden for the loop tail (>=704) same as
-				    the rest of the noise, since frame 0 has only the big player,
-				    not a small shrunk one. */}
-				{frame < 704 && (
-					<Plane z={PLANE_Z.collage}>
-						<HookH4Artefact
-							frame={frame}
-							title={hero.title}
-							x={player.x}
-							y={player.y}
-							width={player.width}
-							height={player.height}
-							messageSize={playerMessageSize}
-						/>
-					</Plane>
-				)}
+				    has burst through, then grows back and reverts to
+				    "unavailable" over the loop tail so frame 719 matches frame 0
+				    (item 7). */}
+				<Plane z={PLANE_Z.collage}>
+					<HookH4Artefact
+						frame={playerForceUnavailable ? 0 : frame}
+						title={hero.title}
+						x={player.x}
+						y={player.y}
+						width={player.width}
+						height={player.height}
+						messageSize={playerMessageSize}
+					/>
+				</Plane>
 
 				{/* Furniture z -300: the Notepad — pristine, no noise, no screen.
 				    Not part of the hook (§6/redline item 3) — arrives at the

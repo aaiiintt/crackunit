@@ -8,9 +8,9 @@ import {staticFile} from 'remotion';
 import {loadFonts} from './fonts';
 import {getDay, getHeroPost, getLinePick} from './data';
 import {PALETTE} from './palette';
-import {Serif} from './text/Serif';
 import {Mono} from './text/Mono';
 import {Halftone} from './junk/Halftone';
+import {TheLine} from './text/TheLine';
 
 loadFonts();
 
@@ -68,9 +68,7 @@ export const Cover: React.FC<{day: string}> = ({day}) => {
 					right: 72,
 				}}
 			>
-				<Serif size={140} color={PALETTE.MAGENTA} maxWidth={936} maxLines={4} shadowOn="BLUE">
-					{pick.line}
-				</Serif>
+				<TheLine text={pick.line} ground="BLUE" maxWidth={936} />
 			</div>
 
 			{/* small specimen, bottom right, breaking the safe area on purpose.
