@@ -37,7 +37,12 @@ for (const tool of ["yt-dlp", "ffmpeg", "ffprobe"]) {
   if (spawnSync("which", [tool]).status !== 0) { console.error(`${tool} not on PATH (brew install yt-dlp ffmpeg)`); process.exit(1); }
 }
 
-const d = JSON.parse(readFileSync(join(otd, "data", "days", `${day}.json`), "utf8"));
+const dayFile = join(otd, "data", "days", `${day}.json`);
+if (!existsSync(dayFile)) {
+  console.log("day JSON missing; running build-days.mjs first");
+  execFileSync(process.execPath, [join(here, "build-days.mjs")], { stdio: "inherit" });
+}
+const d = JSON.parse(readFileSync(dayFile, "utf8"));
 const videos = (d.posts || []).filter((p) => p.video && (!onlyIds || onlyIds.includes(p.video.id)));
 if (videos.length === 0) { console.log(`${day}: no videos${onlyIds ? " matching --ids" : ""}`); process.exit(0); }
 
