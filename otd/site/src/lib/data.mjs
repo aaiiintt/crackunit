@@ -2,11 +2,11 @@
 // owns otd/data.
 import fs from "node:fs";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
 
-const here = path.dirname(fileURLToPath(import.meta.url));
-// src/lib -> site root -> otd root -> data
-export const OTD_ROOT = path.resolve(here, "../../..");
+// Astro/Vite bundles this module into dist/.prerender/chunks at build time,
+// so import.meta.url is not a stable anchor. `astro build` and `astro dev`
+// both run with cwd = the site project root, so anchor there instead.
+export const OTD_ROOT = path.resolve(process.cwd(), "..");
 export const DATA_DIR = path.join(OTD_ROOT, "data");
 export const COVER_SRC_DIR = path.join(OTD_ROOT, "out", "cover");
 
