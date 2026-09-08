@@ -4,19 +4,17 @@
 <link rel="stylesheet" href="/otd/lookdev/fonts.css">
 <style>
   /* A · Camcorder, still 3: the others.
-     Black ground: the camcorder's own index screen. TAPE 1, then the eight
-     other posts that day with their real publish times as the counter, in
-     VCR OSD Mono. One Post-it frame, pillarboxed, small, bottom right.
+     Black: the camcorder's index screen, at the size an OSD actually is, in a
+     field that is mostly nothing. The eight other posts with their real
+     publish times as the counter. One Post-it frame, pillarboxed, small.
      Accent: the REC dot. */
   html, body { margin: 0; width: 1080px; height: 1350px; background: #000000; color: #fff; overflow: hidden; }
   body { position: relative; font-family: "VCR OSD Mono"; }
-  .tape { position: absolute; left: 60px; top: 72px; font: 64px/1 "VCR OSD Mono"; letter-spacing: .02em; }
-  .tape i { display: inline-block; width: 28px; height: 28px; border-radius: 50%; background: #FF1E00; margin-left: 28px; vertical-align: 6px; }
-  .mode { position: absolute; right: 60px; top: 84px; font: 32px/1 "VCR OSD Mono"; text-align: right; }
-  .index { position: absolute; left: 60px; top: 220px; width: 960px; border-top: 2px solid #fff; }
-  .index div { display: grid; grid-template-columns: 170px 90px 1fr; align-items: baseline; padding: 22px 0; border-bottom: 2px solid #fff; font: 30px/1 "VCR OSD Mono"; letter-spacing: .01em; }
-  .index div span:last-child { text-transform: uppercase; }
-  .player { position: absolute; right: 60px; bottom: 60px; width: 400px; height: 225px; background: #000; outline: 2px solid #fff; }
+  .tape { position: absolute; left: 60px; top: 60px; font: 40px/1 "VCR OSD Mono"; }
+  .tape i { display: inline-block; width: 30px; height: 30px; border-radius: 50%; background: #FF1E00; margin-left: 18px; vertical-align: -2px; }
+  .mode { position: absolute; right: 60px; top: 60px; font: 40px/1 "VCR OSD Mono"; text-align: right; }
+  .index { position: absolute; left: 60px; top: 150px; font: 24px/2 "VCR OSD Mono"; white-space: pre; text-transform: uppercase; }
+  .player { position: absolute; left: 60px; bottom: 60px; width: 400px; height: 225px; background: #000; }
   .dv { position: absolute; left: 50px; top: 0; width: 300px; height: 225px; overflow: hidden; }
   .dv img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
   .dv .odd { transform: translateX(3px); -webkit-mask-image: repeating-linear-gradient(#000 0 1px, transparent 1px 2px); mask-image: repeating-linear-gradient(#000 0 1px, transparent 1px 2px); }
@@ -24,22 +22,18 @@
   .dv .scan { position: absolute; inset: 0; background: repeating-linear-gradient(rgba(0,0,0,.22) 0 1px, transparent 1px 2px); }
   .osd { position: absolute; right: 12px; bottom: 10px; font: 16px/1 "VCR OSD Mono"; color: #fff;
          text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000, 2px 2px #000, -2px -2px #000, 2px -2px #000, -2px 2px #000; }
-  .foot { position: absolute; left: 60px; bottom: 60px; font: 22px/1.5 "VCR OSD Mono"; }
-  .foot b { display: block; font-weight: 400; }
+  .foot { position: absolute; right: 60px; bottom: 60px; font: 24px/1.5 "VCR OSD Mono"; text-align: right; }
 </style>
 <div class="tape">TAPE 1<i></i></div>
-<div class="mode">SP<br>NOV 9</div>
-<div class="index">
-  <div><span>11:38:22</span><span>2005</span><span>Talking Point for Orange</span></div>
-  <div><span>11:52:08</span><span>2005</span><span>Account Planning School Of The Web</span></div>
-  <div><span>19:30:52</span><span>2005</span><span>Technorati Tags Plugin</span></div>
-  <div><span>19:52:34</span><span>2005</span><span>Hulger and Skype</span></div>
-  <div><span>09:24:09</span><span>2007</span><span>FreeRice.com</span></div>
-  <div><span>09:35:55</span><span>2007</span><span>How Stuff Dates</span></div>
-  <div><span>20:36:06</span><span>2007</span><span>Post-it Note Waterfall</span></div>
-  <div><span>20:46:54</span><span>2007</span><span>Zoo Advertising</span></div>
-</div>
-<div class="foot"><b>crackunit.com</b><b>2005 · 2007</b></div>
+<div class="mode">SP</div>
+<div class="index">11:38:22  2005  Talking Point for Orange
+11:52:08  2005  Account Planning School Of The Web
+19:30:52  2005  Technorati Tags Plugin
+19:52:34  2005  Hulger and Skype
+09:24:09  2007  FreeRice.com
+09:35:55  2007  How Stuff Dates
+20:36:06  2007  Post-it Note Waterfall
+20:46:54  2007  Zoo Advertising</div>
 <div class="player">
   <div class="dv">
     <img src="/otd/captures/11-09/post-it-note-waterfall/video/vz7BcEfuTFc/even/f-12-0m29s.jpg" alt="">
@@ -49,3 +43,4 @@
     <div class="osd">20:36:06</div>
   </div>
 </div>
+<div class="foot">NOV 9<br>crackunit.com</div>

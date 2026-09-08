@@ -4,38 +4,33 @@
 <link rel="stylesheet" href="/otd/lookdev/fonts.css">
 <style>
   /* B · MiniDisc, still 1: the line.
-     Silver ground, product-graphics language: tiny bold caps labels,
-     engineering hairlines, LCD-segment numerals for the post's time, a
-     debossed wordmark. Accent: the AQUA shutter behind the date. */
+     Silver ground. The post's publish time as an LCD readout at the width of
+     the card, the wrongness of scale; the line in Times beneath, plain. Tiny
+     bold caps labels, hairlines, a debossed wordmark. Accent: the AQUA
+     shutter band behind the readout. */
   html, body { margin: 0; width: 1080px; height: 1350px; background: #D9DAD6; color: #000; overflow: hidden; }
   body { position: relative; }
   .rule { position: absolute; left: 60px; right: 60px; height: 0; border-top: 1px solid #000; }
-  .vrule { position: absolute; top: 60px; bottom: 60px; width: 0; border-left: 1px solid #000; }
   .cap { position: absolute; font: 700 14px/1 "Arial"; letter-spacing: .14em; text-transform: uppercase; }
-  .line { position: absolute; left: 56px; top: 400px; width: 1000px; font: 400 150px/1.02 "Times New Roman"; letter-spacing: -.012em; }
-  .line span { display: block; white-space: nowrap; }
-  .shutter { position: absolute; left: 700px; top: 60px; width: 320px; height: 210px; background: #7FDBE6; opacity: .72; }
-  .lcd { position: absolute; left: 716px; top: 92px; font: 400 64px/1 "DSEG7"; letter-spacing: .02em; }
-  .lcd .ghost { position: absolute; left: 0; top: 0; color: #000; opacity: .08; }
+  .shutter { position: absolute; left: 0; top: 150px; width: 1080px; height: 300px; background: #7FDBE6; opacity: .72; }
+  .lcd { position: absolute; left: 60px; top: 205px; font: 400 148px/1 "DSEG7"; letter-spacing: 0; white-space: nowrap; }
+  .lcd .ghost { position: absolute; left: 0; top: 0; opacity: .08; }
   .lcd .on { position: relative; }
-  .min { position: absolute; left: 720px; top: 190px; font: 700 22px/1 "Arial"; letter-spacing: .12em; }
-  .min small { display: block; font-size: 12px; letter-spacing: .16em; margin-top: 10px; }
+  .min { position: absolute; right: 60px; top: 400px; font: 700 14px/1 "Arial"; letter-spacing: .14em; }
+  .line { position: absolute; left: 60px; top: 560px; width: 980px; font: 400 150px/1 "Times New Roman"; }
+  .line span { display: block; white-space: nowrap; }
   .mark { position: absolute; left: 60px; bottom: 56px; font: 700 44px/1 "Arial"; letter-spacing: -.03em; color: #D9DAD6;
           text-shadow: -1px -1px 0 rgba(0,0,0,.45), 1px 1px 0 rgba(255,255,255,.9); }
-  .spec { position: absolute; right: 60px; bottom: 60px; text-align: right; font: 700 12px/1.9 "Arial"; letter-spacing: .14em; text-transform: uppercase; }
-  .tags { position: absolute; left: 60px; top: 1010px; font: 14px/1.7 "Courier New"; }
+  .tags { position: absolute; right: 60px; bottom: 60px; text-align: right; font: 14px/1.7 "Courier New"; }
 </style>
 <div class="rule" style="top:60px"></div>
-<div class="rule" style="top:300px"></div>
-<div class="rule" style="top:960px"></div>
-<div class="vrule" style="left:700px;top:60px;height:240px;bottom:auto"></div>
 <div class="cap" style="left:60px;top:80px">On this day · 09.11 · 2005</div>
-<div class="cap" style="left:60px;top:250px">Track 03 of 09 · Presentation Zen</div>
-<div class="cap" style="left:60px;top:320px">Line</div>
+<div class="cap" style="right:60px;top:80px">Track 03 of 09</div>
 <div class="shutter"></div>
 <div class="lcd"><span class="ghost">88:88:88</span><span class="on">18:14:42</span></div>
+<div class="cap" style="left:60px;top:400px">Presentation Zen</div>
 <div class="min">74 MIN</div>
+<div class="rule" style="top:520px"></div>
 <div class="line"><span>Bill has bullets,</span><span>Steve has space.</span></div>
-<div class="tags">tags: blog, Seth Godin<br>categories: Technology<br>wpId 32</div>
 <div class="mark">crackunit</div>
-<div class="spec">/2005/11/09/presentation-zen/<br>18:14:42</div>
+<div class="tags">tags: blog, Seth Godin<br>/2005/11/09/presentation-zen/</div>
