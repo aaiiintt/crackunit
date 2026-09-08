@@ -7,6 +7,7 @@
 //   node otd/lookdev/render.mjs --seeds 5              # more variants per still
 //   node otd/lookdev/render.mjs --pick                  # seed 1 only, quick
 //   node otd/lookdev/render.mjs --final                 # the picked seed per slide (lines.json[day].picks) → otd/out/carousel/<day>/NN.png + contact.png
+//   node otd/lookdev/render.mjs --styles                # Part A: 4 style options × 3 beats → out/styles/ and out/styles.png
 //
 // A still is either a p5 sketch <look>/<n>.js, hosted by page.html with
 // vendor/p5.min.js and lib.js and rendered once per seed (window.SEED), or a
@@ -40,6 +41,7 @@ const filter = argv.find((a, i) => !a.startsWith("--") && !(i > 0 && argv[i - 1]
 const seeds = argv.includes("--pick") ? [1] : opt("seed", null) ? [Number(opt("seed"))] : Array.from({ length: Number(opt("seeds", 3)) }, (_, i) => i + 1);
 const DAY = opt("day", "11-09");
 const FINAL = argv.includes("--final");
+const STYLES_MODE = argv.includes("--styles");
 const picks = FINAL ? (JSON.parse(fs.readFileSync(path.join(repo, "otd", "data", "lines.json"), "utf8"))[DAY] || {}).picks || {} : null;
 if (FINAL && !Object.keys(picks).length) { console.error(`no picks for ${DAY} in otd/data/lines.json`); process.exit(1); }
 const finalDir = path.join(repo, "otd", "out", "carousel", DAY);
@@ -62,6 +64,70 @@ const server = http.createServer((req, res) => {
 });
 await new Promise((r) => server.listen(0, "127.0.0.1", r));
 const base = `http://127.0.0.1:${server.address().port}`;
+
+// ---------------------------------------------------------------- Part A
+// Four style options against the same three beats, so we compare styles and
+// not compositions. Beats 1 and 3 are 11-09, whose material we know; beat 2 is
+// 11-26, five videos across five years, the archive's best test of repetition.
+const OPTIONS = [["A", "A · SPONSORED"], ["B", "B · JOURNAL"], ["C", "C · WINDOWS"], ["D", "D · DUOTONE"]];
+const BEATS = [{ n: 1, day: "11-09", name: "the hook" }, { n: 2, day: "11-26", name: "the video" }, { n: 3, day: "11-09", name: "the post" }];
+
+async function renderStyles() {
+  const dir = path.join(outDir, "styles");
+  fs.mkdirSync(dir, { recursive: true });
+  const browser = await chromium.launch({ channel: "chrome", headless: true });
+  const t0 = Date.now();
+  try {
+    const ctx = await browser.newContext({ viewport: { width: W, height: H }, deviceScaleFactor: SCALE });
+    const page = await ctx.newPage();
+    page.on("pageerror", (e) => console.log(`  page error: ${e.message}`));
+    page.on("requestfailed", (r) => console.log(`  missing: ${r.url().replace(base, "")}`));
+    for (const [opt] of OPTIONS) for (const b of BEATS) {
+      const url = `${base}/otd/lookdev/page.html?sketch=/otd/lookdev/styles/beats.js&pre=/otd/lookdev/styles/style.js&seed=1&day=${b.day}&option=${opt}&beat=${b.n}`;
+      const png = path.join(dir, `${opt}${b.n}.png`);
+      await page.goto(url, { waitUntil: "load" });
+      try { await page.waitForFunction(() => window.__rendered === true || window.__error, null, { timeout: 60000 }); }
+      catch { console.log(`  ${opt}${b.n}: timed out waiting for window.__rendered`); }
+      const err = await page.evaluate(() => window.__error || null);
+      if (err) console.log(`  ${opt}${b.n}: ${err}`);
+      const why = await page.evaluate(() => window.__skip || null);
+      if (why) { console.log(`  ${opt}${b.n} skipped: ${why}`); continue; }
+      await page.evaluate(() => document.fonts.ready);
+      await page.screenshot({ path: png, clip: { x: 0, y: 0, width: W, height: H } });
+      console.log(`${opt}${b.n}  ${b.day}  →  ${path.relative(repo, png)}`);
+    }
+
+    // the sheet: a row per option, a column per beat, then the four covers as
+    // the profile grid crops them
+    const CW = 420, CH = Math.round(CW * H / W), SQ = 300, gap = 22;
+    const cell = (opt, b) => `<figure><img src="${base}/otd/lookdev/out/styles/${opt}${b.n}.png"><figcaption>${b.n} · ${b.name} · ${b.day}</figcaption></figure>`;
+    const html = `<!doctype html><meta charset="utf-8"><style>
+      body{margin:0;background:#9a9a9a;font:13px/1.4 "Arial Bold",Arial,sans-serif;font-weight:700;color:#fff;letter-spacing:.05em;text-transform:uppercase;padding:${gap}px}
+      h1{font-size:19px;margin:6px 0 18px;letter-spacing:.14em}
+      h2{font-size:15px;margin:0 0 8px;letter-spacing:.14em;border-top:2px solid #fff;padding-top:8px}
+      .row{display:flex;gap:${gap}px;margin-bottom:${gap + 8}px}
+      figure{margin:0;width:${CW}px}
+      figure img{display:block;width:${CW}px;height:${CH}px;outline:1px solid #000}
+      figcaption{margin-top:7px;font-size:11.5px;color:#eee}
+      .crops{display:flex;gap:${gap}px}
+      .crops figure{width:${SQ}px}
+      .crop{width:${SQ}px;height:${SQ}px;overflow:hidden;outline:1px solid #000}
+      .crop img{display:block;width:${SQ}px;height:${Math.round(SQ * H / W)}px;margin-top:${-Math.round((SQ * H / W - SQ) / 2)}px;outline:0}
+    </style>
+    <h1>on this day · part a · four style options, three beats</h1>
+    ${OPTIONS.map(([opt, label]) => `<h2>${label}</h2><div class="row">${BEATS.map((b) => cell(opt, b)).join("")}</div>`).join("")}
+    <h2>the cover as the profile grid crops it · beat 1, centre square</h2>
+    <div class="crops">${OPTIONS.map(([opt, label]) => `<figure><div class="crop"><img src="${base}/otd/lookdev/out/styles/${opt}1.png"></div><figcaption>${label}</figcaption></figure>`).join("")}</div>`;
+    const sheet = await ctx.newPage();
+    await sheet.setViewportSize({ width: 3 * CW + 2 * gap + gap * 2, height: 800 });
+    await sheet.setContent(html, { waitUntil: "networkidle" });
+    await sheet.screenshot({ path: path.join(outDir, "styles.png"), fullPage: true });
+    await sheet.screenshot({ path: path.join(outDir, "styles.jpg"), type: "jpeg", quality: 78, fullPage: true });
+    console.log(`sheet  →  otd/lookdev/out/styles.png (+ .jpg)   (${((Date.now() - t0) / 1000).toFixed(1)}s)`);
+  } finally { await browser.close(); }
+}
+
+if (STYLES_MODE) { await renderStyles(); server.close(); process.exit(0); }
 
 // stills: <look>/<n>.html, sorted look then number
 const looks = fs.readdirSync(here, { withFileTypes: true }).filter((d) => d.isDirectory() && d.name !== "out").map((d) => d.name).sort();

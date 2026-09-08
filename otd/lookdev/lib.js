@@ -19,19 +19,45 @@ const OTD = {
   _pending: 0, _failed: [],
   img(url, ok, fail) { this._pending++; return loadImage(url, (i) => { this._pending--; ok && ok(i); }, (e) => { this._pending--; this._failed.push(url); fail && fail(e); }); },
   allLoaded() { return this._pending === 0; },
+  // p5's loadJSON and loadStrings decrement its preload counter only when the
+  // file arrives: one 404 leaves the sketch on "Loading…" forever, with no
+  // error. Optional material is fetched instead and counted like an image, so a
+  // day with no Wayback capture or no frames renders rather than hangs.
+  fetchJSON(url, ok, fail) { this._get(url, (r) => r.json(), ok, fail); },
+  fetchText(url, ok, fail) { this._get(url, (r) => r.text(), ok, fail); },
+  _get(url, read, ok, fail) {
+    this._pending++;
+    fetch(url).then((r) => (r.ok ? read(r) : Promise.reject(new Error(`${r.status} ${url}`))))
+      .then((v) => { ok && ok(v); })
+      .catch((e) => { this._failed.push(url); fail && fail(e); })
+      .finally(() => { this._pending--; });   // after ok(), so anything it starts is counted first
+  },
 
   // ---------- data ----------
   preload(opts = {}) {
     const day = window.DAY || "11-09";
     this.sources = {};
+    this.rescued = {};
     this.day = loadJSON(`/otd/data/days/${day}.json`, (d) => {
+      const lost = new Set();
       for (const p of (d.posts || [])) {
         if (p.image && p.image.exists) this.images[p.image.src] = this.img("/public" + p.image.src);
-        if (p.sourceFile) loadStrings("/" + p.sourceFile, (lines) => { this.sources[p.permalink] = lines; }, () => {});
+        if (p.sourceFile) this.fetchText("/" + p.sourceFile, (t) => { this.sources[p.permalink] = t.split(/\r\n|\n|\r/); });
+        // images the archive lost that the Wayback Machine still had: one try per
+        // lost image, named by its file
+        for (const m of String(p.bodyHtml || "").matchAll(/!\[[^\]]*\]\(([^)\s]+)\)/g)) {
+          const src = m[1], name = src.split("/").pop();
+          if (!/^https?:/.test(src) && !(p.image && p.image.exists && p.image.src === src) && !lost.has(name)) {
+            lost.add(name);
+            this.rescued[name] = this.img(`/otd/captures/${day}/wayback/rescued-${name}`, null, () => { delete this.rescued[name]; });
+          }
+        }
         if (!p.video || !p.video.id) continue;
         // this day's captures: the manifest, then its frames and thumbnail
         const base = `/otd/captures/${day}/${p.slug}/video/${p.video.id}/`;
-        this.manifests[p.video.id] = loadJSON(base + "manifest.json", (m) => {
+        this.manifests[p.video.id] = { id: p.video.id, pending: true };
+        this.fetchJSON(base + "manifest.json", (m) => {
+          this.manifests[p.video.id] = m;
           this.frames[p.video.id] = (m.frames || []).map((f) => ({ ...f, img: this.img(base + f.file) }));
           if (m.thumb) this.images[`thumb:${p.video.id}`] = this.img(base + m.thumb);
         }, () => { this.manifests[p.video.id] = { id: p.video.id, missing: true }; });
@@ -43,7 +69,8 @@ const OTD = {
     const [mm, dd] = day.split("-").map(Number);
     const t = new Date(Date.UTC(2024, mm - 1, dd + 1));
     this.tomorrowDay = `${String(t.getUTCMonth() + 1).padStart(2, "0")}-${String(t.getUTCDate()).padStart(2, "0")}`;
-    this.tomorrowJSON = loadJSON(`/otd/data/days/${this.tomorrowDay}.json`, () => {}, () => {});
+    this.tomorrowJSON = {};
+    this.fetchJSON(`/otd/data/days/${this.tomorrowDay}.json`, (j) => { this.tomorrowJSON = j; });
     const F = "/otd/public/fonts/";
     this.font.times = loadFont(encodeURI(F + "Times New Roman.ttf"));
     this.font.timesItalic = loadFont(encodeURI(F + "Times New Roman Italic.ttf"));
@@ -55,17 +82,7 @@ const OTD = {
     this.font.dseg = loadFont(F + "DSEG7Classic-Regular.ttf");
     // wayback captures, when wayback-page.mjs has run
     this.wb = { items: [] };
-    loadJSON(`/otd/captures/${day}/wayback/wayback.json`, (j) => { this.wb = j; for (const it of j.items || []) if (it.file) it.img = this.img(`/otd/captures/${day}/wayback/${it.file}`); }, () => {});
-    // images the archive lost that the Wayback Machine still had: one try per lost image, named by its file
-    this.rescued = {};
-    loadJSON(`/otd/data/days/${day}.json`, (d) => {
-      const lost = new Set();
-      for (const p of (d.posts || [])) for (const m of String(p.bodyHtml || "").matchAll(/!\[[^\]]*\]\(([^)\s]+)\)/g)) {
-        const src = m[1]; const name = src.split("/").pop();
-        if (!/^https?:/.test(src) && !(p.image && p.image.exists && p.image.src === src) && !lost.has(name)) { lost.add(name);
-          this.rescued[name] = this.img(`/otd/captures/${day}/wayback/rescued-${name}`, null, () => { delete this.rescued[name]; }); }
-      }
-    }, () => {});
+    this.fetchJSON(`/otd/captures/${day}/wayback/wayback.json`, (j) => { this.wb = j; for (const it of j.items || []) if (it.file) it.img = this.img(`/otd/captures/${day}/wayback/${it.file}`); });
     for (const s of opts.stickers || []) this.loadSticker(s);
   },
   begin() {

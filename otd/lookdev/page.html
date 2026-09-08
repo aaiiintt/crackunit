@@ -6,14 +6,19 @@
 <script src="/otd/lookdev/vendor/p5.min.js"></script>
 <script src="/otd/lookdev/lib.js"></script>
 <script>
-  // ?sketch=/otd/lookdev/decon/1.js&seed=1&day=11-09
+  // ?sketch=/otd/lookdev/styles/beats.js&pre=/otd/lookdev/styles/style.js&seed=1&day=11-09&option=A&beat=1
+  // `pre` is a comma-separated list run before the sketch, so a sketch may build
+  // on a module of its own; the sketch reads the rest of the query itself.
+  // async=false keeps them in order and keeps p5's auto-start waiting for them.
   const q = new URLSearchParams(location.search);
   window.SEED = Number(q.get("seed") || 1);
   window.DAY = q.get("day") || "11-09";
   window.__rendered = false;
-  const s = document.createElement("script");
-  s.src = q.get("sketch") || "/otd/lookdev/decon/1.js";
-  s.onerror = () => { window.__error = "sketch failed to load: " + s.src; };
-  document.head.appendChild(s);
+  for (const src of [...(q.get("pre") || "").split(",").map((s) => s.trim()).filter(Boolean), q.get("sketch") || "/otd/lookdev/styles/beats.js"]) {
+    const s = document.createElement("script");
+    s.src = src; s.async = false;
+    s.onerror = () => { window.__error = "script failed to load: " + src; };
+    document.head.appendChild(s);
+  }
   window.addEventListener("error", (e) => { window.__error = String(e.message || e); });
 </script>

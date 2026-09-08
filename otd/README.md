@@ -43,6 +43,7 @@ node scripts/fetch-giphy.mjs "word" --stickers --limit 8   # add to the library
 node scripts/giphy-sheet.mjs       # redraw public/giphy/catalog.png
 node scripts/fetch-giphy.mjs --sync    # after deleting GIFs by hand, the catalog follows
 node lookdev/render.mjs            # render sketches, contact sheet
+node lookdev/render.mjs --styles   # Part A: 4 style options × 3 beats → out/styles.png
 cd site && npm run build           # the teaser site
 ```
 
@@ -88,6 +89,13 @@ derived the URL from the publish date and the two do not always agree.
 readiness test and a day's posts are not available in the same tick. Everything
 day-dependent is registered inside the day JSON's callback; every image goes
 through `OTD.img()` and a sketch waits on `OTD.allLoaded()`.
+
+**p5's `loadJSON` and `loadStrings` hang the sketch when a file is missing.**
+They decrement p5's preload counter only on success, so one 404 leaves the page
+on "Loading…" forever with no error — which is what a day with no Wayback
+capture used to do. Anything optional goes through `OTD.fetchJSON` /
+`OTD.fetchText`, which are counted by `OTD.allLoaded()` instead. `loadImage`
+and `loadFont` are fine; only use the p5 loaders for files that certainly exist.
 
 **Chrome caps one screenshot at 16384 device pixels.** A tall contact sheet
 silently wraps. `render.mjs` splits into `contact-1.png`, `contact-2.png`.
