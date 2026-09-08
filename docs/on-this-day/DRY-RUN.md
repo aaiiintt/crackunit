@@ -178,3 +178,43 @@ stickers; filter stickers by `frames` (a 198-frame GIF is slow to decode).
 Labels for posts minutes apart collide on the dial; stagger vertically, not
 radially. `build-days.mjs` does not surface image alt text; `lib.js` parses it
 from `bodyHtml` (Stage 2: add `image.alt` to the day JSON).
+
+## Stage 1, round three: pulling things apart, and the full text (2026-09-08)
+
+Iain on round two: starting to take shape; best where lots of things are
+layered; nothing yet truly pulls a video apart; do the same with GIFs; more
+size difference, more layers, more repetition; pick the best seeds and evolve
+them; and the carousel must also carry the posts' full text, simple and
+legible, three or four screens, flowed around material, ending at the link in
+bio. His sketch: on this day → date → stills → WAYBACK → text fragments with a
+number → source with a GIF → picture → post text nicely formatted → more.
+
+Decisions: all nine posts in order, cut at four screens; Wayback in; the date
+monolith stays the cover; up to twelve slides; "text-ments" = sentences pulled
+out and repeated with a real number; stickers may follow the day's mood, kept
+in a committed library with a catalog; the otd site stays a teaser.
+
+Built: the GIF library (`otd/public/giphy/`, 130 stickers, PAW Patrol pruned,
+`manifest.json` with `words`/`mood`/`usedOn`/`keep`, `--restore`,
+`giphy-sheet.mjs` → `catalog.png`); `wayback-page.mjs` (CDX nearest within a
+year either side, Chrome screenshot, toolbar hidden); lib.js gained a loading
+registry, `gifFrames`, `strip`, `scales`, `flowText`, `postsFlow`, `stamp`,
+`luma`; twelve sketches. Seeds picked from round two: 1/s2, 2/s1, 3/s2 (now 8),
+4/s3, 5/s3 (now 7), 6/s1 (folded into text-ments).
+
+Found: the Wayback snapshot of the Presentation Zen page (2006-04-20) still
+carried the PowerPoint logo the archive lost, and the 2006 and 2007 snapshots
+had the Hulger phone and the TalkingPoint screengrab. All three are rescued
+into `captures/11-09/wayback/rescued-*.jpg` and appear on the stills as
+"recovered, web.archive.org". The homepage of 24 November 2005 has the pink
+Crackunit.com masthead, now the Wayback slide's big material.
+
+Learned: p5's `loadImage` returns a 1 × 1 placeholder, so `.width` is no
+readiness test (a blank GIF slide); every image now goes through `OTD.img()`
+and sketches wait on `allLoaded()`. `numFrames()` can be undefined on a GIF p5
+did not parse as animated. A CDX nearest-match needs 14-digit timestamps on
+both sides. ffmpeg on this Mac has no `drawtext`; the catalog sheet is laid out
+by Chrome instead. Headings in the text screens must avoid the obstacles too,
+not only the body. 3,810 characters of posts at 36 px is four screens with
+material; How Stuff Dates is cut mid-sentence and Post-it and Zoo do not make
+it, which the link in bio is for.

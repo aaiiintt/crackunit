@@ -12,6 +12,14 @@ const OTD = {
   REC: "#FF1E00", HIGHLIGHTER: "#C8FF00", SAFETY: "#FFD400", AQUA: "#7FDBE6", LINK: "#0000EE",
   font: {}, frames: {}, manifests: {}, stickerImgs: {}, day: null, lines: null, giphy: null, images: {}, texts: {},
 
+  // ---------- loading ----------
+  // p5's loadImage hands back a 1×1 placeholder until the file arrives, so `.width` is
+  // no test of readiness. Every image goes through img(), which counts, and a sketch
+  // begins draw() with: if (!OTD.allLoaded()) { setTimeout(() => redraw(), 80); return; }
+  _pending: 0, _failed: [],
+  img(url, ok, fail) { this._pending++; return loadImage(url, (i) => { this._pending--; ok && ok(i); }, (e) => { this._pending--; this._failed.push(url); fail && fail(e); }); },
+  allLoaded() { return this._pending === 0; },
+
   // ---------- data ----------
   preload(opts = {}) {
     const day = window.DAY || "11-09";
@@ -31,12 +39,18 @@ const OTD = {
     for (const [slug, id] of opts.videos || [["post-it-note-waterfall", "vz7BcEfuTFc"], ["zoo-advertising", "cvs9kURU79s"], ["how-stuff-dates", "1odEmDYg4Y4"]]) {
       const base = `/otd/captures/${day}/${slug}/video/${id}/`;
       this.manifests[id] = loadJSON(base + "manifest.json", (m) => {
-        this.frames[id] = (m.frames || []).map((f) => ({ ...f, img: loadImage(base + f.file) }));
-        if (m.thumb) this.images[`thumb:${id}`] = loadImage(base + m.thumb);
+        this.frames[id] = (m.frames || []).map((f) => ({ ...f, img: this.img(base + f.file) }));
+        if (m.thumb) this.images[`thumb:${id}`] = this.img(base + m.thumb);
       });
       if (id === "1odEmDYg4Y4") this.texts.unavailable = loadStrings(base + "unavailable.txt");
     }
-    this.images.freerice = loadImage("/public/wp-content/uploads/2007/11/freerice.jpg");
+    this.images.freerice = this.img("/public/wp-content/uploads/2007/11/freerice.jpg");
+    // wayback captures, when wayback-page.mjs has run
+    this.wb = { items: [] };
+    loadJSON(`/otd/captures/${day}/wayback/wayback.json`, (j) => { this.wb = j; for (const it of j.items || []) if (it.file) it.img = this.img(`/otd/captures/${day}/wayback/${it.file}`); }, () => {});
+    // images the archive lost that the Wayback Machine still had (wayback-page.mjs, by hand for now)
+    this.rescued = {};
+    for (const name of ["Picture1.jpg", "talkingPointMini_01.jpg", "hulger.jpg"]) this.rescued[name] = this.img(`/otd/captures/${day}/wayback/rescued-${name}`, null, () => { delete this.rescued[name]; });
     for (const s of opts.stickers || []) this.loadSticker(s);
   },
   begin() {
@@ -64,6 +78,7 @@ const OTD = {
     return [...(p.bodyHtml || "").matchAll(/!\[([^\]]*)\]\(([^)\s]+)\)/g)].map((m) => ({ alt: m[1], src: m[2], exists: p.image && p.image.src === m[2] ? p.image.exists : false }));
   },
   alt(p) { const i = this.images_(p)[0]; return i ? i.alt : ""; },
+  rescuedFor(src) { const img = this.rescued[String(src).split("/").pop()]; return img && img.width ? img : null; },
   snippets(id) { // the video's own words, from yt-dlp
     const m = this.manifests[id] || {}, x = m.meta || {};
     const out = [];
@@ -76,8 +91,22 @@ const OTD = {
     if (m.unavailable) out.push(m.unavailable);
     return out;
   },
-  stickers(query) { return ((this.giphy || {}).items || []).filter((i) => i.query === query); },
-  loadSticker(item) { if (!this.stickerImgs[item.id]) this.stickerImgs[item.id] = loadImage("/otd/public/" + item.file.replace(/^public\//, "")); return this.stickerImgs[item.id]; },
+  stickers(query) { return ((this.giphy || {}).items || []).filter((i) => i.query === query && i.keep !== false); },
+  stickerByMood(word, maxFrames = 80) { // catalog lookup by query, words or mood; seeded pick
+    const w = String(word).toLowerCase();
+    const all = ((this.giphy || {}).items || []).filter((i) => i.keep !== false && (i.frames == null || i.frames <= maxFrames) &&
+      ([i.query, ...(i.words || []), i.mood || ""].some((x) => String(x).toLowerCase().includes(w))));
+    return all.length ? all[(this.seed() - 1) % all.length] : null;
+  },
+  sentencesAll() { return this.posts().flatMap((p) => (p.sentences || []).map((s) => ({ s, post: p }))); },
+  wayback() { return ((this.wb || {}).items || []).filter((i) => i.img && i.img.width); },
+  waybackAll() { return (this.wb || {}).items || []; },
+  loadSticker(item) { if (!this.stickerImgs[item.id]) this.stickerImgs[item.id] = this.img("/otd/public/" + item.file.replace(/^public\//, "")); return this.stickerImgs[item.id]; },
+  luma(img) { // mean brightness of the opaque pixels, 0 to 1; a sticker near 1 is white and vanishes on a white ground
+    const f = this.gifFrames(img, 1)[0]; f.loadPixels(); let n = 0, t = 0;
+    for (let i = 0; i < f.pixels.length; i += 16) { if (f.pixels[i + 3] < 128) continue; n++; t += (f.pixels[i] * 0.299 + f.pixels[i + 1] * 0.587 + f.pixels[i + 2] * 0.114) / 255; }
+    return n ? t / n : 1;
+  },
   sticker(item) { return this.stickerImgs[item.id]; },
 
   // ---------- material (pixels only) ----------
@@ -136,6 +165,22 @@ const OTD = {
     if (gif && gif.numFrames && gif.numFrames() > 1) { gif.pause(); gif.setFrame(Math.max(0, Math.min(gif.numFrames() - 1, Math.floor(frame)))); }
     return gif;
   },
+  gifFrames(gif, max = 24) { // every frame of a loaded GIF as its own image, evenly thinned to max
+    const n = (gif.numFrames && gif.numFrames()) || 1; if (n <= 1) return [gif];
+    const out = [], step = Math.max(1, n / max);
+    gif.pause();
+    for (let k = 0; k < n && out.length < max; k += step) { gif.setFrame(Math.floor(k)); out.push(gif.get()); }
+    return out;
+  },
+  strip(frames, x, y, size, n = frames.length, dir = "row", gap = 0) { // a row or column of frames at one size
+    for (let i = 0; i < n; i++) {
+      const f = frames[i % frames.length], w = size, h = size * f.height / f.width;
+      if (dir === "row") image(f, x + i * (w + gap), y, w, h); else image(f, x, y + i * (h + gap), w, h);
+    }
+  },
+  scales(img, sizes, area = { x: -200, y: -200, w: 1480, h: 1750 }) { // the same image at several widths, seeded placement, let the card crop it
+    for (const w of sizes) { const h = w * img.height / img.width; image(img, random(area.x, area.x + area.w - w * 0.5), random(area.y, area.y + area.h - h * 0.5), w, h); }
+  },
   scanlines(x, y, w, h, alpha = 40, period = 2) { push(); noStroke(); fill(0, alpha); for (let yy = y; yy < y + h; yy += period) rect(x, yy, w, 1); pop(); },
   pixelated(on = true) { drawingContext.imageSmoothingEnabled = !on; },
   pillarbox(img, x, y, w, h) { // 4:3 material centred in a 16:9 black player
@@ -181,6 +226,56 @@ const OTD = {
     const words = t.split(/\s+/), lines = []; let cur = "";
     for (const w of words) { const n = cur ? cur + " " + w : w; if (textWidth(n) <= maxW || !cur) cur = n; else { lines.push(cur); cur = w; } }
     if (cur) lines.push(cur); return lines;
+  },
+  flowText(t, x, y, w, lineH, obstacles = [], maxY = Infinity) { // wrap around rectangles; returns the y after the last line, or null if it ran past maxY
+    const words = String(t).split(/\s+/).filter(Boolean);
+    let i = 0, yy = y;
+    while (i < words.length) {
+      if (yy > maxY) return null;
+      // the usable span on this line: the widest gap left by obstacles that cross it
+      const asc = textSize() * 0.8, cross = obstacles.filter((o) => yy - asc < o.y + o.h && yy > o.y);
+      let spans = [[x, x + w]];
+      for (const o of cross) spans = spans.flatMap(([a, b]) => (o.x >= b || o.x + o.w <= a) ? [[a, b]] : [[a, Math.min(b, o.x - 24)], [Math.max(a, o.x + o.w + 24), b]]).filter(([a, b]) => b - a > 120);
+      if (!spans.length) { yy += lineH; continue; }
+      const [a, b] = spans.reduce((m, sp) => (sp[1] - sp[0] > m[1] - m[0] ? sp : m));
+      let line = "";
+      while (i < words.length) { const n = line ? line + " " + words[i] : words[i]; if (textWidth(n) <= b - a || !line) { line = n; i++; } else break; }
+      text(line, a, yy); yy += lineH;
+    }
+    return yy;
+  },
+  // The posts as text screens. Every post in date order, laid out once into up to
+  // POST_SCREENS.length screens, each flowing around that screen's obstacles (fixed
+  // here so every screen computes the same cut). Screen k draws its share and
+  // returns the y after its last line. Whatever does not fit the last screen is cut.
+  POST_SCREENS: [
+    [{ x: 600, y: 120, w: 420, h: 340 }],        // 1: the surviving image, top right
+    [{ x: 60, y: 620, w: 480, h: 360 }],         // 2: a DV frame, left, mid
+    [{ x: 640, y: 560, w: 380, h: 420 }],        // 3: a sticker, right, mid
+    [{ x: 600, y: 120, w: 420, h: 300 }],        // 4: a broken image, top right; ends with the link
+  ],
+  postsFlow(k, { x = 60, y0 = 120, w = 960, bottom = 1350 - 170, px = 36, lineH = 46 } = {}) {
+    const screens = this.POST_SCREENS, headH = 56;
+    let screen = 0, yy = y0, lastY = null;
+    const span = (yTop, yBot) => { // the widest horizontal run free of this screen's obstacles between yTop and yBot
+      let spans = [[x, x + w]];
+      for (const o of screens[screen]) if (yTop < o.y + o.h && yBot > o.y) spans = spans.flatMap(([a, b]) => (o.x >= b || o.x + o.w <= a) ? [[a, b]] : [[a, Math.min(b, o.x - 24)], [Math.max(a, o.x + o.w + 24), b]]).filter(([a, b]) => b - a > 120);
+      return spans.length ? spans.reduce((m, sp) => (sp[1] - sp[0] > m[1] - m[0] ? sp : m)) : [x, x + w];
+    };
+    const heading = (p) => { if (screen === k) { const [a, b] = span(yy - 4, yy + 30); push(); fill(0); stroke(0); strokeWeight(1); line(a, yy, b, yy); noStroke(); this.arialCaps(16); text(`${this.caps(p.title)} · ${p.year}`, a, yy + 26); pop(); } };
+    const body = (p, yStart) => { push(); this.times(px); if (screen !== k) fill(0, 0); else fill(0); const r = this.flowText(p.bodyText, x, yStart, w, lineH, screens[screen], bottom); pop(); return r; };
+    for (const p of this.posts()) {
+      if (yy + headH + 3 * lineH > bottom) { screen++; yy = y0; if (screen >= screens.length) break; }
+      heading(p);
+      let endY = body(p, yy + headH + px * 0.8);
+      if (endY === null) { screen++; yy = y0; if (screen >= screens.length) break; heading(p); endY = body(p, yy + headH + px * 0.8); if (endY === null) endY = bottom; }
+      if (screen === k) lastY = endY;
+      yy = endY + 28;
+    }
+    return lastY;
+  },
+  stamp(n, label, x, y, px = 420) { // a true number set like a counter, with what it is in Courier
+    push(); this.times(px); text(String(n), x, y); this.courier(16); text(label, x + 6, y + 30); pop();
   },
   points(t, font, px, x, y, sampleFactor = 0.2) { return font.textToPoints(t, x, y, px, { sampleFactor, simplifyThreshold: 0 }); },
   label(t, x, y, px = 14, bg = null, ink = 0) { // Arial Bold caps, optional box

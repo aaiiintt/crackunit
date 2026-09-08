@@ -1,28 +1,39 @@
-// 7 · The images. What is left of the day's four images: one survives
-// (freerice.jpg, 425 px wide in 2007, shown at 2.5× with its pixels), three
-// are gone and are drawn the way a browser draws a missing image, with their
-// alt text, one of them the size the picture wished it was. Silver ground.
+// 7 · The dead video. How Stuff Dates embedded 1odEmDYg4Y4; the account is
+// terminated. yt-dlp's exact words inside the empty player, and again small,
+// three times, in the black; the post's questions about the funny bird sound;
+// a Giphy bird pulled into its frames as a strip across the player, one frame
+// held large. Black ground. Accent: AQUA on the video id.
+let bird = null;
 function preload() { OTD.preload(); }
-function setup() { createCanvas(1080, 1350); }
+function setup() {
+  createCanvas(1080, 1350);
+  const all = OTD.stickers("bird").filter((s) => s.frames <= 80);
+  const pick = all[(window.SEED - 1) % all.length];
+  bird = { item: pick, img: OTD.loadSticker(pick) };
+}
 function draw() {
-  if (!OTD.images.freerice.width) { setTimeout(() => redraw(), 60); return; }
-  OTD.begin(); background(OTD.SILVER);
+  if (!OTD.allLoaded()) { setTimeout(() => redraw(), 80); return; }
+  OTD.begin(); background(OTD.BLACK);
   const S = OTD.seed();
-  const gone = OTD.posts().flatMap((p) => OTD.images_(p).filter((i) => !i.exists).map((i) => ({ ...i, post: p })));
-  const fr = OTD.images.freerice;
+  const post = OTD.posts().find((p) => p.video && p.video.id === "1odEmDYg4Y4");
+  const err = (OTD.texts.unavailable || []).join(" ").trim();
+  const frames = OTD.gifFrames(bird.img, 16), n = frames.length;
 
-  // the survivor, at 2.5×, pixels showing, echoed
-  const w = fr.width * 2.5, h = fr.height * 2.5;
-  const x = random(-300, 60), y = random(60, 500);
-  OTD.pixelated(true); OTD.echo(fr, x, y, w, h, 3, 40 + S * 10, 24, 0.5); OTD.pixelated(false);
-
-  // the gone, as boxes with alt text
-  const big = floor(random(gone.length));
-  gone.forEach((g, i) => {
-    const bw = i === big ? 820 + random(0, 200) : 220 + random(0, 120), bh = bw * (i === big ? 0.72 : random(0.6, 1));
-    OTD.brokenImage(g.alt, random(0, 1080 - bw * 0.6), random(500, 1350 - bh * 0.5), bw, bh);
-  });
-
-  fill(0); OTD.label(`4 images · 1 remains · ${gone.map((g) => g.src.split("/").pop()).join(" · ")}`, 60, 1350 - 56, 14);
+  const px = 60, py = 120 + random(0, 160), pw = 960, ph = 540;
+  push(); stroke(255); strokeWeight(1); noFill(); rect(px + 0.5, py + 0.5, pw, ph); pop();
+  OTD.vcr(24); fill(255); OTD.wrap(err, pw - 80).forEach((l, i) => text(l, px + 40, py + 80 + i * 36));
+  fill(OTD.AQUA); OTD.vcr(64); text(post.video.id, px + 40, py + ph - 48);
+  // the bird, as frames, across the player
+  OTD.strip(frames, px, py + ph - 200, Math.floor(pw / n), n, "row");
+  // the error again, small, in the dark
+  OTD.vcr(13); fill(255, 150); for (let i = 0; i < 3; i++) text(err, random(-400, 200), random(py + ph + 40, 1300));
+  // the questions
+  const qs = (post.sentences || []).filter((s) => /\?/.test(s)).slice(0, 3);
+  OTD.times(64); fill(255); let y = py + ph + 130;
+  for (const q of qs) for (const l of OTD.wrap(q, 960)) { text(l, 60, y); y += 70; }
+  // one frame, held, large
+  const big = frames[floor(random(n))]; const bw = 320 + random(0, 260), bh = bw * big.height / big.width;
+  push(); translate(random(300, 900), py + random(60, ph - 60)); rotate(random(-0.3, 0.3)); imageMode(CENTER); image(big, 0, 0, bw, bh); pop();
+  fill(255); OTD.courier(16); text(`${post.permalink} · ${post.date.replace("T", " ")} · giphy ${bird.item.id} × ${n}`, 60, 1350 - 60);
   OTD.done();
 }

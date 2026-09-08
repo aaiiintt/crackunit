@@ -1,8 +1,11 @@
 # lookdev
 
-Stage 1 of on-this-day. Round two (2026-09-08): a **digital deconstruction** of
-one day, 11-09, as a carousel of eight freeze frames, each a hand-composed
-p5.js sketch rendered at several seeds. The brief, the substrate and the plan
+Stage 1 of on-this-day. Round three (2026-09-08): a **digital deconstruction** of
+one day, 11-09, as a carousel of twelve freeze frames, each a hand-composed
+p5.js sketch rendered at several seeds: the date, the line, text-ments, the
+stills wall, a GIF pulled apart, Wayback, the dead video, the source, then the
+posts in full across four text screens that flow around material and end at the
+link in bio. The brief, the substrate and the plan
 are in `docs/on-this-day/PLAN.md` and `ART-DIRECTION.md` (Stage 1 notes); the
 round-two redline and the p5 plan are in `docs/on-this-day/DRY-RUN.md`.
 Round one's HTML boards (Camcorder, MiniDisc) are in git history at `489e938`.
@@ -15,7 +18,7 @@ lookdev/
   lib.js            the observer's operations: data, material (pixels only), composition, type
   fonts.css         @font-face for the substrate's faces (../public/fonts)
   vendor/p5.min.js  p5 1.11.3, pinned, committed (a file, not an npm dependency)
-  decon/1.js … 8.js the eight freeze frames for 11-09
+  decon/1.js … 12.js the twelve freeze frames for 11-09 (9 to 12 are the text screens; OTD.postsFlow lays the posts out once so every screen agrees on the cut)
   assets/           ordered assets (the raytraced room; on hold, see ../orders/11-09.md)
   out/              gitignored: decon-<n>-s<seed>.png and contact.png
 ```
@@ -24,6 +27,7 @@ lookdev/
 node otd/lookdev/render.mjs                 # every sketch, 3 seeds, then the contact grid
 node otd/lookdev/render.mjs decon/4 --seed 7  # one still, one seed
 node otd/lookdev/render.mjs --seeds 5       # more variants per still
+node otd/lookdev/render.mjs --pick          # seed 1 only: the carousel as it would post
 open otd/lookdev/out/contact.png            # rows: stills; columns: seeds at 25%; last column seed 1 at 270 px
 ```
 
@@ -43,20 +47,28 @@ which sticker frame, sizes within bounds. They never vary the material.
 
 ## The observer's operations (lib.js)
 
+- Loading: every image goes through `img()`, which counts; a sketch begins
+  `draw()` with `if (!OTD.allLoaded()) { setTimeout(() => redraw(), 80); return; }`
+  (p5 hands back a 1 × 1 placeholder until a file arrives, so `.width` is no test).
 - Material, pixels only, never type: `interlace(img, shift)`, `chroma(img, dx)`,
   `dither(img)` (ordered Bayer, 1-bit), `sortRows(img, threshold)` (pixel sort),
   `posterize`, `grey`, `frozen(gif, frame)` (a sticker held on one frame),
-  `scanlines(x, y, w, h)`, `pixelated(on)`, `pillarbox`, `echo`, `crop`.
+  `gifFrames(gif, max)` (every frame as its own image), `luma(img)` (to skip
+  white stickers on white), `scanlines`, `pixelated(on)`, `pillarbox`, `echo`, `crop`.
 - Composition: `wall(images, cols, rows, opts)` fills the card edge to edge;
-  `registration()` draws the 12-column grid faint.
+  `strip(frames, x, y, size, n, dir)` a row or column of frames; `scales(img,
+  sizes)` the same image at several widths; `registration()` the grid, faint.
 - Type, crisp: `times`, `timesItalic`, `arialCaps`, `courier`, `vcr`, `dseg`,
   `fitLine`, `wrap`, `points(text, font, px, x, y, sampleFactor)` (textToPoints),
   `label` (Arial Bold caps, optional box), `osd` (camcorder burn-in),
-  `brokenImage(alt, x, y, w, h)` (the browser's box for an image that is gone).
+  `brokenImage(alt, x, y, w, h)` (the browser's box for an image that is gone),
+  `flowText(text, x, y, w, lineH, obstacles)` (wraps around rectangles),
+  `postsFlow(k)` (the posts across `POST_SCREENS`), `stamp(n, label)` (a counter).
 - Data: `posts`, `hero`, `others`, `line`, `runnerUp`, `years`, `timestamps`,
-  `tagsAll`, `images_(post)` (every markdown image with alt and whether it
-  exists), `snippets(videoId)` (yt-dlp's words), `stickers(query)`,
-  `loadSticker`, `sticker`.
+  `tagsAll`, `sentencesAll`, `images_(post)` (every markdown image with alt and
+  whether it exists), `rescuedFor(src)` (the lost image, if Wayback had it),
+  `snippets(videoId)` (yt-dlp's words), `wayback()` (page captures),
+  `stickers(query)`, `stickerByMood(word)`, `loadSticker`, `sticker`.
 
 ## Material for 11-09
 
@@ -66,8 +78,14 @@ which sticker frame, sizes within bounds. They never vary the material.
 - `public/wp-content/uploads/2007/11/freerice.jpg`, the one surviving image;
   three 2005 images gone (alt text parsed from the raw markdown).
 - `export/posts/2005-11-09-presentation-zen.md`, the raw source.
-- Giphy stickers in `otd/public/giphy/` (GIFs gitignored, manifest committed;
-  re-fetch with `node otd/scripts/fetch-giphy.mjs november calendar bird orange skype rice zoo powerpoint "post it" --stickers --limit 8`).
+- The GIF library, `otd/public/giphy/`: committed, with `manifest.json` as its
+  catalog (`words`, `mood`, `usedOn`, `keep`) and `catalog.png` drawn by
+  `node otd/scripts/giphy-sheet.mjs`. Add to it with `fetch-giphy.mjs <query>…`;
+  rebuild a fresh clone's folder with `fetch-giphy.mjs --restore`.
+- Wayback captures, `otd/captures/11-09/wayback/` (gitignored), from
+  `node otd/scripts/wayback-page.mjs 11-09`: the homepage and each permalink as
+  web.archive.org holds them nearest the day, plus the three lost 2005 images
+  rescued by hand from the same snapshots (`rescued-*.jpg`).
 
 ## Fonts, in `otd/public/fonts/`
 

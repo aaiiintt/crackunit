@@ -63,8 +63,16 @@ that week's Top 40** that suits the line; write `charts.json[week].pick` with
 
 ```bash
 node otd/scripts/frames.mjs 11-09          # yt-dlp + ffmpeg: frames, thumbnail, metadata per video
-node otd/scripts/capture.mjs 11-09 --wayback   # Stage 2: page renders, crops, raw source, Wayback
+node otd/scripts/wayback-page.mjs 11-09    # crackunit.com as web.archive.org holds it nearest the day, one screenshot per page
+node otd/scripts/capture.mjs 11-09         # Stage 2: page renders, crops, raw source
 ```
+
+Wayback: the homepage usually exists near any date; permalinks often do not
+(no snapshot within a year is a normal answer, and is material). Open the page
+captures: an image the archive has lost is often still in the snapshot, and
+`web.archive.org/web/<ts>id_/<original url>` returns the file. Save it as
+`captures/MM-DD/wayback/rescued-<name>` and say "recovered, web.archive.org" on
+the still. That is the only place a lost image may come from.
 
 Open `otd/captures/MM-DD/`. Look at the frames. Note the ones with a face, a
 title card, a moment, a colour, in `lines.json[MM-DD].frames` by filename.
@@ -78,8 +86,12 @@ error is material. A quick sheet of what came back:
 
 ## The look-board loop (Stage 1 only)
 
-- **L1. Build.** From `ART-DIRECTION.md` Stage 1 notes (the substrate) and this
-  day's captures, hand-compose each still as a p5.js sketch in
+- **L1. Build.** The carousel is up to twelve freeze frames: the date as the
+  cover, the deconstructions (the line, text-ments, the stills wall, a GIF pulled
+  apart, Wayback, the dead video, the source), then the posts in full across up
+  to four text screens (Times 36 on 46, flowed round one piece of material each,
+  cut at the fourth, ending with the link in bio). From `ART-DIRECTION.md` Stage
+  1 notes (the substrate) and this day's captures, hand-compose each still as a p5.js sketch in
   `otd/lookdev/<look>/<n>.js` using the observer's operations in
   `otd/lookdev/lib.js` (see `otd/lookdev/README.md`), and render it with
   `node otd/lookdev/render.mjs` at three seeds into `otd/lookdev/out/` with a
@@ -123,9 +135,14 @@ Until Step 6 passes. Iain sees the contact sheet, not the code.
 
 ## Step 8. Assets, only if a slide wants what the archive cannot supply
 
-- Giphy first for anything generic: `node otd/scripts/fetch-giphy.mjs "query" --stickers`
-  (key in `.env`). Note chosen ids in `lines.json[MM-DD].assets`. "Powered by
-  GIPHY" on the last slide and the site footer when used.
+- The GIF library first: `otd/public/giphy/` with `manifest.json` as its catalog
+  (`words`, `mood`, `usedOn`, `keep`) and `catalog.png` to look at (`node
+  otd/scripts/giphy-sheet.mjs`). Stickers may be chosen for a word in the day's
+  text or for its mood; every use is a frozen frame or the GIF pulled into its
+  frames, never animation. Add to the library with `node otd/scripts/fetch-giphy.mjs
+  "query" --stickers` (key in `.env`); mark junk `keep: false` so it is not
+  fetched twice; add the day to `usedOn`. "Powered by GIPHY" on the last slide
+  and the site footer when used.
 - Order from Iain for anything specific: write `otd/orders/MM-DD.md` (what, size,
   format, fps, length, loop, key colour, style ref, delivery path, the draft
   still). An unfilled order is a valid stopping point.
@@ -161,6 +178,9 @@ response. That is the loop.
 
 ## Version
 
+- v1.3, 2026-09-08 (Mac). Round three: twelve slides with the posts' full text
+  on four screens; the GIF library and catalog; `wayback-page.mjs` and the
+  rescued-image rule; more layers, sizes and repetition per Iain's redline.
 - v1.2, 2026-09-08 (Mac). Round two: the HTML boards read as web templates and
   the tape/track metaphor was rejected (posts are not songs). Stage 1 is now a
   p5.js deconstruction carousel with seeded variants; L1 rewritten.

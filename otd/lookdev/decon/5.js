@@ -1,39 +1,32 @@
-// 5 · The dead video. How Stuff Dates embedded 1odEmDYg4Y4; the account is
-// terminated. yt-dlp's exact words inside the empty player; the post's
-// questions about the funny bird sound; a Giphy bird, frozen mid-flap, is the
-// only picture. Black ground. Accent: AQUA on the video id.
-let bird = null;
+// 5 · The GIF, pulled apart. One sticker from the library, chosen for a word
+// in the day (puma, waterfall, synth, rice, geek), exploded into its frames:
+// every frame edge to edge, one frame twenty times in a row, one frame at
+// 1200 px cropped by the card, a column of the first twelve, the sentence it
+// belongs to. White. Accent: REC on one.
+const WORDS = ["puma", "waterfall", "synth", "rice bowl", "geek"];
+const SAY = { puma: /Zoo/i, waterfall: /Guinness|Mentos/i, synth: /bird sound|machine/i, "rice bowl": /rice|vocabulary/i, geek: /geek/i };
+let stk = null;
 function preload() { OTD.preload(); }
 function setup() {
   createCanvas(1080, 1350);
-  const all = OTD.stickers("bird").filter((s) => s.frames <= 80);
-  const pick = all[(window.SEED - 1) % all.length];
-  bird = { item: pick, img: OTD.loadSticker(pick) };
+  const word = WORDS[(window.SEED - 1) % WORDS.length];
+  const it = OTD.stickerByMood(word, 120); stk = it ? { word, it, img: OTD.loadSticker(it) } : null;
 }
 function draw() {
-  if (!bird.img.width) { setTimeout(() => redraw(), 60); return; }
-  OTD.begin(); background(OTD.BLACK);
-  const S = OTD.seed();
-  const post = OTD.posts().find((p) => p.video && p.video.id === "1odEmDYg4Y4");
-  const err = (OTD.texts.unavailable || []).join(" ").trim();
-
-  // the player, 16:9, empty
-  const px = 60, py = 120 + random(0, 200), pw = 960, ph = 540;
-  push(); stroke(255); strokeWeight(1); noFill(); rect(px + 0.5, py + 0.5, pw, ph); pop();
-  OTD.vcr(24); fill(255); const lines = OTD.wrap(err, pw - 80); lines.forEach((l, i) => text(l, px + 40, py + 80 + i * 36));
-  fill(OTD.AQUA); OTD.vcr(64); text(post.video.id, px + 40, py + ph - 48);
-
-  // the questions, in the post's own words
-  const qs = (post.sentences || []).filter((s) => /\?/.test(s)).slice(0, 3);
-  OTD.times(64); fill(255); let y = py + ph + 130;
-  for (const q of qs) for (const l of OTD.wrap(q, 960)) { text(l, 60, y); y += 70; }
-
-  // the bird, frozen
-  const img = OTD.frozen(bird.img, floor(random(img_frames(bird.img))));
-  const bw = 300 + random(0, 260), bh = bw * img.height / img.width;
-  push(); translate(random(300, 900), py + random(60, ph - 60)); rotate(random(-0.3, 0.3)); imageMode(CENTER); image(img, 0, 0, bw, bh); pop();
-
-  fill(255); OTD.courier(16); text(`${post.permalink} · ${post.date.replace("T", " ")} · giphy ${bird.item.id}`, 60, 1350 - 60);
+  if (!OTD.allLoaded()) { setTimeout(() => redraw(), 80); return; }
+  OTD.begin(); background(OTD.WHITE);
+  const frames = OTD.gifFrames(stk.img, 30), n = frames.length;
+  const cols = n >= 20 ? 6 : n >= 9 ? 4 : 3, rows = Math.ceil(1350 / (1080 / cols) * (frames[0].height / frames[0].width)) + 1;
+  push(); tint(255, 200); OTD.wall(frames, cols, rows, { order: "seq" }); noTint(); pop();
+  const k = floor(random(n)); const sy = random(150, 1000);
+  OTD.strip([frames[k]], 0, sy, 54, 20, "row"); OTD.strip([frames[(k + 3) % n]], 27, sy + 60, 54, 20, "row");
+  const big = frames[(k + 7) % n]; const bw = 1200, bh = bw * big.height / big.width;
+  image(big, random(-500, 200), random(-300, 600), bw, bh);
+  OTD.strip(frames, 1080 - 60 - 80, 60, 80, Math.min(n, 12), "col", 4);
+  const sent = OTD.sentencesAll().find(({ s }) => SAY[stk.word].test(s)) || OTD.sentencesAll()[0];
+  OTD.times(56); let ty = random(700, 1150);
+  for (const l of OTD.wrap(sent.s, 860)) { fill(255); rect(56, ty - 48, textWidth(l) + 16, 64); fill(0); text(l, 64, ty); ty += 64; }
+  fill(OTD.REC); circle(80 + k * 54, sy - 16, 12);
+  fill(0); OTD.label(`giphy ${stk.it.id} · ${n} of ${stk.img.numFrames ? stk.img.numFrames() : 1} frames · "${stk.word}" · ${stk.it.title}`, 60, 1350 - 48, 12, "#fff");
   OTD.done();
 }
-function img_frames(g) { return g.numFrames ? g.numFrames() : 1; }

@@ -85,13 +85,13 @@
     "why": "Seven words, a whole argument, and it makes no sense without the post. The Sueño Latino video (1odEmDYg4Y4) is terminated, so its error text is the day's DV material and the Post-it Note Waterfall (480×360, 15 fps, a dim conference stage) is the camcorder footage. Three 2005 images are gone: Picture1.jpg (powerpoint logo), talkingPointMini_01.jpg (talkingpoint screengrab), hulger.jpg (hulger phone).",
     "assets": {
       "giphy": {
-        "november": "stickers filtered to titles containing November, picked by seed",
-        "bird": "stickers with ≤80 frames, picked by seed",
-        "orange": "on the tag orange",
-        "rice": "on the tag United Nations World Food Program",
-        "zoo": "on the tag San Francisco Zoo"
+        "1 the date": "november (titles containing November, non-white, by seed)",
+        "5 the gif": "puma / waterfall / synth / rice bowl / geek, by seed",
+        "7 the dead video": "bird (≤80 frames, by seed)",
+        "8 the source": "powerpoint"
       },
-      "note": "all from otd/public/giphy/manifest.json; ids chosen per seed at render time, recorded on the still's last line"
+      "wayback": "otd/captures/11-09/wayback/ (wayback-page.mjs): home 2005-11-24, home 2007-08-14, presentation-zen 2006-04-20, technorati 2005-12-16, talking-point and hulger 2006; rescued Picture1.jpg, talkingPointMini_01.jpg, hulger.jpg",
+      "note": "sticker ids are chosen per seed at render time and printed on the still's last line; the catalog is otd/public/giphy/manifest.json"
     }
   }
 }

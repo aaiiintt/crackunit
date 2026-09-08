@@ -5,6 +5,7 @@
 //   node otd/lookdev/render.mjs decon                  # one look
 //   node otd/lookdev/render.mjs decon/4 --seed 7       # one still, one seed
 //   node otd/lookdev/render.mjs --seeds 5              # more variants per still
+//   node otd/lookdev/render.mjs --pick                  # seed 1 only: the carousel as it would post
 //
 // A still is either a p5 sketch <look>/<n>.js, hosted by page.html with
 // vendor/p5.min.js and lib.js and rendered once per seed (window.SEED), or a
@@ -34,7 +35,7 @@ const W = 1080, H = 1350, SCALE = 2, CONTACT = 0.25, GATE = 270;
 const argv = process.argv.slice(2);
 const opt = (n, d) => { const i = argv.indexOf(`--${n}`); return i === -1 ? d : argv[i + 1]; };
 const filter = argv.find((a) => !a.startsWith("--") && a !== opt("seed", null) && a !== opt("seeds", null)) || "";
-const seeds = opt("seed", null) ? [Number(opt("seed"))] : Array.from({ length: Number(opt("seeds", 3)) }, (_, i) => i + 1);
+const seeds = argv.includes("--pick") ? [1] : opt("seed", null) ? [Number(opt("seed"))] : Array.from({ length: Number(opt("seeds", 3)) }, (_, i) => i + 1);
 const DAY = opt("day", "11-09");
 
 const MIME = { ".html": "text/html; charset=utf-8", ".css": "text/css", ".js": "text/javascript", ".png": "image/png", ".jpg": "image/jpeg",

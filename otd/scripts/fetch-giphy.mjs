@@ -8,9 +8,14 @@
 // root (KEY=value lines; never committed, see .gitignore). Uses the public REST API
 // (api.giphy.com/v1), not the React Native SDK, which wraps the same endpoints.
 //
-// Output: public/giphy/<kind>/<slug>/<id>.gif plus public/giphy/manifest.json with
-// id, kind, query, title, width, height, frames (when Giphy reports them), url,
-// and the Giphy attribution fields. Giphy's terms require "Powered by GIPHY"
+// Output: public/giphy/<kind>/<slug>/<id>.gif plus public/giphy/manifest.json,
+// the library's catalog: id, kind, query, title, width, height, frames (when
+// Giphy reports them), url, the Giphy attribution fields, and three fields kept
+// by hand so agents can find things again: `words` (the query and any word the
+// sticker was chosen for), `mood` (free text), `usedOn` (days, "MM-DD"), and
+// `keep` (false for junk that stays catalogued so it is not fetched twice).
+// The folder is the library; it is committed. `--restore` re-downloads every
+// catalogued item by id for a fresh clone. `giphy-sheet.mjs` draws the catalog. Giphy's terms require "Powered by GIPHY"
 // attribution wherever the GIFs are shown; the site footer and the video's
 // studio card carry it when any Giphy asset is used (manifest.attribution).
 //
@@ -52,8 +57,9 @@ if (kinds.length === 0) kinds.push("stickers");
 const limit = Number(flag("limit", 10));
 const rating = flag("rating", "g");
 const queries = args.filter((a, i) => !a.startsWith("--") && !(i > 0 && args[i - 1].match(/^--(limit|rating)$/)));
+const restore = args.includes("--restore");
 
-if (queries.length === 0) {
+if (queries.length === 0 && !restore) {
   console.error('usage: fetch-giphy.mjs <query>... [--stickers] [--gifs] [--limit N] [--rating g|pg]');
   process.exit(2);
 }
@@ -67,6 +73,26 @@ const slug = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const manifest = existsSync(manifestPath) ? JSON.parse(readFileSync(manifestPath, "utf8")) : { attribution: "Powered by GIPHY", items: [] };
 const have = new Set(manifest.items.map((it) => it.id));
+
+if (restore) { // rebuild the folder from the catalog, by id
+  let n = 0;
+  for (const it of manifest.items) {
+    const file = join(outRoot, it.file.replace(/^giphy\//, ""));
+    if (existsSync(file) || it.keep === false) continue;
+    const res = await fetch(`https://api.giphy.com/v1/gifs/${it.id}?api_key=${encodeURIComponent(key)}`, { headers: { "User-Agent": "crackunit-otd/0.1" } });
+    if (!res.ok) { console.error(`  ${it.id}: HTTP ${res.status}`); await sleep(1500); continue; }
+    const { data } = await res.json();
+    const url = data?.images?.original?.url;
+    if (!url) { console.error(`  ${it.id}: no original`); continue; }
+    const r = await fetch(url);
+    if (!r.ok) { console.error(`  ${it.id}: HTTP ${r.status}`); continue; }
+    mkdirSync(dirname(file), { recursive: true });
+    writeFileSync(file, Buffer.from(await r.arrayBuffer())); n++;
+    await sleep(600);
+  }
+  console.log(`restored ${n} files from the catalog`);
+  process.exit(0);
+}
 
 for (const kind of kinds) {
   for (const q of queries) {
@@ -98,6 +124,7 @@ for (const kind of kinds) {
           bytes: orig.size ? Number(orig.size) : null,
           file: `giphy/${kind}/${slug(q)}/${g.id}.gif`,
           giphyUrl: g.url, user: g.user?.username || null, rating: g.rating,
+          words: [q], mood: "", usedOn: [], keep: true,
         });
         have.add(g.id);
       }
