@@ -6,3 +6,5 @@ dist/
 .vercel
 otd/node_modules/
 otd/out/
+otd/data/days/
+otd/data/index.json
