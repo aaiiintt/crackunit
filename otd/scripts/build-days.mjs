@@ -224,7 +224,12 @@ function toPlainText(rawBody) {
     const norm = normalizeApostrophe(line);
     if (STRIP_LINES.has(norm)) continue;
     if (/^via\s+\S+$/i.test(line)) continue;
-    kept.push(line);
+    // Strip leading blockquote markers ("> ", or nested "> > ") — otherwise
+    // joining lines with a space leaks ">" into the middle of sentences
+    // (a blank blockquote continuation line contributes a bare ">").
+    const stripped = line.replace(/^(?:>\s*)+/, "");
+    if (!stripped) continue;
+    kept.push(stripped);
   }
   return kept.join(" ").replace(/[ \t]+/g, " ").trim();
 }
@@ -233,18 +238,31 @@ function isUrlOnly(s) {
   return /^(https?:\/\/|www\.)\S+$/i.test(s.trim());
 }
 
+// Strips a leading run of ">" blockquote markers a sentence should never
+// start with (belt-and-braces on top of the per-line strip in toPlainText).
+function stripLeadingQuote(s) {
+  return s.replace(/^(?:>\s*)+/, "").trim();
+}
+
 function splitSentences(text) {
   if (!text) return [];
-  const norm = text.replace(/\.\.\.+/g, "…"); // collapse "..." to a single ellipsis char
+  // Bare URLs split on their own dots ("http://foo." / "bar." / "com/x.html
+  // It made me…") — remove them before splitting, then re-trim/re-collapse.
+  const withoutUrls = text
+    .replace(/\b(?:https?:\/\/|www\.)\S+/gi, "")
+    .replace(/[ \t]+/g, " ")
+    .trim();
+  if (!withoutUrls) return [];
+  const norm = withoutUrls.replace(/\.\.\.+/g, "…"); // collapse "..." to a single ellipsis char
   const re = /[^.!?…]+[.!?…]+(?:["'”’])?/g;
   const out = [];
   let m;
   let last = 0;
   while ((m = re.exec(norm))) {
-    out.push(m[0].trim());
+    out.push(stripLeadingQuote(m[0]));
     last = re.lastIndex;
   }
-  const rest = norm.slice(last).trim();
+  const rest = stripLeadingQuote(norm.slice(last));
   if (rest) out.push(rest);
   return out.filter(Boolean).filter((s) => !isUrlOnly(s));
 }
@@ -342,9 +360,11 @@ function deriveDialogFrom(posts) {
       const t = s.trim();
       if (t.length < 12 || t.length > 90) continue;
       if (!/[.?!…]$/.test(t)) continue;
+      if (/\d[.!?…]$/.test(t)) continue; // numbered-list fragment ("Tracklist: > 1.")
+      if (t.includes(" .")) continue; // a stripped link left "as ." behind
       let button = "OK";
-      if (exclam) button = exclam.trim();
-      else if (t.endsWith("?")) button = ["Yes", "No"];
+      if (t.endsWith("?")) button = ["Yes", "No"];
+      else if (exclam) button = exclam.trim();
       out.push({ text: t, button, from: p.permalink });
     }
   }
@@ -359,9 +379,20 @@ function deriveSubjectFrom(posts) {
   return posts.map((p) => p.title);
 }
 
+// export-wp.mjs appends "…" to a truncated excerpt unconditionally, even
+// when the truncation happened to land on real terminal punctuation — giving
+// "…near my work.…". Drop the trailing "…" when it's redundant with a "."/
+// "!"/"?" that's already there; keep it when the excerpt was cut mid-word.
+function cleanExcerpt(excerpt) {
+  if (!excerpt || !excerpt.endsWith("…")) return excerpt;
+  const withoutEllipsis = excerpt.slice(0, -1);
+  if (/[.!?…]$/.test(withoutEllipsis)) return withoutEllipsis;
+  return excerpt;
+}
+
 function deriveNotepadFrom(hero, posts, includeHeroExcerpt) {
   const out = [];
-  if (includeHeroExcerpt && hero.excerpt) out.push(hero.excerpt);
+  if (includeHeroExcerpt && hero.excerpt) out.push(cleanExcerpt(hero.excerpt));
   for (const p of posts) {
     if (p.bodyChars > 0 && p.bodyChars < 200) out.push(p.bodyText);
   }
@@ -396,10 +427,12 @@ function deriveTag(posts) {
 
 function deriveTile(posts, hero) {
   const exclamations = [];
+  const periodWords = []; // single-word sentences ending "." — a weaker exclamation source
   for (const p of posts) {
     for (const s of p.sentences) {
       const t = s.trim();
       if (t.endsWith("!")) exclamations.push(t);
+      else if (/^[A-Za-z']+\.$/.test(t)) periodWords.push(t);
     }
   }
   if (exclamations.length) {
@@ -413,6 +446,10 @@ function deriveTile(posts, hero) {
       return words[0];
     }
     return shortest;
+  }
+  if (periodWords.length) {
+    periodWords.sort((a, b) => a.length - b.length);
+    return periodWords[0].slice(0, -1); // "Hooray." -> "Hooray"
   }
   if (hero.tags.length) return hero.tags[0];
   return (hero.title || "").split(/\s+/)[0] || "";
