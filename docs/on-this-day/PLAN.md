@@ -1,245 +1,392 @@
-<!-- v4, approved 2026-09-08. v2 (the Remotion plan) and v3 (carousel rethink) are in git history: `git log -- docs/on-this-day/PLAN.md`. -->
+# on-this-day, plan v5
 
-# on-this-day, plan v4: art direction first
+*Approved 2026-09-08. Replaces v4 and everything built under it: a fixed
+thirteen-slide template that made every day look the same. v1 to v4 are in git
+history (`git log -- docs/on-this-day/PLAN.md`).*
+
+## Start here
+
+**The repo.** `~/Code/crackunit` is Iain Tait's blog archive: 1,526 posts from
+2005 to 2021, migrated from WordPress to Astro and served at crackunit.com. Read
+the root `README.md` and `CLAUDE.md` first. The URL contract in `CLAUDE.md` is
+absolute: every URL WordPress ever published must keep resolving, and
+`export/live-urls.json` is never regenerated. You will not need to touch the
+website. This work lives entirely in `otd/` and `docs/on-this-day/`.
+
+**The project.** "on-this-day" resurfaces the archive one calendar date at a
+time as an Instagram carousel, plus a landing page at otd.crackunit.com. It is
+made for people who were reading blogs in 2005 and will recognise the names, but
+the caption must leave a stranger able to follow.
+
+**Read, in this order:** this file, then `docs/on-this-day/LOOK.md` (what is
+settled about the look and what is open), then `references/round2/` (four
+images: two on simplicity and a reduced palette, one on repetition as stacked
+windows, one on monochrome), then `otd/README.md` (what is in the folder, how to
+run it, and the traps that have already cost time).
+
+**The state.** Everything before this plan was a rejected approach and has been
+deleted. What survives is a toolbox, not a design: capture scripts, a p5
+primitives library, a font set, a curated GIF library, the Astro teaser site,
+and derived day data for all 366 days.
+
+**The first job is Part A only** (§5). Four style options, three beats each, on
+days we already know. Do not build the pipeline, the arcs or the treatments.
+Produce one sheet of twelve renders plus each hook shown square-cropped, and
+stop. Iain chooses one option, or names a mix.
+
+**Hard rules.** Real material only: everything on screen comes from the archive
+or its captures, and never from another post. No invented copy, ever. The words
+that matter stay black; colour is per element, by meaning. Nothing renders
+before its plan is written in text.
+
+**Environment.** Runs on Iain's Mac, not a container: it needs the system fonts,
+Google Chrome for playwright-core, and network for yt-dlp and web.archive.org.
+Node 24, ffmpeg and yt-dlp are installed. A `.env` at the repo root holds
+`GIPHY_API_KEY`; never print or commit it.
+
+**Working style.** Show work early and in pictures. When something needs a
+decision, say exactly what and stop rather than choosing and continuing. Commit
+small, push to the working branch. Log cost to `docs/on-this-day/BUDGET.md` at
+the end of each session.
+
+---
 
 ## Context
 
-The Remotion Reels were laboured. The carousel rethink (5 to 8 stills cut from the
-archive, video frames as material, a zine-maker's operation vocabulary) still
-stands as the *format*. But Iain's last note is the real one: the look is wrong
-before the pipeline is right, and I was swayed by the loudest refs into a
-blue-and-magenta acid palette that most of the references do not have. The brief
-now: **subtle but still crazy; a strange liminal 90s-to-2020s vibe; HD meets
-MiniDisc; raytracing meets DV cams.** Stage 1 of the project is art direction and
-looks, done on the Mac so video frames are available, and nothing is automated
-until a look is signed off. First day: 11-09.
+Stage 1 and 2 produced a **fixed thirteen-slide template**. Every day renders the
+same slides in the same order; a slide only drops out when its material is
+missing, and the "variation" is seeds shuffling placement inside a slide that was
+already decided. On a feed that reads as one post repeated forever. Iain,
+2026-09-08: *"what you think is gonna happen in every day ends up looking exactly
+the same on Instagram… you've stitched them together with the content roll in the
+wrong place."*
 
-## What I got wrong, reading the twelve again
+The diagnosis is right. I put **design first and content second**: I designed
+thirteen slides, then asked each day to fill them. It has to be the other way
+round. The missing layer is the middle one, between knowing what a day contains
+and drawing it.
 
-| Ref | Ground | Where the colour comes from | Type | What it is really doing |
-|---|---|---|---|---|
-| 1 Italika | electric blue | VHS stills of a blonde woman, 1990s Russian TV, chroma bleed | condensed italic + bitmap yellow | A 2020 poster made from 1990s tape. **HD layout over VHS material.** |
-| 2 Take Me Higher | rainbow bars | 1970s TV stills, dithered cut-outs | script + Times in a Notepad | Found material carries all the colour |
-| 3 SRY MB | **white** | cut-out people, a caution sign | red handwriting, Chinese | Sticker sheet. Quiet ground, loud pieces |
-| 4 We're Fucked | blue + halftone | stickers | comic lettering | The one truly acid one |
-| 5 CCA | **white** | primary blocks, a crying child | Times, Helvetica Bold, Mac OS X chrome | Restrained. System type, real UI, three primaries |
-| 6 Index | **white** | tiny thumbnails only | Times | No colour at all. Refined |
-| 7 Fish | cyan gradient | fish, Converse, caution signs | yellow extended caps | Loud, but the fish is a photo |
-| 8 Goose | **paper**, scratched | XP Bliss, a goose | lime outlined caps | Physical. Scanned. One acid accent |
-| 9 Strelka | **white** | red grid, primary blocks | condensed caps, mono | A system. Calm |
-| 10 Splat | **white** | a pixel-mosaic face, a dog photo | Helvetica Bold, script | Magenta and blue as splats only |
-| 11 2000 Visions | **white** | a dithered plant, a yellow-haired woman | script, outlined green, Helvetica | Y2K on white with acid accents |
-| 12 Starfield | **black** | low-poly disco ball, XP dialogs | bitmap | 1999 CGI. Greys. Retro-render |
+Asked to find what else I had missed, five things, all of which change the build:
 
-So: **seven neutral grounds** (white, paper, black), colour supplied by found
-material, **one accent per piece** (red, lime, yellow), system type set with care,
-and the crazy coming from *scale and wrongness*: a goose head at 70% of the frame,
-a crying child in a QuickTime player, a caution sign as a sticker. Blue and
-magenta are accents in three refs and grounds in two. They were never the system.
+1. **No audience.** I restated the objective without one. Resolved below.
+2. **Slide 1 was still a date card** — the template thinking surviving at the one
+   slide that is the entire advert in a feed.
+3. **I planned the day; the complaint was the feed.** Nothing remembered
+   yesterday, and nothing let us look at the profile grid.
+4. **No mechanism for truth.** The wrong-image-beside-the-wrong-post bug came
+   from choosing material by slide position; assembling cards from a treatment
+   makes that easier, not harder, and the plan enforced nothing.
+5. **No platform reality.** The profile grid centre-crops to a square. Most
+   people leave at slide 2. Nothing about phone legibility, alt text, slide
+   count, or reposting other people's video frames.
 
-"HD meets MiniDisc, raytracing meets DV cams" names the actual mechanism in ref 1
-and ref 12: a collision of **capture fidelities**. Crisp HD vector type and layout
-against material that was captured badly and dated fast: DV interlace, VHS chroma,
-webcam noise, 480i, 4:3 inside a modern frame, camcorder OSD, MiniDisc-era product
-graphics and LCD readouts, 1996 raytraced chrome and checkerboards. **Liminal** is
-the compositional half: a lot of nothing; one thing in the wrong place; dead-hour
-light; two decades in the same frame with no explanation.
+New references in `references/round2/` also move the look somewhere simpler:
+white or cream grounds, one ink, everything held in windows and labelled cards,
+imagery duotoned or halftoned, repetition as deep stacks of windows.
+
+**Decisions taken with Iain, 2026-09-08:**
+- The per-day thinking lives in a **treatment file**: I draft, he approves the
+  text before anything renders.
+- The look is **not settled**. A **pre-project** first: options tried fast on
+  days we already know.
+- Colour is **per element, not per slide**, and the day's ink is derived from
+  that day's own material.
+- Audience: **peers first, legible to strangers.**
+- The hook is **the strongest thing that day has**, chosen per day.
+- Feed: **weekly planning and a memory constraint and a grid preview.**
+- Provenance: **enforced in code, silently.**
+- Keep the primitives in `otd/lookdev/lib.js`; **bin the thirteen sketches.**
 
 ---
 
-## Phase 0: move to the Mac (unchanged)
+## 1. The objective
 
-Branch `claude/on-this-day-plan-review-nr1p0f`, [PR #4](https://github.com/aaiiintt/crackunit/pull/4).
+Resurface the crackunit archive one calendar day at a time, so that someone
+scrolling stops, reads something Iain wrote between 2005 and 2011, feels the
+specific strangeness of that day, and goes to the archive.
 
-```bash
-cd ~/Code/crackunit && git fetch origin && git checkout claude/on-this-day-plan-review-nr1p0f
-brew install ffmpeg yt-dlp
-npm ci && npm run build                     # the real site, for captures
-cd otd && npm ci                            # after the Remotion cleanup, playwright-core only
-cp /System/Library/Fonts/Supplemental/{Times\ New\ Roman,Arial\ Bold,Courier\ New,Impact}.ttf public/fonts/
-# .env at the root holds GIPHY_API_KEY
+**Who it is for:** people who were there. Advertising, design and web people who
+remember 2005 blogs, for whom Russell Davies, Poke, Technorati and "anyone want a
+piece of MySpace?" land without explanation. Composed for them, but never so
+inside that a stranger bounces: **the slides play to the people who were there,
+the caption does the explaining for everyone else.**
+
+Three things it must be, in order:
+
+1. **True.** Everything on screen comes from the archive or its captures. No
+   invented copy, no faked assets, no material borrowed between posts.
+2. **Different every day, and different across the week.** Not decorated
+   differently: *shaped* differently. A day with one post and one photograph is
+   not the same object as a day with nine posts, two dead videos and a lost
+   image, and three consecutive posts must not read as siblings.
+3. **Good-looking enough to earn the stop.** Simple, confident, coherent across
+   the feed, with the variation coming from content rather than styling.
+
+The failure mode already proved: a system that is true, good-looking and
+identical every day. Point 2 is the one the architecture must protect.
+
+## 2. The outputs, per day
+
+| Output | Where | Who |
+|---|---|---|
+| **Treatment** — the day's plan in text: shape, hook, line, ink, beats | `otd/data/treatments/MM-DD.json` | I draft, Iain approves |
+| **Carousel** — 5 to 8 slides, 1080 × 1350, plus a contact strip | `otd/out/carousel/MM-DD/` | rendered from the treatment |
+| **Caption** — carries the context the slides do not | `otd/out/carousel/MM-DD/caption.md` | drafted with the treatment |
+| **Alt text** — one line per slide, from its provenance | same folder | generated, checked |
+| **Manifest** — every element and where it came from | `otd/out/carousel/MM-DD/provenance.json` | generated |
+| **Day page** — the teaser that links to the real posts | `otd.crackunit.com/MM-DD/` | existing Astro site |
+| **Checklist** | `otd/out/checklist/MM-DD.md` | `checklist.mjs` |
+| **Performance** — 48 h and 7 d | `otd/data/performance.json` | Iain, later |
+
+## 3. The flow
+
+### Weekly, once
+Choose seven days' shapes together so the week has a deliberate rhythm: loud,
+quiet, dense, single, wrecked. `node otd/scripts/week.mjs 12-08` prints the
+inventories for seven days side by side and the arcs each qualifies for; the
+output is seven draft treatments, reviewed in one sitting.
+
+### Daily, per day
+**Step 1 · Look.** `node otd/scripts/look.mjs 12-10` prints the day's
+**inventory**: every post with year, length and media state; what survives, what
+died, what was recovered; videos alive or terminated; Wayback captures; tags;
+year span; the sentences that are strange out of context. Then read the posts in
+full. No design thinking yet.
+
+**Step 2 · Conceptualise.** From the inventory, what *is* this day? Pick the
+**shape** (an arc), the **hook** (the strongest single thing the day has, which
+becomes slide 1), the **line**, the **ink**, and the ordered **beats**. Write the
+treatment, with one sentence of why. **This is text, and it is the review gate.**
+Iain reads it in two minutes and changes it before anything renders.
+
+**Step 3 · Design and lay out.** `node otd/scripts/compose.mjs 12-10` renders the
+treatment: each beat becomes a slide composed of **cards**, in the day's ink, at
+the rhythm the arc asks for.
+
+**Step 4 · Review.** Contact strip, plus the grid preview showing this cover
+against the last eight. Redlines go into the treatment, not the code, and it
+re-renders in seconds. Code changes only when a *card* is wrong.
+
+**Step 5 · Ship.** Caption, alt text, day page, checklist, upload, log.
+
+The inversion that matters: steps 1 and 2 happen before any pixels, and step 2's
+output is prose a human can argue with.
+
+## 4. The architecture
+
+```
+inventory   what this day is           (data, computed)     look.mjs
+   ↓
+treatment   what we will do with it    (text, editorial)    data/treatments/MM-DD.json
+   ↓
+cards       the pieces we can draw     (code, visual)       lookdev/cards.js
+   ↓
+compose     the slides                 (code, mechanical)   scripts/compose.mjs
 ```
 
-First commit on the Mac: this plan into `docs/on-this-day/PLAN.md`, the Remotion
-tree removed, the skill rewritten to point at Stage 1.
+- **Inventory** is derived, never edited.
+- **Treatment** holds every decision: shape, hook, line, ink, beats. A beat names
+  a card type and the material it uses. Nothing else decides order or length.
+- **Cards** are composable pieces, not slide templates: a window holding a page
+  or an image, a stack of repeated windows, a quote, a broken-image box, a list,
+  a big-type statement, a tag field, a source view, a tomorrow block. Each knows
+  how to draw itself at a given size in the day's style. A slide is one to three
+  cards placed by the composer.
+- **Compose** is mechanical: walk the beats, lay out the cards, render.
 
----
+### The hook
+Slide 1 is not a date card. It is **the strongest single thing the day has**, and
+which thing that is, is a treatment decision: a sentence set large, a surviving
+photograph, a wall of broken image boxes, a number, one video frame. The date
+demotes to a small mark in a fixed position, which is also what makes the account
+recognisable in a grid. Slide 2 is chosen knowing that is where most people
+leave: it must reward the swipe rather than continue an introduction.
 
-## Stage 1: art direction and looks
+### Colour, per element
+The day has an **ink**, sampled from its own material: the dominant non-neutral
+colour of a surviving image, else a Wayback capture, else a video frame; snapped
+to something with enough contrast and saturation to work as an ink, and recorded
+in the treatment so it can be overridden. It is not a wash. **The words that
+matter stay black.** The ink lands on elements according to what they mean:
 
-Nothing else happens until this is signed off. Output: `ART-DIRECTION.md` v2 with
-the locked look and the operations that produce it. Method: name candidate
-looks, make real boards from 11-09's real material, put them in front of Iain,
-iterate, lock.
+| Element | Treatment |
+|---|---|
+| The line, post text, headings | Black. Always. Never tinted. |
+| Material that is *gone* (dead images, terminated videos, error text) | The ink, flattened: duotone or halftone, so absence reads as a colour state |
+| Material that *survives* (live images, frames) | Its own found colour, or the ink, as the day's idea asks |
+| Links, permalinks, URLs, anything once clickable | The ink, as ink |
+| Structure: window chrome, rules, labels | Black hairlines; the ink only where it carries meaning |
 
-### 1.1 The common substrate (true of every candidate)
+Two days sharing an ink still read differently, because the ink lands on
+different things.
 
-- **Grounds:** `WHITE #FFFFFF`, `PAPER #F1EEE8`, `BLACK #000000`, `SILVER #D9DAD6`.
-  Nothing else is a ground.
-- **Ink:** `BLACK` for type on light grounds; `WHITE` on dark.
-- **Found colour:** whatever the material carries. A DV frame's orange. XP Bliss.
-  The freerice.com screenshot's greens. Never corrected, never tinted to a brand.
-- **One accent per slide,** from: `REC #FF1E00`, `HIGHLIGHTER #C8FF00`, `SAFETY
-  #FFD400`, `AQUA #7FDBE6` (translucent plastic, MiniDisc era), `LINK #0000EE`.
-  Blue and magenta only if the material brought them.
-- **Type:** Times New Roman for the line and prose, set immaculately (real
-  kerning, real hierarchy); Arial Bold caps at small sizes for labels; Courier
-  New for metadata; a bitmap face where a screen is being quoted; plus two
-  period display faces per look (below). HD-crisp always. Type is never degraded.
-- **Degradation lives in the material only:** interlace comb, chroma bleed, 4:3
-  pillarbox, timecode burn, inkjet banding, dither, low-poly. Applied to frames,
-  photos, screenshots. Never to type, never to the whole slide.
-- **Composition:** one dominant element, at most three, much empty ground. The
-  12-column grid, hairline rules. Wrongness by scale (one thing far too big) or
-  by placement (one thing where nothing should be), one per slide.
-- **Format:** 1080 × 1350, 5 to 8 slides, slide 1 works alone.
+### Provenance, enforced
+Every card records the permalink or capture path its material came from.
+**Compose refuses a card whose material does not belong to its beat's post**, so
+the wrong-image bug becomes impossible rather than merely unlikely. A
+`provenance.json` is written per day listing every element and its source, and
+the alt text is generated from it. No annotated review sheet: the enforcement is
+silent, and the manifest is there when something needs tracing.
 
-### 1.2 Six candidate looks
+### Feed memory
+Each treatment records its arc, ink and rhythm. A day must **differ on at least
+two of those three from each of the previous two days**, checked when the
+treatment is written. `node otd/scripts/grid.mjs` renders the last nine covers as
+a 3 × 3 grid at profile scale, which is the view Iain actually judges.
 
-Each is a mood, a method, and a material treatment. Three are primary because
-they answer the brief literally; three are secondary and may lend a move.
+### Arcs
+A small library, each with a precondition against the inventory and a beat
+structure, sized against a survey of all 366 days so it covers what the archive
+contains rather than what 11-09 happened to be:
 
-**A · Camcorder** (DV cam meets HD). *Primary.*
-White ground. Video frames and photos treated as DV: 4:3 pillarboxed inside the
-frame, interlace comb on anything that moved, slight chroma bleed, and the
-camcorder's own OSD burned in: `REC ●`, `SP`, `0:07:12`, `NOV 9 2005`, battery
-glyph, in **VCR OSD Mono** (free) white with a black edge. Over and beside it,
-Times at 150 px set perfectly, hairline rules, a small date stamp. The only red is
-the REC dot. Liminal: the frame is small and alone in a white field, like a
-still someone paused on. Refs 1, 5, 6. Display faces: VCR OSD Mono, Times.
-
-**B · MiniDisc** (product graphics, 1998 to 2003). *Primary.*
-Silver or white ground. The layout language of MD and Sony packaging and LCDs:
-tiny bold sans labels in caps, engineering hairlines, spec-sheet tables, a
-translucent `AQUA` shutter rectangle, LCD-segment numerals (**DSEG7**, free) for
-times and dates, a debossed wordmark. The day is a disc: **the nine posts are the
-TOC, with track numbers and lengths** (word count as minutes). Screenshots sit in
-rounded-rect label windows. Subtle, clinical, and wrong because the "product" is
-a blog from 2005. Refs 9, 5, 6. Display faces: DSEG7, Arial Bold caps.
-
-**C · Raytraced** (1996 CGI meets 2024 HD). *Primary.*
-Black or a generated 1996 render as ground: an empty raytraced room, chequered
-floor, grey walls, one window of light, no people. In it, a DV frame mapped onto
-a floating plane with a soft shadow, and a chrome sphere reflecting the freerice
-screenshot. Over all of it, the line in Times, flat, crisp, *not* in perspective:
-HD type refusing to join the render. Liminal by definition. Refs 12, 11. The
-room and the sphere come as assets (an order to Iain, or Giphy/POV-Ray stock).
-Display faces: Times, a bitmap face for a single Win95 label at most.
-
-**D · Scanner** (printed in 2005, scanned in 2024). *Secondary.*
-Paper ground with grain and a scanner's dust. Screenshots and frames treated as
-inkjet printouts: banding, slight skew, a torn edge, tape. Then photographed in
-HD. Highlighter as the accent, on the line's origin in a printed paragraph. Refs
-8, 3, 10.
-
-**E · Broadcast** (teletext, VHS OSD, 90s TV). *Secondary.*
-Black ground, 4:3 safe-area rectangle drawn as a hairline, teletext mosaic type
-rebuilt crisp in HD blocks, `PLAY ▶` OSD, a channel-ident emptiness. Colour is
-teletext's eight, used one at a time. Refs 12, 1.
-
-**F · Desktop** (the OS at 3 a.m.). *Secondary.*
-Plain grey ground, one real Mac OS X Tiger or XP window, empty and enormous, a
-screenshot inside it, the dock, icons at 4× so the pixels show, Lucida Grande and
-Tahoma re-rendered crisp. Already half-explored and the one most likely to look
-laboured; kept only for its window chrome as a device. Refs 5, 12, 2.
-
-### 1.3 The boards
-
-For each primary look, **three hand-composed stills** from 11-09's real material,
-no templates, no pipeline: 1080 × 1350 HTML/CSS pages rendered in Chromium,
-each a file in `otd/lookdev/<look>/<n>.html`, with a contact sheet. Nine stills,
-then a second round on the two that survive, then a third on the one.
-
-| Still | A · Camcorder | B · MiniDisc | C · Raytraced |
+| Arc | Precondition | Days it fits | Shape |
 |---|---|---|---|
-| 1 The line | A small pillarboxed Sueño Latino frame, interlaced, OSD `REC ● NOV 9 2005`, alone in the upper third of a white field. The line in Times 150 px below, ragged left. REC dot is the only colour. | Silver ground. Top-left caps label `ON THIS DAY · 09.11 · 2005`. The line in Times 150 px. Right column: `18:14:42` in DSEG7, `74 MIN`. Hairlines. Aqua shutter behind the date. | Generated empty raytraced room. The line flat in Times 150 px in HD white, centred, ignoring the perspective. One chrome sphere on the floor reflecting freerice.com. |
-| 2 The picture | 12 DV frames in a 3 × 4 grid with timecode burn-ins and interlace; white gutters; under it "And the video has aged really really badly too." in Times 40. | The freerice.com screenshot in a rounded label window with MD groove lines; beside it the **TOC**: `01 Talking Point for Orange 2005 03:21` … nine tracks in Arial Bold caps 22 px. | A single DV frame mapped onto a floating plane in the room, soft shadow on the chequerboard, crisp timecode label beside it, "Anyone know what that funny bird sound is?" in Times 96. |
-| 3 The others | A black tape label: `TAPE 1` and the eight other titles as an index in VCR OSD Mono with fake counter times; one frame from the Post-it Note Waterfall video, pillarboxed, small. | The source markdown of Presentation Zen as an LCD scroll? No: as a printed spec sheet in Courier with the line highlighted in `AQUA`. | The nine titles as a Win95 Explorer list floating in the room at 3×, pixels showing; nothing else. |
+| **The single** | one post | 31 | Told whole and slowly: the post, its picture, its source, its silence |
+| **The wreck** | every image dead, or no usable media | ~40 | Broken boxes, alt text, what Wayback still had, the one survivor |
+| **The reel** | two or more videos | 91 | Frame stacks; the video is the day |
+| **The ladder** | three or more years, one post each | ~50 | The same date walking forward through time |
+| **The list** | nine or more posts, or 15+ tags | 26 / 137 | Density: everything at once, then three things pulled out |
+| **The claim** | default, a strong opinionated line | ~150 | One assertion, its evidence, what happened next |
+| **The empty** | no posts | 26 | Below |
 
-Rules for the boards: real material only (frames, screenshots, the raw source,
-the post images; the broken-image box with its alt text where the file is gone);
-one accent; nothing degraded but the material; and each still must survive at
-270 px wide.
+An arc suggests a length and a rhythm; the treatment may depart with a reason.
+Days often qualify for two, and choosing is the editorial act the treatment
+records.
 
-### 1.4 The review loop
+**Twenty-six days have no posts at all** — including 12-10, the date in Iain's
+own example, and a heavy cluster across Christmas and New Year. That needs a
+deliberate answer: one slide saying the archive is empty on this date and
+offering the nearest day, or skipping the date. Worth settling early; it recurs
+every fortnight on average.
 
-1. Sonnet builds the nine stills from the table above and the substrate rules, on
-   the Mac, after `capture.mjs`'s frame grab (Stage 2's script, built early in a
-   minimal form: yt-dlp + ffmpeg, 12 even frames + scene frames + metadata).
-2. Iain looks at the contact sheet, not the code. Redlines in text: what to keep,
-   what to kill, what to mix. Round two: six stills. Round three: three.
-3. Fable reviews once, at round two, against the brief and the refs.
-4. Lock: `ART-DIRECTION.md` v2. It contains: the substrate (1.1), the chosen look
-   (or mix) with literal values, the material treatments as named operations
-   (interlace, pillarbox, OSD burn, LCD readout, plane-map, chrome-reflect,
-   inkjet, tear), the type spec, and the slide grammar those operations produce.
-   §2 to §9 of v1 are retired.
+### The archive, surveyed
 
-Gate: no Stage 2 code until v2 is signed. **Signed 2026-09-08** after four
-rounds: the look is the twelve-slide deconstruction in `ART-DIRECTION.md` v2,
-built as p5 sketches in `otd/lookdev/decon/`. Stage 1's rounds are logged in
-`DRY-RUN.md`.
+| | |
+|---|---|
+| Posts per day | median 4, max 13; 31 days have one, 26 have nine or more |
+| Years per day | 58 days one year, 117 two, 165 three or more; widest span 16 years (02-07, 2006 to 2021) |
+| Live image | 285 days · **Video** 208 days (91 with two or more) · **A dead image** 190 days |
+| Media rot | 31 days where every image is dead; 25 days with posts but nothing usable; only 4 genuinely text-only |
+| Text | median 2,313 characters; 104 days over 4,000; longest 16,053 (03-17) |
+| Tags | median 11; 137 days with 15 or more; most 56 (09-17) |
 
----
+Eight days maximally different in shape, the test set for Part B: **05-10** (one
+post, one picture, 98 characters), **02-20** (thirteen posts, 7,975 characters),
+**09-08** (four posts, every image dead), **11-26** (five posts, five videos, one
+per year 2006 to 2010), **02-07** (sixteen-year span), **03-17** (16,053
+characters), **09-17** (56 tags), **08-11** (one post, no text, dead image).
 
-## Stage 2: the carousel pipeline (as planned in v3, implementing the locked look)
-
-Mechanics unchanged from v3, condensed:
-
-- `otd/scripts/capture.mjs MM-DD [--wayback]`: post-page renders and crops from
-  the local build; the real image and raw source; per video, yt-dlp metadata +
-  ffmpeg frames (even, scene, thumbnail) with timecodes; the YouTube watch page;
-  Wayback captures of crackunit.com and the watch page when they exist. Manifest
-  per post. `otd/captures/` gitignored.
-- `otd/recipes/*.json` + `otd/scripts/compose.mjs MM-DD`: a slide is a recipe of
-  pieces with operations (cut, multiply, transform, effect, type, place; sequence
-  ops flipbook, zoom, storyboard, pull, echo). The op vocabulary from v3 stays,
-  but the *effects* become the locked look's material treatments, not the acid
-  set. Renders 1080 × 1350 via Chromium, plus `contact.png` and `caption.md`.
-- Site cover from slide 1; checklist for carousels; `.gitignore` for captures.
-- Skill v1: look at the day, pick the line and what to grab, capture, draw (choose
-  or write recipes), compose, gate, redline, assets (Giphy or order), site and
-  upload, log performance. Model routing as before.
-
-Budget: Stage 1 about $6 of Sonnet and $4 of Fable across three rounds; Stage 2
-about $12 of Sonnet.
+### Platform constraints, built in
+- **The profile grid centre-crops 1080 × 1350 to a square.** The hook must survive
+  that crop: a square safe zone in the centre, checked automatically, with the
+  date mark inside it.
+- **Slide 2 is where people leave.** It carries a reward, not a continuation.
+- **Five to eight slides.** Long enough to tell it, short enough to finish.
+- **Minimum type size** enforced as a gate, judged at the size a phone renders it,
+  not at full resolution.
+- **Alt text per slide**, generated from provenance, since the archive audience
+  includes people using screen readers and it is also good practice.
+- **Third-party material**: video frames belong to other people. Frames are used
+  as commentary on a post that already embedded them, always credited with the
+  video's own title, uploader and id, which the captures already record. Giphy
+  keeps its required credit. Worth a conscious decision rather than drift.
 
 ---
 
-## 11-09, the first day (material only; the design waits for Stage 1)
+## 5. Part A: the pre-project, first
 
-Nine posts, 2005 × 5 and 2007 × 4. One surviving image (freerice.jpg). Three 2005
-images gone. Three YouTube videos: How Stuff Dates (1odEmDYg4Y4; a 2007 post
-about a 1989 video ageing badly, the DV material of the day), Post-it Note
-Waterfall (vz7BcEfuTFc), Zoo Advertising (cvs9kURU79s).
+Before any of the above is built, settle the look. **Four options, the same three
+beats, days we already know**, so we compare styles rather than compositions.
 
-- Line: "Bill has bullets, Steve has space." (Presentation Zen, 2005).
-  Runner-up: "Anyone know what that funny bird sound is?" (How Stuff Dates, 2007).
-- Hero: Presentation Zen. Grab: all three videos.
-- Track: week of Sunday 6 November 2005, picked on the Mac.
+The three beats:
+1. **The hook** — the strongest thing the day has, not a date card.
+2. **The video** — several frames of one video, testing the repetition idea.
+3. **The post** — a quote and the page it came from.
 
-## Verification
+11-09 supplies beats 1 and 3 and we know it well. Its videos are both terminated,
+so beat 2 uses **11-26**: five videos across five consecutive years, the best test
+the archive has for stacked frames.
 
+| Option | From | Ground | Type | Colour | The move |
+|---|---|---|---|---|---|
+| **A · Sponsored** | *You May Also Like* | white | Arial/Helvetica, black | ink on links only | Everything in labelled boxes with a close ×; cards overlap; captions under images |
+| **B · Journal** | *XXIX* | off-white | grotesk headlines over a justified text bed | one flat colour card | A body of type as ground, cards floating over it, numbered margin notes |
+| **C · Windows** | *CCA Career Expo* | white | grotesk caps | primaries | Browser windows repeated in deep offset stacks; the stack is the hero |
+| **D · Duotone** | *Ettore Grotesk* | cream | grotesk, one weight | ink on everything but the words | Every image halftoned into the day's ink, held in plain windows |
+
+Each option is a **style module** (grounds, type scale, window chrome, image
+treatment, where the ink lands) plus the three beats drawn in it: twelve renders,
+on one sheet, plus each hook shown square-cropped as it would appear in the grid.
+
+No arcs, no treatments, no pipeline. One question answered with pictures: **which
+of these do we want to live in?**
+
+## 6. Part B: the system, after the look is chosen
+
+Each shown before the next starts:
+
+1. **`look.mjs`** — the inventory, printed. Cheap and immediately useful.
+2. **`docs/on-this-day/ARCS.md`** — the arc library written as prose first,
+   grounded in the survey, reviewed as text before any code.
+3. **`cards.js`** — the card library in the chosen style, built on the surviving
+   primitives in `lib.js`.
+4. **Treatment schema, provenance enforcement, `compose.mjs`.**
+5. **Eight days end to end**, the maximally-different set above, reviewed
+   together as a feed rather than one at a time.
+
+## 7. Operating model
+
+Not a design question, but unplanned until now and it decides whether this
+survives contact with a Tuesday.
+
+- **Cadence**: treatments drafted a week at a time, rendering per day. A week of
+  drafts is one sitting.
+- **Cost**: recorded per week in `BUDGET.md`, which I had been keeping and
+  dropped. A week of treatments plus renders should be a known number before we
+  commit to doing this all year.
+- **When nobody approves**: the day does not post. No auto-publish of an
+  unapproved treatment. A missed day is better than a wrong one.
+- **What is automated**: inventory, capture, render, checklist, grid. **What is
+  never automated**: the line, the hook, the arc, the ink override.
+
+## 8. What survives, and what was deleted
+
+**Deleted 2026-09-08**, with the cleanup: the thirteen fixed sketches
+(`otd/lookdev/decon/`), the Remotion and raytraced asset orders (`otd/orders/`),
+the weekly chart track (`data/charts.json` and its references in `show-day.mjs`
+and the teaser site), the hero and copy override files, `otd/FONTS.md`, and
+`DRY-RUN.md`, whose still-true traps moved into `otd/README.md`. The old
+ART-DIRECTION spec became `LOOK.md`.
+
+**Kept, as a toolbox.** `otd/lookdev/lib.js` primitives: `flowText`,
+`gifFrames`, `dither`, `img`/`allLoaded`, `materialFor`, `wayback`,
+`rescuedFor`, `stickerFor`, `mmdd`/`numbers`/`dayWords`, the fonts. The capture
+scripts `frames.mjs`, `wayback-page.mjs`, `fetch-giphy.mjs`, `giphy-sheet.mjs`
+and the pruned GIF library. `build-days.mjs` and the day JSON including
+`sourceFile`. `render.mjs`'s server and contact-sheet machinery. The
+recovered-image rule. `data/lines.json`, stripped to the real editorial work:
+eight days of chosen lines, which a treatment can start from.
+
+**Honest note.** Everything described in earlier commits as "the look is locked"
+was locking the wrong thing. The operations are sound; the grammar built on them
+was a template.
+
+## 9. Verification
+
+Part A:
 ```bash
-# Stage 1, on the Mac
-node otd/scripts/capture.mjs 11-09 --frames-only     # minimal: frames + metadata for the three videos
-open otd/lookdev/contact.png                          # nine stills at 25%; the gate is Iain's eye
-# each still: real material only · one accent · nothing degraded but the material · readable at 270 px
-
-# Stage 2, after ART-DIRECTION v2 is signed
-npm run build && node scripts/verify-links.mjs        # contract intact
-node otd/scripts/capture.mjs 11-09 --wayback
-node otd/scripts/compose.mjs 11-09 && open otd/out/carousel/11-09/contact.png
+node otd/lookdev/render.mjs --styles          # 4 options × 3 beats, one sheet, plus square crops
+open otd/lookdev/out/styles.png
 ```
 
-## Decisions taken
+Part B, per step: `look.mjs` matches the day JSON; `ARCS.md` reviewed as text; a
+treatment renders in under ten seconds; compose refuses a deliberately
+mismatched card; the type-size and square-crop gates fail loudly when broken.
 
-1. Stage 1 is art direction. No automation until a look is signed off.
-2. The palette is neutral grounds, found colour, one accent. Blue and magenta are
-   demoted to accents that arrive with the material.
-3. Three primary looks are boarded: Camcorder, MiniDisc, Raytraced. Three
-   secondary looks are on file for moves.
-4. Boards are hand-composed from 11-09's real material, on the Mac, with frames.
-5. The carousel format and the zine-operation vocabulary stand; their effects
-   become the locked look's material treatments.
-6. Remotion is removed from the tree.
+The end test: **the eight maximally-different days, rendered, laid side by side,
+that a stranger would not guess came from the same generator** — and the nine
+most recent covers as a profile grid that does not read as a pattern. If they
+look like siblings, the arc library is too thin, and that is the thing to fix,
+not the styling.
+
+---

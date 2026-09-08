@@ -26,11 +26,6 @@ export function readLines() {
   return _lines;
 }
 
-let _charts;
-export function readCharts() {
-  if (!_charts) _charts = readJSON(path.join(DATA_DIR, "charts.json"));
-  return _charts;
-}
 
 export function readDay(mmdd) {
   return readJSON(path.join(DATA_DIR, "days", `${mmdd}.json`));
@@ -41,24 +36,6 @@ export function daysWithPosts() {
   return readIndex().filter((d) => d.postCount > 0);
 }
 
-/** Chart pick for a given MM-DD, or null if that week isn't in charts.json. */
-export function chartFor(mmdd) {
-  const charts = readCharts();
-  const week = charts._dayToWeek?.[mmdd];
-  if (!week || !charts[week]) return null;
-  const entry = charts[week];
-  const officialChartsDate = week.replaceAll("-", "");
-  return {
-    week: entry.week,
-    pick: entry.pick,
-    officialChartsUrl: `https://www.officialcharts.com/charts/singles-chart/${officialChartsDate}/7501/`,
-    youtubeSearchUrl:
-      "https://www.youtube.com/results?search_query=" +
-      encodeURIComponent(
-        entry.pick?.instagramSearch || `${entry.pick?.title} ${entry.pick?.artist}`,
-      ),
-  };
-}
 
 /** "8 September" from an MM-DD string. */
 export function readableDate(mmdd) {

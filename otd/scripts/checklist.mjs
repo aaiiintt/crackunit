@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Write the upload checklist for one or more days: otd/out/checklist/MM-DD.md
 //   node scripts/checklist.mjs 09-08 09-09
-// Reads data/days, data/lines.json, data/charts.json and public/giphy/manifest.json.
+// Reads data/days, data/lines.json and public/giphy/manifest.json.
 
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
@@ -11,7 +11,6 @@ const here = dirname(fileURLToPath(import.meta.url));
 const otd = join(here, "..");
 const read = (p) => JSON.parse(readFileSync(join(otd, p), "utf8"));
 const lines = read("data/lines.json");
-const charts = read("data/charts.json");
 const giphy = existsSync(join(otd, "public/giphy/manifest.json")) ? read("public/giphy/manifest.json") : null;
 const days = process.argv.slice(2).filter((d) => /^\d\d-\d\d$/.test(d));
 if (days.length === 0) { console.error("usage: checklist.mjs MM-DD..."); process.exit(2); }
@@ -25,8 +24,6 @@ for (const day of days) {
   const hero = d.posts.find((p) => p.permalink === d.hero) || d.posts[d.heroIndex] || d.posts[0];
   const [mm, dd] = day.split("-").map(Number);
   const dateText = `${dd} ${monthNames[mm - 1]}`;
-  const wk = charts._dayToWeek?.[day];
-  const c = wk ? charts[wk] : null;
   const usedGiphy = (pick.assets || []).some((a) => /^giphy\//.test(a)) && giphy;
   const caption = [
     `“${pick.line}”`,
@@ -49,7 +46,6 @@ Hook ${pick.hook} · archetype ${pick.archetype}
 ## Instagram (Creator account)
 - [ ] Upload the MP4 as a Reel
 - [ ] Cover: upload \`${day}.png\` (the profile grid crops to 4:5; date and line are inside it)
-- [ ] Music: search the library for **${c?.pick ? `${c.pick.title}, ${c.pick.artist}` : "(no track picked)"}**${c?.pickAlt ? `; if missing, ${c.pickAlt.title}, ${c.pickAlt.artist}` : ""}${c && !c.verified ? " (chart week unverified; confirm on officialcharts.com)" : ""}
 - [ ] Mix: original audio on (the SFX bed is at −6 dB), track over it
 - [ ] Caption (below), no hashtags
 - [ ] Bio link → https://otd.crackunit.com/${day}/

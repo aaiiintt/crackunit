@@ -2,8 +2,8 @@
 // Render the Stage 1 look boards.
 //
 //   node otd/lookdev/render.mjs                        # every <look>/<n>.js sketch (and <n>.html page), 3 seeds
-//   node otd/lookdev/render.mjs decon                  # one look
-//   node otd/lookdev/render.mjs decon/4 --seed 7       # one still, one seed
+//   node otd/lookdev/render.mjs styles                 # one look
+//   node otd/lookdev/render.mjs styles/2 --seed 7      # one still, one seed
 //   node otd/lookdev/render.mjs --seeds 5              # more variants per still
 //   node otd/lookdev/render.mjs --pick                  # seed 1 only, quick
 //   node otd/lookdev/render.mjs --final                 # the picked seed per slide (lines.json[day].picks) → otd/out/carousel/<day>/NN.png + contact.png

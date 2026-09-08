@@ -350,7 +350,7 @@ function pickHero(posts, override) {
 }
 
 // ---------------------------------------------------------------------------
-// Copy derivation (ART-DIRECTION.md section 12)
+// Copy derivation: furniture text is always quoted from the day's other posts, never written.
 // ---------------------------------------------------------------------------
 
 function deriveDialogFrom(posts) {
@@ -571,12 +571,10 @@ async function main() {
   const unrecoverableSet = new Set(await readJson(path.join(CRACKUNIT_DIR, "export/unrecoverable.json")));
   const mediaPathsSet = new Set(await readJson(path.join(CRACKUNIT_DIR, "export/media-paths.json")));
 
-  const heroOverridesFile = path.join(DATA_DIR, "hero-overrides.json");
-  const copyOverridesFile = path.join(DATA_DIR, "copy-overrides.json");
-  await ensureFile(heroOverridesFile, {});
-  await ensureFile(copyOverridesFile, {});
-  const heroOverrides = await readJson(heroOverridesFile, {});
-  const copyOverrides = await readJson(copyOverridesFile, {});
+  // Overrides used to live in their own files. The treatment owns those decisions now;
+  // the scoring below is only a starting point for it.
+  const heroOverrides = {};
+  const copyOverrides = {};
 
   const surprises = {
     badPermalink: [],

@@ -4,7 +4,6 @@ import {
   daysWithPosts,
   readDay,
   readLines,
-  chartFor,
   readableDate,
   hasLocalThumb,
   thumbUrl,
@@ -20,7 +19,6 @@ const lines = readLines();
 const lineEntry = lines[day];
 const heroPost = data.posts[data.heroIndex] ?? data.posts[0];
 const line = lineEntry?.line || heroPost.title;
-const chart = chartFor(day);
 const dateReadable = readableDate(day);
 const copy = data.copy || {};
 
@@ -49,18 +47,6 @@ const ogImage = `/cover/${day}.png`;
     <a class="cta-link" href={heroPost.url}>Read it on crackunit.com →</a>
   </section>
 
-  {chart && (
-    <section class="block yellow">
-      <h2 class="label">In the charts that week</h2>
-      <p class="mono" style="font-size:13px;margin:0 0 4px;">{chart.week}</p>
-      <p class="chart-track">{chart.pick.title} <span class="mono" style="font-size:15px;">by {chart.pick.artist}</span></p>
-      <div class="chart-links">
-        <a href={chart.youtubeSearchUrl} target="_blank" rel="noopener noreferrer">▶ Search on YouTube</a>
-        <a href={chart.officialChartsUrl} target="_blank" rel="noopener noreferrer">✦ Official Charts, that week</a>
-      </div>
-      <p class="chart-attr">Chart data: Official Charts Company</p>
-    </section>
-  )}
 
   <section class="block white">
     <h2 class="label">Every post from {dateReadable}, every year</h2>

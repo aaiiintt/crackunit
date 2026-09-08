@@ -10,7 +10,6 @@ const f = join(here, "..", "data", "days", `${day}.json`);
 if (!existsSync(f)) { console.error(`no ${f}; run build-days.mjs`); process.exit(1); }
 const d = JSON.parse(readFileSync(f, "utf8"));
 const lines = JSON.parse(readFileSync(join(here, "..", "data", "lines.json"), "utf8"))[day];
-const charts = JSON.parse(readFileSync(join(here, "..", "data", "charts.json"), "utf8"));
 console.log(`# ${day}  ${d.empty ? "EMPTY" : d.posts.length + " posts"}`);
 for (const p of d.posts || []) {
   const img = p.image ? `${p.image.state}${p.image.deadHost ? ":" + p.image.deadHost : ""}` : "no image";
@@ -20,8 +19,6 @@ for (const p of d.posts || []) {
 }
 if (lines) {
   console.log(`\n## picks\nline: ${lines.line}\nhook: ${lines.hook}  archetype: ${lines.archetype}\nwhy: ${lines.why}`);
-  const wk = charts._dayToWeek?.[day];
-  if (wk && charts[wk]?.pick) console.log(`track: ${charts[wk].pick.title}, ${charts[wk].pick.artist} (week ${wk}${charts[wk].verified ? "" : ", unverified"})`);
 } else console.log("\n## picks: none yet (add to data/lines.json)");
 console.log("\n## copy" + (d.copy?.borrowed ? " (borrowed from adjacent days)" : ""));
 for (const [slot, v] of Object.entries(d.copy || {})) {

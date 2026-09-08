@@ -1,5 +1,5 @@
 {
-  "_readme": "Per-day editorial picks. Hero override lives in hero-overrides.json; this file holds the line, hook, archetype and the reasoning. Chosen by hand for the dry run; Phase D automates the line pick with a cheap model and this file becomes the override layer.",
+  "_readme": "Editorial picks per day: the line, its runner-up and why. Chosen by hand. A treatment starts from these; nothing here decides layout.",
   "09-08": {
     "hero": "/2006/09/08/youth/",
     "line": "Anyone know where I can get the ‘urban youth cliche clipart vol 7 cd’?",
@@ -7,8 +7,6 @@
       "Ooooh oooh yes please.",
       "Advertising ‘the snip’ must be an interesting brief…"
     ],
-    "hook": "H2",
-    "archetype": "A6",
     "why": "A question, so the dialog gets Yes/No. Every image that day is dead (Photobucket, Skitch, Posterous), so the starfield's error boxes are all true."
   },
   "09-09": {
@@ -18,8 +16,6 @@
       "But then I don’t normally laugh out loud like a freak in the office either…",
       "Jeez, is there nothing that can’t be turned into a video game these days"
     ],
-    "hook": "H4",
-    "archetype": "A4",
     "why": "The post records one of its own videos being taken down. The YouTube 'no longer available' hook is the truth, and the remaining video is the payoff."
   },
   "09-10": {
@@ -29,8 +25,6 @@
       "And of course there’s a small dose of Tai Chi for good measure.",
       "Yeah, that’s what they say… I don’t think it’s strictly true though."
     ],
-    "hook": "H1",
-    "archetype": "A7",
     "why": "Three posts, all with local images. The grid holds the chippy photo in a cell; Internet Now Working is the search field; Everything Is Amazing is the video thumbnail."
   },
   "09-11": {
@@ -40,8 +34,6 @@
       "I probably click on 2/3 a month.",
       "I object to this too."
     ],
-    "hook": "H1",
-    "archetype": "A3",
     "why": "Twelve posts. A cascade of twelve windows is the day. The dialogs are I object to this too, I think I object, Wow."
   },
   "09-12": {
@@ -51,8 +43,6 @@
       "I got bluetoothed yesterday at Euston Station.",
       "It made me realise just how lazy I’ve been with blogging."
     ],
-    "hook": "H1",
-    "archetype": "A1",
     "why": "Deadpan. The crane photo is the hero element, cropped off the top of the frame like ref 1's headline. Blogs is Back is the Notepad."
   },
   "11-09": {
@@ -64,51 +54,7 @@
       "And the video has aged really really badly too.",
       "Once you realise you’re becoming a geek is there any way to reverse the process…?"
     ],
-    "picture": "/2007/11/09/freericecom/",
-    "grab": [
-      "1odEmDYg4Y4",
-      "vz7BcEfuTFc",
-      "cvs9kURU79s"
-    ],
-    "frames": {
-      "vz7BcEfuTFc": [
-        "even/f-03-0m06s.jpg",
-        "even/f-07-0m17s.jpg",
-        "even/f-10-0m24s.jpg",
-        "even/f-12-0m29s.jpg"
-      ],
-      "cvs9kURU79s": [
-        "even/f-01-0m00s.jpg",
-        "even/f-09-0m07s.jpg"
-      ]
-    },
-    "why": "Seven words, a whole argument, and it makes no sense without the post. The Sueño Latino video (1odEmDYg4Y4) is terminated, so its error text is the day's DV material and the Post-it Note Waterfall (480×360, 15 fps, a dim conference stage) is the camcorder footage. Three 2005 images are gone: Picture1.jpg (powerpoint logo), talkingPointMini_01.jpg (talkingpoint screengrab), hulger.jpg (hulger phone).",
-    "assets": {
-      "giphy": {
-        "1 the date": "november (titles containing November, non-white, by seed)",
-        "5 the gif": "puma / waterfall / synth / rice bowl / geek, by seed",
-        "7 the dead video": "bird (≤80 frames, by seed)",
-        "8 the source": "powerpoint"
-      },
-      "wayback": "otd/captures/11-09/wayback/ (wayback-page.mjs): home 2005-11-24, home 2007-08-14, presentation-zen 2006-04-20, technorati 2005-12-16, talking-point and hulger 2006; rescued Picture1.jpg, talkingPointMini_01.jpg, hulger.jpg",
-      "note": "sticker ids are chosen per seed at render time and printed on the still's last line; the catalog is otd/public/giphy/manifest.json"
-    },
-    "picks": {
-      "1": 1,
-      "2": 3,
-      "3": 2,
-      "4": 1,
-      "5": 1,
-      "6": 1,
-      "7": 3,
-      "8": 3,
-      "9": 1,
-      "10": 1,
-      "11": 1,
-      "12": 1,
-      "13": 3
-    },
-    "picksWhy": "Round four, 2026-09-08. Cover: the monolith. Line: the space version, the joke without the explanation. Text-ments: the zoo ad's views. GIF: the puma, jarring on purpose (Iain). Wayback: the 2005 masthead leads. Dead video and source: seed 3 (Iain). Text screens do not vary. 13 (come back tomorrow): seed 3, TOMORROW whole and legible under the sticker storm."
+    "why": "Seven words, a whole argument, and it makes no sense without the post. The Sueño Latino video (1odEmDYg4Y4) is terminated, so its error text is the day's DV material and the Post-it Note Waterfall (480×360, 15 fps, a dim conference stage) is the camcorder footage. Three 2005 images are gone: Picture1.jpg (powerpoint logo), talkingPointMini_01.jpg (talkingpoint screengrab), hulger.jpg (hulger phone)."
   },
   "11-10": {
     "hero": "/2005/11/10/sorrell-vs-murdoch/",
@@ -119,26 +65,7 @@
       "Very very smart. My hat is off.",
       "First, don’t panic…"
     ],
-    "picture": "/2005/11/10/bouncy-balls/",
-    "grab": [
-      "LwQYyUoOA7w"
-    ],
-    "why": "A 2005 question that answers itself twenty years later. Six posts, 2005 to 2010: Sorrell on media panic, the Sony Bouncy Balls ad, a stats package, ITV buying Friends Reunited, a 1990s TV clip about the internet never catching on, and Keynote failing at a conference.",
-    "picks": {
-      "1": 1,
-      "2": 3,
-      "3": 2,
-      "4": 1,
-      "5": 1,
-      "6": 1,
-      "7": 3,
-      "8": 3,
-      "9": 1,
-      "10": 1,
-      "11": 1,
-      "12": 1,
-      "13": 3
-    }
+    "why": "A 2005 question that answers itself twenty years later. Six posts, 2005 to 2010: Sorrell on media panic, the Sony Bouncy Balls ad, a stats package, ITV buying Friends Reunited, a 1990s TV clip about the internet never catching on, and Keynote failing at a conference."
   },
   "11-11": {
     "hero": "/2008/11/11/was-our-store-free-of-clutter/",
@@ -149,23 +76,6 @@
       "It feels kind of retro / dynamic.",
       "This is truly great."
     ],
-    "picture": "/2008/11/11/visa-queue-type-joy/",
-    "grab": [],
-    "why": "A card reader in a Co-Op asked it, so the archive did too. Only two posts, both 2008, both with surviving images and no video: the shortest day in the test set, which is the point.",
-    "picks": {
-      "1": 1,
-      "2": 3,
-      "3": 2,
-      "4": 1,
-      "5": 1,
-      "6": 1,
-      "7": 3,
-      "8": 3,
-      "9": 1,
-      "10": 1,
-      "11": 1,
-      "12": 1,
-      "13": 3
-    }
+    "why": "A card reader in a Co-Op asked it, so the archive did too. Only two posts, both 2008, both with surviving images and no video: the shortest day in the test set, which is the point."
   }
 }
