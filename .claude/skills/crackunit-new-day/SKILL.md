@@ -24,7 +24,11 @@ entry.
 
 ## Inputs
 
-A day as `MM-DD`. If the day is empty (26 of 366 are), say so and stop.
+A day as `MM-DD`, month first: `11-09` is 9 November, `09-11` is 11
+September. Everything downstream uses the same order (day JSON, `lines.json`,
+captures, `otd.crackunit.com/MM-DD/`). Say the date in words back to Iain
+before doing anything, so a UK reading of the digits is caught early. If the
+day is empty (26 of 366 are), say so and stop.
 
 ## Step 0. Look at the day
 
