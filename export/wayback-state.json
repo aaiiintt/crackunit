@@ -24,10 +24,12 @@
     "skip": "junk"
   },
   "https://i0.wp.com/img.skitch.com/20090203-gmg5qrsb2d22q9x65krnh1m7pj.jpg?resize=410%2C474": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20080813-8ek51ht5xn8jscpwkujxx62e1m.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/i92.photobucket.com/albums/l8/iaintait/DSC00070.jpg?w=660": {
     "done": true,
@@ -40,76 +42,100 @@
     "ts": "20060813105120"
   },
   "https://i0.wp.com/img.skitch.com/20080813-jw8uihjjb2b6yenbwmgfcgap9y.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20080813-bmdkssjrcwpfm6y26b1euagjp3.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20080813-cfch8316jdmhd7imu1im2ymqwq.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20080813-d3rn4btw7sc29yw6qcs9frwaaf.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20091223-g9s2dbq2m61c1e71tff9fg5tts.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20080813-xg6rcjthxyjc4sta93ewjr2gfj.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20081011-pu9ge276t31saab2b1m8pphh7i.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20080813-rcp1mn85d4bbhg3d5hpmwqdec4.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/xxIkbihAuECpnFpDiyyjkizJIHCqDHIFoEfcrvnBDphGEqfmkvjGsymiIrId/media_httpattorneystc_JwyBe.jpg.scaled500.jpg?resize=400%2C300": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/EsEkEdbjkCtgsucbmppAAFbrFeHJbolkfdCdcmibFhCpCwECxhExaqAClsAD/media_httpwwwaugerloi_dJbce.jpg.scaled1000.jpg": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/xEqiEaeoujwFujdFFerkxGIodGFmIlfwpeExgouxFrxqnievCypuvpCdeEHI/media_httpimgskitchco_jHHbz.jpg.scaled500.jpg?resize=386%2C500": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/IkFhiHEjuryBdAhjgaswmdirhtxbIajGHcoeunFFaAsyhoAfnsylCGbhbkvf/media_httpimgskitchco_gquig.jpg.scaled1000.jpg": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/IkFhiHEjuryBdAhjgaswmdirhtxbIajGHcoeunFFaAsyhoAfnsylCGbhbkvf/media_httpimgskitchco_gquig.jpg.scaled500.jpg?resize=500%2C147": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/GeCGHxbpzensmkopJevkHqEvGqJpfpumcCfDBclCsbnGEdIHtntpIlJlFJAE/media_httpimgskitchco_apeeC.jpg.scaled500.jpg?resize=330%2C429": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/hhjotzkpefaAagIbivxDhbhlvpGBBfoEzIFqmCcwttqIkBdstgdrEbivxbkg/media_httpwklondontyp_cejhI.jpg.scaled500.jpg?resize=300%2C399": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/farm3.static.flickr.com/2761/4392636021_d7f431047c.jpg?resize=500%2C334": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/JwuAyDIlszyqChAbuflnhbcGjFGAHIuGwoiEkCeEoDrwuIIyoBnJdbbvquDj/media_httpwwwwklondon_uImmu.jpg.scaled500.jpg?resize=500%2C155": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/WAM4Talft9i16wkI3NblcEtTfd1Xx1PQYPk6gLr6lLB7o9NNPGRi3vzSwUOU/Dock.jpeg.scaled.1000.jpg": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/pbdrwGnoBuxbiIaBuFyCEykbiImodegHCdowDECgdbxJEnzlCrwIJttlECgx/media_httplithefilesw_uttqs.jpg.scaled500.jpg?resize=500%2C500": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/JwuAyDIlszyqChAbuflnhbcGjFGAHIuGwoiEkCeEoDrwuIIyoBnJdbbvquDj/media_httpwwwwklondon_uImmu.jpg.scaled1000.jpg": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20090419-bjnepr7x6sfftnuwkchh4nacsk.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/pbdrwGnoBuxbiIaBuFyCEykbiImodegHCdowDECgdbxJEnzlCrwIJttlECgx/media_httplithefilesw_uttqs.jpg.scaled1000.jpg": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/EsEkEdbjkCtgsucbmppAAFbrFeHJbolkfdCdcmibFhCpCwECxhExaqAClsAD/media_httpwwwaugerloi_dJbce.jpg.scaled500.jpg?resize=500%2C375": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20090419-p5g322ecfg2rg45ewj1i66din5.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20090419-dfqs97h3fr2sm14fmr3e4xkiek.jpg?w=660": {
     "done": true,
@@ -117,22 +143,28 @@
     "ts": "20091013121445"
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/FkT3KzaqeyhGoPEJN010JxKHgweV1yRqhUc1zv0YzfJ9HjGQhUn2sPTa7oi7/1984_page_1.jpeg.scaled.500.jpg?resize=500%2C342": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/GrAGggnaEpgfhwzihHJAqyDanJwmfrDAujehjEvxrvlCqfJEehuicIvbqdce/media_httpwwwesquirec_fHBwf.jpg.scaled500.jpg?resize=400%2C500": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/pgIBGJYXu7elJzgoICqrnC0DvyczADeRadcYcfvBVtjQAtDr7V2MPGm6R7sd/1984_page_1.jpeg.scaled.1000.jpg": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/waJHQG3kJHPpPty6E0aRpB1bQXQ48HjBEMErFZP5svJxZ29JKk8EN0zEgNYL/photo.jpg": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/8OaxN1WqlZuSYVT1SzYlbCsw36RJLkuUYQmQhmPt4n4QyiFJPArYrAdqQwSZ/Dock.jpeg.scaled.500.jpg?resize=500%2C397": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/5mKbDv6kNged90DJHIiZHdRvmE1ufJvBvNfoV8wtoJkIWkcXGLVq7VF9pOgA/NOBYNOBYBOY.jpg?resize=320%2C480": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/41jVaueFyH5ukCY28Q6pieOpPmemhbLQbNs2nwivHLUtlPvS7tfhYqFQBkwX/photo.jpg.scaled.500.jpg?resize=500%2C370": {
     "done": true,
@@ -140,34 +172,44 @@
     "ts": "20200729111611"
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/MYe4SP2IEOE9zlCbpXu88slVv4SXexZdhmNFeICGLG2X08vejLwIKQzuhRG4/image.jpeg.scaled.500.jpg?resize=500%2C544": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/hDWrkUyIqyp8cawkpsuFJML5Bpb4O4e9XSh2kf4pZR0wGULRsk04sAZb7zJr/Google_Reader_1000.jpg?resize=498%2C269": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/YxWawGRdINZSuq9NhT3Fn81wsDdCGZuAtvt4iON9JE6BAhrWRTI6fepqLtxy/photo.jpg.scaled.500.jpg?resize=500%2C669": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20090130-xds7mafhxks81e17tcg5erdu47.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/roYK3RYjnsMPqHYy9MeZWFJm6AIFtXToBOqFxAsqwbQyLZf8wVYNBE3fFbOQ/image.jpeg.scaled.1000.jpg": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20090430-x726rarmitaid7ukp5ajjgr679.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20081106-cprht1q71xxcg7pbgksa56ir7d.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/bAO3lewQAliRXem9lTFNdmDJJjEBBD7nCpE3rMIk13u3ofl8Rg1Z6SMQr1kH/photo.jpg.scaled.1000.jpg": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20081106-f2gn6nd3jdbee8tx32rapiqhdf.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20091213-kwg1r1h9aasgum54u7qkuqq2a1.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20091026-bmyajeinwnm2bd6ja97yf49fef.jpg?w=660": {
     "done": true,
@@ -175,16 +217,20 @@
     "ts": "20091103004531"
   },
   "https://i0.wp.com/img.skitch.com/20080717-q6x6ppx3gq2ewesw3924phf1fi.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20091118-edd2m9qc7mgh18hypd2fqqt34j.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/gQnHfvAkbclu5E0jypBTusiI7kIOZHogSa7u1mjvVktnCkbHMGfu3C2aLoaV/pie_hard.jpg": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/GAikEwDqFuwdezIiGcIEgnEwlAwfmxIkdeDfBaJuhhqAdkjftCsanzrFuDBf/media_httpwwwcoolhunt_DIvBf.jpg.scaled500.jpg?resize=500%2C332": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/i92.photobucket.com/albums/l8/iaintait/virgin_media.jpg?w=660": {
     "done": true,
@@ -192,10 +238,12 @@
     "ts": "20230518155259"
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/EDbHKgzTQpKRYoS9oDRGiWUEKq0T6i1kx2kqEvaUNhCVxlco6wkS6exwnHMC/pie_hard.jpg.scaled.500.jpg?resize=500%2C585": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/ClqEbFzxqfCdhdvaCDbcHfxCqHizktjDgFoBloHfxDkkfzFhbsiGvrnBsycc/media_httpwwwgoodshow_BpAwd.jpg.scaled500.jpg?resize=500%2C375": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20090714-x773qptsbxn427dtfhbd3x74sf.jpg?w=660": {
     "done": true,
@@ -203,10 +251,12 @@
     "ts": "20090803135332"
   },
   "https://i0.wp.com/img.skitch.com/20081216-c138ppnmp1kkbuyhwjh3ba7xqh.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20081216-j96g9dygixnd35kkpbeuc7dsb8.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/i92.photobucket.com/albums/l8/iaintait/flickr-geotag.jpg?w=660": {
     "done": true,
@@ -214,49 +264,64 @@
     "ts": "20070210132226"
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/fxsbJJmcdEudeovFnfvgvasCdjwCyAqGGnxddfqGzwhIJpIojvgozebgicAy/media_http25mediatumb_dgHut.gif?resize=300%2C414": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/dxlJBxwspuwnlvdrewmGjjCqIpmrHxrcdstFeqCAqanqJnhwxaguliyIasJv/media_httpwwwmidigunc_ICHtq.jpg.scaled500.jpg?resize=500%2C332": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/dxlJBxwspuwnlvdrewmGjjCqIpmrHxrcdstFeqCAqanqJnhwxaguliyIasJv/media_httpwwwmidigunc_ICHtq.jpg.scaled1000.jpg": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20090807-mayc1fc7wyc23cshi5aqxawhyy.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20080825-n6jtbr79wnk32y42mkjf1ripad.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20091205-c6kpfjn714dwqwww4ecmsm1pkf.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/ClqEbFzxqfCdhdvaCDbcHfxCqHizktjDgFoBloHfxDkkfzFhbsiGvrnBsycc/media_httpwwwgoodshow_BpAwd.jpg.scaled1000.jpg": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/i92.photobucket.com/albums/l8/iaintait/kate_moss.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/i92.photobucket.com/albums/l8/iaintait/th_abercrombie_crotch.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20080825-qxp22wy4ywja3wipyhbkbf71xa.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20080825-86dnhmeu5gj9fmcrf95qmw74jg.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/static.flickr.com/91/229868685_bea043eb2b_d.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/blip.tv/file/get/Leelefever-WikisInPlainEnglish801.flv.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20090807-jtukcwgj43gb9j4cy1h3naa19i.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/rineDrlDIeHesDfoBlEoDdJcHyhdlBCIJGyCtApxiHjvvaflfhncmsqEmxBD/media_https3amazonaws_lAtrz.jpg.scaled500.jpg?resize=500%2C313": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20100919-x5xhhh3xibahgq3twr3bd3rbi5.jpg?w=660": {
     "done": true,
@@ -264,22 +329,28 @@
     "ts": "20101002035245"
   },
   "https://i0.wp.com/img.skitch.com/20090807-e7b11axd66ba552rrk4qesifkj.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20090807-xxncukr8csqsj2fsi3e3tkrrpg.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20090807-rji26c8ajrkhycc5fgf2ksk8pt.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20090807-ny8ptt1cirwh6paknxisxndbnj.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20090807-tkjdt8nwssfwiqsaype6nr2frg.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20091121-bu4epgp6jfq22jytqa7ubu8x3u.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20091019-qkagkmtn3n73nusb56u99cntii.jpg?w=660": {
     "done": true,
@@ -287,7 +358,8 @@
     "ts": "20091103004529"
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/rineDrlDIeHesDfoBlEoDdJcHyhdlBCIJGyCtApxiHjvvaflfhncmsqEmxBD/media_https3amazonaws_lAtrz.jpg.scaled1000.jpg": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20091019-cxh4jutxc56h416uj585s8y7s6.jpg?w=660": {
     "done": true,
@@ -295,7 +367,8 @@
     "ts": "20091103004533"
   },
   "https://i0.wp.com/static.flickr.com/57/188843331_a690b560ef_m.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20091019-emij3q629311hu5pxgfyerhfm9.jpg?w=660": {
     "done": true,
@@ -303,7 +376,8 @@
     "ts": "20091103004534"
   },
   "https://i0.wp.com/img.skitch.com/20090825-bj9sjr6d4x61h39gt1g5kh1r3q.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20091019-kes1948pjn1r9d4ct1jr6p2wb6.jpg?w=660": {
     "done": true,
@@ -321,34 +395,44 @@
     "ts": "20091103004529"
   },
   "https://i0.wp.com/img.skitch.com/20090707-84yispw3r4m8td1sm4m6p76yp4.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20090825-ku8bchb4m2cux7uemfamr9a6aq.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20080819-rr1sqwgfies9b6t22b67icsbhg.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/0CnhTu83chEJ0mbT06lyngnJrw4qauP3xHOZXC3FgFdWO3Dk03ZJMnAcyTxG/Keynote1.png.scaled.500.jpg?resize=500%2C390": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/D7F2vaSiG6ITs2P2Ix9IyubhRX1onzbV27w219BjFetvdzLyZoqk9gsKIt1c/iTunes1.png.scaled.500.jpg?resize=500%2C321": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20090112-j1tna4j5ekhgxb5529fwf4u5yy.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/9c6R1032fYXebixwD5AgA7QlhKB0prqJEPUT07xRwctoAmdXVphrwVK91QqQ/Keynote1.png.scaled.1000.jpg": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/rwU1T8HgKpa3REZy4iYnT6iz0UqbGZRDqiOmAjI5Zv38LpCmfhpyHRQwyVY2/IMG_2447.jpeg.scaled.500.jpg?resize=500%2C375": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/l34zZRwCNsR1DDbjUfF8Gsh8sVAqae6BfTBQ5ac3JTyFP6tvyeNrlM4RoSqP/Home_Yahoo_Style_Guide.jpg?resize=372%2C280": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/2J2xlaVRfsPcrMb51BDVySGK8KbFGdaIVpO4gDDFmi0sRz5uI9vozG6Wayk6/IMG_2447.jpeg.scaled.1000.jpg": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20090720-pxe41k3t4di8ipiinpu4e28wek.jpg?w=660": {
     "done": true,
@@ -356,31 +440,40 @@
     "ts": "20090803135333"
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/EsbkCarefnstfryEspvpdvzbatEjeduyiBqIpHhDCtkIhEvqxFAAGJyFHcfe/media_httpcache1bigca_rwAct.jpg.scaled1000.jpg": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/EsbkCarefnstfryEspvpdvzbatEjeduyiBqIpHhDCtkIhEvqxFAAGJyFHcfe/media_httpcache1bigca_rwAct.jpg.scaled500.jpg?resize=500%2C189": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/FeusAcgsiCAAGojxpCrEuvCpAeplbEoBHygJmzpvGqcnyxoIeoIIuEDspBpC/media_httpwwwshanehop_umkCc.jpg.scaled500.jpg?resize=500%2C648": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/PyNVWqV1nRVP7aSz64uKu7TwZ43t6R5zggaVWILAl0A58BvnOm1dErGH0hbJ/iTunes1.png.scaled.1000.jpg": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20090320-rx2xgpawug8efhufcegbshb85t.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20080817-xsq6x2jynbb81uubg9q1gt7n5f.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/JPdAKsUigZNHZJQzjifbP2K4VV8ybkRAP200jTftoJ3scTvlGnkfudFvsck3/image.png": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/KbYavj6M88H23KmYRQo4EwyS2OWSGRPuVV2oEedXdi3kS72gyemjYVIKIAdY/image.png.scaled.500.jpg?resize=500%2C500": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/fJHqupBpwbmqbexzgkDDyuAIGCEnqeCmoymIAzxohumDkiEmsIdDvlCEynJr/media_httpwwwfredflar_rGyFw.jpg.scaled500.jpg?resize=305%2C350": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/i92.photobucket.com/albums/l8/iaintait/10_people_who_get_it.gif?w=660": {
     "done": true,
@@ -388,28 +481,36 @@
     "ts": "20100712221359"
   },
   "https://i0.wp.com/i92.photobucket.com/albums/l8/iaintait/no_fouling_1.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20080926-r2gbwdf5xhssaeawpr7u45xpbt.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/i92.photobucket.com/albums/l8/iaintait/no_fouling_2.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/i92.photobucket.com/albums/l8/iaintait/dog_poo.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20090519-mewca4eqen212cmkmwyet9ysti.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/i92.photobucket.com/albums/l8/iaintait/pickup.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/gmGwihDxxjplLSkqclXghODWu1zaWngLVwDe0F3F4VHp9FKqseqfHt3qIGAl/awaiting.jpg.scaled.1000.jpg": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/bAsoFbuJoiJxCJAbHskgmhvkglejkfxHdECsBpudeivonAiezdHmujlyBmxm/media_http1bpblogspot_ypakA.jpg.scaled500.jpg?resize=251%2C291": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20090203-cfsd2rbxxxyrh76hfm76md44d3.jpg?w=660": {
     "done": true,
@@ -417,7 +518,8 @@
     "ts": "20090217191329"
   },
   "https://i0.wp.com/img.skitch.com/20090626-e8nki4c7b71jtbt247nsk4iaey.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20090203-fkqmybaf59wxfpy7yjfxxcpgyj.jpg?w=660": {
     "done": true,
@@ -425,28 +527,36 @@
     "ts": "20090217191347"
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/ov3E2cWmq0eDFPeWVa0YiGz6XiVGmXVFg3MkUJqDh1qrAdLvunc5wnTmhFAQ/awaiting.jpg.scaled.500.jpg?resize=500%2C563": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/etJhlpEyxlIhClAvAdtcAFfpmDnymsmvmBfGkAnzyHIkbIpGrDFuxirfJahu/media_httpimgskitchco_ggeuo.gif.scaled500.gif?resize=500%2C389": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20080817-1cshgup3khri2cqx5djdanrrsh.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/etJhlpEyxlIhClAvAdtcAFfpmDnymsmvmBfGkAnzyHIkbIpGrDFuxirfJahu/media_httpimgskitchco_ggeuo.gif.scaled1000.gif": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20080817-gd8jdi8ubjs6ef8wsgqq7218f2.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20090626-k9w8fyg8uxbewkd6hkak5e6wx4.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20080817-fpgwpch511nfmbq2chwu2h6pk5.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20080817-ngtw19mba9wbfyet4esmct9iia.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20090203-hajttc9cgmmgcqmi9t8qpk2h.jpg?w=660": {
     "done": true,
@@ -454,49 +564,64 @@
     "ts": "20090217191342"
   },
   "https://i0.wp.com/img.skitch.com/20080817-81ubfu852ycj4i67i39fx1qik.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20080817-mrecg57m96xkhrh3nyg4gpg8ts.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20080817-e4pfr86wbggx7ajq4ussrhecq5.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20080817-trjdcu7hesij9748reikfxhbx5.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20080807-fpfg74emjaq9ggh5ax72guxtrh.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20080817-dactfibxqf62bgair1pbuypf75.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20090630-dc5je5bkmm3s3tbts6xp58yhsn.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20080817-k2qxp7rua6kfw5d2rf54nsxxt6.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20100308-e72g928r8pwamyimke8p17pe8b.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20080730-bbskiefutfq6pb5yimwfat745g.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20090116-rffwymrjn4uiga5bdyddn7r6f9.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20090202-8ycpbbdwxkr41yi9wawfi74gwf.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/i92.photobucket.com/albums/l8/iaintait/Plastic-toy-lamb.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/i92.photobucket.com/albums/l8/iaintait/CIMG2266.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20100308-crgn5juyp6q3efya5inkftih4d.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/i92.photobucket.com/albums/l8/iaintait/togatoday.jpg?w=660": {
     "done": true,
@@ -504,10 +629,12 @@
     "ts": "20070210130836"
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/xDusgS6NPTiZNfN1uhFHfxjUSrtBJ54DR2Bfxqj177HJEuztDfQBlnso2z6i/photo.jpg.scaled.500.jpg?resize=500%2C669": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/TLLplyBorP1ABcR38tfRVa6bPAnD6Gk90eiScnUIUswkK0Fmg7HVxkTzqu6z/photo.jpg.scaled.1000.jpg": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/i92.photobucket.com/albums/l8/iaintait/tonyd.jpg?w=660": {
     "done": true,
@@ -525,13 +652,16 @@
     "ts": "20100615013416"
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/AtcaufiiDYaU0hC2GpqRLmw7YDboA5CyJWUmrA1mbX5UkQZMFgOgZmxvH8Ca/image.jpeg.scaled.500.jpg?resize=500%2C374": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/img.skitch.com/20080915-kptn9278msx1td3fujfdii7f98.jpg?w=660": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/posterous.com/getfile/files.posterous.com/crackunit/mSO57GRQMCCCc6CzEDNrQV7P7SgdgdmKDEYxl3ESJjr6eoQfyfAjeiYYTMOp/image.jpeg": {
-    "skip": "no-snapshot"
+    "skip": "no-snapshot",
+    "confirmed": true
   },
   "https://i0.wp.com/crackunit.s3.amazonaws.com/made-on-the-train.jpg?resize=400%2C400": {
     "skip": "no-snapshot"
