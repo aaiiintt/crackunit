@@ -54,5 +54,34 @@
     "hook": "H1",
     "archetype": "A1",
     "why": "Deadpan. The crane photo is the hero element, cropped off the top of the frame like ref 1's headline. Blogs is Back is the Notepad."
+  },
+  "11-09": {
+    "hero": "/2005/11/09/presentation-zen/",
+    "line": "Bill has bullets, Steve has space.",
+    "runnerUp": "Anyone know what that funny bird sound is?",
+    "runnerUpFrom": "/2007/11/09/how-stuff-dates/",
+    "alternates": [
+      "And the video has aged really really badly too.",
+      "Once you realise you’re becoming a geek is there any way to reverse the process…?"
+    ],
+    "picture": "/2007/11/09/freericecom/",
+    "grab": [
+      "1odEmDYg4Y4",
+      "vz7BcEfuTFc",
+      "cvs9kURU79s"
+    ],
+    "frames": {
+      "vz7BcEfuTFc": [
+        "even/f-03-0m06s.jpg",
+        "even/f-07-0m17s.jpg",
+        "even/f-10-0m24s.jpg",
+        "even/f-12-0m29s.jpg"
+      ],
+      "cvs9kURU79s": [
+        "even/f-01-0m00s.jpg",
+        "even/f-09-0m07s.jpg"
+      ]
+    },
+    "why": "Seven words, a whole argument, and it makes no sense without the post. The Sueño Latino video (1odEmDYg4Y4) is terminated, so its error text is the day's DV material and the Post-it Note Waterfall (480×360, 15 fps, a dim conference stage) is the camcorder footage. Three 2005 images are gone: Picture1.jpg (powerpoint logo), talkingPointMini_01.jpg (talkingpoint screengrab), hulger.jpg (hulger phone)."
   }
 }
