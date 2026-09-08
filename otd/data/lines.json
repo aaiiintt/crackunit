@@ -92,6 +92,21 @@
       },
       "wayback": "otd/captures/11-09/wayback/ (wayback-page.mjs): home 2005-11-24, home 2007-08-14, presentation-zen 2006-04-20, technorati 2005-12-16, talking-point and hulger 2006; rescued Picture1.jpg, talkingPointMini_01.jpg, hulger.jpg",
       "note": "sticker ids are chosen per seed at render time and printed on the still's last line; the catalog is otd/public/giphy/manifest.json"
-    }
+    },
+    "picks": {
+      "1": 1,
+      "2": 3,
+      "3": 2,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 3,
+      "8": 3,
+      "9": 1,
+      "10": 1,
+      "11": 1,
+      "12": 1
+    },
+    "picksWhy": "Round four, 2026-09-08. Cover: the monolith. Line: the space version, the joke without the explanation. Text-ments: the zoo ad's views. GIF: the puma, jarring on purpose (Iain). Wayback: the 2005 masthead leads. Dead video and source: seed 3 (Iain). Text screens do not vary."
   }
 }

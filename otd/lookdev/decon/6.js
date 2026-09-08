@@ -17,12 +17,16 @@ function draw() {
   // the second page, at 2×, cropped, lower
   const mid = OTD.crop(B.img, 0, 0, B.img.width, 600);
   image(mid, random(-800, 100), random(500, 800), B.img.width * 2, 600 * 2);
-  // the recovered images, large
-  let rx = random(60, 400), ry = random(900, 1040);
-  for (const [name, img] of Object.entries(OTD.rescued)) if (img && img.width) { const w = 200 + random(0, 160); OTD.pixelated(true); image(img, rx, ry, w, w * img.height / img.width); OTD.pixelated(false); fill(0); OTD.courier(12); text(`${name} · recovered`, rx, ry + w * img.height / img.width + 18); rx += w + 30; }
-  // the timestamps
-  fill(OTD.LINK); OTD.courier(16); let y = 1350 - 60 - (OTD.waybackAll().length - 1) * 22;
-  for (const it of OTD.waybackAll()) { text(`${it.slug}  ${it.ts ? `web.archive.org/web/${it.ts}` : it.none ? "no snapshot within a year" : "cdx undecided"}`, 60, y); y += 22; }
+  // the recovered images, large, along the top of the timestamp block
+  const items = OTD.waybackAll();
+  OTD.courier(16); const listW = Math.max(...items.map((it) => textWidth(`${it.slug}  web.archive.org/web/00000000000000`))) + 24;
+  const listH = items.length * 22 + 20, listY = 1350 - 56 - listH;
+  let rx = 60, ry = listY - 300;
+  for (const [name, img] of Object.entries(OTD.rescued)) if (img && img.width) { const w = 190 + random(0, 90), h = w * img.height / img.width; OTD.pixelated(true); image(img, rx, ry + (240 - h), w, h); OTD.pixelated(false); fill(0); OTD.courier(11); text(`${name} · recovered`, rx, ry + 258); rx += w + 26; }
+  // the timestamps, on their own ground so they read over whatever is under them
+  noStroke(); fill(OTD.PAPER); rect(48, listY - 8, listW, listH + 8);
+  fill(OTD.LINK); OTD.courier(16); let y = listY + 14;
+  for (const it of items) { text(`${it.slug}  ${it.ts ? `web.archive.org/web/${it.ts}` : it.none ? "no snapshot within a year" : "cdx undecided"}`, 60, y); y += 22; }
   fill(0); OTD.label(`crackunit.com · as the wayback machine holds it · ${A.ts}`, 60, 80, 12, "#fff");
   OTD.done();
 }

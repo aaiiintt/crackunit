@@ -5,7 +5,8 @@
 //   node otd/lookdev/render.mjs decon                  # one look
 //   node otd/lookdev/render.mjs decon/4 --seed 7       # one still, one seed
 //   node otd/lookdev/render.mjs --seeds 5              # more variants per still
-//   node otd/lookdev/render.mjs --pick                  # seed 1 only: the carousel as it would post
+//   node otd/lookdev/render.mjs --pick                  # seed 1 only, quick
+//   node otd/lookdev/render.mjs --final                 # the picked seed per slide (lines.json[day].picks) → otd/out/carousel/<day>/NN.png + contact.png
 //
 // A still is either a p5 sketch <look>/<n>.js, hosted by page.html with
 // vendor/p5.min.js and lib.js and rendered once per seed (window.SEED), or a
@@ -38,6 +39,11 @@ const opt = (n, d) => { const i = argv.indexOf(`--${n}`); return i === -1 ? d : 
 const filter = argv.find((a) => !a.startsWith("--") && a !== opt("seed", null) && a !== opt("seeds", null)) || "";
 const seeds = argv.includes("--pick") ? [1] : opt("seed", null) ? [Number(opt("seed"))] : Array.from({ length: Number(opt("seeds", 3)) }, (_, i) => i + 1);
 const DAY = opt("day", "11-09");
+const FINAL = argv.includes("--final");
+const picks = FINAL ? (JSON.parse(fs.readFileSync(path.join(repo, "otd", "data", "lines.json"), "utf8"))[DAY] || {}).picks || {} : null;
+if (FINAL && !Object.keys(picks).length) { console.error(`no picks for ${DAY} in otd/data/lines.json`); process.exit(1); }
+const finalDir = path.join(repo, "otd", "out", "carousel", DAY);
+if (FINAL) fs.mkdirSync(finalDir, { recursive: true });
 
 const MIME = { ".html": "text/html; charset=utf-8", ".css": "text/css", ".js": "text/javascript", ".png": "image/png", ".jpg": "image/jpeg",
   ".jpeg": "image/jpeg", ".gif": "image/gif", ".svg": "image/svg+xml", ".webp": "image/webp", ".ttf": "font/ttf", ".otf": "font/otf",
@@ -70,9 +76,10 @@ for (const look of looks) {
     const req = (src.match(/<meta name="requires" content="([^"]+)"/) || src.match(/\/\/\s*requires:\s*(.+)/) || [])[1];
     const missing = req ? req.split(",").map((s) => s.trim()).filter((s) => !fs.existsSync(path.join(repo, s))) : [];
     if (missing.length) { console.log(`${id}  waiting for ${missing.join(", ")}  (see otd/orders/)`); continue; }
-    for (const seed of sketch ? seeds : [1]) {
+    for (const seed of FINAL ? [Number(picks[String(n)] || 1)] : sketch ? seeds : [1]) {
       const url = sketch ? `${base}/otd/lookdev/page.html?sketch=/otd/lookdev/${look}/${f}&seed=${seed}&day=${DAY}` : `${base}/otd/lookdev/${look}/${f}`;
-      stills.push({ look, n, id: `${id} s${seed}`, sketch, seed, url, png: path.join(outDir, `${look}-${n}-s${seed}.png`) });
+      const png = FINAL ? path.join(finalDir, `${String(n).padStart(2, "0")}.png`) : path.join(outDir, `${look}-${n}-s${seed}.png`);
+      stills.push({ look, n, id: `${id} s${seed}`, sketch, seed, url, png });
     }
   }
 }
@@ -101,6 +108,16 @@ try {
     console.log(`${s.id}  →  ${path.relative(repo, s.png)}`);
   }
 
+  if (FINAL) { // the carousel in order, one row, at 25%
+    const files = fs.readdirSync(finalDir).filter((f) => /^\d\d\.png$/.test(f)).sort();
+    const cw = W * SCALE * CONTACT, ch = H * SCALE * CONTACT, gap = 24, label = 44;
+    const html = `<!doctype html><meta charset="utf-8"><style>body{margin:0;background:#888;font:14px/1 "Arial Bold","Arial",sans-serif;font-weight:700;color:#fff;letter-spacing:.06em}.row{display:flex;gap:${gap}px;padding:${gap}px}figure{margin:0;width:${cw}px}img{display:block;width:${cw}px;height:${ch}px;outline:1px solid #000}figcaption{height:${label}px;line-height:${label}px}</style><div class="row">${files.map((f) => `<figure><img src="${base}/otd/out/carousel/${DAY}/${f}"><figcaption>${DAY} · ${f.replace(".png", "")} · seed ${picks[String(Number(f.replace(".png", "")))] || 1}</figcaption></figure>`).join("")}</div>`;
+    const cpage = await ctx.newPage();
+    await cpage.setViewportSize({ width: Math.ceil(files.length * (cw + gap) + gap), height: Math.ceil(ch + label + gap * 2) });
+    await cpage.setContent(html, { waitUntil: "networkidle" });
+    await cpage.screenshot({ path: path.join(finalDir, "contact.png"), fullPage: true });
+    console.log(`final: ${files.length} slides  →  otd/out/carousel/${DAY}/   (${((Date.now() - t0) / 1000).toFixed(1)}s)`);
+  } else {
   // contact sheet: every rendered still in out/, one row per still, one column per seed at 25%, then seed 1 at 270 px
   const files = fs.readdirSync(outDir).filter((f) => /^[a-z]+-\d+-s\d+\.png$/.test(f));
   const key = (f) => { const m = f.match(/^([a-z]+)-(\d+)-s(\d+)\.png$/); return { look: m[1], n: Number(m[2]), seed: Number(m[3]) }; };
@@ -134,6 +151,7 @@ try {
   }
   if (sheets.length > 1) fs.rmSync(path.join(outDir, "contact.png"), { force: true }); else for (const f of fs.readdirSync(outDir)) if (/^contact-\d+\.png$/.test(f)) fs.rmSync(path.join(outDir, f));
   console.log(`contact: ${files.length} renders in ${rowsMap.size} rows  →  otd/lookdev/out/${sheets.length === 1 ? "contact.png" : `contact-1..${sheets.length}.png`}   (${((Date.now() - t0) / 1000).toFixed(1)}s)`);
+  }
 } finally {
   await browser.close();
   server.close();

@@ -265,3 +265,22 @@ The redline, from `~/Documents/crackunit-otd-notes.pdf`, and what was done:
 Learned: Chrome caps one screenshot at 16384 device px, so a five-seed sheet
 wraps at the bottom; `render.mjs` now writes `contact-1.png, contact-2.png`
 when a sheet would exceed it. A local `const line` shadows p5's `line()`.
+
+## Stage 1 closed: the look is locked (2026-09-08)
+
+Iain: "I'm pretty happy with everything rn", and left the seed picks to me.
+Picked, into `lines.json["11-09"].picks`: 1/s1 the monolith cover, 2/s3 the
+space version (the joke without the explanation), 3/s2 the zoo ad's 18,891
+views, 4/s1, 5/s1 the puma, 6/s1 the 2005 masthead, 7/s3 and 8/s3 (Iain's
+own picks), 9 to 12/s1.
+
+`render.mjs --final` reads those picks and writes the carousel to
+`otd/out/carousel/11-09/01..12.png` with a contact strip, in five seconds.
+One fix while picking: the Wayback slide's timestamp list collided with the
+recovered images, so it sits on its own paper ground.
+
+`ART-DIRECTION.md` v2 is written and the gate in the skill is closed: the
+substrate, the type table, every operation with the values the boards used,
+the twelve-slide grammar, the sticker taste, the recovered-image rule, the
+per-slide gates, and a list of what Stage 1 rejected so it is not tried again.
+Stage 2 (capture.mjs, compose.mjs, the recipe library) can start.

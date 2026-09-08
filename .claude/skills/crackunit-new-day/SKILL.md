@@ -10,13 +10,15 @@ material. The procedure is the product: every step writes to a file in `otd/`
 so the next day starts from what the last day learned. Refine this file
 whenever a step turns out wrong. Version at the bottom.
 
-Read `docs/on-this-day/PLAN.md` (v4) once per session. `ART-DIRECTION.md` is
-the spec; its Stage 1 notes at the top are current, its v1 sections below are
-retired. Run everything from the repo root, on the Mac (frames, Wayback, charts
+Read `docs/on-this-day/PLAN.md` (v4) once per session. `ART-DIRECTION.md` v2 is
+the spec: the substrate, the type, the operations with their values, the
+twelve-slide grammar, the sticker taste, the recovered-image rule, the gates.
+Its v1 sections below the rule are retired. Run everything from the repo root, on the Mac (frames, Wayback, charts
 and Giphy need the network the cloud container does not have).
 
-**Gate:** while `ART-DIRECTION.md` says Stage 1 is open, only Steps 0 to 3 and
-the look-board loop (L1 to L4) run. Steps 4 to 10 wait for the locked look.
+**The look is locked** (`ART-DIRECTION.md` v2, 2026-09-08). All steps run. The
+look-board loop (L1 to L4) is only for re-opening art direction, which needs
+Iain to say so; it is not part of a normal day.
 
 Model routing: Steps 1, 4, L2 and L3 are taste and belong to Iain or a capable
 model. Steps 0, 2, 3, 5, 8, 9 and L1 are grunt work for Sonnet. Step 10 is data
@@ -121,8 +123,14 @@ Only operations from the bible. If a move is missing, add it to the bible first.
 ## Step 5. Compose
 
 ```bash
-node otd/scripts/compose.mjs 11-09     # otd/out/carousel/11-09/01..08.png, contact.png, caption.md
+node otd/lookdev/render.mjs --day MM-DD --seeds 5     # the range, for choosing
+# put the chosen seed per slide in lines.json[MM-DD].picks, then
+node otd/lookdev/render.mjs --day MM-DD --final       # otd/out/carousel/MM-DD/01..12.png + contact.png
 ```
+
+Until `compose.mjs` exists (Stage 2), the twelve sketches in `otd/lookdev/decon/`
+are the carousel. They carry 11-09's material by name; Stage 2 replaces those
+with the day's data. `--final` reads `picks` and renders one seed per slide.
 
 ## Step 6. Gates, per slide
 
@@ -192,6 +200,9 @@ response. That is the loop.
 
 ## Version
 
+- v1.5, 2026-09-08 (Mac). **The look is locked**: ART-DIRECTION v2. The gate is
+  gone; every step runs. Step 5 renders from the sketches with `--final` until
+  `compose.mjs` exists. 11-09's picked seeds are in `lines.json`.
 - v1.4, 2026-09-08 (Mac). Iain's twelve-page redline. Seeds pick a **mode**
   first (a different composition), then vary within it, so a run shows a real
   range; render five seeds for review. The text screens' material is placed by

@@ -175,7 +175,10 @@ one accent; nothing degraded but the material; and each still must survive at
    inkjet, tear), the type spec, and the slide grammar those operations produce.
    §2 to §9 of v1 are retired.
 
-Gate: no Stage 2 code until v2 is signed.
+Gate: no Stage 2 code until v2 is signed. **Signed 2026-09-08** after four
+rounds: the look is the twelve-slide deconstruction in `ART-DIRECTION.md` v2,
+built as p5 sketches in `otd/lookdev/decon/`. Stage 1's rounds are logged in
+`DRY-RUN.md`.
 
 ---
 
