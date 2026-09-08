@@ -14,3 +14,7 @@ otd/site/out/
 otd/site/public/cover/
 otd/site/.astro/
 otd/public/sfx/
+.env
+.env.*
+otd/.env
+otd/site/.env

@@ -76,3 +76,8 @@ after this one.
 5. Move `otd/` to the sibling repo `crackunit-otd` once the dry run is posted, so
    crackunit keeps its three dependencies.
 6. Write `performance-report.mjs` after the first week of posts.
+7. On the Mac, with the Giphy key in `.env`: `fetch-giphy.mjs` for goose, disco
+   ball, spinning globe, dial up, windows 98 (stickers), then `npm i
+   @remotion/gif@4.0.522` in `otd/` and replace A6's CSS disc with a real GIF.
+8. Asset orders: the skill's Step 4b format is live; the first order is the
+   crackunit wordmark turning in chrome (bible §13, loop 6).

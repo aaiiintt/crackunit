@@ -72,17 +72,66 @@ real quote from the archive. Nothing is written for the video.
 
 ## Step 4. Assets for the day
 
+What the day already has:
+
 - Hero image: if `image.state` is `local` or `rescued`, it is in
   `public/wp-content/`. If `dead`, the day has no hero image and the archetype
   must not need one (A6, A3, A4 with a video).
 - Video: YouTube thumbnails are fetched at build time; Vimeo needs a manual
   thumbnail in `otd/public/thumbs/MM-DD.jpg` until the Vimeo lookup exists.
-- Loops and specimens: `otd/data/props.json` lists what exists. If the archetype
-  wants a loop that is not there, either generate it (bible §13, the prompt sheets
-  in `otd/prompts/`) and drop it in `otd/public/loops/`, or pick an archetype that
-  does not need one. Do not fake a loop in code.
+- Loops, specimens and GIFs: `otd/data/props.json` and
+  `otd/public/giphy/manifest.json` list what exists, with size, fps and loop
+  method. Reuse before ordering.
 - Wayback capture for H6: `otd/public/wayback/YYYY.png`. If missing for that year,
   H6 is unavailable.
+
+What the day still needs comes from one of two places. Do not fake an asset in
+code; a CSS disc is not a disco ball.
+
+**4a. Giphy first, for anything generic.** Giphy's sticker search returns
+animated transparent GIFs, which is the crunchy fake-3D register the bible wants.
+On the Mac, with `GIPHY_API_KEY` in `.env`:
+
+```bash
+node otd/scripts/fetch-giphy.mjs "goose" "disco ball" "spinning globe" --stickers --limit 12
+node otd/scripts/fetch-giphy.mjs "windows 98" "dial up" --gifs --limit 8
+```
+
+Files land in `otd/public/giphy/<kind>/<query>/<id>.gif` with a manifest. Pick by
+eye; note the chosen ids in `lines.json[MM-DD].assets`. GIFs play on the timeline
+through `@remotion/gif` (`npm i @remotion/gif@<remotion version>` in `otd/`, same
+version as `remotion`). "Powered by GIPHY" appears on the studio card and the site
+footer whenever a Giphy asset is used; the manifest tracks that.
+
+**4b. Order it from Iain, for anything specific.** When the design wants an asset
+that Giphy cannot supply (the crackunit wordmark turning in chrome, a specimen
+that matches the post, a loop in a particular palette), the skill writes an order
+and stops until it is filled. Write `otd/orders/MM-DD.md`:
+
+```markdown
+# Asset order, 09-12
+
+Draft: out/still/09-12-post.png (the crane frame; the order fills the empty right third)
+
+| # | What | Size | Format | fps | Length | Loop | Key colour | Style, refs |
+|---|---|---|---|---|---|---|---|---|
+| 1 | Tower crane, low-poly, slowly turning, seen from below | 1024 × 1024 | GIF or PNG sequence, transparent | 12 | 3 s | rotation, 360° | #00FF00 | ref 12's globe; flat-shaded; no sky |
+| 2 | "EBOR STREET" as a 3D chrome extrusion, spinning | 1024 × 512 | GIF, transparent | 24 | 2 s | rotation | #00FF00 | Impact-like caps; reflects blue |
+
+Deliver to: otd/public/loops/09-12-01.gif, otd/public/loops/09-12-02.gif
+Where it goes: item 1 at plane z −900, right of the line, 45% frame height; item 2 replaces the condensed-italic headline at the top.
+```
+
+Rules for an order: one row per asset; every column filled; size in pixels at
+the asset's native resolution (1024 square for loops, 2048 long edge for stills,
+per bible §13); the key colour so it can be keyed cleanly (`#FF00FF` for anything
+green); the loop method so the timeline knows how to play it; a ref number or a
+one-line style note; and the exact delivery path. Attach the draft still so the
+order can be judged in place. Iain generates with whatever tool suits (Nano
+Banana Pro for stills, an image-to-video model for loops, per bible §13) and
+drops the files at the delivery paths. Then run `node otd/scripts/catalogue-props.mjs`
+(to be written; until then, add the entry to `props.json` by hand) and continue at
+Step 5. An unfilled order is a valid stopping point: say what is waiting and why.
 
 ## Step 5. Design the motion sequence
 

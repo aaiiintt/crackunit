@@ -647,6 +647,21 @@ palette, 1-bit alpha with ordered dither), and catalogued. Default key is
 `#00FF00`; anything green is keyed on `#FF00FF`. Stills are 2048 px on the long
 edge. Loops are 1024 px square, 24fps, 2 to 4 seconds, and must loop.
 
+### Two more sources, cheaper than generation
+
+**Giphy.** `otd/scripts/fetch-giphy.mjs` pulls animated GIFs and, more usefully,
+*stickers*, which are transparent animated GIFs, straight into
+`otd/public/giphy/`. That is the crunchy fake-3D register at zero cost: spinning
+globes, disco balls, geese, dial-up modems, Windows logos, all already dithered
+and already looping. Check Giphy before ordering anything generic from the lists
+below. Attribution "Powered by GIPHY" goes on the studio card and the site footer
+whenever one is used.
+
+**Orders to Iain.** Anything specific to a day or to the house (the wordmark in
+chrome, a specimen that matches the post, a loop in the palette) is ordered with
+a written brief and a draft still, per the `crackunit-new-day` skill, Step 4b.
+The lists below are the standing catalogue those orders draw from.
+
 ### Specimens, stills (40)
 
 | # | Specimen | Ref | Key | Note |
