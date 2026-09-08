@@ -41,6 +41,25 @@ read. Frame 719 did not match frame 0. The cover, by contrast, worked first time
 (date, line, URL, the photo tinted blue). Round-two redline sent; see the commit
 after this one.
 
+## Round-two stills: pass, with three redlines for round three
+
+Root cause of round one: the line's arrival animation applied a 0.7 scale that was
+still in force on frame 0, and the loop interpolations ended at frame 719 rather
+than 720. Fixed with a canvas-measured autofit (220 to 140 px, never truncates),
+hook-scale furniture, a deeper page dolly, and loop return to 720. All five hooks
+read at 270 px. 09-12's frame 719 is frame 0 with the photo one frame off the top.
+Second 09-12 render: 2 m 15 s.
+
+Round three, not blocking the dry run:
+
+1. The line starts at x 0 on 09-12; it should sit at the 48 px safe margin.
+2. The page beat dollies past the "crackunit" header; the header is the era
+   signal and should stay in frame at the start of the dwell.
+3. 09-11's hook window sets the line at 64 px, under the 36 px cap-height minimum
+   at thumbnail scale; 96 px fits the window.
+4. 09-09's player copy is small at 270 px; the "no longer available" line could be
+   the bitmap register at 44 instead of the player's own grey.
+
 ## Blocked in this container, works on the Mac
 
 - officialcharts.com, Wikipedia, web.archive.org, i.ytimg.com, vimeo.com are all
