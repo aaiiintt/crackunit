@@ -147,6 +147,16 @@ Until Step 6 passes. Iain sees the contact sheet, not the code.
   "query" --stickers` (key in `.env`); mark junk `keep: false` so it is not
   fetched twice; add the day to `usedOn`. "Powered by GIPHY" on the last slide
   and the site footer when used.
+- What Iain keeps (his hand prune of 2026-09-08, 135 to 52): **photographic or
+  drawn objects with real edges** (fruit, bowls, products, a bird photo, a
+  rotary phone), **period lettering as an object** (an 80s badge, glitter
+  caps, pixel NOVEMBER, a script word), and **the odd one** (a nerd drawing, a
+  cat in glasses, a vaporwave sun, a human cut-out). What he cuts: flat vector
+  clip-art, brand promos and corporate mascots with copy on them, "sound on"
+  text, blank shapes. Search for nouns and period words; fetch eight, expect to
+  keep three; when in doubt, photo beats vector and odd beats cute. The
+  catalog's `mood` field carries these words (photo, drawn, period type, odd,
+  product, logo) so `stickerByMood("photo")` and friends work.
 - Order from Iain for anything specific: write `otd/orders/MM-DD.md` (what, size,
   format, fps, length, loop, key colour, style ref, delivery path, the draft
   still). An unfilled order is a valid stopping point.

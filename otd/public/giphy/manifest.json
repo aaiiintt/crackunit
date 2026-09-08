@@ -17,7 +17,7 @@
       "words": [
         "1989"
       ],
-      "mood": "",
+      "mood": "period type, 80s",
       "usedOn": [],
       "keep": true
     },
@@ -37,7 +37,7 @@
       "words": [
         "1989"
       ],
-      "mood": "",
+      "mood": "photo, polaroid, 1989",
       "usedOn": [],
       "keep": true
     },
@@ -145,7 +145,7 @@
       "words": [
         "1989"
       ],
-      "mood": "",
+      "mood": "period type, badge, odd",
       "usedOn": [],
       "keep": true
     },
@@ -165,7 +165,7 @@
       "words": [
         "1989"
       ],
-      "mood": "",
+      "mood": "period type, 80s, 1987",
       "usedOn": [],
       "keep": true
     },
@@ -207,7 +207,7 @@
       "words": [
         "bird sound"
       ],
-      "mood": "",
+      "mood": "drawn, bird",
       "usedOn": [],
       "keep": true
     },
@@ -249,7 +249,7 @@
       "words": [
         "bird sound"
       ],
-      "mood": "",
+      "mood": "photo, bird, odd",
       "usedOn": [],
       "keep": true
     },
@@ -405,7 +405,7 @@
       "words": [
         "bird"
       ],
-      "mood": "",
+      "mood": "photo, bird",
       "usedOn": [
         "11-09"
       ],
@@ -499,7 +499,7 @@
       "words": [
         "bird"
       ],
-      "mood": "",
+      "mood": "drawn, bird, small",
       "usedOn": [
         "11-09"
       ],
@@ -545,7 +545,7 @@
       "words": [
         "calendar"
       ],
-      "mood": "",
+      "mood": "drawn, calendar",
       "usedOn": [],
       "keep": true
     },
@@ -719,7 +719,7 @@
       "words": [
         "geek"
       ],
-      "mood": "",
+      "mood": "photo, cat, odd",
       "usedOn": [
         "11-09"
       ],
@@ -789,7 +789,7 @@
       "words": [
         "geek"
       ],
-      "mood": "",
+      "mood": "drawn, face, odd",
       "usedOn": [
         "11-09"
       ],
@@ -811,7 +811,7 @@
       "words": [
         "geek"
       ],
-      "mood": "",
+      "mood": "period type, glitter",
       "usedOn": [
         "11-09"
       ],
@@ -881,7 +881,7 @@
       "words": [
         "geek"
       ],
-      "mood": "",
+      "mood": "period type, pixel",
       "usedOn": [
         "11-09"
       ],
@@ -903,7 +903,7 @@
       "words": [
         "headset"
       ],
-      "mood": "",
+      "mood": "photo, product, headset",
       "usedOn": [
         "11-09"
       ],
@@ -925,7 +925,7 @@
       "words": [
         "headset"
       ],
-      "mood": "",
+      "mood": "photo, product, headset",
       "usedOn": [
         "11-09"
       ],
@@ -971,7 +971,7 @@
       "words": [
         "headset"
       ],
-      "mood": "",
+      "mood": "photo, person, cut-out",
       "usedOn": [
         "11-09"
       ],
@@ -1041,7 +1041,7 @@
       "words": [
         "headset"
       ],
-      "mood": "",
+      "mood": "photo, product, headset",
       "usedOn": [
         "11-09"
       ],
@@ -1159,7 +1159,7 @@
       "words": [
         "november"
       ],
-      "mood": "",
+      "mood": "period type, script, november",
       "usedOn": [
         "11-09"
       ],
@@ -1205,7 +1205,7 @@
       "words": [
         "november"
       ],
-      "mood": "",
+      "mood": "photo, leaves, autumn",
       "usedOn": [
         "11-09"
       ],
@@ -1251,7 +1251,7 @@
       "words": [
         "november"
       ],
-      "mood": "",
+      "mood": "period type, pixel, november",
       "usedOn": [
         "11-09"
       ],
@@ -1297,7 +1297,7 @@
       "words": [
         "orange"
       ],
-      "mood": "",
+      "mood": "photo, fruit, orange",
       "usedOn": [
         "11-09"
       ],
@@ -1367,7 +1367,7 @@
       "words": [
         "orange"
       ],
-      "mood": "",
+      "mood": "photo, fruit, orange",
       "usedOn": [
         "11-09"
       ],
@@ -1413,7 +1413,7 @@
       "words": [
         "orange"
       ],
-      "mood": "",
+      "mood": "photo, fruit, orange",
       "usedOn": [
         "11-09"
       ],
@@ -1435,7 +1435,7 @@
       "words": [
         "orange"
       ],
-      "mood": "",
+      "mood": "render, 3d, orange, small",
       "usedOn": [
         "11-09"
       ],
@@ -1777,7 +1777,7 @@
       "words": [
         "powerpoint"
       ],
-      "mood": "",
+      "mood": "photo, person, cut-out, odd",
       "usedOn": [
         "11-09"
       ],
@@ -1799,7 +1799,7 @@
       "words": [
         "powerpoint"
       ],
-      "mood": "",
+      "mood": "icon, powerpoint, logo",
       "usedOn": [
         "11-09"
       ],
@@ -1893,7 +1893,7 @@
       "words": [
         "puma"
       ],
-      "mood": "",
+      "mood": "logo, silhouette, magenta",
       "usedOn": [
         "11-09"
       ],
@@ -1915,7 +1915,7 @@
       "words": [
         "puma"
       ],
-      "mood": "",
+      "mood": "logo, silhouette, sticker",
       "usedOn": [
         "11-09"
       ],
@@ -1985,7 +1985,7 @@
       "words": [
         "puma"
       ],
-      "mood": "",
+      "mood": "logo, silhouette",
       "usedOn": [
         "11-09"
       ],
@@ -2007,7 +2007,7 @@
       "words": [
         "rice bowl"
       ],
-      "mood": "",
+      "mood": "drawn, food",
       "usedOn": [
         "11-09"
       ],
@@ -2029,7 +2029,7 @@
       "words": [
         "rice bowl"
       ],
-      "mood": "",
+      "mood": "photo, rice, bowl",
       "usedOn": [
         "11-09"
       ],
@@ -2051,7 +2051,7 @@
       "words": [
         "rice bowl"
       ],
-      "mood": "",
+      "mood": "photo, food, bowl",
       "usedOn": [
         "11-09"
       ],
@@ -2073,7 +2073,7 @@
       "words": [
         "rice bowl"
       ],
-      "mood": "",
+      "mood": "photo, rice, bowl",
       "usedOn": [
         "11-09"
       ],
@@ -2095,7 +2095,7 @@
       "words": [
         "rice bowl"
       ],
-      "mood": "",
+      "mood": "photo, food, bowl",
       "usedOn": [
         "11-09"
       ],
@@ -2117,7 +2117,7 @@
       "words": [
         "rice bowl"
       ],
-      "mood": "",
+      "mood": "photo, food, bowl",
       "usedOn": [
         "11-09"
       ],
@@ -2139,7 +2139,7 @@
       "words": [
         "rice bowl"
       ],
-      "mood": "",
+      "mood": "photo, rice, bowl",
       "usedOn": [
         "11-09"
       ],
@@ -2161,7 +2161,7 @@
       "words": [
         "rice"
       ],
-      "mood": "",
+      "mood": "drawn, rice, face",
       "usedOn": [
         "11-09"
       ],
@@ -2255,7 +2255,7 @@
       "words": [
         "rice"
       ],
-      "mood": "",
+      "mood": "photo, rice, bowl",
       "usedOn": [
         "11-09"
       ],
@@ -2301,7 +2301,7 @@
       "words": [
         "rice"
       ],
-      "mood": "",
+      "mood": "photo, rice, bowl",
       "usedOn": [
         "11-09"
       ],
@@ -2347,7 +2347,7 @@
       "words": [
         "synth"
       ],
-      "mood": "",
+      "mood": "render, vaporwave, sun, odd",
       "usedOn": [
         "11-09"
       ],
@@ -2417,7 +2417,7 @@
       "words": [
         "synth"
       ],
-      "mood": "",
+      "mood": "photo, product, synth",
       "usedOn": [
         "11-09"
       ],
@@ -2463,7 +2463,7 @@
       "words": [
         "synth"
       ],
-      "mood": "",
+      "mood": "photo, product, synth, korg",
       "usedOn": [
         "11-09"
       ],
@@ -2509,7 +2509,7 @@
       "words": [
         "synth"
       ],
-      "mood": "",
+      "mood": "glitch, odd",
       "usedOn": [
         "11-09"
       ],
@@ -2555,7 +2555,7 @@
       "words": [
         "telephone"
       ],
-      "mood": "",
+      "mood": "drawn, telephone, rotary",
       "usedOn": [
         "11-09"
       ],
@@ -2601,7 +2601,7 @@
       "words": [
         "telephone"
       ],
-      "mood": "",
+      "mood": "photo, phone, screen",
       "usedOn": [
         "11-09"
       ],
@@ -2719,7 +2719,7 @@
       "words": [
         "waterfall"
       ],
-      "mood": "",
+      "mood": "type, repeated, waterfall, odd",
       "usedOn": [
         "11-09"
       ],
@@ -2741,7 +2741,7 @@
       "words": [
         "waterfall"
       ],
-      "mood": "",
+      "mood": "photo, waterfall, round",
       "usedOn": [
         "11-09"
       ],
@@ -2883,7 +2883,7 @@
       "words": [
         "waterfall"
       ],
-      "mood": "",
+      "mood": "pixel, waterfall, twin peaks",
       "usedOn": [
         "11-09"
       ],
@@ -2905,7 +2905,7 @@
       "words": [
         "zoo"
       ],
-      "mood": "",
+      "mood": "drawn, animals, pile",
       "usedOn": [
         "11-09"
       ],
@@ -2975,7 +2975,7 @@
       "words": [
         "zoo"
       ],
-      "mood": "",
+      "mood": "photo, cheetah",
       "usedOn": [
         "11-09"
       ],
@@ -3021,7 +3021,7 @@
       "words": [
         "zoo"
       ],
-      "mood": "",
+      "mood": "photo, rhino",
       "usedOn": [
         "11-09"
       ],
@@ -3043,7 +3043,7 @@
       "words": [
         "zoo"
       ],
-      "mood": "",
+      "mood": "photo, bouncy castle, odd",
       "usedOn": [
         "11-09"
       ],

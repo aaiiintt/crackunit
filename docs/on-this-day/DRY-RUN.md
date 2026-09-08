@@ -218,3 +218,15 @@ by Chrome instead. Headings in the text screens must avoid the obstacles too,
 not only the body. 3,810 characters of posts at 36 px is four screens with
 material; How Stuff Dates is cut mid-sentence and Post-it and Zoo do not make
 it, which the link in bio is for.
+
+## The GIF library, pruned by hand (2026-09-08)
+
+Iain deleted 83 of 135 stickers in the Finder; `fetch-giphy.mjs --sync` marked
+them `keep: false` with `prunedBy`/`prunedOn` so they never return. The taste,
+now in the skill's Step 8: photographic or drawn objects with edges, period
+lettering as an object, the odd one; not vector clip-art, brand promos, text
+prompts or blank shapes. Every post-it and every cartoon calendar went; every
+rice bowl stayed. The survivors carry a `mood` field in the catalog. Slides 1,
+5, 7 and 8 re-rendered from the pruned set without a change to the sketches.
+The library is 84 MB, mostly a few long GIFs he kept (the cheetah at 198
+frames, the round waterfall at 251).
