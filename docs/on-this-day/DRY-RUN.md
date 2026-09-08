@@ -284,3 +284,31 @@ substrate, the type table, every operation with the values the boards used,
 the twelve-slide grammar, the sticker taste, the recovered-image rule, the
 per-slide gates, and a list of what Stage 1 rejected so it is not tried again.
 Stage 2 (capture.mjs, compose.mjs, the recipe library) can start.
+
+## After the lock: three fixes and a thirteenth slide (2026-09-08)
+
+Iain, on the picked carousel: the images relate to the wrong things on the last
+four slides, Russell Davies repeats, and there should be a final "come back
+tomorrow" slide with crazy GIF embeddings and wild type.
+
+1. **Wrong images.** The text screens placed material by screen, not by post,
+   so 2007's freerice sat beside a 2005 post. `materialFor(post)` now gives a
+   post its own: its surviving image, the same image recovered from Wayback, a
+   frame from its own video, the black box for a video that is gone, or a
+   sticker whose word is in that post's text (Technorati gets a geek). Never
+   another post's.
+2. **The repetition.** `flowText` drew lines as it went and only then reported
+   that it had overflowed, so a post that did not fit was drawn twice: once
+   partially, once whole. It now takes a `draw` flag and a start word, and
+   returns where it stopped, so `postsFlow` measures first and **continues** a
+   post on the next screen from the word it reached. Screens fill; nothing
+   repeats. Seven of the nine posts now fit, against six before.
+3. Also found: p5's `loadJSON` fills its object after `preload` returns, so the
+   per-post image loads had to move into its callback. freerice was showing as
+   a broken box because of it.
+4. **Slide 13, come back tomorrow.** Reads the next date's own day file: for
+   11-10, six posts across 2005, 2007 and 2010, led by Sorrell vs. Murdoch and
+   Bouncy Balls. `TOMORROW` in Arial Bold caps, three sizes by seed, whole or
+   cropped but never illegible; the date inverted through it; the library
+   papered on as a tinted wall of frames plus eighteen singles from 70 to
+   620 px. Seed 3 picked.

@@ -17,7 +17,7 @@ this document is aspirational; every value below is one the boards used.
 ## 1. The substrate
 
 - **Format.** 1080 × 1350, rendered at device scale 2 (2160 × 2700) by Google
-  Chrome through playwright-core. Up to **twelve** slides. Slide 1 works alone.
+  Chrome through playwright-core. Up to **thirteen** slides. Slide 1 works alone.
 - **Grounds.** `WHITE #FFFFFF`, `PAPER #F1EEE8`, `BLACK #000000`, `SILVER #D9DAD6`.
   Nothing else is a ground.
 - **Ink.** Black on light grounds, white on black.
@@ -99,11 +99,17 @@ Composition:
 Type:
 - **flowText(text, x, y, w, lineH, obstacles)**: greedy wrap, each line cut by
   the rectangles it crosses, 24 px gutter.
-- **postsFlow(k)**: every post in date order across up to four screens (Times
-  36 on 46, x 60, width 960, bottom at 1180); the layout places one piece of
-  material per screen at the start of a post's body (right 420 × 300, left
-  460 × 345, right 380 × 380, right 420 × 300) so the heading sits above it;
-  whatever does not fit the fourth screen is cut.
+- **postsFlow(k)**: every post in date order, **flowed** across up to four
+  screens (Times 36 on 46, x 60, width 960, bottom at 1180). A post that does
+  not finish continues on the next screen from the word it stopped at: no line
+  is drawn twice and no screen is left half empty. Whatever does not fit the
+  fourth screen is cut, which the link in bio is for.
+- **materialFor(post)**: a post's own material, in order of truth: its surviving
+  image, the same image recovered from the Wayback Machine, a frame from its own
+  video (interlaced, with its timecode), the black box and id of its video if
+  that video is gone, or a sticker from the library **whose word appears in that
+  post's text**. Never another post's material. Placed in a 400 × 300 rectangle
+  beside the start of its body, sides alternating; the text wraps round it.
 - **stamp(n, label)**: a true number in Times 440 on a SAFETY block, its meaning
   in Courier 16 beneath.
 - **points(text)**: `textToPoints`; retired from the carousel after round three
@@ -125,11 +131,12 @@ Type:
 | 6 | **Wayback.** crackunit.com as web.archive.org holds it nearest the day: one masthead at 4× cropped, one page at 2×, the recovered images, the timestamps | paper | LINK | which page leads |
 | 7 | **The dead video.** The empty 16:9 player with yt-dlp's exact words, the id, the post's questions, a filmic bird's frames as a strip and one held | black | AQUA | which bird, which frame |
 | 8 | **The source, with a GIF.** The hero post's file verbatim in Courier 30, the line highlighted, its links at 230 to 310 px leaving the card, the lost image as the browser's box with the recovered original beside it, a sticker's frames down the margin at four sizes | paper | HIGHLIGHTER | link size, placements |
-| 9 to 12 | **The posts.** Every post in date order, headings in Arial caps 16 under a rule, Times 36 on 46, one piece of material per screen placed by the layout (the surviving image, a DV frame, a recovered image, a recovered image), cut at the fourth; the last screen ends `otd.crackunit.com/MM-DD/ · link in bio` and `Powered by GIPHY` | white | none | none; the text screens do not vary |
+| 9 to 12 | **The posts.** Every post in date order, flowed across four screens, headings in Arial caps 16 under a rule, Times 36 on 46, each post beside its own material (`materialFor`), sides alternating, cut at the fourth; the last screen ends `otd.crackunit.com/MM-DD/ · link in bio` and `Powered by GIPHY` | white | none | none; the text screens do not vary |
+| 13 | **Come back tomorrow.** The archive's own facts for the next date: how many posts it holds, their years, the first three titles, knocked out on white. `TOMORROW` in Arial Bold caps at 150, 260 or 360 px, whole on the card or cropped by it, never so large it stops being the word; the date beneath in Times, inverted through it in DIFFERENCE. The GIF library papered on: a loose 6 × 8 wall of frames at `tint(255, 120)` plus eighteen singles from 70 to 620 px, rotated. An empty tomorrow says so | white | SAFETY behind the count | type size, which stickers, placement |
 
 A day with fewer posts drops text screens; a day with no video drops 4 and 7
 (or 7 becomes the missing image); a day with no Wayback snapshot shows the CDX
-answer verbatim. The order stays.
+answer verbatim; a day whose tomorrow is empty says so on 13. The order stays.
 
 ## 5. Stickers
 

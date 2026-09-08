@@ -200,6 +200,10 @@ response. That is the loop.
 
 ## Version
 
+- v1.6, 2026-09-08 (Mac). Thirteen slides: a "come back tomorrow" end slide
+  reading the next date's own day file. Each post on the text screens brings
+  its own material (`materialFor`), and the text flows across screens instead
+  of jumping, so nothing is drawn twice.
 - v1.5, 2026-09-08 (Mac). **The look is locked**: ART-DIRECTION v2. The gate is
   gone; every step runs. Step 5 renders from the sketches with `--final` until
   `compose.mjs` exists. 11-09's picked seeds are in `lines.json`.

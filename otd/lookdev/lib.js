@@ -23,9 +23,14 @@ const OTD = {
   // ---------- data ----------
   preload(opts = {}) {
     const day = window.DAY || "11-09";
-    this.day = loadJSON(`/otd/data/days/${day}.json`);
+    this.day = loadJSON(`/otd/data/days/${day}.json`, (d) => { for (const p of (d.posts || [])) if (p.image && p.image.exists) this.images[p.image.src] = this.img("/public" + p.image.src); });
     this.lines = loadJSON(`/otd/data/lines.json`);
     this.giphy = loadJSON(`/otd/public/giphy/manifest.json`);
+    // tomorrow, for the last slide's tease
+    const [mm, dd] = day.split("-").map(Number);
+    const t = new Date(Date.UTC(2024, mm - 1, dd + 1));
+    this.tomorrowDay = `${String(t.getUTCMonth() + 1).padStart(2, "0")}-${String(t.getUTCDate()).padStart(2, "0")}`;
+    this.tomorrowJSON = loadJSON(`/otd/data/days/${this.tomorrowDay}.json`, () => {}, () => {});
     const F = "/otd/public/fonts/";
     this.font.times = loadFont(encodeURI(F + "Times New Roman.ttf"));
     this.font.timesItalic = loadFont(encodeURI(F + "Times New Roman Italic.ttf"));
@@ -78,6 +83,50 @@ const OTD = {
     return [...(p.bodyHtml || "").matchAll(/!\[([^\]]*)\]\(([^)\s]+)\)/g)].map((m) => ({ alt: m[1], src: m[2], exists: p.image && p.image.src === m[2] ? p.image.exists : false }));
   },
   alt(p) { const i = this.images_(p)[0]; return i ? i.alt : ""; },
+  // A post's own material, in order of truth: its surviving image, the same image
+  // recovered from the Wayback Machine, a frame from its own video, or a sticker
+  // from the library whose word appears in its text. Never another post's.
+  materialFor(post) {
+    const im = this.images_(post)[0];
+    if (im) {
+      const live = this.images[im.src];
+      if (live && live.width > 1) return { kind: "image", img: live, label: `${im.src.split("/").pop()} · ${post.year}` };
+      const r = this.rescuedFor(im.src);
+      if (r) return { kind: "recovered", img: r, label: `${im.alt || im.src.split("/").pop()} · recovered, web.archive.org` };
+      return { kind: "broken", alt: im.alt || im.src.split("/").pop(), label: null };
+    }
+    if (post.video) {
+      const fr = this.frames[post.video.id] || [];
+      const usable = fr.filter((f) => f.img && f.img.width > 1);
+      if (usable.length) { const f = usable[Math.floor(usable.length / 2)]; return { kind: "frame", img: this.interlace(this.chroma(f.img, 3), 3), label: null, tc: `0:00:${String(Math.round(f.t)).padStart(2, "0")}` }; }
+      const err = this.manifests[post.video.id] && this.manifests[post.video.id].unavailable;
+      if (err) return { kind: "gone", id: post.video.id, label: null };
+    }
+    const it = this.stickerFor(post);
+    if (it) { const g = this.sticker(it); if (g && g.width > 1) return { kind: "sticker", img: this.frozen(g, Math.floor(random((g.numFrames && g.numFrames()) || 1))), label: `giphy ${it.id} · "${it.query}"` }; }
+    return null;
+  },
+  stickerFor(post) { // a sticker from the library whose word is in this post's text
+    const t = " " + String(post.bodyText || "").toLowerCase() + " ";
+    const hits = ((this.giphy || {}).items || []).filter((i) => i.keep !== false && (i.frames == null || i.frames <= 80) &&
+      [i.query, ...(i.words || [])].some((w) => w && w.length > 3 && new RegExp(`[^a-z]${String(w).toLowerCase()}[^a-z]`).test(t)));
+    return hits.length ? hits[(this.seed() - 1) % hits.length] : null;
+  },
+  drawMaterial(m, r) { // into the rectangle the layout reserved, bottom-aligned to its text
+    if (!m) return;
+    push();
+    if (m.kind === "broken") this.brokenImage(m.alt, r.x, r.y, r.w, r.h);
+    else if (m.kind === "gone") { noStroke(); fill(0); rect(r.x, r.y, r.w, r.w * 0.5625); fill(255); this.vcr(15); text(m.id, r.x + 14, r.y + r.w * 0.5625 - 14); fill(0); this.label("no longer available", r.x, r.y + r.w * 0.5625 + 24, 11); }
+    else if (m.img) {
+      const h = Math.min(r.h, r.w * m.img.height / m.img.width), w = h * m.img.width / m.img.height;
+      const x = r.x + (r.w - w) / 2;
+      if (m.kind === "image" || m.kind === "recovered") this.pixelated(true);
+      image(m.img, x, r.y, w, h); this.pixelated(false);
+      if (m.tc) this.osd(m.tc, x + 14, r.y + h - 14, 18);
+      if (m.label) { fill(0); this.label(m.label, r.x, r.y + h + 24, 11); }
+    }
+    pop();
+  },
   rescuedFor(src) { const img = this.rescued[String(src).split("/").pop()]; return img && img.width ? img : null; },
   snippets(id) { // the video's own words, from yt-dlp
     const m = this.manifests[id] || {}, x = m.meta || {};
@@ -98,6 +147,8 @@ const OTD = {
       ([i.query, ...(i.words || []), i.mood || ""].some((x) => String(x).toLowerCase().includes(w))));
     return all.length ? all[(this.seed() - 1) % all.length] : null;
   },
+  tomorrow() { const d = this.tomorrowJSON || {}; return { day: this.tomorrowDay, posts: d.posts || [], years: [...new Set((d.posts || []).map((p) => p.year))].sort() }; },
+  monthName(mm) { return ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"][Number(mm) - 1]; },
   sentencesAll() { return this.posts().flatMap((p) => (p.sentences || []).map((s) => ({ s, post: p }))); },
   wayback() { return ((this.wb || {}).items || []).filter((i) => i.img && i.img.width); },
   waybackAll() { return (this.wb || {}).items || []; },
@@ -227,11 +278,14 @@ const OTD = {
     for (const w of words) { const n = cur ? cur + " " + w : w; if (textWidth(n) <= maxW || !cur) cur = n; else { lines.push(cur); cur = w; } }
     if (cur) lines.push(cur); return lines;
   },
-  flowText(t, x, y, w, lineH, obstacles = [], maxY = Infinity) { // wrap around rectangles; returns the y after the last line, or null if it ran past maxY
+  // Wrap around rectangles, from word `from` onward. Returns { y, next }: the y
+  // after the last line drawn, and the index of the first word that did not fit
+  // (-1 when the text is finished), so the next screen can continue it.
+  flowText(t, x, y, w, lineH, obstacles = [], maxY = Infinity, draw = true, from = 0) {
     const words = String(t).split(/\s+/).filter(Boolean);
-    let i = 0, yy = y;
+    let i = from, yy = y;
     while (i < words.length) {
-      if (yy > maxY) return null;
+      if (yy > maxY) return { y: yy, next: i };
       // the usable span on this line: the widest gap left by obstacles that cross it
       const asc = textSize() * 0.8, cross = obstacles.filter((o) => yy - asc < o.y + o.h && yy > o.y);
       let spans = [[x, x + w]];
@@ -240,43 +294,49 @@ const OTD = {
       const [a, b] = spans.reduce((m, sp) => (sp[1] - sp[0] > m[1] - m[0] ? sp : m));
       let line = "";
       while (i < words.length) { const n = line ? line + " " + words[i] : words[i]; if (textWidth(n) <= b - a || !line) { line = n; i++; } else break; }
-      text(line, a, yy); yy += lineH;
+      if (draw) text(line, a, yy);
+      yy += lineH;
     }
-    return yy;
+    return { y: yy, next: -1 };
   },
-  // The posts as text screens. Every post in date order, laid out once into up to
-  // POST_SCREENS.length screens; each screen may carry one piece of material, which
-  // the layout places at the start of a post's body (right or left) so the text
-  // wraps round it cleanly and the heading sits above it. Screen k draws its share
-  // and returns { end, rects } so the sketch can draw the material in the rect.
-  POST_SCREENS: [
-    { w: 420, h: 300, side: "right" },   // 1: the surviving image
-    { w: 460, h: 345, side: "left" },    // 2: a DV frame
-    { w: 380, h: 380, side: "right" },   // 3: the recovered Hulger phone
-    { w: 420, h: 300, side: "right" },   // 4: a recovered image; ends with the link
-  ],
-  postsFlow(k, { x = 60, y0 = 120, w = 960, bottom = 1350 - 170, px = 36, lineH = 46 } = {}) {
-    const screens = this.POST_SCREENS, headH = 56;
-    let screen = 0, yy = y0, lastY = null; const rects = {};
-    const obstacles = () => (rects[screen] ? [rects[screen]] : []);
-    const heading = (p) => { if (screen === k) { push(); fill(0); stroke(0); strokeWeight(1); line(x, yy, x + w, yy); noStroke(); this.arialCaps(16); text(`${this.caps(p.title)} · ${p.year}`, x, yy + 26); pop(); } };
-    const body = (p, yStart) => { push(); this.times(px); if (screen !== k) fill(0, 0); else fill(0); const r = this.flowText(p.bodyText, x, yStart, w, lineH, obstacles(), bottom); pop(); return r; };
-    const place = (p, yStart) => { // material beside this post's body, if the screen has none yet and the post is long enough
-      const spec = screens[screen]; if (!spec || rects[screen]) return;
-      push(); this.times(px); const lines = Math.ceil(textWidth(p.bodyText) / (w - spec.w - 24)); pop();
-      if (lines * lineH < spec.h * 0.6) return;
-      const top = yStart - px * 0.8 - 4; if (top + spec.h > bottom + 40) return;
-      rects[screen] = { x: spec.side === "left" ? x : x + w - spec.w, y: top, w: spec.w, h: spec.h };
-    };
+  // The posts as text screens. Every post in date order, flowed across up to
+  // SCREENS screens: a post that does not finish continues on the next screen
+  // from the word it stopped at, so no line is drawn twice and no screen is left
+  // half empty. Each post brings its OWN material (materialFor) beside the start
+  // of its body, alternating sides. Screen k draws its share.
+  SCREENS: 4,
+  postsFlow(k, { x = 60, y0 = 120, w = 960, bottom = 1350 - 170, px = 36, lineH = 46, mw = 400, mh = 300 } = {}) {
+    const headH = 56, gap = 30;
+    let screen = 0, yy = y0, lastY = null, side = 0;
     for (const p of this.posts()) {
-      if (yy + headH + 3 * lineH > bottom) { screen++; yy = y0; if (screen >= screens.length) break; }
-      heading(p); place(p, yy + headH + px * 0.8);
-      let endY = body(p, yy + headH + px * 0.8);
-      if (endY === null) { screen++; yy = y0; if (screen >= screens.length) break; heading(p); place(p, yy + headH + px * 0.8); endY = body(p, yy + headH + px * 0.8); if (endY === null) endY = bottom; }
-      if (screen === k) { lastY = endY; if (rects[k]) lastY = Math.max(lastY, rects[k].y + rects[k].h); }
-      yy = endY + 28; if (rects[screen] && yy < rects[screen].y + rects[screen].h + 28 && screen === k) { /* the next post starts beside the material; flowText handles it */ }
+      const m = this.materialFor(p);
+      let from = 0, first = true;
+      while (from >= 0 && screen < this.SCREENS) {
+        const isHead = first;
+        const bodyY = yy + (isHead ? headH + px * 0.8 : px * 0.8);
+        if (bodyY + lineH * 2 > bottom) { screen++; yy = y0; continue; } // no room to start here
+        // this post's material, on the screen where it starts, if its text can wrap round it
+        let r = null;
+        if (isHead && m) {
+          push(); this.times(px); const wide = Math.ceil(textWidth(p.bodyText) / (w - mw - 24)) * lineH; pop();
+          if (wide >= mh * 0.5 && bodyY - px * 0.8 - 4 + mh < bottom + 60) r = { x: side % 2 ? x : x + w - mw, y: bodyY - px * 0.8 - 4, w: mw, h: mh };
+        }
+        push(); this.times(px);
+        if (screen === k) {
+          if (isHead) { push(); fill(0); stroke(0); strokeWeight(1); line(x, yy, x + w, yy); noStroke(); this.arialCaps(16); text(`${this.caps(p.title)} · ${p.year}`, x, yy + 26); pop(); }
+          fill(0);
+        } else fill(0, 0);
+        const res = this.flowText(p.bodyText, x, bodyY, w, lineH, r ? [r] : [], bottom, screen === k, from);
+        pop();
+        if (screen === k) { this.drawMaterial(m && isHead ? m : null, r); lastY = Math.max(lastY ?? 0, res.y, r ? r.y + r.h : 0); }
+        from = res.next;
+        if (from >= 0) { screen++; yy = y0; first = false; }   // continues on the next screen
+        else { yy = res.y + gap; if (r) yy = Math.max(yy, r.y + r.h + gap); }
+      }
+      if (m) side++;
+      if (screen >= this.SCREENS) break;
     }
-    return { end: lastY, rect: rects[k] || null };
+    return lastY;
   },
   stamp(n, label, x, y, px = 420) { // a true number set like a counter, with what it is in Courier
     push(); this.times(px); text(String(n), x, y); this.courier(16); text(label, x + 6, y + 30); pop();
