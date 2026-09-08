@@ -7,7 +7,7 @@ import {interpolate, useCurrentFrame} from 'remotion';
 import {Camera, Plane, PLANE_Z, CAMERA_REST_Z} from '../scene';
 import {PALETTE, RAINBOW} from '../palette';
 import {BEATS} from '../beats';
-import {kineticJump, layerStack} from '../moves';
+import {layerStack} from '../moves';
 import {Bayer} from '../junk/Bayer';
 import {Notepad} from '../junk/Notepad';
 import {Win98Dialog} from '../junk/Win98Dialog';
@@ -38,27 +38,36 @@ export const A4Window: React.FC<{
 }> = ({day, pick, hero, track, renderDate}) => {
 	const frame = useCurrentFrame();
 
-	let bibleZ: number;
-	if (frame < BEATS.hookEnd) {
-		bibleZ = 1150; // f0 tight on the Notepad
-	} else if (frame < BEATS.hookEnd + 6) {
-		bibleZ = kineticJump(frame, BEATS.hookEnd, 1150, 1500);
-	} else if (frame < 714) {
-		bibleZ = 1500;
-	} else {
-		// loopReturn: motion-matched back toward the f0 tight framing, same
-		// device as A1Hero.tsx's camera loop return.
-		bibleZ = interpolate(frame, [714, BEATS.loopEnd - 1], [1500, 1150 + (1500 - 1150) / 6], {
-			extrapolateLeft: 'clamp',
-			extrapolateRight: 'clamp',
-		});
-	}
+	// The player and Notepad are both sized directly (CSS width/height), not
+	// through camera dolly, so the camera just sits at rest throughout —
+	// nothing here needs the extra tight-framing dolly the Notepad used to
+	// get at the hook (item 3 moved the hook's subject to the player).
+	const bibleZ = 1500;
 
 	const noiseArrival = layerStack(frame, BEATS.hookEnd, 0, 12); // f24-60 window
 	// Hidden again from f704 so frame 719 matches frame 0's noise-free
 	// starkness — §14: "frame 719 differs from frame 0 by one frame of
 	// motion and nothing else."
 	const noiseOpacity = frame < 704 ? noiseArrival.opacity : 0;
+
+	// Round-two redline item 3: frame 0 is the YouTube player, not the
+	// Notepad — 90% frame width, centred. It shrinks into its small "noise"
+	// spot (part of the rainbow-noise cluster) over the transition into the
+	// payoff, after the title has burst through (f18-26).
+	const BIG_PLAYER = {width: 972, height: 730, x: (1080 - 972) / 2, y: 420};
+	const SMALL_PLAYER = {width: 260, height: 200, x: 60, y: 60};
+	const playerShrink = interpolate(frame, [26, 40], [0, 1], {
+		extrapolateLeft: 'clamp',
+		extrapolateRight: 'clamp',
+	});
+	const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
+	const player = {
+		width: lerp(BIG_PLAYER.width, SMALL_PLAYER.width, playerShrink),
+		height: lerp(BIG_PLAYER.height, SMALL_PLAYER.height, playerShrink),
+		x: lerp(BIG_PLAYER.x, SMALL_PLAYER.x, playerShrink),
+		y: lerp(BIG_PLAYER.y, SMALL_PLAYER.y, playerShrink),
+	};
+	const playerMessageSize = lerp(48, 26, playerShrink);
 
 	const showPost = frame >= BEATS.postStart && frame < BEATS.postEnd;
 	const showScore = frame >= BEATS.scoreStart && frame < BEATS.scoreEnd;
@@ -74,20 +83,22 @@ export const A4Window: React.FC<{
 				extrapolateRight: 'clamp',
 			})
 		: 0;
-	// f0 tight on the Notepad (§6): the hook needs the line legible at the
-	// 25% thumbnail, which this rig's weak z-parallax at the Furniture plane
-	// doesn't deliver on its own (z -300 barely magnifies even at a big
-	// dolly-in) — so the hook framing is boosted directly via scale instead.
-	// Also true for the tail of the loop (>=714) so frame 719's Notepad
-	// framing matches frame 0's exactly, not just its (by-then-empty) text —
-	// §14: "frame 719 differs from frame 0 by one frame of motion and
-	// nothing else."
+	// Round-two redline item 3: the Notepad is NOT part of the hook — it
+	// comes in at the payoff, right after the title bursts through the
+	// player (§6's own text: "the noise arriving by layerStack f24 to f60").
+	// It stays at a legible scale throughout (this rig's weak z-parallax at
+	// the Furniture plane doesn't deliver hook-grade legibility on its own —
+	// z -300 barely magnifies even at a big dolly-in — so scale is driven
+	// directly rather than through the camera).
+	const notepadVisible = frame >= BEATS.hookEnd && frame < 704;
+	// isHook here just means "use the tight f0-equivalent framing" for the
+	// loop tail (>=714), so frame 719 matches frame 0 (which has no Notepad
+	// at all — both are "hidden", so the framing only matters for the
+	// instant it fades back in during payoff on the next loop).
 	const isHook = frame < BEATS.hookEnd || frame >= 714;
-	const notepadScale = isHook
-		? 1
-		: pageDwelling
-			? interpolate(frame, [BEATS.pageSweepStart, BEATS.pageSweepStart + 36], [0.55, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})
-			: 0.55;
+	const notepadScale = pageDwelling
+		? interpolate(frame, [BEATS.pageSweepStart, BEATS.pageSweepStart + 36], [0.55, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})
+		: 1;
 
 	// The Notepad shows the line everywhere except the page dwell, where it
 	// scrolls the whole post body instead (§6). Loop mechanic: [No] clicked
@@ -115,13 +126,12 @@ export const A4Window: React.FC<{
 					<RainbowGround />
 				</Plane>
 
-				{/* Collage z -600: the noise — dithered TV stills / decorative
-				    shapes stand-in, plus the H4 YouTube player as one of them. */}
+				{/* Collage z -600: the OTHER noise — decorative shapes, dithered —
+				    fades in by layerStack f24-60. The player itself is rendered
+				    separately below: big and alone at the hook, shrinking into
+				    this cluster as the noise arrives. */}
 				<Plane z={PLANE_Z.collage} style={{opacity: noiseOpacity}}>
 					<div style={{position: 'absolute', inset: 0}}>
-						<div style={{position: 'absolute', left: 60, top: 60, width: 260, height: 200}}>
-							<HookH4Artefact frame={frame} title={hero.title} x={0} y={0} width={260} height={200} />
-						</div>
 						<div
 							style={{
 								position: 'absolute',
@@ -138,8 +148,30 @@ export const A4Window: React.FC<{
 					</div>
 				</Plane>
 
-				{/* Furniture z -300: the Notepad — pristine, no noise, no screen. */}
-				<Plane z={PLANE_Z.furniture}>
+				{/* The YouTube player: 90% frame width and centred at the hook
+				    (frame 0), full opacity throughout (not part of the noise
+				    fade) — it shrinks into its noise-cluster spot once the title
+				    has burst through. Hidden for the loop tail (>=704) same as
+				    the rest of the noise, since frame 0 has only the big player,
+				    not a small shrunk one. */}
+				{frame < 704 && (
+					<Plane z={PLANE_Z.collage}>
+						<HookH4Artefact
+							frame={frame}
+							title={hero.title}
+							x={player.x}
+							y={player.y}
+							width={player.width}
+							height={player.height}
+							messageSize={playerMessageSize}
+						/>
+					</Plane>
+				)}
+
+				{/* Furniture z -300: the Notepad — pristine, no noise, no screen.
+				    Not part of the hook (§6/redline item 3) — arrives at the
+				    payoff, right after the burst. */}
+				<Plane z={PLANE_Z.furniture} style={{opacity: notepadVisible ? 1 : 0}}>
 					<Notepad
 						title="Untitled - Notepad"
 						body={visibleBody}

@@ -58,9 +58,9 @@ export const A6Starfield: React.FC<{
 	if (frame < BEATS.pageSweepStart) {
 		bibleZ = 1500;
 	} else if (frame < BEATS.pageSweepEnd) {
-		bibleZ = sweep(frame, BEATS.pageSweepStart, 36, 1500, -900);
+		bibleZ = sweep(frame, BEATS.pageSweepStart, 36, 1500, -1630);
 	} else if (frame < BEATS.pageEnd) {
-		bibleZ = interpolate(frame, [BEATS.pageDwellStart, BEATS.pageEnd], [-900, -960], {
+		bibleZ = interpolate(frame, [BEATS.pageDwellStart, BEATS.pageEnd], [-1630, -1690], {
 			extrapolateLeft: 'clamp',
 			extrapolateRight: 'clamp',
 		});
@@ -69,8 +69,12 @@ export const A6Starfield: React.FC<{
 	}
 
 	const buttons = pick.line.trim().endsWith('?') ? ['Yes', 'No'] : ['OK'];
-	const dialogX = 300;
-	const dialogY = 1100;
+	// Round-two redline item 2: the hook dialog is at least 75% of frame
+	// width (810px+) and centred in the safe area (x 48-940, y 220-1500).
+	const DIALOG_WIDTH = 860;
+	const DIALOG_HEIGHT = 340;
+	const dialogX = (1080 - DIALOG_WIDTH) / 2;
+	const dialogY = 220 + (1280 - DIALOG_HEIGHT) / 2;
 
 	const showPost = frame >= BEATS.postStart && frame < BEATS.postEnd;
 	const showPage = frame >= BEATS.pageSweepStart && frame < BEATS.pageEnd;
@@ -93,10 +97,12 @@ export const A6Starfield: React.FC<{
 	// H2's studio-card loop mechanic, A6-specific numbers: [OK] clicked at
 	// f702, closes, the f0 dialog reopens by cascade at f714, cursor returns
 	// to its f0 position by f719.
-	const studioCursor = cursorMove(frame, 690, {x: dialogX + 200, y: dialogY + 40}, {x: dialogX + 40, y: dialogY + 130});
+	const cursorFrom = {x: dialogX + DIALOG_WIDTH - 100, y: dialogY + 40};
+	const cursorTo = {x: dialogX + DIALOG_WIDTH / 2 - 40, y: dialogY + DIALOG_HEIGHT - 50};
+	const studioCursor = cursorMove(frame, 690, cursorFrom, cursorTo);
 	const reopenArrival = frame >= 714;
-	const cursorReturnX = frame >= 714 ? loopReturn(frame, 714, 719, studioCursor.x, dialogX + 200) : studioCursor.x;
-	const cursorReturnY = frame >= 714 ? loopReturn(frame, 714, 719, studioCursor.y, dialogY + 40) : studioCursor.y;
+	const cursorReturnX = frame >= 714 ? loopReturn(frame, 714, 720, studioCursor.x, cursorFrom.x) : studioCursor.x;
+	const cursorReturnY = frame >= 714 ? loopReturn(frame, 714, 720, studioCursor.y, cursorFrom.y) : studioCursor.y;
 
 	return (
 		<div style={{width: 1080, height: 1920, background: PALETTE.BLACK, position: 'relative', overflow: 'hidden'}}>
@@ -174,7 +180,18 @@ export const A6Starfield: React.FC<{
 							)}
 
 							{/* the hook dialog / its H2 shatter-and-reassemble */}
-							{frame < 690 && <HookH2Dialog frame={frame} text={pick.line} buttons={buttons} x={dialogX} y={dialogY} />}
+							{frame < 690 && (
+								<HookH2Dialog
+									frame={frame}
+									text={pick.line}
+									buttons={buttons}
+									x={dialogX}
+									y={dialogY}
+									width={DIALOG_WIDTH}
+									height={DIALOG_HEIGHT}
+									bodyScale={44}
+								/>
+							)}
 
 							{/* studio-card loop mechanic */}
 							{frame >= 690 && (
@@ -186,11 +203,24 @@ export const A6Starfield: React.FC<{
 											title={hero.url}
 											x={dialogX}
 											y={dialogY}
+											width={DIALOG_WIDTH}
+											bodyScale={44}
+										big
 											highlightButton={frame >= 702 ? 'OK' : undefined}
 										/>
 									)}
 									{reopenArrival && (
-										<HookH2Dialog frame={0} text={pick.line} buttons={buttons} x={dialogX} y={dialogY} />
+										<HookH2Dialog
+											frame={0}
+											text={pick.line}
+											buttons={buttons}
+											x={dialogX}
+											y={dialogY}
+											width={DIALOG_WIDTH}
+											height={DIALOG_HEIGHT}
+											bodyScale={44}
+										big
+										/>
 									)}
 									<ArrowCursor x={cursorReturnX} y={cursorReturnY} clicking={frame >= 702 && frame < 704} />
 								</>

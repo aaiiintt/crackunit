@@ -36,11 +36,19 @@ export const A7Grid: React.FC<{
 }> = ({day, pick, hero, track, renderDate}) => {
 	const frame = useCurrentFrame();
 
+	// Round-two redline item 4: frame 0 is tight on ONE grid cell — the red
+	// grid at cell size, dominant on screen. That needs a much deeper dolly
+	// on the ground plane (z -1400) than the Type plane (z -100) can safely
+	// share (the same dolly would push Type's tz past the perspective
+	// distance and invert/balloon it — the same class of bug as the page
+	// reveal). So "the line" is rendered on the Screen plane instead (below,
+	// outside <Camera>) for the hook, sidestepping the coupling entirely.
+	const HOOK_BIBLE_Z = -2430;
 	let bibleZ: number;
 	if (frame < BEATS.hookEnd) {
-		bibleZ = 1150; // f0 tight on one cell holding the line
+		bibleZ = HOOK_BIBLE_Z;
 	} else if (frame < BEATS.hookEnd + 6) {
-		bibleZ = kineticJump(frame, BEATS.hookEnd, 1150, 1500);
+		bibleZ = kineticJump(frame, BEATS.hookEnd, HOOK_BIBLE_Z, 1500);
 	} else if (frame < 90) {
 		bibleZ = 1500;
 	} else if (frame < 90 + 18) {
@@ -48,16 +56,16 @@ export const A7Grid: React.FC<{
 	} else if (frame < BEATS.pageSweepStart) {
 		bibleZ = 1500;
 	} else if (frame < BEATS.pageSweepEnd) {
-		bibleZ = sweep(frame, BEATS.pageSweepStart, 36, 1500, -900);
+		bibleZ = sweep(frame, BEATS.pageSweepStart, 36, 1500, -1630);
 	} else if (frame < BEATS.pageEnd) {
-		bibleZ = interpolate(frame, [BEATS.pageDwellStart, BEATS.pageEnd], [-900, -960], {
+		bibleZ = interpolate(frame, [BEATS.pageDwellStart, BEATS.pageEnd], [-1630, -1690], {
 			extrapolateLeft: 'clamp',
 			extrapolateRight: 'clamp',
 		});
 	} else if (frame < BEATS.loopStart) {
 		bibleZ = 1500;
 	} else {
-		bibleZ = interpolate(frame, [BEATS.loopStart, BEATS.loopEnd - 1], [1500, 1150 + (1500 - 1150) / 30], {
+		bibleZ = interpolate(frame, [BEATS.loopStart, BEATS.loopEnd], [1500, HOOK_BIBLE_Z], {
 			extrapolateLeft: 'clamp',
 			extrapolateRight: 'clamp',
 		});
@@ -174,26 +182,14 @@ export const A7Grid: React.FC<{
 					</Plane>
 				)}
 
-				{/* Type z -100: the line, RED, across four cells. Hidden during the
-				    page reveal — nearer planes balloon past frame size once the
-				    camera dollies deep for the far page plane (see A1Hero.tsx's
-				    comment on this rig's lack of near-plane clipping). */}
-				{!showPage && (
+				{/* Type z -100: the line, autoscaled, BLACK on this WHITE ground.
+				    Only rendered here (on the 3D plane) once the hook's extreme
+				    ground dolly has settled back to rest — see the HOOK_BIBLE_Z
+				    comment above for why the hook itself renders the line on the
+				    Screen plane instead. Hidden during the page reveal too. */}
+				{!showPage && frame >= BEATS.hookEnd && frame < BEATS.loopStart && (
 					<Plane z={PLANE_Z.type}>
-						<div
-							style={{
-								position: 'absolute',
-								left: 48,
-								top: CELL * 5,
-								width: 892, // the type safe area's full width — a long line at
-								// this compact grid's 64px size needs it to stay within 4
-								// lines without truncating (the bible's own diagram shows the
-								// line across four ~108px cells, but that's too narrow for
-								// several of this dataset's actual lines).
-							}}
-						>
-							<HookH1Line frame={frame} line={pick.line} size={64} maxWidth={892} />
-						</div>
+						<HookH1Line frame={frame} line={pick.line} ground="WHITE" x={48} y={CELL * 5} maxWidth={892} />
 					</Plane>
 				)}
 
@@ -203,6 +199,15 @@ export const A7Grid: React.FC<{
 					</Plane>
 				)}
 			</Camera>
+
+			{/* The hook's line, on the Screen plane (never moves with the
+			    camera) — see the HOOK_BIBLE_Z comment above. */}
+			{frame < BEATS.hookEnd && (
+				<HookH1Line frame={frame} line={pick.line} ground="WHITE" x={48} y={CELL * 5} maxWidth={892} />
+			)}
+			{/* Loop tail: the line reappears here too once the camera has
+			    started its return dolly, matching the hook's own render path. */}
+			{frame >= 714 && <HookH1Line frame={frame} line={pick.line} ground="WHITE" x={48} y={CELL * 5} maxWidth={892} />}
 
 			{showPost && <PostTitleOverlay title={hero.title} />}
 			{showScore && <Chyron track={track} />}

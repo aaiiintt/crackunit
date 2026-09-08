@@ -20,8 +20,9 @@ export const YouTubePlayer: React.FC<{
 	state: 'chrome' | 'unavailable' | 'burst';
 	burstText?: string;
 	burstScale?: number;
+	messageSize?: number;
 	style?: React.CSSProperties;
-}> = ({x, y, width = 640, height = 480, state, burstText, burstScale = 1, style}) => {
+}> = ({x, y, width = 640, height = 480, state, burstText, burstScale = 1, messageSize = 26, style}) => {
 	return (
 		<div
 			style={{
@@ -49,9 +50,37 @@ export const YouTubePlayer: React.FC<{
 				}}
 			>
 				{state === 'unavailable' && (
-					<Serif size={26} color={PALETTE.WHITE} style={{textAlign: 'center', padding: 24}}>
-						This video is no longer available
-					</Serif>
+					<div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 20}}>
+						{/* the red play button still shows behind the message — a
+						    disabled/greyed-out player, not an empty one, per 2006
+						    YouTube's actual "video removed" placeholder */}
+						<div
+							style={{
+								width: messageSize * 2.6,
+								height: messageSize * 1.85,
+								borderRadius: 10,
+								background: '#8a2020',
+								display: 'flex',
+								alignItems: 'center',
+								justifyContent: 'center',
+								opacity: 0.7,
+							}}
+						>
+							<div
+								style={{
+									width: 0,
+									height: 0,
+									borderTop: `${messageSize * 0.54}px solid transparent`,
+									borderBottom: `${messageSize * 0.54}px solid transparent`,
+									borderLeft: `${messageSize * 0.85}px solid #ccc`,
+									marginLeft: messageSize * 0.2,
+								}}
+							/>
+						</div>
+						<Serif size={messageSize} color="#999" style={{textAlign: 'center', padding: '0 24px'}}>
+							This video is no longer available
+						</Serif>
+					</div>
 				)}
 				{state === 'chrome' && (
 					<div

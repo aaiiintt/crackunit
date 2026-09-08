@@ -4,13 +4,12 @@
 // (f690-720). Archetypes place these on whichever plane §6 calls for.
 import React from 'react';
 import {interpolate} from 'remotion';
-import {PALETTE} from './palette';
-import {Serif} from './text/Serif';
-import {typeIn, cursor as cursorMove} from './moves';
+import {cursor as cursorMove} from './moves';
 import {Win98Dialog} from './junk/Win98Dialog';
 import {ArrowCursor} from './junk/ArrowCursor';
 import {YouTubePlayer} from './junk/YouTubePlayer';
 import {BEATS} from './beats';
+import {LineBox, useLineSize, type Ground} from './text/TheLine';
 
 // ---------------------------------------------------------------------------
 // H1 — The line. Frame 0: the line alone, Times, MAGENTA on BLUE, nothing
@@ -28,15 +27,20 @@ const splitLastWord = (line: string): [string, string] => {
 export const HookH1Line: React.FC<{
 	frame: number;
 	line: string;
-	size?: number;
+	ground?: Ground;
 	maxWidth?: number;
-}> = ({frame, line, size = 140, maxWidth = 900}) => {
+	x?: number;
+	y?: number;
+	style?: React.CSSProperties;
+}> = ({frame, line, ground = 'BLUE', maxWidth, x, y, style}) => {
 	const [rest, lastWord] = splitLastWord(line);
 
 	// Loop mechanic: from f704 to f719 (15 frames) delete the last word's
-	// characters one at a time; retype happens at f0 via the mirrored typeIn
-	// below, so frame 719 shows zero characters of the last word and frame 0
-	// (typeIn arrival f0-f6) shows it typing back in — motion-matched, no fade.
+	// characters one at a time; retype happens at f0 (the reveal below), so
+	// frame 719 shows zero characters of the last word and frame 0 shows it
+	// typing back in — motion-matched, never a scale/fade on the whole line
+	// (that's what shrank it to ~60px in the first pass: scaling the entire
+	// block from 0.7 on arrival, at exactly frame 0, before it had "arrived").
 	let visibleLastWord = lastWord;
 	if (frame >= 704) {
 		const deleteProgress = interpolate(frame, [704, 719], [lastWord.length, 0], {
@@ -45,8 +49,6 @@ export const HookH1Line: React.FC<{
 		});
 		visibleLastWord = lastWord.slice(0, Math.round(deleteProgress));
 	} else {
-		// Normal playback: last word typeIn's in by f6 (a per-character reveal
-		// standing in for the bible's single typeIn arrival on the whole word).
 		const charCount = Math.round(
 			interpolate(frame, [0, 6], [0, lastWord.length], {
 				extrapolateLeft: 'clamp',
@@ -56,26 +58,21 @@ export const HookH1Line: React.FC<{
 		visibleLastWord = lastWord.slice(0, charCount);
 	}
 
-	const {scale} = typeIn(Math.min(frame, 6), 0);
+	// The autofit size is computed from the FULL line (not the partially
+	// typed substring) so the size never jumps as characters arrive/delete —
+	// LineBox takes that size explicitly rather than computing its own.
+	const size = useLineSize(line, maxWidth);
 
 	return (
-		<div
-			style={{
-				position: 'absolute',
-				inset: 0,
-				display: 'flex',
-				alignItems: 'center',
-				justifyContent: 'flex-start',
-				padding: '0 48px',
-			}}
-		>
-			<div style={{transform: `scale(${scale})`, transformOrigin: 'left center'}}>
-				<Serif size={size} color={PALETTE.MAGENTA} maxWidth={maxWidth} maxLines={4} shadowOn="BLUE">
-					{rest}
-					{visibleLastWord}
-				</Serif>
-			</div>
-		</div>
+		<LineBox
+			text={`${rest}${visibleLastWord}`}
+			size={size}
+			ground={ground}
+			maxWidth={maxWidth}
+			x={x}
+			y={y}
+			style={style}
+		/>
 	);
 };
 
@@ -91,10 +88,14 @@ export const HookH2Dialog: React.FC<{
 	buttons: string[];
 	x: number;
 	y: number;
-}> = ({frame, text, buttons, x, y}) => {
+	width?: number;
+	height?: number;
+	bodyScale?: 33 | 44 | 55;
+	big?: boolean;
+}> = ({frame, text, buttons, x, y, width = 480, height = 180, bodyScale = 33, big = false}) => {
 	const okButton = buttons.includes('OK') ? 'OK' : buttons[buttons.length - 1];
-	const cursorFrom = {x: x + 200, y: y + 40};
-	const cursorTo = {x: x + 40, y: y + 130};
+	const cursorFrom = {x: x + width - 100, y: y + 40};
+	const cursorTo = {x: x + width / 2 - 40, y: y + height - 50};
 	const c = cursorMove(frame, 0, cursorFrom, cursorTo);
 	const clicked = frame >= 18;
 
@@ -107,8 +108,8 @@ export const HookH2Dialog: React.FC<{
 	});
 
 	if (shatterProgress > 0) {
-		const w = 480;
-		const h = 180;
+		const w = width;
+		const h = height;
 		const cellW = w / 4;
 		const cellH = h / 2;
 		const pieces = Array.from({length: 8}, (_, i) => {
@@ -138,7 +139,16 @@ export const HookH2Dialog: React.FC<{
 
 	return (
 		<>
-			<Win98Dialog text={text} buttons={buttons} x={x} y={y} highlightButton={clicked ? okButton : undefined} />
+			<Win98Dialog
+				text={text}
+				buttons={buttons}
+				x={x}
+				y={y}
+				width={width}
+				bodyScale={bodyScale}
+				big={big}
+				highlightButton={clicked ? okButton : undefined}
+			/>
 			<ArrowCursor x={c.x} y={c.y} clicking={c.clicking} />
 		</>
 	);
@@ -158,7 +168,8 @@ export const HookH4Artefact: React.FC<{
 	y: number;
 	width?: number;
 	height?: number;
-}> = ({frame, title, x, y, width = 640, height = 480}) => {
+	messageSize?: number;
+}> = ({frame, title, x, y, width = 640, height = 480, messageSize}) => {
 	const burstScale = interpolate(frame, [18, 22, 26], [1, 1.3, 1.1], {
 		extrapolateLeft: 'clamp',
 		extrapolateRight: 'clamp',
@@ -173,6 +184,7 @@ export const HookH4Artefact: React.FC<{
 			state={state}
 			burstText={title}
 			burstScale={state === 'burst' ? burstScale : 1}
+			messageSize={messageSize}
 		/>
 	);
 };

@@ -15,7 +15,6 @@ import {MacWindow} from '../junk/MacWindow';
 import {ArrowCursor} from '../junk/ArrowCursor';
 import {Grotesk} from '../text/Grotesk';
 import {Serif} from '../text/Serif';
-import {HookH1Line} from '../hooks';
 import {PostTitleOverlay, Chyron, StudioCard} from '../BeatOverlays';
 import {Page} from '../page/Page';
 import {Sfx} from '../sfx';
@@ -45,9 +44,9 @@ export const A3Cascade: React.FC<{
 	} else if (frame < BEATS.pageSweepStart) {
 		bibleZ = 1500;
 	} else if (frame < BEATS.pageSweepEnd) {
-		bibleZ = sweep(frame, BEATS.pageSweepStart, 36, 1500, -900); // f300 sweep36 into the QT window
+		bibleZ = sweep(frame, BEATS.pageSweepStart, 36, 1500, -1630); // f300 sweep36 into the QT window
 	} else if (frame < BEATS.pageEnd) {
-		bibleZ = interpolate(frame, [BEATS.pageDwellStart, BEATS.pageEnd], [-900, -960], {
+		bibleZ = interpolate(frame, [BEATS.pageDwellStart, BEATS.pageEnd], [-1630, -1690], {
 			extrapolateLeft: 'clamp',
 			extrapolateRight: 'clamp',
 		});
@@ -96,6 +95,14 @@ export const A3Cascade: React.FC<{
 						const arrival = windowArrival[i];
 						if (!arrival.visible || closedWindows[i]) return null;
 						const isHero = i === heroIdx;
+						// Round-two redline item 5: frame 0 is ONE window, centred at
+						// 80% frame width, with the line inside it at a fixed 64px —
+						// not the autoscale range (this window is a contained,
+						// furniture-scale reading, not "the line" at full prominence).
+						const isFirstWindow = i === 0;
+						const width = isFirstWindow ? 864 : isHero ? 520 : 420;
+						const x = isFirstWindow ? (1080 - width) / 2 : 80 + 28 * i;
+						const y = isFirstWindow ? 500 : 160 + 36 * i;
 						return (
 							<div
 								key={post.permalink}
@@ -104,13 +111,12 @@ export const A3Cascade: React.FC<{
 									transform: `scale(${arrival.scale})`,
 								}}
 							>
-								<MacWindow
-									title={post.title}
-									x={80 + 28 * i}
-									y={160 + 36 * i}
-									width={isHero ? 520 : 420}
-								>
-									{isHero ? (
+								<MacWindow title={post.title} x={x} y={y} width={width}>
+									{isFirstWindow ? (
+										<Serif size={64} color={PALETTE.BLACK}>
+											{pick.line}
+										</Serif>
+									) : isHero ? (
 										<div>
 											{post.image && post.image.exists && (
 												<div style={{position: 'relative', marginBottom: 10}}>
@@ -144,8 +150,6 @@ export const A3Cascade: React.FC<{
 
 				{!showPage && (
 				<Plane z={PLANE_Z.type}>
-					<HookH1Line frame={frame} line={pick.line} size={96} maxWidth={860} />
-
 					{showBlocks && (
 						<div
 							style={{

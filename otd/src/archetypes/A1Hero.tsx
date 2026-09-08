@@ -7,14 +7,12 @@ import React from 'react';
 import {staticFile, interpolate, useCurrentFrame} from 'remotion';
 import {Camera, Plane, PLANE_Z, CAMERA_REST_Z} from '../scene';
 import {PALETTE} from '../palette';
-import {TYPE_SAFE} from '../safe';
 import {BEATS} from '../beats';
 import {kineticJump, sweep, layerStack, fallingY} from '../moves';
 import {Halftone} from '../junk/Halftone';
-import {Notepad} from '../junk/Notepad';
+import {Win98Dialog} from '../junk/Win98Dialog';
+import {LabelTag} from '../junk/LabelTag';
 import {CondensedItalic} from '../text/CondensedItalic';
-import {Bitmap} from '../text/Bitmap';
-import {typeShadow} from '../text/shadow';
 import {HookH1Line} from '../hooks';
 import {PostTitleOverlay, Chyron, StudioCard} from '../BeatOverlays';
 import {Page} from '../page/Page';
@@ -58,10 +56,10 @@ export const A1Hero: React.FC<{
 	} else if (frame < BEATS.pageSweepStart) {
 		bibleZ = 1300;
 	} else if (frame < BEATS.pageSweepEnd) {
-		bibleZ = sweep(frame, BEATS.pageSweepStart, 36, 1300, -900); // f300 sweep36 to page
+		bibleZ = sweep(frame, BEATS.pageSweepStart, 36, 1300, -1630); // f300 sweep36 to page
 	} else if (frame < BEATS.pageEnd) {
 		// f336-480: only the camera moves, 60px total dolly (§8).
-		bibleZ = interpolate(frame, [BEATS.pageDwellStart, BEATS.pageEnd], [-900, -960], {
+		bibleZ = interpolate(frame, [BEATS.pageDwellStart, BEATS.pageEnd], [-1630, -1690], {
 			extrapolateLeft: 'clamp',
 			extrapolateRight: 'clamp',
 		});
@@ -70,7 +68,7 @@ export const A1Hero: React.FC<{
 	} else {
 		// f690 loopReturn: motion-matched back toward the f0 tight framing so
 		// the camera, like the specimen, is one frame short of f0 at f719.
-		bibleZ = interpolate(frame, [BEATS.loopStart, BEATS.loopEnd - 1], [1500, 1100 + (1500 - 1100) / 30], {
+		bibleZ = interpolate(frame, [BEATS.loopStart, BEATS.loopEnd], [1500, 1100], {
 			extrapolateLeft: 'clamp',
 			extrapolateRight: 'clamp',
 		});
@@ -80,9 +78,14 @@ export const A1Hero: React.FC<{
 	const specimenY = fallingY(frame, -SPECIMEN_HEIGHT, FALL_PX_PER_FRAME, FALL_PERIOD);
 
 	// --- furniture, quoted from the day's non-hero posts (§12) --------------
-	const nonHeroNotepad = day.copy.notepad[0] ?? '';
+	// Round-two redline item 8: the post beat is culled to AT MOST — the
+	// hero photo, the headline, the line, one label-tag cluster, one dialog,
+	// one torn shape. The caption and Notepad from the first pass are gone
+	// (not on that list); the dialog replaces the Notepad, sized/scaled to
+	// meet item 8's own minimums (Silkscreen >=33, >=50% frame width).
 	const headline = day.copy.tile;
-	const caption = day.copy.subject[0] ?? day.copy.search[0] ?? '';
+	const dialogEntry = day.copy.dialog[0];
+	const tagCluster = day.copy.tag.slice(0, 3);
 
 	const showPost = frame >= BEATS.postStart && frame < BEATS.postEnd;
 	const showPage = frame >= BEATS.pageSweepStart && frame < BEATS.pageEnd;
@@ -95,9 +98,16 @@ export const A1Hero: React.FC<{
 	const showArchetypeFurniture = frame >= BEATS.hookEnd && frame < 704;
 
 	const headlineArrival = layerStack(frame, BEATS.hookEnd, 0, 0);
-	const captionArrival = layerStack(frame, BEATS.hookEnd, 1, 3);
+	const tagArrival = layerStack(frame, BEATS.hookEnd, 1, 3);
 	const jaggedArrival = layerStack(frame, BEATS.hookEnd, 2, 3);
-	const notepadArrival = layerStack(frame, BEATS.payoffStart, 0, 3);
+	const dialogArrival = layerStack(frame, BEATS.payoffStart, 0, 3);
+
+	// The line's box is fixed for the whole video (position, width) — only
+	// its content changes (typing/deleting the last word). That is what
+	// makes it trivially loop-safe (item 7): nothing about its box moves or
+	// rescales between frame 0 and frame 719.
+	const LINE_X = 48;
+	const LINE_Y = 520;
 
 	return (
 		<div style={{width: 1080, height: 1920, background: PALETTE.BLUE, position: 'relative', overflow: 'hidden'}}>
@@ -112,16 +122,17 @@ export const A1Hero: React.FC<{
 				    several times frame size and obscure the page (see the report). */}
 				{!showPage && (
 					<>
-						{/* Collage z -600: two jagged RED/ACID torn shapes, halftone screen. */}
+						{/* Collage z -600: one jagged RED torn shape (item 8: at most
+						    one), halftone screen. */}
 						<Plane z={PLANE_Z.collage} style={{opacity: frame < 704 ? jaggedArrival.opacity : 0}}>
 							<svg width={1080} height={1920} style={{position: 'absolute', inset: 0}}>
 								<polygon points="120,300 420,260 380,560 90,540" fill={PALETTE.RED} opacity={0.85} />
-								<polygon points="700,900 980,860 940,1180 660,1200" fill={PALETTE.ACID} opacity={0.8} />
 							</svg>
 							<Halftone width={1080} height={1920} />
 						</Plane>
 
-						{/* Loop z -900: the falling specimen (hero image). */}
+						{/* Loop z -900: the falling specimen (hero image), 70% of
+						    frame height (item 8). */}
 						<Plane z={PLANE_Z.loop}>
 							{hero.image && hero.image.exists ? (
 								<img
@@ -140,46 +151,42 @@ export const A1Hero: React.FC<{
 							) : null}
 						</Plane>
 
-						{/* Furniture z -300: a borrowed Notepad, from the payoff onward. */}
+						{/* Furniture z -300: item 8's culled set — one label-tag
+						    cluster, one dialog (>=50% frame width, Silkscreen >=33). */}
 						{showArchetypeFurniture && (
-							<Plane z={PLANE_Z.furniture} style={{opacity: notepadArrival.opacity}}>
-								<Notepad
-									body={nonHeroNotepad}
-									x={520}
-									y={1180}
-									width={460}
-									height={160}
-									scale={0.55}
-									frame={frame}
-								/>
+							<Plane z={PLANE_Z.furniture}>
+								<div style={{position: 'absolute', left: 48, top: 240, display: 'flex', gap: 6, opacity: tagArrival.opacity}}>
+									{tagCluster.map((tag, i) => (
+										<LabelTag key={tag} text={tag} seedIndex={i} x={0} y={0} style={{position: 'static'}} />
+									))}
+								</div>
+
+								{dialogEntry && (
+									<div style={{position: 'absolute', opacity: dialogArrival.opacity}}>
+										<Win98Dialog
+											text={dialogEntry.text}
+											buttons={[dialogEntry.button]}
+											x={240}
+											y={1280}
+											width={600}
+											bodyScale={33}
+										/>
+									</div>
+								)}
 							</Plane>
 						)}
 
-						{/* Type z -100: the line (persistent, per H1), headline, caption. */}
+						{/* Type z -100: the line (persistent, per H1), headline
+						    (cropped by the top edge, per item 8). */}
 						<Plane z={PLANE_Z.type}>
-							<HookH1Line frame={frame} line={pick.line} />
+							<HookH1Line frame={frame} line={pick.line} x={LINE_X} y={LINE_Y} />
 
 							{showArchetypeFurniture && (
-								<>
-									<div style={{position: 'absolute', top: -40, right: -60, opacity: headlineArrival.opacity}}>
-										<CondensedItalic size={320} color={PALETTE.MAGENTA}>
-											{headline}
-										</CondensedItalic>
-									</div>
-
-									<div
-										style={{
-											position: 'absolute',
-											left: TYPE_SAFE.x0,
-											bottom: 1920 - TYPE_SAFE.y1,
-											opacity: captionArrival.opacity,
-										}}
-									>
-										<Bitmap scale={44} color={PALETTE.YELLOW} style={{textShadow: typeShadow('BLUE')}}>
-											{caption}
-										</Bitmap>
-									</div>
-								</>
+								<div style={{position: 'absolute', top: -40, right: -60, opacity: headlineArrival.opacity}}>
+									<CondensedItalic size={320} color={PALETTE.MAGENTA}>
+										{headline}
+									</CondensedItalic>
+								</div>
 							)}
 						</Plane>
 					</>
