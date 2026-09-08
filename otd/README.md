@@ -72,7 +72,44 @@ pruned it by hand: **photographic or drawn objects with real edges, period
 lettering as an object, and the odd one.** Not vector clip-art, brand promos,
 text prompts or blank shapes. Fetch eight for a word, expect to keep three.
 Deleted GIFs are marked `keep: false` by `--sync` so they are never fetched
-again. A sticker is only used when its word appears in that day's text.
+again. A sticker is only used when one of its `words` is a word the post itself
+uses — its prose, title, alt text or tags (`OTD.ownWords`).
+
+### Choosing what to search for
+
+**Search the object, never the concept.** Lifting words straight out of a post
+gives bad results, and this was measured, not guessed:
+
+| query | what came back | keep |
+|---|---|---|
+| `loop` | bubbles, a recycle arrow, a black square, blood hearts | 0 of 8 |
+| `techno` | people dancing at raves, "I ♥ TECHNO" in glitter type | 2 of 8 |
+| `bug` | cockroach, beetle, ant, caterpillar, flies | 6 of 8 |
+| `german tv` | the ZDF logo, BERLIN lettering, a wooden TV set | 5 of 8 |
+| `puppet` | sock puppets, a monkey, a creepy clown | 5 of 8 |
+
+A genre word returns bodies. An abstraction returns nothing. What works is a
+**thing you could photograph on a white background** (`turntable`, `vinyl
+record`, `cockroach`, `pocket watch`) or a **named institution, brand or
+place**, which returns the period graphics that are the best material of all
+(`german tv`, `myspace`, `ikea`, `1987`).
+
+So the step is: read the post for the *things* in it, then name each thing as
+specifically as it can be named — `mirror ball` not `party`, `Oscar statuette`
+not `award`, `TR-909` not `drum machine` — and search that.
+
+**Then tag it back.** The query is associative but the link to the archive has
+to stay literal, so `--words` records the post's own words that earned it:
+
+```bash
+node scripts/fetch-giphy.mjs turntable "vinyl record" "mirror ball" \
+  --stickers --limit 8 --words "techno,records,track,dance music" --for 11-26
+```
+
+Now the turntable is in the library *because* the post says "techno", and
+`stickersFor` still only fires on a word the post actually used. Without
+`--words` a sticker can only ever match a post that says its query verbatim,
+which is how 11-26 ended up with nothing usable on the first pass.
 
 ## Traps that have already cost time
 

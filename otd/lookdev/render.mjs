@@ -70,10 +70,13 @@ const base = `http://127.0.0.1:${server.address().port}`;
 // not compositions. Beats 1 and 3 are 11-09, whose material we know; beat 2 is
 // 11-26, five videos across five years, the archive's best test of repetition.
 const OPTIONS = [["A", "A · SPONSORED"], ["B", "B · JOURNAL"], ["C", "C · WINDOWS"], ["D", "D · DUOTONE"]];
-const BEATS = [{ n: 1, day: "11-09", name: "the hook" }, { n: 2, day: "11-26", name: "the video" }, { n: 3, day: "11-09", name: "the post" }];
+// --on MM-DD renders every beat against a day nobody tuned for, which is the
+// only cheap test of whether these compositions are fitted to two known days.
+const ON = opt("on", null);
+const BEATS = [{ n: 1, day: ON || "11-09", name: "the hook" }, { n: 2, day: ON || "11-26", name: "the video" }, { n: 3, day: ON || "11-09", name: "the post" }];
 
 async function renderStyles() {
-  const dir = path.join(outDir, "styles");
+  const dir = path.join(outDir, ON ? `styles-${ON}` : "styles");
   fs.mkdirSync(dir, { recursive: true });
   const browser = await chromium.launch({ channel: "chrome", headless: true });
   const t0 = Date.now();
@@ -100,7 +103,7 @@ async function renderStyles() {
     // the sheet: a row per option, a column per beat, then the four covers as
     // the profile grid crops them
     const CW = 420, CH = Math.round(CW * H / W), SQ = 300, gap = 22;
-    const cell = (opt, b) => `<figure><img src="${base}/otd/lookdev/out/styles/${opt}${b.n}.png"><figcaption>${b.n} · ${b.name} · ${b.day}</figcaption></figure>`;
+    const cell = (opt, b) => `<figure><img src="${base}/otd/lookdev/out/${ON ? `styles-${ON}` : "styles"}/${opt}${b.n}.png"><figcaption>${b.n} · ${b.name} · ${b.day}</figcaption></figure>`;
     const html = `<!doctype html><meta charset="utf-8"><style>
       body{margin:0;background:#9a9a9a;font:13px/1.4 "Arial Bold",Arial,sans-serif;font-weight:700;color:#fff;letter-spacing:.05em;text-transform:uppercase;padding:${gap}px}
       h1{font-size:19px;margin:6px 0 18px;letter-spacing:.14em}
@@ -117,13 +120,13 @@ async function renderStyles() {
     <h1>on this day · part a · four style options, three beats</h1>
     ${OPTIONS.map(([opt, label]) => `<h2>${label}</h2><div class="row">${BEATS.map((b) => cell(opt, b)).join("")}</div>`).join("")}
     <h2>the cover as the profile grid crops it · beat 1, centre square</h2>
-    <div class="crops">${OPTIONS.map(([opt, label]) => `<figure><div class="crop"><img src="${base}/otd/lookdev/out/styles/${opt}1.png"></div><figcaption>${label}</figcaption></figure>`).join("")}</div>`;
+    <div class="crops">${OPTIONS.map(([opt, label]) => `<figure><div class="crop"><img src="${base}/otd/lookdev/out/${ON ? `styles-${ON}` : "styles"}/${opt}1.png"></div><figcaption>${label}</figcaption></figure>`).join("")}</div>`;
     const sheet = await ctx.newPage();
     await sheet.setViewportSize({ width: 3 * CW + 2 * gap + gap * 2, height: 800 });
     await sheet.setContent(html, { waitUntil: "networkidle" });
-    await sheet.screenshot({ path: path.join(outDir, "styles.png"), fullPage: true });
-    await sheet.screenshot({ path: path.join(outDir, "styles.jpg"), type: "jpeg", quality: 78, fullPage: true });
-    console.log(`sheet  →  otd/lookdev/out/styles.png (+ .jpg)   (${((Date.now() - t0) / 1000).toFixed(1)}s)`);
+    await sheet.screenshot({ path: path.join(outDir, ON ? `styles-${ON}.png` : "styles.png"), fullPage: true });
+    await sheet.screenshot({ path: path.join(outDir, ON ? `styles-${ON}.jpg` : "styles.jpg"), type: "jpeg", quality: 78, fullPage: true });
+    console.log(`sheet  →  otd/lookdev/out/${ON ? `styles-${ON}` : "styles"}.png (+ .jpg)   (${((Date.now() - t0) / 1000).toFixed(1)}s)`);
   } finally { await browser.close(); }
 }
 

@@ -59,7 +59,13 @@ if (args.includes("--gifs")) kinds.push("gifs");
 if (kinds.length === 0) kinds.push("stickers");
 const limit = Number(flag("limit", 10));
 const rating = flag("rating", "g");
-const queries = args.filter((a, i) => !a.startsWith("--") && !(i > 0 && args[i - 1].match(/^--(limit|rating)$/)));
+const queries = args.filter((a, i) => !a.startsWith("--") && !(i > 0 && args[i - 1].match(/^--(limit|rating|words|for)$/)));
+// The query names an object; `words` are the post's own words that earned it.
+// Search "turntable", tag it "techno, records" — the search is associative, the
+// link back to the archive stays literal, and stickerFor still only fires on a
+// word the post itself uses.
+const extraWords = String(flag("words", "") || "").split(",").map((w) => w.trim().toLowerCase()).filter(Boolean);
+const fetchedFor = String(flag("for", "") || "").split(",").map((w) => w.trim()).filter(Boolean);
 const restore = args.includes("--restore");
 const sync = args.includes("--sync");
 
@@ -146,7 +152,8 @@ for (const kind of kinds) {
           bytes: orig.size ? Number(orig.size) : null,
           file: `giphy/${kind}/${slug(q)}/${g.id}.gif`,
           giphyUrl: g.url, user: g.user?.username || null, rating: g.rating,
-          words: [q], mood: "", usedOn: [], keep: true,
+          words: [...new Set([q, ...extraWords])], mood: "", usedOn: [], keep: true,
+          ...(fetchedFor.length ? { fetchedFor } : {}),
         });
         have.add(g.id);
       }
