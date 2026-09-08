@@ -135,9 +135,12 @@ Type:
 | 9 to 12 | **The posts.** Every post in date order, flowed across four screens, headings in Arial caps 16 under a rule, Times 36 on 46, each post beside its own material (`materialFor`), sides alternating, cut at the fourth; the last screen ends `otd.crackunit.com/MM-DD/ · link in bio` and `Powered by GIPHY` | white | none | none; the text screens do not vary |
 | 13 | **Come back tomorrow.** The archive's own facts for the next date: how many posts it holds, their years, the first three titles, knocked out on white. `TOMORROW` in Arial Bold caps at 150, 260 or 360 px, whole on the card or cropped by it, never so large it stops being the word; the date beneath in Times, inverted through it in DIFFERENCE. The GIF library papered on: a loose 6 × 8 wall of frames at `tint(255, 120)` plus eighteen singles from 70 to 620 px, rotated. An empty tomorrow says so | white | SAFETY behind the count | type size, which stickers, placement |
 
-A day with fewer posts drops text screens; a day with no video drops 4 and 7
-(or 7 becomes the missing image); a day with no Wayback snapshot shows the CDX
-answer verbatim; a day whose tomorrow is empty says so on 13. The order stays.
+**A slide with no material for that day takes itself out.** Each sketch tests
+its own material and calls `OTD.skip(why)`; the carousel is renumbered over what
+rendered, so the order never changes but the length does. Measured on the first
+three days: 11-09 thirteen slides, 11-10 twelve (no video frames: both its
+videos are gone), 11-11 eight (two posts, no video, one text screen). A day
+whose tomorrow is empty says so on the last slide.
 
 ## 5. Stickers
 

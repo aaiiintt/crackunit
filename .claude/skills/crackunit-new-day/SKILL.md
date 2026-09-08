@@ -24,6 +24,17 @@ Model routing: Steps 1, 4, L2 and L3 are taste and belong to Iain or a capable
 model. Steps 0, 2, 3, 5, 8, 9 and L1 are grunt work for Sonnet. Step 10 is data
 entry.
 
+## The short way
+
+```bash
+node otd/scripts/newday.mjs MM-DD          # build, capture, then render 3 seeds per slide
+node otd/scripts/newday.mjs MM-DD --final  # render the picked seeds into otd/out/carousel/MM-DD/
+```
+
+It runs Steps 0 and 3, tells you what it still needs from you (the line, the
+hero, the picks) and stops rather than inventing any of it. The steps below are
+what it is doing, and what to do by hand when a day is strange.
+
 ## Inputs
 
 A day as `MM-DD`, month first: `11-09` is 9 November, `09-11` is 11
@@ -200,6 +211,14 @@ response. That is the loop.
 
 ## Version
 
+- v1.7, 2026-09-08 (Mac). **Any day now runs.** The sketches no longer name a
+  video, a file, a month or a word: everything comes from the day JSON, the
+  day's captures and the library (`OTD.mmdd`, `videos`, `goneVideos`,
+  `allFrames`, `numbers`, `dayWords`, `monthSticker`, `heroSource`,
+  `lineParts`, `materialFor`). A slide with no material for that day calls
+  `OTD.skip(why)` and leaves the carousel, which is then renumbered: 11-09 is
+  thirteen slides, 11-10 twelve, 11-11 eight. `build-days.mjs` now records each
+  post's `sourceFile`. `newday.mjs` is the one command.
 - v1.6, 2026-09-08 (Mac). Thirteen slides: a "come back tomorrow" end slide
   reading the next date's own day file. Each post on the text screens brings
   its own material (`materialFor`), and the text flows across screens instead

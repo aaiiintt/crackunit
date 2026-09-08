@@ -23,7 +23,20 @@ const OTD = {
   // ---------- data ----------
   preload(opts = {}) {
     const day = window.DAY || "11-09";
-    this.day = loadJSON(`/otd/data/days/${day}.json`, (d) => { for (const p of (d.posts || [])) if (p.image && p.image.exists) this.images[p.image.src] = this.img("/public" + p.image.src); });
+    this.sources = {};
+    this.day = loadJSON(`/otd/data/days/${day}.json`, (d) => {
+      for (const p of (d.posts || [])) {
+        if (p.image && p.image.exists) this.images[p.image.src] = this.img("/public" + p.image.src);
+        if (p.sourceFile) loadStrings("/" + p.sourceFile, (lines) => { this.sources[p.permalink] = lines; }, () => {});
+        if (!p.video || !p.video.id) continue;
+        // this day's captures: the manifest, then its frames and thumbnail
+        const base = `/otd/captures/${day}/${p.slug}/video/${p.video.id}/`;
+        this.manifests[p.video.id] = loadJSON(base + "manifest.json", (m) => {
+          this.frames[p.video.id] = (m.frames || []).map((f) => ({ ...f, img: this.img(base + f.file) }));
+          if (m.thumb) this.images[`thumb:${p.video.id}`] = this.img(base + m.thumb);
+        }, () => { this.manifests[p.video.id] = { id: p.video.id, missing: true }; });
+      }
+    });
     this.lines = loadJSON(`/otd/data/lines.json`);
     this.giphy = loadJSON(`/otd/public/giphy/manifest.json`);
     // tomorrow, for the last slide's tease
@@ -40,22 +53,19 @@ const OTD = {
     this.font.courier = loadFont(encodeURI(F + "Courier New.ttf"));
     this.font.vcr = loadFont(F + "VCR_OSD_MONO.ttf");
     this.font.dseg = loadFont(F + "DSEG7Classic-Regular.ttf");
-    // captures: every video that day; manifests first, frames from a second pass via loadJSON callback
-    for (const [slug, id] of opts.videos || [["post-it-note-waterfall", "vz7BcEfuTFc"], ["zoo-advertising", "cvs9kURU79s"], ["how-stuff-dates", "1odEmDYg4Y4"]]) {
-      const base = `/otd/captures/${day}/${slug}/video/${id}/`;
-      this.manifests[id] = loadJSON(base + "manifest.json", (m) => {
-        this.frames[id] = (m.frames || []).map((f) => ({ ...f, img: this.img(base + f.file) }));
-        if (m.thumb) this.images[`thumb:${id}`] = this.img(base + m.thumb);
-      });
-      if (id === "1odEmDYg4Y4") this.texts.unavailable = loadStrings(base + "unavailable.txt");
-    }
-    this.images.freerice = this.img("/public/wp-content/uploads/2007/11/freerice.jpg");
     // wayback captures, when wayback-page.mjs has run
     this.wb = { items: [] };
     loadJSON(`/otd/captures/${day}/wayback/wayback.json`, (j) => { this.wb = j; for (const it of j.items || []) if (it.file) it.img = this.img(`/otd/captures/${day}/wayback/${it.file}`); }, () => {});
-    // images the archive lost that the Wayback Machine still had (wayback-page.mjs, by hand for now)
+    // images the archive lost that the Wayback Machine still had: one try per lost image, named by its file
     this.rescued = {};
-    for (const name of ["Picture1.jpg", "talkingPointMini_01.jpg", "hulger.jpg"]) this.rescued[name] = this.img(`/otd/captures/${day}/wayback/rescued-${name}`, null, () => { delete this.rescued[name]; });
+    loadJSON(`/otd/data/days/${day}.json`, (d) => {
+      const lost = new Set();
+      for (const p of (d.posts || [])) for (const m of String(p.bodyHtml || "").matchAll(/!\[[^\]]*\]\(([^)\s]+)\)/g)) {
+        const src = m[1]; const name = src.split("/").pop();
+        if (!/^https?:/.test(src) && !(p.image && p.image.exists && p.image.src === src) && !lost.has(name)) { lost.add(name);
+          this.rescued[name] = this.img(`/otd/captures/${day}/wayback/rescued-${name}`, null, () => { delete this.rescued[name]; }); }
+      }
+    }, () => {});
     for (const s of opts.stickers || []) this.loadSticker(s);
   },
   begin() {
@@ -71,6 +81,13 @@ const OTD = {
   hero() { const h = this.picks().hero || this.day.hero; return this.posts().find((p) => p.permalink === h) || this.posts()[0]; },
   others() { const h = this.hero(); return this.posts().filter((p) => p !== h); },
   line() { return this.picks().line || ""; },
+  lineParts() { // the line in two halves: at its comma, else its dash or ellipsis, else the middle word
+    const t = this.line();
+    let i = t.indexOf(", ");
+    if (i < 0) { const m = t.match(/[–—…:;]\s|\.\.\.\s/); if (m) i = m.index; }
+    if (i < 0) { const words = t.split(" "); const half = Math.ceil(words.length / 2); return [words.slice(0, half).join(" "), words.slice(half).join(" ")]; }
+    return [t.slice(0, i + (t[i] === "," ? 1 : 0)).trim(), t.slice(i + 1).trim()];
+  },
   runnerUp() { return this.picks().runnerUp || ""; },
   years() { return [...new Set(this.posts().map((p) => p.year))].sort(); },
   timestamps() { return this.posts().map((p) => ({ post: p, hms: p.date.slice(11, 19), h: +p.date.slice(11, 13), m: +p.date.slice(14, 16), s: +p.date.slice(17, 19) })); },
@@ -147,6 +164,52 @@ const OTD = {
       ([i.query, ...(i.words || []), i.mood || ""].some((x) => String(x).toLowerCase().includes(w))));
     return all.length ? all[(this.seed() - 1) % all.length] : null;
   },
+  // ---- the day's own facts, so a sketch never names a video, a file or a month ----
+  mmdd() { const [mm, dd] = (this.day.day || "01-01").split("-"); return { mm, dd, month: this.monthName(mm), abbr: this.monthName(mm).slice(0, 3).toUpperCase(), dayNum: Number(dd) }; },
+  dateWords() { const { dayNum, month } = this.mmdd(); return `${dayNum} ${month.toLowerCase()}`; },
+  videos() { // posts whose video gave us frames
+    return this.posts().filter((p) => p.video && (this.frames[p.video.id] || []).some((f) => f.img && f.img.width > 1));
+  },
+  goneVideos() { // posts whose video is gone, with yt-dlp's words
+    return this.posts().filter((p) => p.video && (this.manifests[p.video.id] || {}).unavailable && !(this.frames[p.video.id] || []).some((f) => f.img && f.img.width > 1))
+      .map((p) => ({ post: p, id: p.video.id, error: (this.manifests[p.video.id].unavailable || "").trim() }));
+  },
+  allFrames() { return this.videos().flatMap((p) => (this.frames[p.video.id] || []).filter((f) => f.img && f.img.width > 1).map((f) => ({ id: p.video.id, post: p, ...f }))); },
+  heroSource() { return this.sources[this.hero().permalink] || []; },
+  heroSourcePath() { return this.hero().sourceFile || ""; },
+  numbers() { // true numbers from the day, biggest first: a counter needs no explanation but its own
+    const out = [];
+    for (const p of this.posts()) {
+      const m = (this.manifests[(p.video || {}).id] || {}).meta;
+      if (m && m.view_count) out.push([m.view_count, `views · ${m.title} · youtube`]);
+      if (m && m.duration) out.push([m.duration, `seconds · ${m.title}`]);
+    }
+    out.push([this.hero().wpId, `wpId · ${this.hero().title}`]);
+    out.push([this.posts().length, `posts · ${this.dateWords()}`]);
+    out.push([this.tagsAll().length, `tags and categories · ${this.dateWords()}`]);
+    out.push([this.sentencesAll().length, `sentences · ${this.dateWords()}`]);
+    return out.filter(([n]) => n != null);
+  },
+  dayWords(max = 6) { // stickers from the library whose word is in the day's text, with the sentence that says it
+    const seen = new Set(), out = [];
+    for (const it of ((this.giphy || {}).items || [])) {
+      if (it.keep === false) continue;
+      for (const w of [it.query, ...(it.words || [])]) {
+        if (!w || w.length < 4 || seen.has(w)) continue;
+        const re = new RegExp(`[^a-z]${String(w).toLowerCase()}[^a-z]`);
+        const hit = this.sentencesAll().find(({ s }) => re.test(" " + s.toLowerCase() + " "));
+        if (hit) { seen.add(w); out.push({ word: w, item: it, sentence: hit.s, post: hit.post }); }
+      }
+    }
+    return out.slice(0, max);
+  },
+  monthSticker() { // a sticker for the month, else period lettering, else anything that will show
+    const { month } = this.mmdd();
+    const by = (f) => ((this.giphy || {}).items || []).filter((i) => i.keep !== false && (i.frames == null || i.frames <= 40) && f(i));
+    return by((i) => [i.query, ...(i.words || [])].some((w) => String(w).toLowerCase() === month.toLowerCase()))
+      .concat(by((i) => /period type/.test(i.mood || ""))).concat(by(() => true));
+  },
+  skip(why) { window.__skip = why; window.__rendered = true; },
   tomorrow() { const d = this.tomorrowJSON || {}; return { day: this.tomorrowDay, posts: d.posts || [], years: [...new Set((d.posts || []).map((p) => p.year))].sort() }; },
   monthName(mm) { return ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"][Number(mm) - 1]; },
   sentencesAll() { return this.posts().flatMap((p) => (p.sentences || []).map((s) => ({ s, post: p }))); },
@@ -307,7 +370,7 @@ const OTD = {
   SCREENS: 4,
   postsFlow(k, { x = 60, y0 = 120, w = 960, bottom = 1350 - 170, px = 36, lineH = 46, mw = 400, mh = 300 } = {}) {
     const headH = 56, gap = 30;
-    let screen = 0, yy = y0, lastY = null, side = 0;
+    let screen = 0, yy = y0, lastY = null, side = 0, used = 0;
     for (const p of this.posts()) {
       const m = this.materialFor(p);
       let from = 0, first = true;
@@ -328,6 +391,7 @@ const OTD = {
         } else fill(0, 0);
         const res = this.flowText(p.bodyText, x, bodyY, w, lineH, r ? [r] : [], bottom, screen === k, from);
         pop();
+        used = Math.max(used, screen);
         if (screen === k) { this.drawMaterial(m && isHead ? m : null, r); lastY = Math.max(lastY ?? 0, res.y, r ? r.y + r.h : 0); }
         from = res.next;
         if (from >= 0) { screen++; yy = y0; first = false; }   // continues on the next screen
@@ -336,7 +400,8 @@ const OTD = {
       if (m) side++;
       if (screen >= this.SCREENS) break;
     }
-    return lastY;
+    // { end: the y this screen finished at, or null if it drew nothing; last: this is the final screen with text }
+    return { end: lastY, last: k >= used };
   },
   stamp(n, label, x, y, px = 420) { // a true number set like a counter, with what it is in Courier
     push(); this.times(px); text(String(n), x, y); this.courier(16); text(label, x + 6, y + 30); pop();

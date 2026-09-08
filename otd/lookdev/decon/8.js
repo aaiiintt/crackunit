@@ -5,9 +5,16 @@
 // browser shows today; a PowerPoint sticker's frames down the right margin at
 // four sizes. Accent: HIGHLIGHTER.
 let src = null, stk = null;
-function preload() { OTD.preload(); src = loadStrings("/export/posts/2005-11-09-presentation-zen.md"); }
-function setup() { createCanvas(1080, 1350); const it = OTD.stickerByMood("powerpoint", 40); stk = it ? { it, img: OTD.loadSticker(it) } : null; }
+function preload() { OTD.preload(); }
+function setup() {
+  createCanvas(1080, 1350);
+  src = OTD.heroSource();
+  // a sticker for a word in the hero post, else one for a word anywhere that day
+  const mine = OTD.stickerFor(OTD.hero()) || (OTD.dayWords(8)[0] || {}).item;
+  stk = mine ? { it: mine, img: OTD.loadSticker(mine) } : null;
+}
 function draw() {
+  if (!src || !src.length) return OTD.skip("the hero post has no source file");
   if (!OTD.allLoaded()) { setTimeout(() => redraw(), 80); return; }
   OTD.begin(); background(OTD.PAPER);
   const S = OTD.seed(), line = OTD.line();
@@ -41,6 +48,6 @@ function draw() {
   // the sticker's frames down the right margin
   if (stk) { const fr = OTD.gifFrames(stk.img, 8); let yy = 60; for (const w of [40, 80, 160, 320]) { OTD.strip(fr, 1080 - 40 - w, yy, w, Math.min(fr.length, 4), "col", 6); yy += 4 * (w * fr[0].height / fr[0].width + 6) + 20; } }
 
-  fill(0); OTD.label(`source · export/posts/2005-11-09-presentation-zen.md · ${src.length} lines${stk ? ` · giphy ${stk.it.id}` : ""}`, 60, 1350 - 56, 12);
+  fill(0); OTD.label(`source · ${OTD.heroSourcePath()} · ${src.length} lines${stk ? ` · giphy ${stk.it.id}` : ""}`, 60, 1350 - 56, 12);
   OTD.done();
 }

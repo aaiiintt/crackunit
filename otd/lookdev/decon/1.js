@@ -8,7 +8,7 @@ let cands = [];
 function preload() { OTD.preload(); }
 function setup() {
   createCanvas(1080, 1350);
-  cands = OTD.stickers("november").filter((s) => (s.frames == null || s.frames <= 40));
+  cands = OTD.monthSticker();
   for (const c of cands) OTD.loadSticker(c);
 }
 function draw() {
@@ -27,8 +27,8 @@ function draw() {
   // the number
   const big = mode === 1 ? 420 : 1500 + (S % 3) * 120;
   const nx = mode === 1 ? 540 - 110 : 140 + random(-220, 60), ny = mode === 1 ? 660 + 150 : 1180 + random(-80, 120);
-  fill(ink); OTD.times(big); text("9", nx, ny);
-  if (mode === 0) { blendMode(DIFFERENCE); fill(255); OTD.times(900); text("9", nx + random(300, 560), ny - random(300, 700)); OTD.times(300); text("9", random(60, 900), random(300, 1300)); blendMode(BLEND); }
+  fill(ink); OTD.times(big); text(String(OTD.mmdd().dayNum), nx, ny);
+  if (mode === 0) { blendMode(DIFFERENCE); fill(255); const D = String(OTD.mmdd().dayNum); OTD.times(900); text(D, nx + random(300, 560), ny - random(300, 700)); OTD.times(300); text(D, random(60, 900), random(300, 1300)); blendMode(BLEND); }
 
   // the dial
   const cx = mode === 1 ? 540 : 540 + random(-60, 60), cy = mode === 1 ? 660 : 660 + random(-40, 80), R = mode === 1 ? 600 : 420 + random(-30, 30);
@@ -50,7 +50,7 @@ function draw() {
     OTD.courier(lab * 0.6); text(`${t.post.year} · ${t.post.wpId}`, lx, ly + lab);
   }
   textAlign(LEFT, BASELINE);
-  fill(mode === 0 ? 255 : ink); OTD.arialCaps(mode === 1 ? 90 : 150); text("NOV", 60, mode === 1 ? 140 : 250);
+  fill(mode === 0 ? 255 : ink); OTD.arialCaps(mode === 1 ? 90 : 150); text(OTD.mmdd().abbr, 60, mode === 1 ? 140 : 250);
   const ys = OTD.years(); OTD.times(mode === 1 ? 200 : 210);
   ys.forEach((y, i) => text(String(y), mode === 1 ? 60 + i * 500 : 1080 - 60 - textWidth(String(y)), mode === 1 ? 1350 - 50 : 1350 - 60 - (ys.length - 1 - i) * 200));
   blendMode(BLEND);
@@ -60,7 +60,7 @@ function draw() {
   const bigF = frames[floor(random(n))], bw = (mode === 2 ? 700 : 440) + random(-60, 80), bh = bw * bigF.height / bigF.width;
   push(); translate(random(240, 760), random(360, 980)); rotate(random(-0.5, 0.5)); imageMode(CENTER); image(bigF, 0, 0, bw, bh); pop();
 
-  fill(ink); OTD.label("on this day · 09 · 11", 60, 76, 14);
+  fill(ink); OTD.label(`on this day · ${OTD.mmdd().dd} · ${OTD.mmdd().mm}`, 60, 76, 14);
   OTD.courier(16); text(`crackunit.com · ${OTD.posts().length} posts · ${OTD.years().join(" · ")} · giphy ${stick.id} × ${n} · mode ${mode}`, 60, 1350 - 60);
   OTD.done();
 }

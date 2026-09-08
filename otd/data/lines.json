@@ -109,5 +109,63 @@
       "13": 3
     },
     "picksWhy": "Round four, 2026-09-08. Cover: the monolith. Line: the space version, the joke without the explanation. Text-ments: the zoo ad's views. GIF: the puma, jarring on purpose (Iain). Wayback: the 2005 masthead leads. Dead video and source: seed 3 (Iain). Text screens do not vary. 13 (come back tomorrow): seed 3, TOMORROW whole and legible under the sticker storm."
+  },
+  "11-10": {
+    "hero": "/2005/11/10/sorrell-vs-murdoch/",
+    "line": "Hmmmmmmmm… anyone want a piece of MySpace?",
+    "runnerUp": "Thank goodness there’s only a few people visiting the site.",
+    "runnerUpFrom": "/2005/11/10/the-joy-of-stats/",
+    "alternates": [
+      "Very very smart. My hat is off.",
+      "First, don’t panic…"
+    ],
+    "picture": "/2005/11/10/bouncy-balls/",
+    "grab": [
+      "LwQYyUoOA7w"
+    ],
+    "why": "A 2005 question that answers itself twenty years later. Six posts, 2005 to 2010: Sorrell on media panic, the Sony Bouncy Balls ad, a stats package, ITV buying Friends Reunited, a 1990s TV clip about the internet never catching on, and Keynote failing at a conference.",
+    "picks": {
+      "1": 1,
+      "2": 3,
+      "3": 2,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 3,
+      "8": 3,
+      "9": 1,
+      "10": 1,
+      "11": 1,
+      "12": 1,
+      "13": 3
+    }
+  },
+  "11-11": {
+    "hero": "/2008/11/11/was-our-store-free-of-clutter/",
+    "line": "Was our store free of clutter?",
+    "runnerUp": "The overhead of me answering was almost zero.",
+    "runnerUpFrom": "/2008/11/11/was-our-store-free-of-clutter/",
+    "alternates": [
+      "It feels kind of retro / dynamic.",
+      "This is truly great."
+    ],
+    "picture": "/2008/11/11/visa-queue-type-joy/",
+    "grab": [],
+    "why": "A card reader in a Co-Op asked it, so the archive did too. Only two posts, both 2008, both with surviving images and no video: the shortest day in the test set, which is the point.",
+    "picks": {
+      "1": 1,
+      "2": 3,
+      "3": 2,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 3,
+      "8": 3,
+      "9": 1,
+      "10": 1,
+      "11": 1,
+      "12": 1,
+      "13": 3
+    }
   }
 }

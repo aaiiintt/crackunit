@@ -5,24 +5,31 @@
 // held large. Black ground. Accent: AQUA on the video id.
 let bird = null;
 function preload() { OTD.preload(); }
+let gone = null;
 function setup() {
   createCanvas(1080, 1350);
-  const all = OTD.stickers("bird").filter((s) => s.frames <= 80 && /photo/.test(s.mood || ""));
-  const pick = all[(window.SEED - 1) % all.length];
+  gone = OTD.goneVideos()[0] || null;
+  if (!gone) return;
+  // a photographic creature for the post's own words, else any photographic sticker
+  const words = OTD.dayWords(12).map((w) => w.word);
+  const photo = ((OTD.giphy.items || [])).filter((s) => s.keep !== false && s.frames <= 80 && /photo/.test(s.mood || ""));
+  const named = photo.filter((s) => words.some((w) => [s.query, ...(s.words || [])].includes(w)));
+  const pool = named.length ? named : photo;
+  const pick = pool[(window.SEED - 1) % pool.length];
   bird = { item: pick, img: OTD.loadSticker(pick) };
 }
 function draw() {
+  if (!gone) return OTD.skip("no video of that day is gone");
   if (!OTD.allLoaded()) { setTimeout(() => redraw(), 80); return; }
   OTD.begin(); background(OTD.BLACK);
   const S = OTD.seed();
-  const post = OTD.posts().find((p) => p.video && p.video.id === "1odEmDYg4Y4");
-  const err = (OTD.texts.unavailable || []).join(" ").trim();
+  const post = gone.post, err = gone.error;
   const frames = OTD.gifFrames(bird.img, 16), n = frames.length;
 
   const px = 60, py = 120 + random(0, 160), pw = 960, ph = 540;
   push(); stroke(255); strokeWeight(1); noFill(); rect(px + 0.5, py + 0.5, pw, ph); pop();
   OTD.vcr(24); fill(255); OTD.wrap(err, pw - 80).forEach((l, i) => text(l, px + 40, py + 80 + i * 36));
-  fill(OTD.AQUA); OTD.vcr(64); text(post.video.id, px + 40, py + ph - 48);
+  fill(OTD.AQUA); OTD.vcr(64); text(gone.id, px + 40, py + ph - 48);
   // the bird, as frames, across the player
   OTD.strip(frames, px, py + ph - 200, Math.floor(pw / n), n, "row");
   // the error again, small, in the dark

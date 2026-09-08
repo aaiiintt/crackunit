@@ -36,7 +36,7 @@ fs.mkdirSync(outDir, { recursive: true });
 const W = 1080, H = 1350, SCALE = 2, CONTACT = 0.25, GATE = 270;
 const argv = process.argv.slice(2);
 const opt = (n, d) => { const i = argv.indexOf(`--${n}`); return i === -1 ? d : argv[i + 1]; };
-const filter = argv.find((a) => !a.startsWith("--") && a !== opt("seed", null) && a !== opt("seeds", null)) || "";
+const filter = argv.find((a, i) => !a.startsWith("--") && !(i > 0 && argv[i - 1].startsWith("--"))) || "";
 const seeds = argv.includes("--pick") ? [1] : opt("seed", null) ? [Number(opt("seed"))] : Array.from({ length: Number(opt("seeds", 3)) }, (_, i) => i + 1);
 const DAY = opt("day", "11-09");
 const FINAL = argv.includes("--final");
@@ -78,7 +78,7 @@ for (const look of looks) {
     if (missing.length) { console.log(`${id}  waiting for ${missing.join(", ")}  (see otd/orders/)`); continue; }
     for (const seed of FINAL ? [Number(picks[String(n)] || 1)] : sketch ? seeds : [1]) {
       const url = sketch ? `${base}/otd/lookdev/page.html?sketch=/otd/lookdev/${look}/${f}&seed=${seed}&day=${DAY}` : `${base}/otd/lookdev/${look}/${f}`;
-      const png = FINAL ? path.join(finalDir, `${String(n).padStart(2, "0")}.png`) : path.join(outDir, `${look}-${n}-s${seed}.png`);
+      const png = FINAL ? path.join(finalDir, `slide-${String(n).padStart(2, "0")}.png`) : path.join(outDir, `${look}-${n}-s${seed}.png`);
       stills.push({ look, n, id: `${id} s${seed}`, sketch, seed, url, png });
     }
   }
@@ -100,6 +100,9 @@ try {
       catch { console.log(`  ${s.id}: timed out waiting for window.__rendered`); }
       const err = await page.evaluate(() => window.__error || null);
       if (err) console.log(`  ${s.id}: ${err}`);
+      // a slide the day has no material for takes itself out of the carousel
+      const why = await page.evaluate(() => window.__skip || null);
+      if (why) { console.log(`${s.id}  skipped: ${why}`); fs.rmSync(s.png, { force: true }); continue; }
     } else {
       await page.waitForLoadState("networkidle");
     }
@@ -108,10 +111,14 @@ try {
     console.log(`${s.id}  →  ${path.relative(repo, s.png)}`);
   }
 
-  if (FINAL) { // the carousel in order, one row, at 25%
-    const files = fs.readdirSync(finalDir).filter((f) => /^\d\d\.png$/.test(f)).sort();
+  if (FINAL) { // renumber over the slides that actually rendered, then the carousel in order at 25%
+    for (const f of fs.readdirSync(finalDir)) if (/^\d\d\.png$/.test(f)) fs.rmSync(path.join(finalDir, f));
+    const made = fs.readdirSync(finalDir).filter((f) => /^slide-\d\d\.png$/.test(f)).sort();
+    const order = [];
+    made.forEach((f, i) => { const to = `${String(i + 1).padStart(2, "0")}.png`; fs.renameSync(path.join(finalDir, f), path.join(finalDir, to)); order.push({ to, from: Number(f.match(/\d\d/)[0]) }); });
+    const files = order.map((o) => o.to);
     const cw = W * SCALE * CONTACT, ch = H * SCALE * CONTACT, gap = 24, label = 44;
-    const html = `<!doctype html><meta charset="utf-8"><style>body{margin:0;background:#888;font:14px/1 "Arial Bold","Arial",sans-serif;font-weight:700;color:#fff;letter-spacing:.06em}.row{display:flex;gap:${gap}px;padding:${gap}px}figure{margin:0;width:${cw}px}img{display:block;width:${cw}px;height:${ch}px;outline:1px solid #000}figcaption{height:${label}px;line-height:${label}px}</style><div class="row">${files.map((f) => `<figure><img src="${base}/otd/out/carousel/${DAY}/${f}"><figcaption>${DAY} · ${f.replace(".png", "")} · seed ${picks[String(Number(f.replace(".png", "")))] || 1}</figcaption></figure>`).join("")}</div>`;
+    const html = `<!doctype html><meta charset="utf-8"><style>body{margin:0;background:#888;font:14px/1 "Arial Bold","Arial",sans-serif;font-weight:700;color:#fff;letter-spacing:.06em}.row{display:flex;gap:${gap}px;padding:${gap}px}figure{margin:0;width:${cw}px}img{display:block;width:${cw}px;height:${ch}px;outline:1px solid #000}figcaption{height:${label}px;line-height:${label}px}</style><div class="row">${files.map((f, i) => `<figure><img src="${base}/otd/out/carousel/${DAY}/${f}"><figcaption>${DAY} · ${f.replace(".png", "")} (${order[i].from})</figcaption></figure>`).join("")}</div>`;
     const cpage = await ctx.newPage();
     await cpage.setViewportSize({ width: Math.ceil(files.length * (cw + gap) + gap), height: Math.ceil(ch + label + gap * 2) });
     await cpage.setContent(html, { waitUntil: "networkidle" });

@@ -8,7 +8,7 @@ function draw() {
   OTD.begin(); background(OTD.WHITE);
   const S = OTD.seed();
   const all = OTD.sentencesAll();
-  const numbers = [[OTD.hero().wpId, `wpId · ${OTD.hero().title}`], [18891, "views · San Francisco Zoo: Puma · youtube"], [442, "views · Catarata de postit · youtube"], [OTD.posts().length, "posts · 9 november"]];
+  const numbers = OTD.numbers();
   const [num, what] = numbers[(S - 1) % numbers.length];
   const nx = random(-80, 300), ny = random(500, 1100);
   const sizes = [22, 22, 28, 36, 48, 64, 96, 140, 220];
@@ -25,6 +25,6 @@ function draw() {
   fill(0); OTD.stamp(num, what, nx, ny, 440);
   OTD.arialCaps(14); fill(OTD.LINK);
   for (const t of OTD.tagsAll()) text(OTD.caps(t.tag), random(60, 900), random(80, 1320));
-  fill(0); OTD.label(`${all.length} sentences · ${OTD.posts().length} posts · crackunit.com · 9 november`, 60, 1350 - 56, 12, "#fff");
+  fill(0); OTD.label(`${all.length} sentences · ${OTD.posts().length} posts · crackunit.com · ${OTD.dateWords()}`, 60, 1350 - 56, 12, "#fff");
   OTD.done();
 }

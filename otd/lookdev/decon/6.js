@@ -6,10 +6,12 @@ function preload() { OTD.preload(); }
 function setup() { createCanvas(1080, 1350); }
 function draw() {
   if (!OTD.allLoaded()) { setTimeout(() => redraw(), 80); return; }
+  const wb = OTD.wayback();
+  if (!wb.length) return OTD.skip("no wayback capture rendered for that day");
   OTD.begin(); background(OTD.PAPER);
-  const S = OTD.seed(), wb = OTD.wayback();
-  const pick = (re) => wb.find((i) => re.test(i.slug));
-  const lead = [pick(/home-2005/), pick(/presentation-zen/), pick(/home-2007/), pick(/technorati/)].filter(Boolean);
+  const S = OTD.seed();
+  // the homepages first (the masthead is the era signal), then the post pages
+  const lead = [...wb.filter((i) => /^home/.test(i.slug)), ...wb.filter((i) => !/^home/.test(i.slug))];
   const A = lead[(S - 1) % lead.length], B = lead[S % lead.length];
   // the lead page's top, at 4×
   const top = OTD.crop(A.img, 0, 0, A.img.width, 260);

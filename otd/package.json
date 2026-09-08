@@ -7,7 +7,9 @@
     "days": "node scripts/build-days.mjs && node scripts/validate-days.mjs",
     "day": "node scripts/show-day.mjs",
     "frames": "node scripts/frames.mjs",
-    "checklist": "node scripts/checklist.mjs"
+    "checklist": "node scripts/checklist.mjs",
+    "newday": "node scripts/newday.mjs",
+    "render": "node lookdev/render.mjs"
   },
   "devDependencies": {
     "playwright-core": "1.63.0"

@@ -312,3 +312,38 @@ tomorrow" slide with crazy GIF embeddings and wild type.
    cropped but never illegible; the date inverted through it; the library
    papered on as a tinted wall of frames plus eighteen singles from 70 to
    620 px. Seed 3 picked.
+
+## Stage 2, part one: any day runs (2026-09-08)
+
+The thirteen sketches knew about 11-09. Now nothing does:
+
+| was hard-coded | now |
+|---|---|
+| `stickers("november")`, `"NOV"`, `"on this day · 09 · 11"` | `OTD.mmdd()` and `monthSticker()` from the day |
+| `18891`, `442`, `"9 november"` | `OTD.numbers()`: view counts and durations from the day's own manifests, then wpId, posts, tags, sentences |
+| `IDS = ["vz7BcEfuTFc", "cvs9kURU79s"]` | `OTD.allFrames()` / `videos()` |
+| `"1odEmDYg4Y4"` | `OTD.goneVideos()[0]` |
+| the five sticker words and their sentences | `OTD.dayWords()`: every library word that appears in that day's text, with the sentence that says it |
+| `pick(/home-2005/)` | homepages first, then post pages, from whatever `wayback.json` holds |
+| `loadStrings(".../presentation-zen.md")` | `OTD.heroSource()`, from `sourceFile`, which `build-days.mjs` now records |
+| the three rescued image names | every lost image in the day's markdown, tried by filename |
+| the preload's three video slugs | the day's own posts, registered inside the day JSON's callback |
+| `line.split(",")` | `OTD.lineParts()`: the comma, else a dash or ellipsis, else the middle word |
+
+**Skipping.** A slide with no material calls `OTD.skip(why)`; `render.mjs`
+drops it and renumbers `--final` over what rendered. 11-09 is thirteen slides,
+11-10 twelve, 11-11 eight, and the order never changes.
+
+**The two new days.** 11-10 (10 November) has six posts across 2005, 2007 and
+2010, and its only video is terminated too, so the stills wall goes and the
+dead-video slide carries it. Line: "Hmmmmmmmm… anyone want a piece of MySpace?"
+11-11 has two posts, both 2008, both with surviving images and no video: eight
+slides, one text screen. Line: "Was our store free of clutter?", which a card
+reader in a Co-Op actually asked.
+
+**The library grows per day.** Neither new day had a word in the library, so
+slide 5 skipped until stickers were fetched for their words (myspace, flickr,
+keynote, emoticon, queue, clutter, checkout, ticket…). 206 catalogued, 123 kept.
+
+`otd/scripts/newday.mjs MM-DD` is now the one command: build, capture, then
+render, stopping to say what it needs from Iain rather than inventing it.

@@ -299,6 +299,7 @@ function loadPost(filename, raw, ctx) {
     year: Number(yyyy),
     slug: data.slug,
     wpId: data.wpId,
+    sourceFile: `export/posts/${filename}`, // the file this post came from; the filename's date is not always the permalink's (CLAUDE.md)
     excerpt: data.excerpt || "",
     categories: data.categories || [],
     tags: data.tags || [],
