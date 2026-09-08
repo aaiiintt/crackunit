@@ -15,7 +15,10 @@
 // sticker was chosen for), `mood` (free text), `usedOn` (days, "MM-DD"), and
 // `keep` (false for junk that stays catalogued so it is not fetched twice).
 // The folder is the library; it is committed. `--restore` re-downloads every
-// catalogued item by id for a fresh clone. `giphy-sheet.mjs` draws the catalog. Giphy's terms require "Powered by GIPHY"
+// catalogued item by id for a fresh clone. `--sync` reconciles the catalog with
+// the folder after Iain has deleted GIFs by hand: each missing file is marked
+// `keep: false`, `prunedBy: "iain"`, `prunedOn: <date>`, and the cut is printed
+// by query so the next fetch can learn from it. `giphy-sheet.mjs` draws the catalog. Giphy's terms require "Powered by GIPHY"
 // attribution wherever the GIFs are shown; the site footer and the video's
 // studio card carry it when any Giphy asset is used (manifest.attribution).
 //
@@ -58,6 +61,25 @@ const limit = Number(flag("limit", 10));
 const rating = flag("rating", "g");
 const queries = args.filter((a, i) => !a.startsWith("--") && !(i > 0 && args[i - 1].match(/^--(limit|rating)$/)));
 const restore = args.includes("--restore");
+const sync = args.includes("--sync");
+
+if (sync) { // Iain pruned by hand; the catalog follows
+  const manifest = JSON.parse(readFileSync(manifestPath, "utf8"));
+  const today = new Date().toISOString().slice(0, 10);
+  const cut = [], kept = [];
+  for (const it of manifest.items) {
+    const present = existsSync(join(outRoot, it.file.replace(/^giphy\//, "")));
+    if (!present && it.keep !== false) { it.keep = false; it.prunedBy = "iain"; it.prunedOn = today; cut.push(it); }
+    else if (present && it.keep !== false) kept.push(it);
+  }
+  writeFileSync(manifestPath, JSON.stringify(manifest, null, 2) + "\n");
+  const byQ = (list) => { const m = new Map(); for (const it of list) m.set(it.query, (m.get(it.query) || 0) + 1); return m; };
+  const c = byQ(cut), k = byQ(kept);
+  console.log(`pruned ${cut.length}, kept ${kept.length}\n`);
+  for (const q of new Set([...c.keys(), ...k.keys()].sort())) console.log(`${q.padEnd(14)} kept ${String(k.get(q) || 0).padStart(2)}  cut ${String(c.get(q) || 0).padStart(2)}`);
+  if (cut.length) { console.log("\ncut:"); for (const it of cut) console.log(`  ${it.query.padEnd(14)} ${it.id.padEnd(22)} ${it.frames ?? "?"}f  ${it.title}`); }
+  process.exit(0);
+}
 
 if (queries.length === 0 && !restore) {
   console.error('usage: fetch-giphy.mjs <query>... [--stickers] [--gifs] [--limit N] [--rating g|pg]');
