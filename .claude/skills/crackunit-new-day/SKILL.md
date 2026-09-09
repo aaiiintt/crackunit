@@ -129,12 +129,18 @@ renders until he has read it and changed what he wants changed.
 and some material and does not know what day it is:
 
 `statement` · `swarm` · `march` · `stack` · `wall` · `window` · `broken` ·
-`bullets` · `quote` · `page` · `tags` · `source` · `tomorrow`
+`bullets` · `quote` · `page` · `tags` · `source` · `index` · `tomorrow`
 (described in `PLAN.md` §3.)
+
+**`index` is close to compulsory.** Every day needs one card that lists what
+it contains — each post's own date and title — and says where to read them.
+It is written: `otd/lookdev/styles/cards.js`, and drawn on its own in all
+three registers with `node otd/lookdev/render.mjs --card index --day MM-DD`.
 
 ## Step 5 · Compose
 
-**Honest state: `cards.js` and `compose.mjs` do not exist yet.** Until they do,
+**Honest state: `cards.js` holds one card — `index` — and `compose.mjs` does
+not exist yet.** Until it does,
 compose the day by writing its sketch against the shared vocabulary in
 `otd/lookdev/styles/style.js` — the register modules `A` / `B` / `D`, and
 `S.swarm`, `S.march`, `S.bleed`, `S.giant`, `S.bullets`, `S.screened`,

@@ -132,6 +132,51 @@ async function renderStyles() {
 
 if (STYLES_MODE) { await renderStyles(); server.close(); process.exit(0); }
 
+// One card, drawn in each register, so a new card is judged on its own before
+// it is spent on a day:  node otd/lookdev/render.mjs --card index --day 09-09
+async function renderCard(name, day) {
+  const dir = path.join(outDir, "cards");
+  fs.mkdirSync(dir, { recursive: true });
+  const regs = ["A", "B", "D"];
+  const browser = await chromium.launch({ channel: "chrome", headless: true });
+  try {
+    const ctx = await browser.newContext({ viewport: { width: W, height: H }, deviceScaleFactor: SCALE });
+    const page = await ctx.newPage();
+    page.on("pageerror", (e) => console.log(`  page error: ${e.message}`));
+    for (const reg of regs) {
+      const url = `${base}/otd/lookdev/page.html?sketch=/otd/lookdev/styles/card.js&pre=/otd/lookdev/styles/style.js,/otd/lookdev/styles/cards.js&seed=1&day=${day}&card=${name}&register=${reg}`;
+      const png = path.join(dir, `${name}-${day}-${reg}.png`);
+      await page.goto(url, { waitUntil: "load" });
+      try { await page.waitForFunction(() => window.__rendered === true || window.__error, null, { timeout: 60000 }); }
+      catch { console.log(`  ${reg}: timed out`); }
+      const err = await page.evaluate(() => window.__error || null);
+      if (err) console.log(`  ${reg}: ${err}`);
+      const why = await page.evaluate(() => window.__skip || null);
+      if (why) { console.log(`  ${reg} skipped: ${why}`); continue; }
+      await page.evaluate(() => document.fonts.ready);
+      await page.screenshot({ path: png, clip: { x: 0, y: 0, width: W, height: H } });
+      console.log(`${name} ${day} ${reg}  →  ${path.relative(repo, png)}`);
+    }
+    const CW = 460, CH = Math.round(CW * H / W), gap = 22;
+    const html = `<!doctype html><meta charset="utf-8"><style>
+      body{margin:0;background:#9a9a9a;font:13px/1.4 "Arial Bold",Arial,sans-serif;font-weight:700;color:#fff;letter-spacing:.06em;text-transform:uppercase;padding:${gap}px}
+      h1{font-size:17px;margin:4px 0 16px;letter-spacing:.14em}
+      .row{display:flex;gap:${gap}px}figure{margin:0;width:${CW}px}
+      img{display:block;width:${CW}px;height:${CH}px;outline:1px solid #000}
+      figcaption{margin-top:7px;font-size:11.5px;color:#eee}
+    </style><h1>card · ${name} · ${day}</h1><div class="row">${regs.map((r) => `<figure><img src="${base}/otd/lookdev/out/cards/${name}-${day}-${r}.png"><figcaption>${r}</figcaption></figure>`).join("")}</div>`;
+    const sheet = await ctx.newPage();
+    await sheet.setViewportSize({ width: 3 * CW + 2 * gap + gap * 2, height: 600 });
+    await sheet.setContent(html, { waitUntil: "networkidle" });
+    await sheet.screenshot({ path: path.join(outDir, `card-${name}-${day}.png`), fullPage: true });
+    console.log(`sheet  →  otd/lookdev/out/card-${name}-${day}.png`);
+  } finally { await browser.close(); }
+}
+
+const CARD = opt("card", null);
+if (CARD) { await renderCard(CARD, opt("day", "09-09")); server.close(); process.exit(0); }
+
+
 // stills: <look>/<n>.html, sorted look then number
 const looks = fs.readdirSync(here, { withFileTypes: true }).filter((d) => d.isDirectory() && d.name !== "out").map((d) => d.name).sort();
 const stills = [];

@@ -292,6 +292,7 @@ and some material and does not know what day it is.
 | `page` | a Wayback capture, whole |
 | `tags` | the tag field |
 | `source` | the raw markdown the post is stored as |
+| `index` | the day's posts — each one's own date and title — and where to read them: `otd.crackunit.com/MM-DD` and *link in bio*. The rows fill the card, so one post is set enormous and thirteen small |
 | `tomorrow` | the tease |
 
 ## 4. The architecture

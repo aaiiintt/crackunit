@@ -19,46 +19,82 @@
     "text": "I wonder how long the others will last?",
     "from": "/2009/09/09/super-lovely-bootlegs/"
   },
-  "ink": { "hex": "#c79710", "from": "captures/09-09/super-lovely-bootlegs/video/F1jmhbw3JHw/even/f-07-2m09s.jpg", "override": false },
+  "ink": {
+    "hex": "#c79710",
+    "from": "captures/09-09/super-lovely-bootlegs/video/F1jmhbw3JHw/even/f-07-2m09s.jpg",
+    "override": false
+  },
   "density": "MIDDLING",
   "beats": [
     {
       "says": "the question, over what is left of the answer",
       "post": "/2009/09/09/super-lovely-bootlegs/",
       "material": "12 even frames, halftoned",
-      "cards": ["statement", "wall"]
+      "cards": [
+        "statement",
+        "wall"
+      ]
     },
     {
       "says": "the reveal: this was written in 2009, not now — the EDIT in full, with its own date in it",
       "post": "/2009/09/09/super-lovely-bootlegs/",
       "material": "the post's text, its permalink",
-      "cards": ["quote", "window"]
+      "cards": [
+        "quote",
+        "window"
+      ]
     },
     {
       "says": "one that did not last: Ramsay's dead screenshot, and the kitchen swarming",
       "post": "/2008/09/09/1433/",
       "material": "broken image, alt \"Hell's Kitchen\"; chef hat and wooden spoon stickers",
-      "cards": ["broken", "swarm"]
+      "cards": [
+        "broken",
+        "swarm"
+      ]
     },
     {
       "says": "2008's idea of the future of music, as a numbered list it wrote itself",
       "post": "/2008/09/09/nice-music-player-widget-affiliate/",
       "material": "the post's own 1. 2. 3.; turntable and vinyl stickers",
-      "cards": ["bullets", "march"]
+      "cards": [
+        "bullets",
+        "march"
+      ]
     },
     {
       "says": "a post that is only a reaction to a thing that is gone — seventy-five characters, whole, enormous, alone",
       "post": "/2008/09/09/i-dont-normally-post-this-kind-of-thing/",
       "material": "its entire text",
-      "cards": ["statement"]
+      "cards": [
+        "statement"
+      ]
     },
     {
       "says": "the one that lasted, with yt-dlp's own record of it",
       "post": "/2009/09/09/super-lovely-bootlegs/",
       "material": "the twelve frames, the real YouTube URL, the metadata",
-      "cards": ["wall", "window"]
+      "cards": [
+        "wall",
+        "window"
+      ]
     },
-    { "says": "come back tomorrow", "post": null, "material": "10 September's shape", "cards": ["tomorrow"] }
+    {
+      "says": "what this day contains, and where to read it",
+      "post": null,
+      "material": "the four posts' own dates and titles; otd.crackunit.com/09-09",
+      "cards": [
+        "index"
+      ]
+    },
+    {
+      "says": "come back tomorrow",
+      "post": null,
+      "material": "10 September's shape",
+      "cards": [
+        "tomorrow"
+      ]
+    }
   ],
   "caption": "9 September 2009. Iain notices one of the videos he posted the night before has already been taken down, and leaves the broken embed in on purpose — \"an artifact of 'the man' exercising his right to shut stuff down. I wonder how long the others will last?\" Seventeen years on, one of them is still up and we pulled twelve frames off it. The day's other three posts are from 2008: Gordon Ramsay becoming a video game, a music widget with a 'needle drop' function, and seventy-five characters about laughing out loud in an office. Link in bio for the originals.",
   "feed": {
