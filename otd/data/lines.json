@@ -1,0 +1,81 @@
+{
+  "_readme": "Editorial picks per day: the line, its runner-up and why. Chosen by hand. A treatment starts from these; nothing here decides layout.",
+  "09-08": {
+    "hero": "/2006/09/08/youth/",
+    "line": "Anyone know where I can get the ‘urban youth cliche clipart vol 7 cd’?",
+    "alternates": [
+      "Ooooh oooh yes please.",
+      "Advertising ‘the snip’ must be an interesting brief…"
+    ],
+    "why": "A question, so the dialog gets Yes/No. Every image that day is dead (Photobucket, Skitch, Posterous), so the starfield's error boxes are all true."
+  },
+  "09-09": {
+    "hero": "/2009/09/09/super-lovely-bootlegs/",
+    "line": "I wonder how long the others will last?",
+    "alternates": [
+      "But then I don’t normally laugh out loud like a freak in the office either…",
+      "Jeez, is there nothing that can’t be turned into a video game these days"
+    ],
+    "why": "The post records one of its own videos being taken down. The YouTube 'no longer available' hook is the truth, and the remaining video is the payoff."
+  },
+  "09-10": {
+    "hero": "/2007/09/10/brighton-chip-shop/",
+    "line": "Anthropologists could figure out a lot about Brighton just by looking at this chippy window.",
+    "alternates": [
+      "And of course there’s a small dose of Tai Chi for good measure.",
+      "Yeah, that’s what they say… I don’t think it’s strictly true though."
+    ],
+    "why": "Three posts, all with local images. The grid holds the chippy photo in a cell; Internet Now Working is the search field; Everything Is Amazing is the video thumbnail."
+  },
+  "09-11": {
+    "hero": "/2007/09/11/fosters-do-a-bad-thing/",
+    "line": "I clicked on a banner today.",
+    "alternates": [
+      "I probably click on 2/3 a month.",
+      "I object to this too."
+    ],
+    "why": "Twelve posts. A cascade of twelve windows is the day. The dialogs are I object to this too, I think I object, Wow."
+  },
+  "09-12": {
+    "hero": "/2007/09/12/cranes-are-big/",
+    "line": "This is a very big crane on Ebor Street near my work.",
+    "alternates": [
+      "I got bluetoothed yesterday at Euston Station.",
+      "It made me realise just how lazy I’ve been with blogging."
+    ],
+    "why": "Deadpan. The crane photo is the hero element, cropped off the top of the frame like ref 1's headline. Blogs is Back is the Notepad."
+  },
+  "11-09": {
+    "hero": "/2005/11/09/presentation-zen/",
+    "line": "Bill has bullets, Steve has space.",
+    "runnerUp": "Anyone know what that funny bird sound is?",
+    "runnerUpFrom": "/2007/11/09/how-stuff-dates/",
+    "alternates": [
+      "And the video has aged really really badly too.",
+      "Once you realise you’re becoming a geek is there any way to reverse the process…?"
+    ],
+    "why": "Seven words, a whole argument, and it makes no sense without the post. The Sueño Latino video (1odEmDYg4Y4) is terminated, so its error text is the day's DV material and the Post-it Note Waterfall (480×360, 15 fps, a dim conference stage) is the camcorder footage. Three 2005 images are gone: Picture1.jpg (powerpoint logo), talkingPointMini_01.jpg (talkingpoint screengrab), hulger.jpg (hulger phone)."
+  },
+  "11-10": {
+    "hero": "/2005/11/10/sorrell-vs-murdoch/",
+    "line": "Hmmmmmmmm… anyone want a piece of MySpace?",
+    "runnerUp": "Thank goodness there’s only a few people visiting the site.",
+    "runnerUpFrom": "/2005/11/10/the-joy-of-stats/",
+    "alternates": [
+      "Very very smart. My hat is off.",
+      "First, don’t panic…"
+    ],
+    "why": "A 2005 question that answers itself twenty years later. Six posts, 2005 to 2010: Sorrell on media panic, the Sony Bouncy Balls ad, a stats package, ITV buying Friends Reunited, a 1990s TV clip about the internet never catching on, and Keynote failing at a conference."
+  },
+  "11-11": {
+    "hero": "/2008/11/11/was-our-store-free-of-clutter/",
+    "line": "Was our store free of clutter?",
+    "runnerUp": "The overhead of me answering was almost zero.",
+    "runnerUpFrom": "/2008/11/11/was-our-store-free-of-clutter/",
+    "alternates": [
+      "It feels kind of retro / dynamic.",
+      "This is truly great."
+    ],
+    "why": "A card reader in a Co-Op asked it, so the archive did too. Only two posts, both 2008, both with surviving images and no video: the shortest day in the test set, which is the point."
+  }
+}

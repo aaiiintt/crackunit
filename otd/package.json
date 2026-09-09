@@ -1,0 +1,18 @@
+{
+  "name": "crackunit-otd",
+  "private": true,
+  "type": "module",
+  "description": "on-this-day: carousels cut from the crackunit archive, one calendar date at a time. See docs/on-this-day/PLAN.md.",
+  "scripts": {
+    "days": "node scripts/build-days.mjs && node scripts/validate-days.mjs",
+    "day": "node scripts/show-day.mjs",
+    "frames": "node scripts/frames.mjs",
+    "checklist": "node scripts/checklist.mjs",
+    "render": "node lookdev/render.mjs",
+    "look": "node scripts/look.mjs",
+    "compose": "node lookdev/render.mjs --compose"
+  },
+  "devDependencies": {
+    "playwright-core": "1.63.0"
+  }
+}

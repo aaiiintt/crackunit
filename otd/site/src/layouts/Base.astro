@@ -1,0 +1,312 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  path: string;
+  ogImage?: string;
+}
+const { title, description, path: pagePath, ogImage } = Astro.props;
+const canonical = new URL(pagePath, Astro.site).href;
+const ogImageUrl = ogImage ? new URL(ogImage, Astro.site).href : undefined;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="canonical" href={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:type" content="website" />
+    {description && <meta property="og:description" content={description} />}
+    {ogImageUrl && <meta property="og:image" content={ogImageUrl} />}
+    <style is:global>
+      @font-face {
+        font-family: "Anton";
+        src: url("/fonts/Anton-Regular.woff2") format("woff2");
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Anybody";
+        src: url("/fonts/Anybody-Variable.woff2") format("woff2");
+        font-weight: 100 900;
+        font-stretch: 50% 150%;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Silkscreen";
+        src: url("/fonts/Silkscreen-Regular.woff2") format("woff2");
+        font-display: swap;
+      }
+
+      :root {
+        --white: #ffffff;
+        --black: #000000;
+        --blue: #1a1aff;
+        --red: #ff2a00;
+        --yellow: #ffe600;
+        --magenta: #ff1fce;
+        --link: #0000ee;
+        --visited: #551a8b;
+        --cell: 40px;
+        --serif: "Liberation Serif", "Times New Roman", Times, serif;
+        --mono: "Liberation Mono", "Courier New", monospace;
+        color-scheme: light;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        margin: 0;
+        background: var(--white);
+        color: var(--black);
+        font-family: var(--serif);
+        line-height: 1.3;
+      }
+
+      /* The A7 grid: a visible RED 1px grid on WHITE running behind every
+         page, cells snapped at --cell. Blocks below are padded/margined in
+         multiples of --cell so they read as aligned to it. */
+      .grid {
+        background-image:
+          linear-gradient(to right, var(--red) 1px, transparent 1px),
+          linear-gradient(to bottom, var(--red) 1px, transparent 1px);
+        background-size: var(--cell) var(--cell);
+        background-color: var(--white);
+      }
+
+      .block {
+        margin: 0;
+        padding: var(--cell) calc(var(--cell) * 0.6);
+      }
+      .block + .block {
+        border-top: 1px solid var(--red);
+      }
+      .blue {
+        background: var(--blue);
+        color: var(--white);
+      }
+      .red {
+        background: var(--red);
+        color: var(--white);
+      }
+      .yellow {
+        background: var(--yellow);
+        color: var(--black);
+      }
+      .black {
+        background: var(--black);
+        color: var(--white);
+      }
+      .white {
+        background: var(--white);
+        color: var(--black);
+      }
+
+      a {
+        color: inherit;
+      }
+      .white a,
+      .yellow a {
+        color: var(--link);
+      }
+      .white a:visited,
+      .yellow a:visited {
+        color: var(--visited);
+      }
+
+      .mono {
+        font-family: var(--mono);
+        letter-spacing: 0;
+      }
+
+      .date {
+        font-family: "Anybody", var(--sans, sans-serif);
+        font-weight: 700;
+        font-variation-settings: "wdth" 110;
+        font-size: clamp(28px, 8vw, 48px);
+        margin: 0 0 8px;
+      }
+
+      .line {
+        font-family: var(--serif);
+        font-size: clamp(30px, 10vw, 56px);
+        line-height: 1.05;
+        font-weight: 400;
+        margin: 0;
+        text-align: left;
+      }
+
+      .cover-wrap {
+        display: block;
+        line-height: 0;
+      }
+      .cover-wrap img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      h2.label {
+        font-family: var(--mono);
+        text-transform: uppercase;
+        font-size: 13px;
+        letter-spacing: 0.06em;
+        margin: 0 0 calc(var(--cell) * 0.4);
+        opacity: 0.85;
+      }
+
+      .hero-title {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: clamp(22px, 6.5vw, 34px);
+        margin: 0 0 4px;
+        line-height: 1.1;
+      }
+      .hero-year {
+        font-family: var(--mono);
+        font-size: 15px;
+        opacity: 0.85;
+        margin: 0 0 12px;
+      }
+      .hero-excerpt {
+        font-family: var(--serif);
+        font-size: 19px;
+        line-height: 1.4;
+        margin: 0 0 var(--cell);
+      }
+      .cta-link {
+        display: inline-block;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-decoration: none;
+        background: var(--black);
+        color: var(--white);
+        padding: 14px 20px;
+        border: 2px solid var(--white);
+      }
+      .white .cta-link,
+      .yellow .cta-link {
+        background: var(--blue);
+        color: var(--white);
+        border-color: var(--blue);
+      }
+
+      .chart-track {
+        font-family: var(--serif);
+        font-size: 26px;
+        margin: 4px 0 12px;
+      }
+      .chart-links {
+        font-family: var(--mono);
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        margin-bottom: 10px;
+      }
+      .chart-attr {
+        font-family: var(--mono);
+        font-size: 12px;
+        opacity: 0.75;
+      }
+
+      ul.post-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      ul.post-list li {
+        display: flex;
+        align-items: baseline;
+        gap: 8px;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--red);
+      }
+      ul.post-list li:first-child {
+        border-top: 1px solid var(--red);
+      }
+      ul.post-list a.title {
+        font-family: var(--serif);
+        font-size: 20px;
+        text-decoration: none;
+        flex: 1 1 auto;
+        min-width: 0;
+      }
+      ul.post-list img.thumb {
+        width: 28px;
+        height: 28px;
+        object-fit: cover;
+        flex: 0 0 auto;
+        border: 1px solid var(--black);
+      }
+      ul.post-list .year {
+        font-family: var(--mono);
+        font-size: 14px;
+        flex: 0 0 auto;
+        text-align: right;
+        min-width: 3.2em;
+      }
+
+      .dialogs {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .dialog {
+        background: var(--white);
+        color: var(--black);
+        border: 2px solid var(--black);
+        box-shadow: 4px 4px 0 var(--black);
+        padding: 10px 12px;
+        font-family: var(--mono);
+        font-size: 13px;
+        max-width: 100%;
+      }
+      .dialog .btn {
+        display: inline-block;
+        margin-top: 8px;
+        border: 1px solid var(--black);
+        padding: 2px 10px;
+        font-family: "Silkscreen", var(--mono);
+        font-size: 11px;
+      }
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 16px;
+      }
+      .tag {
+        font-family: "Silkscreen", var(--mono);
+        font-size: 11px;
+        text-transform: uppercase;
+        padding: 4px 8px;
+        border: 1px solid currentColor;
+      }
+      .tag:nth-child(3n + 1) {
+        background: var(--red);
+        color: var(--white);
+      }
+      .tag:nth-child(3n + 2) {
+        background: var(--blue);
+        color: var(--white);
+      }
+      .tag:nth-child(3n) {
+        background: var(--yellow);
+        color: var(--black);
+      }
+    </style>
+  </head>
+  <body class="grid">
+    <slot />
+  </body>
+</html>

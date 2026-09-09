@@ -1,0 +1,109 @@
+{
+  "day": "09-09",
+  "written": "2026-09-09",
+  "arc": {
+    "name": "the claim",
+    "why": "Not the wreck — twelve frames of one video survived. The day makes an assertion and then, seventeen years later, supplies its own evidence. It also qualifies as the claim over the ladder because two of its four posts are 2008 and the fourth is 2009: too shallow to walk through time."
+  },
+  "register": {
+    "name": "D · Duotone",
+    "why": "Pictures and their absence carry it. One image dead, one video's twelve frames alive, one post with no media at all. Halftoning the survivors into the ink and leaving the dead as broken boxes is the day's whole subject rendered as a colour state."
+  },
+  "hook": {
+    "what": "The EDIT sentence at the size of the frame, over the twelve surviving frames halftoned in the ink",
+    "post": "/2009/09/09/super-lovely-bootlegs/",
+    "material": "captures/09-09/super-lovely-bootlegs/video/F1jmhbw3JHw/even/*.jpg",
+    "why": "It is the strongest thing the day has by a distance: Iain in 2009 watching a video die overnight, keeping the corpse deliberately as evidence, and asking how long the others have. This project is the answer to that question. It survives the square crop because it is one sentence and a texture."
+  },
+  "line": {
+    "text": "I wonder how long the others will last?",
+    "from": "/2009/09/09/super-lovely-bootlegs/"
+  },
+  "ink": {
+    "hex": "#c79710",
+    "from": "captures/09-09/super-lovely-bootlegs/video/F1jmhbw3JHw/even/f-07-2m09s.jpg",
+    "override": false
+  },
+  "density": "MIDDLING",
+  "beats": [
+    {
+      "says": "the question, over what is left of the answer",
+      "post": "/2009/09/09/super-lovely-bootlegs/",
+      "material": "12 even frames, halftoned",
+      "cards": [
+        "statement",
+        "wall"
+      ]
+    },
+    {
+      "says": "the reveal: this was written in 2009, not now — the EDIT in full, with its own date in it",
+      "post": "/2009/09/09/super-lovely-bootlegs/",
+      "material": "the post's text, its permalink",
+      "cards": [
+        "quote",
+        "window"
+      ]
+    },
+    {
+      "says": "one that did not last: Ramsay's dead screenshot, and the kitchen swarming",
+      "post": "/2008/09/09/1433/",
+      "material": "broken image, alt \"Hell's Kitchen\"; chef hat and wooden spoon stickers",
+      "cards": [
+        "broken",
+        "swarm"
+      ]
+    },
+    {
+      "says": "2008's idea of the future of music, as a numbered list it wrote itself",
+      "post": "/2008/09/09/nice-music-player-widget-affiliate/",
+      "material": "the post's own 1. 2. 3.; turntable and vinyl stickers",
+      "cards": [
+        "bullets",
+        "march"
+      ]
+    },
+    {
+      "says": "a post that is only a reaction to a thing that is gone — seventy-five characters, whole, enormous, alone",
+      "post": "/2008/09/09/i-dont-normally-post-this-kind-of-thing/",
+      "material": "its entire text",
+      "cards": [
+        "statement"
+      ]
+    },
+    {
+      "says": "the one that lasted, with yt-dlp's own record of it",
+      "post": "/2009/09/09/super-lovely-bootlegs/",
+      "material": "the twelve frames, the real YouTube URL, the metadata",
+      "cards": [
+        "wall",
+        "window"
+      ]
+    },
+    {
+      "says": "what this day contains, and where to read it",
+      "post": null,
+      "material": "the four posts' own dates and titles; otd.crackunit.com/09-09",
+      "cards": [
+        "index"
+      ]
+    },
+    {
+      "says": "come back tomorrow",
+      "post": null,
+      "material": "10 September's shape",
+      "cards": [
+        "tomorrow"
+      ]
+    }
+  ],
+  "caption": "9 September 2009. Iain notices one of the videos he posted the night before has already been taken down, and leaves the broken embed in on purpose — \"an artifact of 'the man' exercising his right to shut stuff down. I wonder how long the others will last?\" Seventeen years on, one of them is still up and we pulled twelve frames off it. The day's other three posts are from 2008: Gordon Ramsay becoming a video game, a music widget with a 'needle drop' function, and seventy-five characters about laughing out loud in an office. Link in bio for the originals.",
+  "feed": {
+    "differsFrom": [],
+    "on": [],
+    "note": "Cannot be checked. No treatments exist for 09-07 or 09-08; this is the first. From the second day onward this must differ on at least two of arc, register and ink from each of the previous two."
+  },
+  "openQuestions": [
+    "Slide 5 is one sentence alone on a slide. Deliberate, but it is the riskiest slide here and the easiest to cut to six.",
+    "The turntable and vinyl stickers reach this day via the word 'track' in the DJdownload post, having been fetched for 11-26. Legitimate under the rule, but it is the first case of the library crossing days — worth watching."
+  ]
+}

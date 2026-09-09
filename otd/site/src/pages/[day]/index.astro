@@ -1,0 +1,88 @@
+---
+import Base from "../../layouts/Base.astro";
+import {
+  daysWithPosts,
+  readDay,
+  readLines,
+  readableDate,
+  hasLocalThumb,
+  thumbUrl,
+} from "../../lib/data.mjs";
+
+export function getStaticPaths() {
+  return daysWithPosts().map(({ day }) => ({ params: { day } }));
+}
+
+const { day } = Astro.params;
+const data = readDay(day);
+const lines = readLines();
+const lineEntry = lines[day];
+const heroPost = data.posts[data.heroIndex] ?? data.posts[0];
+const line = lineEntry?.line || heroPost.title;
+const dateReadable = readableDate(day);
+const copy = data.copy || {};
+
+const postsNewestFirst = [...data.posts].sort((a, b) => new Date(b.date) - new Date(a.date));
+
+const title = `${dateReadable} · crackunit on this day`;
+const description = line;
+const ogImage = `/cover/${day}.png`;
+---
+
+<Base title={title} description={description} path={`/${day}/`} ogImage={ogImage}>
+  <section class="block blue">
+    <p class="date mono">{dateReadable}</p>
+    <p class="line">{line}</p>
+  </section>
+
+  <a class="cover-wrap block" href={heroPost.url} aria-label={`Read ${heroPost.title} on crackunit.com`}>
+    <img src={`/cover/${day}.png`} alt={`Cover for ${dateReadable}`} width="270" height="480" />
+  </a>
+
+  <section class="block white">
+    <h2 class="label">The hero post</h2>
+    <p class="hero-title">{heroPost.title}</p>
+    <p class="hero-year">{heroPost.year}</p>
+    {heroPost.excerpt && <p class="hero-excerpt">{heroPost.excerpt}</p>}
+    <a class="cta-link" href={heroPost.url}>Read it on crackunit.com →</a>
+  </section>
+
+
+  <section class="block white">
+    <h2 class="label">Every post from {dateReadable}, every year</h2>
+    <ul class="post-list">
+      {postsNewestFirst.map((post) => (
+        <li>
+          {hasLocalThumb(post) && <img class="thumb" src={thumbUrl(post)} alt="" loading="lazy" />}
+          <a class="title" href={post.url}>{post.title}</a>
+          <span class="year">{post.year}</span>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="block black">
+    <h2 class="label">From the archive, that day</h2>
+    {copy.dialog && copy.dialog.length > 0 && (
+      <div class="dialogs">
+        {copy.dialog.slice(0, 5).map((d) => (
+          <div class="dialog">
+            <p style="margin:0;">{d.text}</p>
+            <span class="btn">[{d.button}]</span>
+          </div>
+        ))}
+      </div>
+    )}
+    {copy.tag && copy.tag.length > 0 && (
+      <div class="tags">
+        {copy.tag.slice(0, 18).map((t) => (
+          <span class="tag">{t}</span>
+        ))}
+      </div>
+    )}
+  </section>
+
+  <a class="block blue" style="display:block;text-align:center;text-decoration:none;" href="https://www.crackunit.com/">
+    <p class="hero-title" style="font-size:clamp(24px,7vw,40px);margin:0;">Read the whole archive at crackunit.com</p>
+  </a>
+</Base>

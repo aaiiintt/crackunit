@@ -1,0 +1,12 @@
+/* The substrate's faces, all local files. Type is never degraded: no smoothing tricks, no filters. */
+@font-face { font-family: "Times New Roman"; src: url("/otd/public/fonts/Times New Roman.ttf"); font-weight: 400; font-style: normal; }
+@font-face { font-family: "Times New Roman"; src: url("/otd/public/fonts/Times New Roman Italic.ttf"); font-weight: 400; font-style: italic; }
+@font-face { font-family: "Times New Roman"; src: url("/otd/public/fonts/Times New Roman Bold.ttf"); font-weight: 700; font-style: normal; }
+@font-face { font-family: "Arial"; src: url("/otd/public/fonts/Arial.ttf"); font-weight: 400; }
+@font-face { font-family: "Arial"; src: url("/otd/public/fonts/Arial Bold.ttf"); font-weight: 700; }
+@font-face { font-family: "Courier New"; src: url("/otd/public/fonts/Courier New.ttf"); font-weight: 400; }
+@font-face { font-family: "Courier New"; src: url("/otd/public/fonts/Courier New Bold.ttf"); font-weight: 700; }
+@font-face { font-family: "VCR OSD Mono"; src: url("/otd/public/fonts/VCR_OSD_MONO.ttf"); }
+@font-face { font-family: "DSEG7"; src: url("/otd/public/fonts/DSEG7Classic-Regular.ttf"); font-weight: 400; }
+@font-face { font-family: "DSEG7"; src: url("/otd/public/fonts/DSEG7Classic-Bold.ttf"); font-weight: 700; }
+@font-face { font-family: "DSEG14"; src: url("/otd/public/fonts/DSEG14Classic-Regular.ttf"); }

@@ -1,0 +1,58 @@
+---
+import Base from "../layouts/Base.astro";
+import { daysWithPosts, readLines, monthName } from "../lib/data.mjs";
+
+const days = daysWithPosts();
+const lines = readLines();
+
+const byMonth = new Map();
+for (const d of days) {
+  const mm = d.day.slice(0, 2);
+  if (!byMonth.has(mm)) byMonth.set(mm, []);
+  byMonth.get(mm).push(d);
+}
+const months = [...byMonth.keys()].sort();
+
+const title = "crackunit on this day";
+const description = "340 days, resurfaced. Every day crackunit.com published something, once.";
+---
+
+<Base title={title} description={description} path="/">
+  <section class="block blue">
+    <p class="date mono">On this day</p>
+    <p class="line" style="font-size:clamp(24px,8vw,44px);">340 days from a 1,526-post archive, resurfaced one at a time.</p>
+  </section>
+
+  {months.map((mm) => (
+    <section class="block white">
+      <h2 class="label">{monthName(mm)}</h2>
+      <ul class="post-list">
+        {byMonth.get(mm).map((d) => {
+          const posted = Boolean(lines[d.day]);
+          const thumb =
+            (d.hero.image && d.hero.image.exists && d.hero.image.src?.startsWith("/wp-content/")
+              ? `https://www.crackunit.com${d.hero.image.src}`
+              : null) || d.hero.video?.thumbnail || null;
+          return (
+            <li>
+              {posted && (
+                <span
+                  aria-label="posted"
+                  title="Posted, see lines.json"
+                  style="width:8px;height:8px;background:var(--red);flex:0 0 auto;border-radius:50%;"
+                ></span>
+              )}
+              {thumb && <img class="thumb" src={thumb} alt="" loading="lazy" />}
+              <a class="title" href={`/${d.day}/`}>{d.hero.title}</a>
+              <span class="year">{d.hero.year}</span>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  ))}
+
+  <a class="block black" style="display:block;text-align:center;text-decoration:none;" href="https://www.crackunit.com/">
+    <p class="hero-title" style="font-size:clamp(24px,7vw,40px);margin:0;">Read the whole archive at crackunit.com</p>
+  </a>
+</Base>
