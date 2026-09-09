@@ -63,8 +63,7 @@ const BEATS = [
       push(); noStroke(); fill(247, 244, 237, 120); rect(0, 0, OTD.W, OTD.H); pop();
     }
     push(); fill(0); noStroke();
-    const px = S.giantSize(theLine(), OTD.W * 1.14, 760, 0.98, (v) => S.arial(v), 200, 54, OTD.W - 84);
-    S.giant(theLine(), 42, 250, px, 0.98, OTD.W * 1.14, (v) => S.arial(v), 88);
+    S.giantFit(theLine(), 42, 250, 760, 0.98, (v) => S.arial(v), { maxPx: 200, jitter: 70 });
     pop();
     push(); noStroke(); fill(INK[0], INK[1], INK[2]); S.arial(22);
     text(`${bootlegs().title} · ${bootlegs().year}`, 44, 1206);
@@ -78,13 +77,14 @@ const BEATS = [
     const F = framesOf(bootlegs());
     if (F.length) { push(); S.bleed(inked(F[9 % F.length].img, 210), 840, 1090, 1120); pop(); }
     const edit = clean((bootlegs().bodyText.match(/EDIT:[\s\S]*$/) || [bootlegs().bodyText])[0]);
-    const w = D.win(52, 150, 700, 700, INK, `${bootlegs().permalink} · ${bootlegs().date.slice(0, 10)}`);
+    // the swarm goes under the window, or it eats the words
+    if (stills(bootlegs()).length) S.swarm(stills(bootlegs()).map((f) => inked(f, 90)), { n: 9, rot: 0.3, max: 700 });
+    const w = D.win(52, 150, 700, 700, INK, `${bootlegs().permalink} · ${bootlegs().date.slice(0, 10)}`, [247, 244, 237]);
     push(); fill(0); noStroke();
     const px = S.fitBox(edit, w.w - 72, w.h - 80, 1.26, 58, 20, (v) => S.arial(v));
     let y = w.y + 40 + px * 0.8;
     for (const ln of OTD.wrap(edit, w.w - 72)) { text(ln, w.x + 36, y); y += px * 1.26; }
     pop();
-    if (stills(bootlegs()).length) S.swarm(stills(bootlegs()).map((f) => inked(f, 90)), { n: 9, rot: 0.3, max: 700 });
     const cap = D.win(52, 872, 700, 74, INK);
     push(); noStroke(); fill(INK[0], INK[1], INK[2]); S.arial(23);
     text(`${bootlegs().title} · ${bootlegs().year}`, cap.x + 16, cap.y + 28); pop();
@@ -99,8 +99,7 @@ const BEATS = [
     OTD.brokenImage(im ? im.alt : "", 96, 300, 620, 470);
     pop();
     push(); fill(0); noStroke();
-    const px = S.giantSize(p.title, OTD.W * 1.1, 300, 0.96, (v) => S.arial(v), 170);
-    S.giant(p.title, 44, 848, px, 0.96, OTD.W * 1.1, (v) => S.arial(v), 76);
+    S.giantFit(p.title, 44, 848, 300, 0.96, (v) => S.arial(v), { maxPx: 170, jitter: 56 });
     pop();
     const meta = D.win(44, 1150, OTD.W - 88, 106, INK);
     push(); noStroke(); fill(INK[0], INK[1], INK[2]); S.arial(21);
@@ -115,8 +114,7 @@ const BEATS = [
     const p = player();
     const items = (p.bodyText.match(/\d\.\s[^0-9]+?(?=\s\d\.\s|$)/g) || p.sentences || []).map((t) => t.trim());
     push(); fill(0); noStroke();
-    const px = S.giantSize(p.title, OTD.W * 1.12, 260, 0.96, (v) => S.arial(v), 130, 40, OTD.W - 86);
-    S.giant(p.title, 44, 150, px, 0.96, OTD.W * 1.12, (v) => S.arial(v), 70);
+    S.giantFit(p.title, 44, 150, 260, 0.96, (v) => S.arial(v), { maxPx: 130, jitter: 50 });
     pop();
     push(); S.bullets(items, 56, 470, 700, 24, 1.44, 1120); pop();
     if (stills(p).length) S.march(stills(p).map((f) => inked(f, 80)), 1146, 118, { gap: 6, angle: -0.02 });
@@ -129,8 +127,7 @@ const BEATS = [
   () => {
     const p = freak();
     push(); fill(0); noStroke();
-    const px = S.giantSize(p.bodyText, OTD.W * 1.1, 720, 1.0, (v) => S.arial(v), 210, 46, OTD.W - 86);
-    S.giant(p.bodyText, 44, 300, px, 1.0, OTD.W * 1.1, (v) => S.arial(v), 92);
+    S.giantFit(p.bodyText, 44, 300, 720, 1.0, (v) => S.arial(v), { maxPx: 210, jitter: 76 });
     pop();
     push(); noStroke(); fill(INK[0], INK[1], INK[2]); S.arial(23);
     text(`${p.title} · ${p.year}`, 46, 1160);

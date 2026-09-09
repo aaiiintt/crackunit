@@ -195,9 +195,6 @@ const S = {
     for (const ln of OTD.wrap(t, wrapW)) { text(ln, x + (jitter ? random(-jitter * 0.35, jitter) : 0), yy); yy += px * lead; }
     pop(); return yy;
   },
-  // A middle line running out of the frame is the point. The FIRST line running
-  // out is just a word you cannot read, so it is held inside `firstFit` when one
-  // is given — the hook is the whole advert and has to survive the square crop.
   giantSize(t, wrapW, targetH, lead, setSize, maxPx = 420, minPx = 54, firstFit = 0) {
     for (let px = maxPx; px >= minPx; px -= 4) {
       setSize(px);
@@ -207,6 +204,22 @@ const S = {
       return px;
     }
     setSize(minPx); return minPx;
+  },
+  // Type that has to be read is never clipped by the frame: no word loses
+  // letters off the side. Lines are staggered by indenting from the left, so
+  // the block still steps rather than sitting on a column, and the stagger is
+  // taken out of the measured width before the size is chosen. Only type used
+  // as pattern — a URL repeated, a numeral used as form — may run out, and it
+  // uses `giant` directly.
+  giantFit(t, x, y, h, lead, setSize, o = {}) {
+    const { right = 44, jitter = 0, maxPx = 300, minPx = 20 } = o;
+    const w = OTD.W - x - right - jitter;
+    const px = S.fitBox(t, w, h, lead, maxPx, minPx, setSize);
+    push(); setSize(px);
+    let yy = y + px * 0.78;
+    for (const ln of OTD.wrap(t, w)) { text(ln, x + (jitter ? random(0, jitter) : 0), yy); yy += px * lead; }
+    pop();
+    return { y: yy, px };
   },
   // Where the account signs itself, and where Giphy is credited. Both tiny,
   // both in the gutter, both in every one of the references.

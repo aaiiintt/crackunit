@@ -23,6 +23,13 @@ another post's material.** Copy is never written; the only furniture words are
 the date, the URL, `link in bio`, `recovered, web.archive.org`,
 `no longer available`, `come back tomorrow`, and the Giphy credit.
 
+**Type is never clipped.** A word never loses letters off the side of the
+frame, and nothing is drawn over words that have to be read. Lines are
+staggered by indenting from the left, so a block still steps rather than
+sitting on a column, and the indent is taken out of the measured width before
+the size is chosen (`S.giantFit`). Only type used as *pattern* — a URL
+repeated, a numeral used as form — may run out of the frame.
+
 **Type.** One grotesk for structure, labels and headlines. Times New Roman for
 the archive's own prose, set plainly, like a 2005 browser default. Courier for
 metadata, permalinks and timestamps. Type is never blurred, interlaced or
