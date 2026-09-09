@@ -84,6 +84,23 @@ const CARDS = {
       fill(0); S.arial(19); S.tracked("LINK IN BIO", f.x + 16, f.y + 52, 2); pop();
     }
   },
+
+  // tomorrow — the tease. "come back tomorrow" is allowed furniture; the date
+  // and the shape of the next day are facts.
+  //   data = { dateWords, count, years, url }
+  tomorrow(reg, r, data, ink) {
+    const face = reg === "A" ? (px) => S.arialB(px) : (px) => S.arial(px);
+    push(); fill(0); noStroke();
+    const px = S.fitBox("COME BACK TOMORROW", r.w, r.h * 0.34, 0.94, 210, 40, (v) => face(v));
+    let y = r.y + px * 0.8;
+    for (const ln of OTD.wrap("COME BACK TOMORROW", r.w)) { text(ln, r.x, y); y += px * 0.94; }
+    pop();
+    push(); noStroke(); fill(0); face(64);
+    text(data.dateWords, r.x, y + 76); pop();
+    push(); noStroke(); fill(ink[0], ink[1], ink[2]); face(28);
+    text(data.count, r.x, y + 128);
+    text(data.url, r.x, y + 168); pop();
+  },
 };
 
 window.CARDS = CARDS;

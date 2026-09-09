@@ -195,8 +195,17 @@ const S = {
     for (const ln of OTD.wrap(t, wrapW)) { text(ln, x + (jitter ? random(-jitter * 0.35, jitter) : 0), yy); yy += px * lead; }
     pop(); return yy;
   },
-  giantSize(t, wrapW, targetH, lead, setSize, maxPx = 420, minPx = 54) {
-    for (let px = maxPx; px >= minPx; px -= 4) { setSize(px); if (OTD.wrap(t, wrapW).length * px * lead <= targetH) return px; }
+  // A middle line running out of the frame is the point. The FIRST line running
+  // out is just a word you cannot read, so it is held inside `firstFit` when one
+  // is given — the hook is the whole advert and has to survive the square crop.
+  giantSize(t, wrapW, targetH, lead, setSize, maxPx = 420, minPx = 54, firstFit = 0) {
+    for (let px = maxPx; px >= minPx; px -= 4) {
+      setSize(px);
+      const ls = OTD.wrap(t, wrapW);
+      if (ls.length * px * lead > targetH) continue;
+      if (firstFit && textWidth(ls[0]) > firstFit) continue;
+      return px;
+    }
     setSize(minPx); return minPx;
   },
   // Where the account signs itself, and where Giphy is credited. Both tiny,

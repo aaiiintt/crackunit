@@ -139,9 +139,18 @@ three registers with `node otd/lookdev/render.mjs --card index --day MM-DD`.
 
 ## Step 5 · Compose
 
-**Honest state: `cards.js` holds one card — `index` — and `compose.mjs` does
-not exist yet.** Until it does,
-compose the day by writing its sketch against the shared vocabulary in
+```bash
+node otd/lookdev/render.mjs --compose MM-DD    # otd/out/carousel/MM-DD/
+```
+
+Reads the treatment, renders one image per beat from `otd/lookdev/days/MM-DD.js`,
+and writes a contact strip with each beat's `says` under it and the cover
+square-cropped as the profile grid will take it.
+
+**Honest state: `cards.js` holds two cards — `index` and `tomorrow` — and the
+day's composition is still hand-written per day in `otd/lookdev/days/MM-DD.js`.**
+That is deliberate for now:
+write that sketch against the shared vocabulary in
 `otd/lookdev/styles/style.js` — the register modules `A` / `B` / `D`, and
 `S.swarm`, `S.march`, `S.bleed`, `S.giant`, `S.bullets`, `S.screened`,
 `S.credit`, `S.daymark`, `S.anomaly` — following the treatment's beats.
@@ -203,5 +212,6 @@ quiet, dense, single, wrecked. Render per day.
   its own step before the treatment, registers chosen per day, and density
   derived and inverted. Exists: `build-days`, `validate-days`, `show-day`,
   `look`, `frames`, `wayback-page`, `fetch-giphy`, `giphy-sheet`, `checklist`.
-  Still to come: `cards.js`, `compose`, `grid`, `week`.
+  `render.mjs --compose` and `--card`. cards.js holds `index` and `tomorrow`.
+  Still to come: the rest of the card library, `grid`, `week`.
 - v0 to v2 are in git history.

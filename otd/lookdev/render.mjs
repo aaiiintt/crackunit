@@ -176,6 +176,66 @@ async function renderCard(name, day) {
 const CARD = opt("card", null);
 if (CARD) { await renderCard(CARD, opt("day", "09-09")); server.close(); process.exit(0); }
 
+// A whole day, from its treatment:  node otd/lookdev/render.mjs --compose 09-09
+// One image per beat into otd/out/carousel/<day>/, plus a contact strip and the
+// square crop of the cover as the profile grid will take it.
+async function compose(day) {
+  const tPath = path.join(repo, "otd", "data", "treatments", `${day}.json`);
+  if (!fs.existsSync(tPath)) { console.error(`no treatment at otd/data/treatments/${day}.json — write it first (step 4)`); process.exit(1); }
+  const T = JSON.parse(fs.readFileSync(tPath, "utf8"));
+  const sketch = path.join(here, "days", `${day}.js`);
+  if (!fs.existsSync(sketch)) { console.error(`no composition at otd/lookdev/days/${day}.js`); process.exit(1); }
+  const out = path.join(repo, "otd", "out", "carousel", day);
+  fs.rmSync(out, { recursive: true, force: true });
+  fs.mkdirSync(out, { recursive: true });
+  const beats = T.beats || [];
+  const browser = await chromium.launch({ channel: "chrome", headless: true });
+  try {
+    const ctx = await browser.newContext({ viewport: { width: W, height: H }, deviceScaleFactor: SCALE });
+    const page = await ctx.newPage();
+    page.on("pageerror", (e) => console.log(`  page error: ${e.message}`));
+    page.on("requestfailed", (r) => console.log(`  missing: ${r.url().replace(base, "")}`));
+    const made = [];
+    for (let i = 0; i < beats.length; i++) {
+      const url = `${base}/otd/lookdev/page.html?sketch=/otd/lookdev/days/${day}.js&pre=/otd/lookdev/styles/style.js,/otd/lookdev/styles/cards.js&seed=1&day=${day}&beat=${i + 1}`;
+      const png = path.join(out, `${String(i + 1).padStart(2, "0")}.png`);
+      await page.goto(url, { waitUntil: "load" });
+      try { await page.waitForFunction(() => window.__rendered === true || window.__error, null, { timeout: 60000 }); }
+      catch { console.log(`  beat ${i + 1}: timed out`); }
+      const err = await page.evaluate(() => window.__error || null);
+      if (err) console.log(`  beat ${i + 1}: ${err}`);
+      const why = await page.evaluate(() => window.__skip || null);
+      if (why) { console.log(`  beat ${i + 1} skipped: ${why}`); continue; }
+      await page.evaluate(() => document.fonts.ready);
+      await page.screenshot({ path: png, clip: { x: 0, y: 0, width: W, height: H } });
+      made.push({ n: i + 1, file: path.basename(png), says: beats[i].says, cards: (beats[i].cards || []).join(" + ") });
+      console.log(`  ${String(i + 1).padStart(2, "0")}  ${(beats[i].cards || []).join(" + ").padEnd(22)} ${beats[i].says}`);
+    }
+    const CW = 300, CH = Math.round(CW * H / W), gap = 16, SQ = 300;
+    const html = `<!doctype html><meta charset="utf-8"><style>
+      body{margin:0;background:#9a9a9a;font:12px/1.35 "Arial Bold",Arial,sans-serif;font-weight:700;color:#fff;letter-spacing:.05em;padding:${gap}px}
+      h1{font-size:16px;margin:4px 0 14px;letter-spacing:.13em;text-transform:uppercase}
+      h2{font-size:12px;margin:18px 0 8px;letter-spacing:.13em;text-transform:uppercase;border-top:2px solid #fff;padding-top:8px}
+      .row{display:flex;gap:${gap}px;flex-wrap:wrap}figure{margin:0;width:${CW}px}
+      img{display:block;width:${CW}px;height:${CH}px;outline:1px solid #000}
+      figcaption{margin-top:6px;font-size:10.5px;color:#eee;text-transform:none;letter-spacing:0}
+      .crop{width:${SQ}px;height:${SQ}px;overflow:hidden;outline:1px solid #000}
+      .crop img{width:${SQ}px;height:${Math.round(SQ * H / W)}px;margin-top:${-Math.round((SQ * H / W - SQ) / 2)}px;outline:0}
+    </style><h1>${day} · ${T.arc.name} · ${T.register.name} · ${T.density} · ${T.ink.hex}</h1>
+    <div class="row">${made.map((m) => `<figure><img src="${base}/otd/out/carousel/${day}/${m.file}"><figcaption><b>${m.n} · ${m.cards}</b><br>${m.says}</figcaption></figure>`).join("")}</div>
+    <h2>the cover as the profile grid crops it</h2>
+    <div class="row"><figure style="width:${SQ}px"><div class="crop"><img src="${base}/otd/out/carousel/${day}/01.png"></div></figure></div>`;
+    const sheet = await ctx.newPage();
+    await sheet.setViewportSize({ width: 4 * CW + 5 * gap, height: 900 });
+    await sheet.setContent(html, { waitUntil: "networkidle" });
+    await sheet.screenshot({ path: path.join(out, "contact.png"), fullPage: true });
+    console.log(`\n${made.length} slides  →  otd/out/carousel/${day}/   contact.png`);
+  } finally { await browser.close(); }
+}
+
+const COMPOSE = opt("compose", null);
+if (COMPOSE) { await compose(COMPOSE); server.close(); process.exit(0); }
+
 
 // stills: <look>/<n>.html, sorted look then number
 const looks = fs.readdirSync(here, { withFileTypes: true }).filter((d) => d.isDirectory() && d.name !== "out").map((d) => d.name).sort();
